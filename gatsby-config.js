@@ -7,11 +7,16 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
+    resolve: `gatsby-source-wordpress`,
     options: {
-      "name": "images",
-      "path": "./src/images/"
+      url: `https://wp-naswoimmiejscu.headlesshub.com/graphql`,
     },
-    __key: "images"
-  }]
+  }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": "./src/images/"
+      },
+      __key: "images"
+    }]
 };
