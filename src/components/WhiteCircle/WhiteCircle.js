@@ -8,7 +8,7 @@ const WhiteCircle = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="491" cy="491" r="455.5" stroke="white" stroke-width="71" />
+    <circle cx="491" cy="491" r="464" stroke="white" stroke-width="54" />
   </svg>
 );
 

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "gatsby";
 
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
 import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
-
-import { StyledHeader, StyledNav, StyledWrappedLinks } from "./StyledHeader";
 import Container from "../Container/Container";
+import Nav from "../Nav/Nav";
+
+import { StyledHeader } from "./StyledHeader";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,35 +27,7 @@ const Header = () => {
     <Container>
       <StyledHeader>
         <Logo />
-        <StyledNav>
-          <Link to="/" activeClassName="activeLink">
-            STRONA GŁÓWNA
-          </Link>
-          <div>
-            <Link to="/mlodziez" activeClassName="activeLink">
-              MŁODZIEŻ
-            </Link>
-            /
-            <Link to="/kobiety" activeClassName="activeLink">
-              KOBIETY
-            </Link>
-          </div>
-          <Link to="/o-mnie" activeClassName="activeLink">
-            O MNIE
-          </Link>
-          <Link to="/blog" activeClassName="activeLink">
-            BLOG
-          </Link>
-          <Link to="/jak-dzialam" activeClassName="activeLink">
-            JAK DZIAŁAM
-          </Link>
-          <Link to="/calendly" activeClassName="activeLink">
-            CALENDLY
-          </Link>
-          <Link to="/kontakt" activeClassName="activeLink">
-            KONTAKT
-          </Link>
-        </StyledNav>
+        <Nav />
         <Button
           text="SZUKAM CELU"
           variant="green"
