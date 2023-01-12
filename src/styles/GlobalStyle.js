@@ -12,11 +12,12 @@ const GlobalStyle = createGlobalStyle`
         --buttonWhiteNormal: #EDEDED;
         --buttonBrownHover: #745239;
         --buttonBrownActive: #593922;
-        --buttonBrownFocus: #745239;
         --normalBlur: #FFFBEF;
         --nromalBrown: #6C5F4D;
         --normalGrey: #606164;
         --normalWhite: #ffffff; 
+        --normalBlack: #000000;
+        --btnGrey: #D9D9D9;
     }
 
     body {
@@ -44,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
       outline: none
     }
 
-    p{
+    p {
       font-variant-numeric: oldstyle-nums;
     }
 

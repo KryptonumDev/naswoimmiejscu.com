@@ -1,83 +1,13 @@
+const React = require("react");
+
 exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
   setHtmlAttributes({ lang: "pl" });
   setHeadComponents([
     <link
       rel="preload"
-      href="/fonts/Roboto-Bold.ttf"
+      href="/fonts/Roboto-Regular.woff2"
       as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Roboto-BoldItalic.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Roboto-Italic.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Roboto-Light.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Roboto-LightItalic.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Roboto-Medium.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Roboto-MediumItalic.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Roboto-Regular.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Roboto-Thin.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Roboto-ThinItalic.ttf"
-      as="font"
-      type="font/ttf"
+      type="font/woff2"
       crossOrigin="anonymous"
       key="interFont"
     />,

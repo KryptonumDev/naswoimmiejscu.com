@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `https://wp-naswoimmiejscu.headlesshub.com/graphql`,
+        url: `${process.env.GATSBY_WORDPRESS_URL}/graphql`,
       },
     },
     {
