@@ -15,8 +15,18 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: 'tracedSVG',
+          quality: 100,
+          backgroundColor: `transparent`,
+        }
+      }
+    },
     {
       resolve: `gatsby-source-wordpress`,
       options: {

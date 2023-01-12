@@ -1,11 +1,11 @@
 import React from "react";
 
-import { StyledLogo } from "./StyledLogo";
+import { StyledLogo, StyledImage } from "./StyledLogo";
 
-const Logo = ({ hasMaxWidth, hadDeclaredMargin }) => {
+const Logo = ({ hasMaxWidth, hadDeclaredMargin, logoDesktop, logoMobile }) => {
   return (
     <StyledLogo hasmaxwidth={hasMaxWidth} hasdeclaredmargin={hadDeclaredMargin}>
-      logo
+      {logoDesktop ? <StyledImage imageDesktop={logoDesktop} imageMobile={logoMobile} /> : null}
     </StyledLogo>
   );
 };
