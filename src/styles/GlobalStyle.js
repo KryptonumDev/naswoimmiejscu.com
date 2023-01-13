@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
         --normalWhite: #ffffff; 
         --normalBlack: #000000;
         --btnGrey: #D9D9D9;
+        --arrowBlack: #203533;
         overflow-x: hidden;
     }
 

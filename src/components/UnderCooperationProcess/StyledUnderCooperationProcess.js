@@ -12,7 +12,6 @@ export const StyledLeftWrapper = styled.div`
 
 export const StyledRightWrapper = styled.div`
   width: 50%;
-  padding-right: 125px;
 `;
 
 export const StyledTextWrapper = styled.div`
@@ -30,7 +29,9 @@ export const StyledContent = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin: 50px auto 0;
+  padding: 0 125px 0 180px;
+  max-width: 1920px;
 `;
 
 export const StyledAnimationWrapper = styled.div``;

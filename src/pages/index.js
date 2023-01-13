@@ -7,22 +7,29 @@ import HomeSecondSection from "../components/HomeSecondSection/HomeSecondSection
 import CooperationProcess from "../components/CooperationProcess/CooperationProcess";
 import GreenCircle from "../components/GreenCircle/GreenCircle";
 import UnderCooperationProcess from "../components/UnderCooperationProcess/UnderCooperationProcess";
+import HomeFAQSection  from "../components/HomeFAQSection/HomeFAQSection";
 
-import { StyledCircleWrapper, StyledHome, StyledGreenCircleWrapper } from "../components/Home/StyledHome";
+import { StyledCircleWrapper, StyledHome, StyledGreenCircleWrapper, StyledWhiteCircleWrapper } from "../components/Home/StyledHome";
 
 const IndexPage = ({ data }) => {
+  const shortData = data.wpPage.stronaGlowna;
+
   return (
     <StyledHome>
-      <HomeHeroSection data={data.wpPage.stronaGlowna.pierwszaSekcja} />
+      <HomeHeroSection data={shortData.pierwszaSekcja} />
       <StyledCircleWrapper>
         <WhiteCircle />
       </StyledCircleWrapper>
-      <HomeSecondSection data={data.wpPage.stronaGlowna.drugaSekcja} />
+      <HomeSecondSection data={shortData.drugaSekcja} />
       <StyledGreenCircleWrapper>
         <GreenCircle />
       </StyledGreenCircleWrapper>
-      <CooperationProcess data={data.wpPage.stronaGlowna.procesWspolpracy} />
-      <UnderCooperationProcess data={data.wpPage.stronaGlowna.sekcjaPodProcesemWspolpracy} />
+      <CooperationProcess data={shortData.procesWspolpracy} />
+      <UnderCooperationProcess data={shortData.sekcjaPodProcesemWspolpracy} />
+      <StyledWhiteCircleWrapper>
+        <WhiteCircle />
+      </StyledWhiteCircleWrapper>
+      <HomeFAQSection data={shortData.stronaGlownaFaq} />
     </StyledHome>
   );
 };
@@ -143,6 +150,13 @@ export const query = graphql`
             target
             title
             url
+          }
+        }
+        stronaGlownaFaq {
+          tytulPoLewej
+          element {
+            odpowiedz
+            pytanie
           }
         }
       }

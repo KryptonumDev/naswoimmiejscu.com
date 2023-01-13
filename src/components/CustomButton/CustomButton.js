@@ -1,4 +1,6 @@
 import React from "react";
+
+import Arrow from "../Arrow/Arrow";
 import Image from "../Image/Image";
 
 import { StyledCustomButton } from "./StyledCustomButton";
@@ -11,6 +13,9 @@ const CustomButton = ({
   onClick,
   type,
   imageSize,
+  tabIndex,
+  hasIcon,
+  iconColor
 }) => {
   return (
     <StyledCustomButton
@@ -20,8 +25,10 @@ const CustomButton = ({
       onClick={onClick}
       type={type}
       imagesize={imageSize}
+      tabIndex={tabIndex}
+      iconColor={iconColor}
     >
-      <Image imageDesktop={image} />
+      {hasIcon ? <Arrow /> : <Image imageDesktop={image} />}
     </StyledCustomButton>
   );
 };

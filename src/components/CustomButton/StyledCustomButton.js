@@ -23,4 +23,8 @@ export const StyledCustomButton = styled.button`
     width: ${({ imagesize }) => (imagesize ? imagesize : "initial")};
     height: ${({ imagesize }) => (imagesize ? imagesize : "initial")};
   }
+
+  svg {
+    fill: ${({ iconColor }) => iconColor ? iconColor : "var(--normalWhite)"};
+  }
 `;
