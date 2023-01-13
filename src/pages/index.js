@@ -7,9 +7,17 @@ import HomeSecondSection from "../components/HomeSecondSection/HomeSecondSection
 import CooperationProcess from "../components/CooperationProcess/CooperationProcess";
 import GreenCircle from "../components/GreenCircle/GreenCircle";
 import UnderCooperationProcess from "../components/UnderCooperationProcess/UnderCooperationProcess";
-import HomeFAQSection  from "../components/HomeFAQSection/HomeFAQSection";
+import HomeFAQSection from "../components/HomeFAQSection/HomeFAQSection";
+import HomeAboutMe from "../components/HomeAboutMe/HomeAboutMe";
+import HomeContact from "../components/HomeContact/HomeContact";
 
-import { StyledCircleWrapper, StyledHome, StyledGreenCircleWrapper, StyledWhiteCircleWrapper } from "../components/Home/StyledHome";
+import {
+  StyledCircleWrapper,
+  StyledHome,
+  StyledGreenCircleWrapper,
+  StyledWhiteSecondCircleWrapper,
+  StyledWhiteCircleWrapper,
+} from "../components/Home/StyledHome";
 
 const IndexPage = ({ data }) => {
   const shortData = data.wpPage.stronaGlowna;
@@ -30,6 +38,11 @@ const IndexPage = ({ data }) => {
         <WhiteCircle />
       </StyledWhiteCircleWrapper>
       <HomeFAQSection data={shortData.stronaGlownaFaq} />
+      <HomeAboutMe data={shortData.oMnie} />
+      <StyledWhiteSecondCircleWrapper>
+        <WhiteCircle />
+      </StyledWhiteSecondCircleWrapper>
+      <HomeContact data={shortData.spotkajmySie} />
     </StyledHome>
   );
 };
@@ -157,6 +170,55 @@ export const query = graphql`
           element {
             odpowiedz
             pytanie
+          }
+        }
+        oMnie {
+          tytulPoPrawo
+          przycisk {
+            target
+            title
+            url
+          }
+          opisPoPrawo
+          zdjeciePoLewo {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+          zdjeciePoLewoMobile {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+        }
+        spotkajmySie {
+          tytul
+          opis
+          obrazMobile {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+          obraz {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
         }
       }

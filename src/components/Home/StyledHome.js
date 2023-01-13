@@ -47,3 +47,17 @@ export const StyledWhiteCircleWrapper = styled.div`
     height: 100%;
   }
 `;
+
+export const StyledWhiteSecondCircleWrapper = styled.div`
+  position: absolute;
+  top: 4980px;
+  width: 982px;
+  height: 982px;
+  right: -660px;
+  z-index: -1;
+
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
+`;
