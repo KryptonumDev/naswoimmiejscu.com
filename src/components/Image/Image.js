@@ -6,7 +6,7 @@ const Image = ({ imageDesktop, imageMobile }) => {
     {
       media: "(max-width: 360px)",
       image: getImage(
-        imageMobile ? imageMobile.localFile : imageDesktop.localFile
+        imageMobile ? imageMobile?.localFile : imageDesktop.localFile
       ),
     },
   ]);
