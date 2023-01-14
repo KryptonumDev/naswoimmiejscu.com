@@ -13,4 +13,10 @@ export const StyledContainer = styled.section`
       padding: 0 33px 0 0;
     }
   }
+
+  @media only screen and (max-width: 992px) {
+    &.footer {
+      padding: 0 0 0 33px;
+    }
+  }
 `;

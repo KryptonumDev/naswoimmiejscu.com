@@ -11,10 +11,11 @@ import {
   StyledMobileWrapper,
   StyledCircleWrapper,
   StyledGreenCircle,
+  StyledFooterNav,
 } from "./StyledNav";
 
-const Nav = ({ isOpen, logoDesktop, logoMobile }) => {
-  return (
+const Nav = ({ isOpen, isFooter, logoDesktop, logoMobile }) => {
+  return !isFooter ? (
     <StyledNav isopen={isOpen}>
       <StyledLogoWrapper>
         <Logo isHeader logoDesktop={logoDesktop} logoMobile={logoMobile} />
@@ -57,6 +58,36 @@ const Nav = ({ isOpen, logoDesktop, logoMobile }) => {
         <Link to="/regulamin">Regulamin</Link>
       </StyledMobileWrapper>
     </StyledNav>
+  ) : (
+    <StyledFooterNav>
+      <Link to="/" activeClassName="activeLink">
+        STRONA GŁÓWNA
+      </Link>
+      <div className="flex-wrapper">
+        <Link to="/mlodziez" activeClassName="activeLink">
+          MŁODZIEŻ
+        </Link>
+        <span>/</span>
+        <Link to="/kobiety" activeClassName="activeLink">
+          KOBIETY
+        </Link>
+      </div>
+      <Link to="/o-mnie" activeClassName="activeLink">
+        O MNIE
+      </Link>
+      <Link to="/blog" activeClassName="activeLink">
+        BLOG
+      </Link>
+      <Link to="/jak-dzialam" activeClassName="activeLink">
+        JAK DZIAŁAM
+      </Link>
+      <Link to="/calendly" activeClassName="activeLink">
+        CALENDLY
+      </Link>
+      <Link to="/kontakt" activeClassName="activeLink">
+        KONTAKT
+      </Link>
+    </StyledFooterNav>
   );
 };
 

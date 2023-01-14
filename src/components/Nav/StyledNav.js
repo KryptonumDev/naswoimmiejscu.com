@@ -123,3 +123,58 @@ export const StyledGreenCircle = styled.div`
     display: block;
   }
 `;
+
+export const StyledFooterNav = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  width: 100%;
+
+  a,
+  span {
+    font: 400 14px Roboto;
+    text-transform: uppercase;
+    color: var(--normalGrey);
+    text-decoration: none;
+    position: relative;
+
+    &.activeLink {
+      color: var(--normalBlack);
+      font-weight: 700;
+    }
+  }
+
+  .flex-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 1608px) {
+    gap: 13px;
+
+    a,
+    span {
+      font-size: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 1350px) {
+    gap: 9px;
+
+    a,
+    span {
+      font-size: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 992px){
+    flex-direction: column;
+    gap; 14px;
+    align-items: flex-start;
+    
+    a,
+    span {
+      font-size: 20px;
+    }
+  }
+`;

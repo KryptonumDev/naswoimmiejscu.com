@@ -29,8 +29,8 @@ export const StyledLogo = styled(Link)`
   }
 
   @media only screen and (max-width: 600px) {
-    max-width: ${({ isheader, hasmaxwidth }) =>
-      isheader ? "169px" : hasmaxwidth};
+    max-width: ${({ isheader, hasmaxwidth, isfooter }) =>
+      isheader ? (isfooter ? "246px" : "169px") : hasmaxwidth};
   }
 `;
 

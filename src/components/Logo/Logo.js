@@ -8,6 +8,7 @@ const Logo = ({
   logoDesktop,
   logoMobile,
   isHeader,
+  isFooter,
 }) => {
   return (
     <StyledLogo
@@ -15,6 +16,7 @@ const Logo = ({
       isheader={isHeader}
       hasmaxwidth={hasMaxWidth}
       hasdeclaredmargin={hadDeclaredMargin}
+      isfooter={isFooter}
     >
       {logoDesktop ? (
         <StyledImage imageDesktop={logoDesktop} imageMobile={logoMobile} />

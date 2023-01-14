@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import parse from "html-react-parser";
 
 import Container from "../Container/Container";
 import Logo from "../Logo/Logo";
@@ -16,41 +17,97 @@ import {
   StyledBottomText,
   StyledCircleWrapper,
   StyledFooterLinks,
-  StyledRightWrapperContent
+  StyledRightWrapperContent,
+  StyledSmallGreenCircle,
 } from "./StyledFooter";
-
-import { StyledText } from "../Text/StyledText";
+import SmallGreenCircle from "../SmallGreenCircle/SmallGreenCircle";
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query footerData {
+      wpPage(id: { eq: "cG9zdDoxOA==" }) {
+        global {
+          stopka {
+            coopyrightDolnaLinia
+            coopyrightGornaLinia
+            tekstObokPrzycisku
+            przycisk {
+              target
+              title
+              url
+            }
+            logoMobile {
+              altText
+              title
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+            logo {
+              altText
+              title
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+  const shortData = data.wpPage.global.stopka;
+
   return (
-    <Container>
+    <Container className="footer">
       <StyledFooter>
         <StyledLeftWrapper>
-          <Logo hadDeclaredMargin="0 0 54px 0" />
-          <Nav />
+          <Logo
+            hadDeclaredMargin="0 0 54px 0"
+            logoDesktop={shortData.logo}
+            logoMobile={shortData.logoMobile}
+            isHeader
+            isFooter
+          />
+          <Nav isFooter isOpen={false} />
+          <StyledFooterLinks>
+            <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
+            <Link to="/regulamin">Regulamin</Link>
+          </StyledFooterLinks>
           <StyledCopyright>
-            <StyledTopText>Wszelkie prawa zastrzeżone © 2022</StyledTopText>
-            <StyledBottomText>Stworzone z ♥ przez Kryptonum oraz Wojdyło Design.</StyledBottomText>
+            <StyledTopText>
+              {shortData.coopyrightGornaLinia
+                ? parse(shortData.coopyrightGornaLinia)
+                : null}
+            </StyledTopText>
+            <StyledBottomText>
+              {shortData.coopyrightDolnaLinia
+                ? parse(shortData.coopyrightDolnaLinia)
+                : null}
+            </StyledBottomText>
           </StyledCopyright>
+          <StyledSmallGreenCircle>
+            <SmallGreenCircle />
+          </StyledSmallGreenCircle>
         </StyledLeftWrapper>
         <StyledRightWrapper>
           <StyledRightWrapperContent>
-            <StyledText
-              hasdeclaredfontweight="700"
-              hasdeclaredfontsize="24px"
-              hasdeclaredfontcolor="var(--normalBlack)"
-            >
-              Odkryj swój życiowy cel
-            </StyledText>
+            {shortData.tekstObokPrzycisku
+              ? parse(shortData.tekstObokPrzycisku)
+              : null}
             <Button
-              text="POROZMAWIAJMY"
+              btnData={shortData.przycisk}
               variant="green"
               haswidth="366px"
               hasheight="88px"
               hasfontsize="24px"
+              className="footer"
             />
           </StyledRightWrapperContent>
-          <StyledFooterLinks>
+          <StyledFooterLinks hideMobile>
             <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
             <Link to="/regulamin">Regulamin</Link>
           </StyledFooterLinks>
