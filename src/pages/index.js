@@ -10,6 +10,7 @@ import UnderCooperationProcess from "../components/UnderCooperationProcess/Under
 import HomeFAQSection from "../components/HomeFAQSection/HomeFAQSection";
 import HomeAboutMe from "../components/HomeAboutMe/HomeAboutMe";
 import HomeContact from "../components/HomeContact/HomeContact";
+import HomeBlogSection from "../components/HomeBlogSection/HomeBlogSection";
 
 import {
   StyledCircleWrapper,
@@ -43,6 +44,7 @@ const IndexPage = ({ data }) => {
         <WhiteCircle />
       </StyledWhiteSecondCircleWrapper>
       <HomeContact data={shortData.spotkajmySie} />
+      <HomeBlogSection data={shortData.sekcjaZBlogiem} />
     </StyledHome>
   );
 };
@@ -53,6 +55,22 @@ export const query = graphql`
   query homePage {
     wpPage(id: { eq: "cG9zdDoyOA==" }) {
       stronaGlowna {
+        sekcjaZBlogiem {
+          rekomendacjeTytul
+          rekomendacjeOpis
+          blogTytul
+          rekomendacjePrzycisk {
+            url
+            title
+            target
+          }
+          blogOpis
+          blogPrzycisk {
+            url
+            title
+            target
+          }
+        }
         pierwszaSekcja {
           opisPoPrawo
           tytulPoPrawo

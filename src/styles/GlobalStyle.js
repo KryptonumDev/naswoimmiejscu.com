@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
         --btnGrey: #D9D9D9;
         --arrowBlack: #203533;
         --errorColor: #D63D3D;
+        --hrColor: #EBE2D3;
         overflow-x: hidden;
     }
 
