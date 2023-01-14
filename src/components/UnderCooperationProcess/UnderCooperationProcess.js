@@ -30,6 +30,7 @@ const UnderCooperationProcess = ({ data }) => {
             haswidth="355px"
             hasheight="88px"
             hasfontsize="20px"
+            className="under-cooperation-process"
           />
         </StyledLeftWrapper>
         <StyledRightWrapper>

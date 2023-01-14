@@ -167,6 +167,7 @@ export const query = graphql`
         }
         stronaGlownaFaq {
           tytulPoLewej
+          tekstMobilePodTytulem
           element {
             odpowiedz
             pytanie

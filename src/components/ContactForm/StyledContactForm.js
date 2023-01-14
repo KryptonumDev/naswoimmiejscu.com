@@ -12,12 +12,28 @@ export const StyledContactForm = styled.div`
     flex-direction: column;
     gap: 24px;
   }
+
+  @media only screen and (max-width: 1167px) {
+    padding: 60px 34px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    max-width: unset;
+  }
 `;
 
 export const StyledTitleWrapper = styled.div`
   font: 700 36px Roboto;
   color: var(--arrowBlack);
   position: relative;
+
+  @media only screen and (max-width: 1763px) {
+    font-size: 32px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    font-size: 24px;
+  }
 `;
 
 export const StyledErrorMessage = styled(ErrorMessage)`
@@ -131,10 +147,19 @@ export const StyledSubmit = styled.button`
   font: 700 20px Roboto;
   text-transform: uppercase;
   cursor: pointer;
+
+  @media only screen and (max-width: 375px) {
+    width: 100%;
+  }
 `;
 
 export const StyledIconTitle = styled.div`
   position: absolute;
   top: -30px;
   left: -30px;
+
+  @media only screen and (max-width: 1167px) {
+    top: -20px;
+    left: -10px;
+  }
 `;

@@ -94,7 +94,6 @@ const ContactForm = () => {
                 component="div"
               />
             </StyledInputWrapper>
-
             <StyledCustomCheckbox
               iserror={errors.termsAndConditions}
               value={values.termsAndConditions}
@@ -111,7 +110,6 @@ const ContactForm = () => {
                   : null}
               </label>
             </StyledCustomCheckbox>
-
             <StyledSubmit type="submit" disabled={isSubmitting}>
               {shortData.tekstWPrzycisku}
             </StyledSubmit>

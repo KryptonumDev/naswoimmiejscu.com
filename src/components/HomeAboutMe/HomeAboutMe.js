@@ -20,7 +20,7 @@ import {
 
 const HomeAboutMe = ({ data }) => {
   return (
-    <Container>
+    <Container className="home-about-me">
       <StyledHomeAboutMe>
         <StyledLeftWrapper>
           <StyledTopCircle>
@@ -31,14 +31,17 @@ const HomeAboutMe = ({ data }) => {
             imageMobile={data.zdjeciePoLewoMobile}
           />
           <StyledBottomCircle>
-            <StyledCircle hasdeclaredbg="var(--normalGreen)" />
+            <StyledCircle
+              hasdeclaredbg="var(--normalGreen)"
+              className="home-about-me"
+            />
           </StyledBottomCircle>
         </StyledLeftWrapper>
         <StyledRightWrapper>
-          <StyledTitleWrapper>
+          <StyledTitleWrapper className="home-about-me">
             {data.tytulPoPrawo ? parse(data.tytulPoPrawo) : null}
           </StyledTitleWrapper>
-          <StyledDescWrapper>
+          <StyledDescWrapper className="home-about-me">
             {data.opisPoPrawo ? parse(data.opisPoPrawo) : null}
           </StyledDescWrapper>
           <Button
@@ -47,6 +50,7 @@ const HomeAboutMe = ({ data }) => {
             haswidth="355px"
             hasheight="88px"
             hasfontsize="20px"
+            className="home-about-me"
           />
         </StyledRightWrapper>
       </StyledHomeAboutMe>

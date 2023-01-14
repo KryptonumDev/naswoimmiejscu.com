@@ -19,17 +19,17 @@ const HomeHeroSection = ({ data }) => {
     <Container>
       <StyledHomeHeroSection>
         <StyledLeftWrapper>
-          <StyledCircleWrapper />
+          <StyledCircleWrapper className="home-hero-section" />
           <StyledImage
             imageDesktop={data.zdjeciePoLewo}
             imageMobile={data.zdjeciePoLewoMobile}
           />
         </StyledLeftWrapper>
         <StyledRightWrapper>
-          <StyledTitleWrapper>
+          <StyledTitleWrapper className="home-hero-section">
             {data.tytulPoPrawo ? parse(data.tytulPoPrawo) : null}
           </StyledTitleWrapper>
-          <StyledDescWrapper>
+          <StyledDescWrapper className="home-hero-section">
             {data.opisPoPrawo ? parse(data.opisPoPrawo) : null}
           </StyledDescWrapper>
           <Button
@@ -38,6 +38,7 @@ const HomeHeroSection = ({ data }) => {
             haswidth="355px"
             hasheight="88px"
             hasfontsize="20px"
+            className="home-hero-section"
           />
         </StyledRightWrapper>
       </StyledHomeHeroSection>

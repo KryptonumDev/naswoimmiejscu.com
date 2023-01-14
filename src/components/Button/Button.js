@@ -10,6 +10,7 @@ const Button = ({
   haswidth,
   hasheight,
   hasfontsize,
+  className,
 }) => {
   return text ? (
     <StyledButton
@@ -17,6 +18,7 @@ const Button = ({
       hasdeclaredwidth={haswidth}
       hasdeclaredheight={hasheight}
       hasfontsize={hasfontsize}
+      className={className}
     >
       {text}
     </StyledButton>
@@ -29,6 +31,7 @@ const Button = ({
       hasdeclaredwidth={haswidth}
       hasdeclaredheight={hasheight}
       hasfontsize={hasfontsize}
+      className={className}
     >
       {btnData.title}
     </StyledLink>

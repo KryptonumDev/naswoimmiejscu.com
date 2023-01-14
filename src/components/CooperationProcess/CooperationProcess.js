@@ -23,10 +23,10 @@ const CooperationProcess = ({ data }) => {
         />
       </StyledLeftWrapper>
       <StyledRightWrapper>
-        <StyledTitleWrapper>
+        <StyledTitleWrapper className="cooperation-process">
           {data.tytulPoPrawo ? parse(data.tytulPoPrawo) : null}
         </StyledTitleWrapper>
-        <StyledDescWrapper>
+        <StyledDescWrapper className="cooperation-process">
           {data.opisPoPrawo ? parse(data.opisPoPrawo) : null}
         </StyledDescWrapper>
       </StyledRightWrapper>

@@ -22,10 +22,10 @@ const HomeContact = ({ data }) => {
         <SmallWhiteCircle />
       </StyledCircleWrapper>
       <StyledLeftWrapper>
-        <StyledTitleWrapper>
+        <StyledTitleWrapper className="home-contact">
           {data.tytul ? parse(data.tytul) : null}
         </StyledTitleWrapper>
-        <StyledDescWrapperEdit>
+        <StyledDescWrapperEdit className="home-contact">
           {data.opis ? parse(data.opis) : null}
         </StyledDescWrapperEdit>
         <StyledImageWrapper>

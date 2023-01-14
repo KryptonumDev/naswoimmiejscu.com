@@ -17,6 +17,7 @@ import {
   StyledContent,
   StyledContentWrapper,
   StyledIconsWrapper,
+  StyledMobileImage,
 } from "./StyledHomeSecondSection";
 import { StyledText } from "../Text/StyledText";
 
@@ -27,10 +28,16 @@ const HomeSecondSection = ({ data }) => {
     <Container>
       <StyledHomeSecondSection>
         <StyledLeftWrapper>
-          <StyledTitleWrapper>
+          <StyledTitleWrapper className="home-second-section">
             {data.tytulPoLewo ? parse(data.tytulPoLewo) : null}
           </StyledTitleWrapper>
-          <StyledDescWrapper>
+          <StyledMobileImage>
+            <Image
+              imageDesktop={data.zdjeciePoPrawo}
+              imageMobil={data.zdjeciePoPrawoMobile}
+            />
+          </StyledMobileImage>
+          <StyledDescWrapper className="home-second-section">
             {data.opisPoLewo ? parse(data.opisPoLewo) : null}
           </StyledDescWrapper>
           <StyledIconsWrapper>
@@ -86,6 +93,7 @@ const HomeSecondSection = ({ data }) => {
                 haswidth="355px"
                 hasheight="88px"
                 hasfontsize="20px"
+                className="home-second-section"
               />
             </StyledContent>
           ) : (
@@ -99,6 +107,7 @@ const HomeSecondSection = ({ data }) => {
                 haswidth="355px"
                 hasheight="88px"
                 hasfontsize="20px"
+                className="home-second-section"
               />
             </StyledContent>
           )}

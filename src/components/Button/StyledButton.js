@@ -44,6 +44,30 @@ export const StyledLink = styled(Link)`
       display: none;
     }
   }
+
+  @media only screen and (max-width: 1499px) {
+    &.home-hero-section,
+    &.home-second-section,
+    &.under-cooperation-process,
+    &.home-about-me {
+      width: 277px;
+      min-height: 73px;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    &.under-cooperation-process {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    &.home-hero-section,
+    &.home-second-section,
+    &.home-about-me {
+      width: 100%;
+    }
+  }
 `;
 
 export const StyledButton = styled.button`

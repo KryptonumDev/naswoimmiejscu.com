@@ -19,6 +19,10 @@ export const StyledCircleWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  @media only screen and (max-width: 1167px) {
+    display: none;
+  }
 `;
 
 export const StyledGreenCircleWrapper = styled.div`
@@ -31,6 +35,10 @@ export const StyledGreenCircleWrapper = styled.div`
   > svg {
     width: 100%;
     height: 100%;
+  }
+
+  @media only screen and (max-width: 1167px) {
+    display: none;
   }
 `;
 
@@ -46,6 +54,10 @@ export const StyledWhiteCircleWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  @media only screen and (max-width: 1167px) {
+    display: none;
+  }
 `;
 
 export const StyledWhiteSecondCircleWrapper = styled.div`
@@ -59,5 +71,9 @@ export const StyledWhiteSecondCircleWrapper = styled.div`
   > svg {
     width: 100%;
     height: 100%;
+  }
+
+  @media only screen and (max-width: 1167px) {
+    display: none;
   }
 `;
