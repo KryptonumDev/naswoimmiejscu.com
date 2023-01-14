@@ -49,9 +49,11 @@ export const StyledLink = styled(Link)`
     &.home-hero-section,
     &.home-second-section,
     &.under-cooperation-process,
-    &.home-about-me {
+    &.home-about-me,
+    &.footer {
       width: 277px;
       min-height: 73px;
+      font-size: 16px;
     }
   }
 
@@ -64,7 +66,8 @@ export const StyledLink = styled(Link)`
   @media only screen and (max-width: 350px) {
     &.home-hero-section,
     &.home-second-section,
-    &.home-about-me {
+    &.home-about-me,
+    &.footer {
       width: 100%;
     }
   }
