@@ -2,6 +2,8 @@ import React from "react";
 import parse from "html-react-parser";
 
 import Button from "../Button/Button";
+import AnimateIcon from "../AnimateIcon/AnimateIcon";
+import BiggerAnimate from "../BiggerAnimate/BiggerAnimate";
 
 import {
   StyledUnderCooperationProcess,
@@ -11,15 +13,28 @@ import {
   StyledContent,
   StyledAnimationWrapper,
   StyledLine,
+  StyledFirstIcon,
+  StyledSecondIcon,
+  StyledCircleWrapper,
 } from "./StyledUnderCooperationProcess";
+import { StyledCircle } from "../Circle/StyledCircle";
 
 const UnderCooperationProcess = ({ data }) => {
   return (
     <StyledUnderCooperationProcess>
       <StyledAnimationWrapper>
         <StyledLine />
+        <StyledFirstIcon ishide>
+          <AnimateIcon />
+        </StyledFirstIcon>
+        <StyledSecondIcon ishide>
+          <BiggerAnimate />
+        </StyledSecondIcon>
       </StyledAnimationWrapper>
       <StyledContent>
+        <StyledCircleWrapper>
+          <StyledCircle hasdeclaredwidth="36px" hasdeclaredheight="36px" />
+        </StyledCircleWrapper>
         <StyledLeftWrapper>
           <StyledTextWrapper>
             {data.tekstPoLewo ? parse(data.tekstPoLewo) : null}
@@ -32,11 +47,17 @@ const UnderCooperationProcess = ({ data }) => {
             hasfontsize="20px"
             className="under-cooperation-process"
           />
+          <StyledFirstIcon>
+            <AnimateIcon />
+          </StyledFirstIcon>
         </StyledLeftWrapper>
         <StyledRightWrapper>
           <StyledTextWrapper>
             {data.tekstPoPrawo ? parse(data.tekstPoPrawo) : null}
           </StyledTextWrapper>
+          <StyledSecondIcon>
+            <BiggerAnimate />
+          </StyledSecondIcon>
         </StyledRightWrapper>
       </StyledContent>
     </StyledUnderCooperationProcess>

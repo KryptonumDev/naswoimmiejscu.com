@@ -8,6 +8,7 @@ export const StyledCooperationProcess = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-right: 125px;
+  position: relative;
 
   @media only screen and (max-width: 1167px) {
     padding-right: 33px;
@@ -53,5 +54,25 @@ export const StyledRightWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     width: 100%;
     padding: 102px 33px 0;
+  }
+`;
+
+export const StyledGreenCircle = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+    position: absolute;
+    right: -240px;
+    top: 90px;
+  }
+
+  @media only screen and (max-width: 538px) {
+    top: 30px;
+    right: -260px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    top: 80px;
   }
 `;

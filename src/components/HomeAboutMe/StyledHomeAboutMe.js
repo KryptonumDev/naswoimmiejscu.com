@@ -6,6 +6,7 @@ export const StyledHomeAboutMe = styled.div`
   justify-content: space-between;
   padding-left: 55px;
   gap: 40px;
+  position: relative;
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;
@@ -60,5 +61,27 @@ export const StyledBottomCircle = styled.div`
   @media only screen and (max-width: 1225px) {
     bottom: -21px;
     right: -21px;
+  }
+`;
+
+export const StyledGreenCircle = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+    width: 328px;
+    height: 328px;
+    position: absolute;
+    right: -220px;
+    top: 0;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    right: -250px;
   }
 `;

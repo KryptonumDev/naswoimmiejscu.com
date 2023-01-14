@@ -2,11 +2,13 @@ import React from "react";
 import parse from "html-react-parser";
 
 import Image from "../Image/Image";
+import SmallGreenCircle from "../SmallGreenCircle/SmallGreenCircle";
 
 import {
   StyledCooperationProcess,
   StyledLeftWrapper,
   StyledRightWrapper,
+  StyledGreenCircle,
 } from "./StyledCooperationProcess";
 import {
   StyledDescWrapper,
@@ -30,6 +32,9 @@ const CooperationProcess = ({ data }) => {
           {data.opisPoPrawo ? parse(data.opisPoPrawo) : null}
         </StyledDescWrapper>
       </StyledRightWrapper>
+      <StyledGreenCircle>
+        <SmallGreenCircle />
+      </StyledGreenCircle>
     </StyledCooperationProcess>
   );
 };

@@ -4,8 +4,9 @@ import parse from "html-react-parser";
 import Button from "../Button/Button";
 import Image from "../Image/Image";
 import Container from "../Container/Container";
-import { StyledCircle } from "../Circle/StyledCircle";
+import SmallGreenCircle from "../SmallGreenCircle/SmallGreenCircle";
 
+import { StyledCircle } from "../Circle/StyledCircle";
 import {
   StyledDescWrapper,
   StyledTitleWrapper,
@@ -16,6 +17,7 @@ import {
   StyledLeftWrapper,
   StyledTopCircle,
   StyledBottomCircle,
+  StyledGreenCircle,
 } from "./StyledHomeAboutMe";
 
 const HomeAboutMe = ({ data }) => {
@@ -53,6 +55,9 @@ const HomeAboutMe = ({ data }) => {
             className="home-about-me"
           />
         </StyledRightWrapper>
+        <StyledGreenCircle>
+          <SmallGreenCircle />
+        </StyledGreenCircle>
       </StyledHomeAboutMe>
     </Container>
   );

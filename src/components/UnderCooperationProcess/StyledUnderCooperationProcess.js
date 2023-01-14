@@ -66,18 +66,79 @@ export const StyledContent = styled.div`
   @media only screen and (max-width: 992px) {
     flex-direction: column;
     margin-top: 0;
+    gap: 12px;
   }
 `;
 
-export const StyledAnimationWrapper = styled.div``;
+export const StyledAnimationWrapper = styled.div`
+  position: relative;
+`;
 
 export const StyledLine = styled.div`
   width: 90%;
   height: 2px;
   background-color: var(--normalBlack);
   max-width: 1671px;
+  opacity: 0.24;
 
   @media only screen and (max-width: 1167px) {
     display: none;
+  }
+`;
+
+export const StyledFirstIcon = styled.div`
+  position: absolute;
+  left: 53%;
+  transform: translateX(-50%);
+  top: -18px;
+
+  @media only screen and (max-width: 1167px) {
+    display: none;
+  }
+
+  @media only screen and (max-width: 992px) {
+    display: ${({ ishide }) => (ishide ? "none" : "flex")};
+    position: relative;
+    margin: 0 auto;
+    left: auto;
+    top: auto;
+    transform: translateX(0);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+`;
+
+export const StyledSecondIcon = styled.div`
+  position: absolute;
+  left: 90%;
+  transform: translateX(-50%);
+  top: -30px;
+
+  @media only screen and (max-width: 1167px) {
+    display: none;
+  }
+
+  @media only screen and (max-width: 992px) {
+    display: ${({ ishide }) => (ishide ? "none" : "flex")};
+    position: relative;
+    margin: 0 auto;
+    left: auto;
+    top: auto;
+    transform: translateX(0);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+`;
+
+export const StyledCircleWrapper = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+    margin: 0 auto;
   }
 `;
