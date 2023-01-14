@@ -7,7 +7,7 @@ import Button from "../Button/Button";
 import Container from "../Container/Container";
 import Nav from "../Nav/Nav";
 
-import { StyledHeader } from "./StyledHeader";
+import { StyledHeader, StyledLogoWrapperHeader } from "./StyledHeader";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -48,27 +48,30 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-  }, [isOpen]);
-
   return (
     <Container>
       <StyledHeader>
-        <Logo logoDesktop={shortData.logo} logoMobile={shortData.logoMobile} />
-        <Nav />
+        <StyledLogoWrapperHeader>
+          <Logo
+            isHeader
+            logoDesktop={shortData.logo}
+            logoMobile={shortData.logoMobile}
+          />
+        </StyledLogoWrapperHeader>
+        <Nav
+          isOpen={isOpen}
+          logoDesktop={shortData.logo}
+          logoMobile={shortData.logoMobile}
+        />
         <Button
           btnData={shortData.przycisk}
           variant="green"
           haswidth="254px"
           hasheight="78px"
           hasfontsize="16px"
+          className="header-btn"
         />
-        <HamburgerButton openMenu={handleOpenMenu} />
+        <HamburgerButton openMenu={handleOpenMenu} isOpen={isOpen} />
       </StyledHeader>
     </Container>
   );

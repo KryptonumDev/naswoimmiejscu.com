@@ -103,16 +103,22 @@ export const StyledInputWrapper = styled.div`
       ${({ iserror }) => (iserror ? "var(--errorColor)" : "var(--arrowBlack)")};
     height: 66px;
     border-radius: 32px;
+    font: 700 20px Roboto;
+    padding: 20px;
+    color: var(--arrowBlack);
   }
 
   textarea {
     border-radius: 32px;
     width: 100%;
     background-color: transparent;
+    color: var(--arrowBlack);
     border: 1px solid
       ${({ iserror }) => (iserror ? "var(--errorColor)" : "var(--arrowBlack)")};
     resize: none;
     height: 226px;
+    font: 700 20px Roboto;
+    padding: 20px;
   }
 `;
 
@@ -124,6 +130,7 @@ export const StyledSubmit = styled.button`
   border-radius: 45px;
   font: 700 20px Roboto;
   text-transform: uppercase;
+  cursor: pointer;
 `;
 
 export const StyledIconTitle = styled.div`

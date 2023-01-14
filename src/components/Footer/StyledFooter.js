@@ -7,24 +7,25 @@ export const StyledFooter = styled.footer`
   padding-bottom: 42px;
   display: flex;
   justify-content: space-between;
+  margin-top: 56px;
 `;
 
 export const StyledLeftWrapper = styled.div`
-    width: 50%;
+  width: 50%;
 `;
 
 export const StyledRightWrapper = styled.div`
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const StyledRightWrapperContent = styled.div`
-    display: flex;
-    gap: 29px;
-    align-items: center;
-    align-self: flex-end;
-`
+  display: flex;
+  gap: 29px;
+  align-items: center;
+  align-self: flex-end;
+`;
 
 export const StyledCopyright = styled.div`
   margin-top: 62px;

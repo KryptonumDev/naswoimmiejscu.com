@@ -5,9 +5,13 @@ import {
   StyledHamburgerInner,
 } from "./StyledHamburgerButton";
 
-const HamburgerButton = ({ openMenu }) => {
+const HamburgerButton = ({ openMenu, isOpen }) => {
   return (
-    <StyledHamburgerButton aria-label="otwórz menu" onClick={openMenu}>
+    <StyledHamburgerButton
+      aria-label="otwórz menu"
+      onClick={openMenu}
+      isopen={isOpen}
+    >
       <StyledHamburgerBox>
         <StyledHamburgerInner />
       </StyledHamburgerBox>

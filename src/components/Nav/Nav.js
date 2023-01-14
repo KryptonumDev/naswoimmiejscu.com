@@ -1,19 +1,38 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import { StyledNav } from "./StyledNav";
+import Logo from "../Logo/Logo";
+import SecondGreenCircle from "../SecondGreenCircle/SecondGreenCircle";
 
-const Nav = () => {
+import { StyledCircle } from "../Circle/StyledCircle";
+import {
+  StyledNav,
+  StyledLogoWrapper,
+  StyledMobileWrapper,
+  StyledCircleWrapper,
+  StyledGreenCircle,
+} from "./StyledNav";
+
+const Nav = ({ isOpen, logoDesktop, logoMobile }) => {
   return (
-    <StyledNav>
+    <StyledNav isopen={isOpen}>
+      <StyledLogoWrapper>
+        <Logo isHeader logoDesktop={logoDesktop} logoMobile={logoMobile} />
+      </StyledLogoWrapper>
+      <StyledGreenCircle>
+        <SecondGreenCircle />
+      </StyledGreenCircle>
       <Link to="/" activeClassName="activeLink">
+        <StyledCircleWrapper>
+          <StyledCircle hasdeclaredwidth="30px" hasdeclaredheight="30px" />
+        </StyledCircleWrapper>
         STRONA GŁÓWNA
       </Link>
-      <div>
+      <div className="flex-wrapper">
         <Link to="/mlodziez" activeClassName="activeLink">
           MŁODZIEŻ
         </Link>
-        /
+        <span>/</span>
         <Link to="/kobiety" activeClassName="activeLink">
           KOBIETY
         </Link>
@@ -33,6 +52,10 @@ const Nav = () => {
       <Link to="/kontakt" activeClassName="activeLink">
         KONTAKT
       </Link>
+      <StyledMobileWrapper>
+        <Link to="/polityka-prywatnosci">Polityka prywatności</Link>
+        <Link to="/regulamin">Regulamin</Link>
+      </StyledMobileWrapper>
     </StyledNav>
   );
 };

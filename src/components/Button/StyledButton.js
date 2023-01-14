@@ -33,6 +33,17 @@ export const StyledLink = styled(Link)`
       variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
     outline-offset: 4px;
   }
+
+  &.header-btn {
+    @media only screen and (max-width: 1608px) {
+      width: 200px;
+      min-height: 60px;
+    }
+
+    @media only screen and (max-width: 1167px) {
+      display: none;
+    }
+  }
 `;
 
 export const StyledButton = styled.button`

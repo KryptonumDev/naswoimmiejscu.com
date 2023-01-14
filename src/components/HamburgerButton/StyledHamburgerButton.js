@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const StyledHamburgerButton = styled.button`
   display: none;
 
-  @media only screen and (max-width: 768px) {
-    position: ${({ isopen }) => (isopen ? "fixed" : "absolute")};
-    z-index: 3;
+  @media only screen and (max-width: 1167px) {
+    position: fixed;
+    z-index: 11;
     right: 29px;
     top: 24px;
     cursor: pointer;
@@ -33,6 +33,7 @@ export const StyledHamburgerInner = styled.span`
   left: 0;
   top: 50%;
   border-radius: 2px;
+  background-color: var(--normalBlack);
 
   &::after {
     content: "";
