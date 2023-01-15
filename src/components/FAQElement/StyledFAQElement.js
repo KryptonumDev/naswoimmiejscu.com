@@ -24,6 +24,10 @@ export const StyledFAQElement = styled.details`
 export const StyledQuestionWrapper = styled.summary`
   display: flex;
   gap: 17px;
+
+  @media only screen and (max-width: 992px) {
+    align-items: ${({ open }) => (open ? "flex-start" : "center")};
+  }
 `;
 
 export const StyledAnswerWrapper = styled.div`
@@ -42,6 +46,6 @@ export const StyledQuestionContent = styled.div`
   cursor: pointer;
 
   @media only screen and (max-width: 992px) {
-    font-size: 32px;
+    font-size: ${({ open }) => (open ? "32px" : "15px")};
   }
 `;

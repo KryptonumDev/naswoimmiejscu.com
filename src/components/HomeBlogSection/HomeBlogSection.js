@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import parse from "html-react-parser";
 import { useStaticQuery, graphql } from "gatsby";
 
+import AHASvg from "../AHASvg/AHASvg";
+
 import { StyledCircle } from "../Circle/StyledCircle";
 import {
   StyledHomeBlogSection,
@@ -10,6 +12,7 @@ import {
   StyledRightWrapper,
   StyledDescWrapper,
   StyledTitleElement,
+  StyledIconWrapper,
 } from "./StyledHomeBlogSection";
 
 const HomeBlogSection = () => {
@@ -44,6 +47,9 @@ const HomeBlogSection = () => {
   return (
     <StyledHomeBlogSection>
       <StyledLeftWrapper>
+        <StyledIconWrapper>
+          <AHASvg />
+        </StyledIconWrapper>
         <StyledContent
           onClick={() => setIsBlog(true)}
           type="button"

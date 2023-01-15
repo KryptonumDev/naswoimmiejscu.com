@@ -58,6 +58,10 @@ export const StyledTitleWrapper = styled.div`
     font-weight: 700;
   }
 
+  &.contact-page {
+    margin-top: 0;
+  }
+
   @media only screen and (max-width: 1763px) {
     &.home-hero-section,
     &.home-second-section,

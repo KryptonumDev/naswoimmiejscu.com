@@ -27,7 +27,7 @@ const FAQElement = ({ question, answer }) => {
       onClick={onToggle}
       open={isOpen}
     >
-      <StyledQuestionWrapper>
+      <StyledQuestionWrapper open={isOpen}>
         <StyledIconWrapper>
           <CustomButton
             hasWidth="51px"
@@ -37,7 +37,7 @@ const FAQElement = ({ question, answer }) => {
             bgColor={isOpen ? "var(--normalGreen)" : "var(--buttonBrownHover)"}
           />
         </StyledIconWrapper>
-        <StyledQuestionContent>
+        <StyledQuestionContent open={isOpen}>
           {question ? parse(question) : null}
         </StyledQuestionContent>
       </StyledQuestionWrapper>

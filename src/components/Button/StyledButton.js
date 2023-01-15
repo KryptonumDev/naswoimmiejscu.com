@@ -3,8 +3,9 @@ import { Link } from "gatsby";
 
 export const StyledLink = styled(Link)`
   background-color: ${({ variant }) =>
-    variant === "green" ? "var(--normalGreen)" : "var(--normalWhite)"};
-  border: none;
+    variant === "green" ? "var(--normalGreen)" : "transparent"};
+  border: ${({ variant }) =>
+    variant === "green" ? "none" : "1px solid var(--normalBlack)"};
   width: ${({ hasdeclaredwidth }) =>
     hasdeclaredwidth ? hasdeclaredwidth : "355px"};
   border-radius: 64px;
@@ -18,8 +19,7 @@ export const StyledLink = styled(Link)`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: ${({ variant }) =>
-    variant === "green" ? "var(--normalBlack)" : "var(--normalWhite)"};
+  color: var(--normalBlack);
 
   &:hover {
     background-color: ${({ variant }) =>
@@ -76,8 +76,7 @@ export const StyledLink = styled(Link)`
 export const StyledButton = styled.button`
   background-color: ${({ variant }) =>
     variant === "green" ? "var(--normalGreen)" : "var(--normalWhite)"};
-  color: ${({ variant }) =>
-    variant === "green" ? "var(--normalBlack)" : "var(--normalWhite)"};
+  color: var(--normalBlack);
   border: none;
   width: ${({ hasdeclaredwidth }) =>
     hasdeclaredwidth ? hasdeclaredwidth : "355px"};

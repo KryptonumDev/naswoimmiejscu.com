@@ -12,7 +12,7 @@ import {
 } from "./StyledFAQSection";
 import Button from "../Button/Button";
 
-const FAQSection = ({ data }) => {
+const FAQSection = ({ data, btnWidth }) => {
   return (
     <StyledFAQSection>
       <StyledFAQWrapper>
@@ -30,7 +30,7 @@ const FAQSection = ({ data }) => {
           <Button
             btnData={data.przycisk}
             variant="green"
-            haswidth="355px"
+            haswidth={btnWidth ? btnWidth : "355px"}
             hasheight="88px"
             hasfontsize="20px"
           />

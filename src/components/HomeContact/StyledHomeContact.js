@@ -48,6 +48,10 @@ export const StyledImageWrapper = styled.div`
 
 export const StyledDescWrapperEdit = styled(StyledDescWrapper)`
   max-width: 790px;
+
+  @media only screen and (max-width: 992px) {
+    padding-right: 33px;
+  }
 `;
 
 export const StyledCircleWrapper = styled.div`

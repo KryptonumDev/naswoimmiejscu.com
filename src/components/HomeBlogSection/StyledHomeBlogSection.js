@@ -4,6 +4,8 @@ export const StyledHomeBlogSection = styled.div`
   width: 100%;
   display: flex;
   padding-left: 185px;
+  max-width: 1920px;
+  margin: 0 auto;
 `;
 
 export const StyledLeftWrapper = styled.div`
@@ -42,4 +44,12 @@ export const StyledContent = styled.button`
   padding: ${({ hasdeclaredpadding }) =>
     hasdeclaredpadding ? hasdeclaredpadding : "0"};
   opacity: ${({ isactive }) => (isactive ? "1" : "0.5")};
+`;
+
+export const StyledIconWrapper = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+  }
 `;
