@@ -20,12 +20,9 @@ const HomeFAQSection = ({ data }) => {
         {data.tekstMobilePodTytulem ? parse(data.tekstMobilePodTytulem) : null}
       </StyledMobileSubHeading>
       <StyledFAQWrapper>
-        {data.element.map((faq, idx) => (
+        {data.element.map((faq) => (
           <FAQElement
-            iconBgColor={
-              idx % 2 === 0 ? "var(--normalGreen)" : "var(--buttonBrownHover)"
-            }
-            iconColor={idx % 2 === 0}
+            key={faq.pytanie + faq.odpowiedz}
             question={faq.pytanie}
             answer={faq.odpowiedz}
           />

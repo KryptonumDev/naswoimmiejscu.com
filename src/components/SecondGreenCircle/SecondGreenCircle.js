@@ -8,7 +8,7 @@ const SecondGreenCircle = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="164" cy="164" r="148.5" stroke="#0BC76D" stroke-width="31" />
+    <circle cx="164" cy="164" r="148.5" stroke="#0BC76D" strokeWidth="31" />
   </svg>
 );
 

@@ -18,7 +18,7 @@ const Nav = ({ isOpen, isFooter, logoDesktop, logoMobile }) => {
   return !isFooter ? (
     <StyledNav isopen={isOpen}>
       <StyledLogoWrapper>
-        <Logo isHeader logoDesktop={logoDesktop} logoMobile={logoMobile} />
+        <Logo isHeader="true" logoDesktop={logoDesktop} logoMobile={logoMobile} />
       </StyledLogoWrapper>
       <StyledGreenCircle>
         <SecondGreenCircle />

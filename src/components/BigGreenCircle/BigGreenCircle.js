@@ -1,6 +1,6 @@
 import React from "react";
 
-const WhiteCircle = () => (
+const BigGreenCircle = () => (
   <svg
     width="982"
     height="982"
@@ -8,8 +8,8 @@ const WhiteCircle = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="491" cy="491" r="464" stroke="white" strokeWidth="54" />
+    <circle cx="491" cy="491" r="435" stroke="#0BC76D" strokeWidth="112" />
   </svg>
 );
 
-export default WhiteCircle;
+export default BigGreenCircle;

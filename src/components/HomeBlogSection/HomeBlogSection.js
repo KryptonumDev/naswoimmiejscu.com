@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import parse from "html-react-parser";
+import { useStaticQuery, graphql } from "gatsby";
 
 import { StyledCircle } from "../Circle/StyledCircle";
 import {
@@ -11,7 +12,33 @@ import {
   StyledTitleElement,
 } from "./StyledHomeBlogSection";
 
-const HomeBlogSection = ({ data }) => {
+const HomeBlogSection = () => {
+  const {
+    wpPage: { stronaGlowna },
+  } = useStaticQuery(graphql`
+    query homeBlog {
+      wpPage(id: { eq: "cG9zdDoyOA==" }) {
+        stronaGlowna {
+          sekcjaZBlogiem {
+            rekomendacjeTytul
+            rekomendacjeOpis
+            blogTytul
+            rekomendacjePrzycisk {
+              url
+              title
+              target
+            }
+            blogOpis
+            blogPrzycisk {
+              url
+              title
+              target
+            }
+          }
+        }
+      }
+    }
+  `);
   const [isBlog, setIsBlog] = useState(true);
 
   return (
@@ -25,10 +52,14 @@ const HomeBlogSection = ({ data }) => {
         >
           <StyledCircle hasdeclaredbg="var(--normalGreen)" />
           <StyledTitleElement>
-            {data.blogTytul ? parse(data.blogTytul) : null}
+            {stronaGlowna.sekcjaZBlogiem.blogTytul
+              ? parse(stronaGlowna.sekcjaZBlogiem.blogTytul)
+              : null}
           </StyledTitleElement>
           <StyledDescWrapper isleft>
-            {data.blogTytul ? parse(data.blogOpis) : null}
+            {stronaGlowna.sekcjaZBlogiem.blogTytul
+              ? parse(stronaGlowna.sekcjaZBlogiem.blogOpis)
+              : null}
           </StyledDescWrapper>
         </StyledContent>
         <StyledContent
@@ -40,10 +71,14 @@ const HomeBlogSection = ({ data }) => {
         >
           <StyledCircle />
           <StyledTitleElement>
-            {data.rekomendacjeTytul ? parse(data.rekomendacjeTytul) : null}
+            {stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul
+              ? parse(stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul)
+              : null}
           </StyledTitleElement>
           <StyledDescWrapper>
-            {data.rekomendacjeOpis ? parse(data.rekomendacjeOpis) : null}
+            {stronaGlowna.sekcjaZBlogiem.rekomendacjeOpis
+              ? parse(stronaGlowna.sekcjaZBlogiem.rekomendacjeOpis)
+              : null}
           </StyledDescWrapper>
         </StyledContent>
       </StyledLeftWrapper>

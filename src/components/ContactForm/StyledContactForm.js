@@ -6,7 +6,8 @@ export const StyledContactForm = styled.div`
   max-width: 788px;
   background-color: var(--normalGreen);
   padding: 90px 130px 119px 81px;
-
+  max-height: 1130px;
+  
   form {
     display: flex;
     flex-direction: column;

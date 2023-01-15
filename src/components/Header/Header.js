@@ -53,7 +53,7 @@ const Header = () => {
       <StyledHeader>
         <StyledLogoWrapperHeader>
           <Logo
-            isHeader
+            isHeader="true"
             logoDesktop={shortData.logo}
             logoMobile={shortData.logoMobile}
           />

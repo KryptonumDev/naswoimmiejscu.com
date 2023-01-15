@@ -14,7 +14,7 @@ const GreenCircle = () => (
       cy="491"
       r="435"
       stroke="#0BC76D"
-      stroke-width="112"
+      strokeWidth="112"
     />
   </svg>
 );

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledFAQElement = styled.details`
   width: 100%;
-  max-width: 743px;
+  max-width: 800px;
 
   &[open] {
     svg {
@@ -38,7 +38,7 @@ export const StyledAnswerWrapper = styled.div`
 export const StyledIconWrapper = styled.div``;
 
 export const StyledQuestionContent = styled.div`
-  font: 700 40px Roboto;
+  font: 700 36px Roboto;
   cursor: pointer;
 
   @media only screen and (max-width: 992px) {

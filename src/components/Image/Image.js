@@ -1,7 +1,7 @@
 import React from "react";
 import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image";
 
-const Image = ({ imageDesktop, imageMobile }) => {
+const Image = ({ imageDesktop, imageMobile, objectFit }) => {
   const images = withArtDirection(getImage(imageDesktop.localFile), [
     {
       media: "(max-width: 360px)",
@@ -16,6 +16,7 @@ const Image = ({ imageDesktop, imageMobile }) => {
       image={images}
       alt={imageDesktop?.altText}
       title={imageDesktop?.title}
+      objectFit={objectFit}
     />
   ) : null;
 };

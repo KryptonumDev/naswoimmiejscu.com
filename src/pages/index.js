@@ -20,31 +20,29 @@ import {
   StyledWhiteCircleWrapper,
 } from "../components/Home/StyledHome";
 
-const IndexPage = ({ data }) => {
-  const shortData = data.wpPage.stronaGlowna;
-
+const IndexPage = ({ data: { wpPage: { stronaGlowna }} }) => {
   return (
     <StyledHome>
-      <HomeHeroSection data={shortData.pierwszaSekcja} />
+      <HomeHeroSection data={stronaGlowna.pierwszaSekcjaHomePage} />
       <StyledCircleWrapper>
         <WhiteCircle />
       </StyledCircleWrapper>
-      <HomeSecondSection data={shortData.drugaSekcja} />
+      <HomeSecondSection data={stronaGlowna.drugaSekcjaHomePage} />
       <StyledGreenCircleWrapper>
         <GreenCircle />
       </StyledGreenCircleWrapper>
-      <CooperationProcess data={shortData.procesWspolpracy} />
-      <UnderCooperationProcess data={shortData.sekcjaPodProcesemWspolpracy} />
+      <CooperationProcess data={stronaGlowna.procesWspolpracyHomePage} />
+      <UnderCooperationProcess data={stronaGlowna.sekcjaPodProcesemWspolpracy} />
       <StyledWhiteCircleWrapper>
         <WhiteCircle />
       </StyledWhiteCircleWrapper>
-      <HomeFAQSection data={shortData.stronaGlownaFaq} />
-      <HomeAboutMe data={shortData.oMnie} />
+      <HomeFAQSection data={stronaGlowna.stronaGlownaFaq} />
+      <HomeAboutMe data={stronaGlowna.oMnie} />
       <StyledWhiteSecondCircleWrapper>
         <WhiteCircle />
       </StyledWhiteSecondCircleWrapper>
-      <HomeContact data={shortData.spotkajmySie} />
-      <HomeBlogSection data={shortData.sekcjaZBlogiem} />
+      <HomeContact data={stronaGlowna.spotkajmySie} />
+      <HomeBlogSection />
     </StyledHome>
   );
 };
@@ -52,26 +50,10 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const query = graphql`
-  query homePage {
+  query homePageQuery {
     wpPage(id: { eq: "cG9zdDoyOA==" }) {
       stronaGlowna {
-        sekcjaZBlogiem {
-          rekomendacjeTytul
-          rekomendacjeOpis
-          blogTytul
-          rekomendacjePrzycisk {
-            url
-            title
-            target
-          }
-          blogOpis
-          blogPrzycisk {
-            url
-            title
-            target
-          }
-        }
-        pierwszaSekcja {
+        pierwszaSekcjaHomePage {
           opisPoPrawo
           tytulPoPrawo
           przyciskPoPrawo {
@@ -98,7 +80,7 @@ export const query = graphql`
             title
           }
         }
-        drugaSekcja {
+        drugaSekcjaHomePage {
           ikonkaKobiety {
             altText
             title
@@ -152,7 +134,7 @@ export const query = graphql`
             }
           }
         }
-        procesWspolpracy {
+        procesWspolpracyHomePage {
           opisPoPrawo
           tytulPoPrawo
           zdjeciePoLewo {

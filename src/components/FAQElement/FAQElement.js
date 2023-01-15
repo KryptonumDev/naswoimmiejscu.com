@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import parse from "html-react-parser";
 
 import CustomButton from "../CustomButton/CustomButton";
@@ -11,12 +11,21 @@ import {
   StyledQuestionContent,
 } from "./StyledFAQElement";
 
-const FAQElement = ({ iconBgColor, question, answer, iconColor }) => {
+const FAQElement = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onToggle = (event) => {
+    event.preventDefault();
+    setIsOpen(!isOpen);
+  };
+
   return (
     <StyledFAQElement
       itemscope
       itemprop="mainEntity"
       itemtype="https://schema.org/Question"
+      onClick={onToggle}
+      open={isOpen}
     >
       <StyledQuestionWrapper>
         <StyledIconWrapper>
@@ -24,8 +33,8 @@ const FAQElement = ({ iconBgColor, question, answer, iconColor }) => {
             hasWidth="51px"
             hasHeight="44px"
             hasIcon
-            iconColor={iconColor ? "var(--arrowBlack)" : "var(--normalWhite)"}
-            bgColor={iconBgColor}
+            iconColor={isOpen ? "var(--arrowBlack)" : "var(--normalWhite)"}
+            bgColor={isOpen ? "var(--normalGreen)" : "var(--buttonBrownHover)"}
           />
         </StyledIconWrapper>
         <StyledQuestionContent>

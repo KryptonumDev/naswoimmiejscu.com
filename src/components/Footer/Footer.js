@@ -69,8 +69,8 @@ const Footer = () => {
             hadDeclaredMargin="0 0 54px 0"
             logoDesktop={shortData.logo}
             logoMobile={shortData.logoMobile}
-            isHeader
-            isFooter
+            isHeader="true"
+            isFooter="true"
           />
           <Nav isFooter isOpen={false} />
           <StyledFooterLinks>
