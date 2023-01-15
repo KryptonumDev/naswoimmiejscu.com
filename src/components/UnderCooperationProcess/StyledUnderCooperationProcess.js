@@ -4,7 +4,7 @@ export const StyledUnderCooperationProcess = styled.div`
   margin: 110px auto 0;
   width: 100%;
   max-width: 1920px;
-  postion: relative;
+  position: relative;
   
   @media only screen and (max-width: 992px) {
     margin-top: 30px;
