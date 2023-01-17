@@ -19,7 +19,7 @@ import { initialState, contactSchema } from "./form.constants";
 
 const ContactForm = () => {
   const data = useStaticQuery(graphql`
-    query contactQuery {
+    query contactQueryForm {
       wpPage(id: { eq: "cG9zdDoxOA==" }) {
         global {
           formularzKontaktowy {
