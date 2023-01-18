@@ -19,10 +19,10 @@ const AboutMeFirstSection = ({ data }) => {
     <Container>
       <StyledAboutMeFirstSection>
         <StyledLeftWrapper>
-          <StyledTitleWrapper>
+          <StyledTitleWrapper className="about-me-first-section">
             {data.tytulPoLewo ? parse(data.tytulPoLewo) : null}
           </StyledTitleWrapper>
-          <StyledDescWrapper>
+          <StyledDescWrapper className="about-me-first-section">
             {data.opisPoLewo ? parse(data.opisPoLewo) : null}
           </StyledDescWrapper>
         </StyledLeftWrapper>

@@ -26,7 +26,8 @@ export const StyledQuestionWrapper = styled.summary`
   gap: 17px;
 
   @media only screen and (max-width: 992px) {
-    align-items: ${({ open }) => (open ? "flex-start" : "center")};
+    // align-items: ${({ open }) => (open ? "flex-start" : "center")};
+    align-items: center;
   }
 `;
 
@@ -46,6 +47,6 @@ export const StyledQuestionContent = styled.div`
   cursor: pointer;
 
   @media only screen and (max-width: 992px) {
-    font-size: ${({ open }) => (open ? "32px" : "15px")};
+    font-size: ${({ open, isnormalfont }) => (open ? isnormalfont ? "15px" : "32px" : "15px")};
   }
 `;

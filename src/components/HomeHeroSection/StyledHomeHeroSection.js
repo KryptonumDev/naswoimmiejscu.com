@@ -67,7 +67,11 @@ export const StyledTitleWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       margin-top: 33px;
       font-size: 52px;
     }
@@ -78,7 +82,11 @@ export const StyledTitleWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       margin-top: 0;
       font-size: 42px;
     }
@@ -89,7 +97,11 @@ export const StyledTitleWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       font-size: 32px;
     }
   }
@@ -99,7 +111,11 @@ export const StyledTitleWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       font-size: 42px;
     }
   }
@@ -112,13 +128,21 @@ export const StyledTitleWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       font-size: 32px;
     }
   }
 
   @media only screen and (max-width: 360px) {
-    &.home-hero-section {
+    &.home-hero-section,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       font-size: 22px;
     }
   }
@@ -138,7 +162,11 @@ export const StyledDescWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       font-size: 22px;
       margin-bottom: 33px;
     }
@@ -149,7 +177,11 @@ export const StyledDescWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       font-size: 20px;
     }
   }
@@ -159,7 +191,11 @@ export const StyledDescWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       font-size: 18px;
     }
   }
@@ -169,7 +205,11 @@ export const StyledDescWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       font-size: 22px;
     }
   }
@@ -179,7 +219,11 @@ export const StyledDescWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       margin-top: 14px;
       font-size: 18px;
     }
@@ -190,7 +234,11 @@ export const StyledDescWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact {
+    &.home-contact,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet {
       font-size: 15px;
     }
   }

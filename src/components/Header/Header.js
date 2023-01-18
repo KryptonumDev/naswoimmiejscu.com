@@ -62,6 +62,7 @@ const Header = () => {
           isOpen={isOpen}
           logoDesktop={shortData.logo}
           logoMobile={shortData.logoMobile}
+          openMenu={handleOpenMenu}
         />
         <Button
           btnData={shortData.przycisk}

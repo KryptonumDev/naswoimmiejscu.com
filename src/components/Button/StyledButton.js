@@ -20,6 +20,7 @@ export const StyledLink = styled(Link)`
   justify-content: center;
   text-decoration: none;
   color: var(--normalBlack);
+  text-align: center;
 
   &:hover {
     background-color: ${({ variant }) =>
@@ -50,7 +51,10 @@ export const StyledLink = styled(Link)`
     &.home-second-section,
     &.under-cooperation-process,
     &.home-about-me,
-    &.footer {
+    &.footer,
+    &.abotu-me-who-im,
+    &.about-me-meet-btn,
+    &.btn-faq-section {
       width: 277px;
       min-height: 73px;
       font-size: 16px;
@@ -63,11 +67,22 @@ export const StyledLink = styled(Link)`
     }
   }
 
+  @media only screen and (max-width: 660px) {
+    &.about-me-proccess-btn {
+      width: 100%;
+      font-size: 11px;
+      min-height: 53px;
+    }
+  }
+
   @media only screen and (max-width: 350px) {
     &.home-hero-section,
     &.home-second-section,
     &.home-about-me,
-    &.footer {
+    &.footer,
+    &.abotu-me-who-im,
+    &.about-me-meet-btn,
+    &.btn-faq-section {
       width: 100%;
     }
   }
@@ -86,6 +101,7 @@ export const StyledButton = styled.button`
   transition: background-color 250ms;
   cursor: pointer;
   text-transform: uppercase;
+  text-align: center;
   font: 700 ${({ hasfontsize }) => (hasfontsize ? hasfontsize : "20px")} Roboto;
 
   &:hover {
@@ -112,5 +128,19 @@ export const StyledButton = styled.button`
       variant === "green"
         ? "1px solid var(--normalWhite)"
         : "1px solid var(--disabledGreen)"};
+  }
+
+  @media only screen and (max-width: 1499px) {
+    &.btn-faq-section {
+      width: 277px;
+      min-height: 73px;
+      font-size: 16px;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    &.btn-faq-section {
+      width: 100%;
+    }
   }
 `;

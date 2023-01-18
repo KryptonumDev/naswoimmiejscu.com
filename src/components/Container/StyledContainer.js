@@ -18,5 +18,9 @@ export const StyledContainer = styled.section`
     &.footer {
       padding: 0 0 0 33px;
     }
+
+    &.about-me-second-section {
+      padding: 0;
+    }
   }
 `;

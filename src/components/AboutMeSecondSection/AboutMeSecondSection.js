@@ -19,7 +19,7 @@ import { StyledCircle } from "../Circle/StyledCircle";
 
 const AboutMeSecondSection = ({ data }) => {
   return (
-    <Container>
+    <Container className="about-me-second-section">
       <StyledAboutMeSecondSection>
         <StyledTitleWrapper>
           {data.tytul ? parse(data.tytul) : null}
@@ -34,16 +34,16 @@ const AboutMeSecondSection = ({ data }) => {
             <div>{data.opisPoPrawo ? parse(data.opisPoPrawo) : null}</div>
           </StyledRightWrapper>
         </StyledContent>
-        <StyledImageWrapper>
-          <Image
-            imageDesktop={data.zdjecieNaDole}
-            imageMobile={data.zdjecieNaDoleMobile}
-          />
-          <StyledCircleWrapper>
-            <BigGreenCircle />
-          </StyledCircleWrapper>
-        </StyledImageWrapper>
       </StyledAboutMeSecondSection>
+      <StyledImageWrapper>
+        <Image
+          imageDesktop={data.zdjecieNaDole}
+          imageMobile={data.zdjecieNaDoleMobile}
+        />
+        <StyledCircleWrapper>
+          <BigGreenCircle />
+        </StyledCircleWrapper>
+      </StyledImageWrapper>
     </Container>
   );
 };

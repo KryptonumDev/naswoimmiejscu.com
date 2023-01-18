@@ -20,6 +20,9 @@ const AboutMeMeet = ({ data }) => {
   return (
     <Container>
       <StyledAboutMeMeet>
+        <StyledTitleWrapperElement className="about-me-meet" ishide>
+          {data.tytul ? parse(data.tytul) : null}
+        </StyledTitleWrapperElement>
         <StyledImageWrapper>
           <StyledTopCircle>
             <StyledCircle />
@@ -33,10 +36,10 @@ const AboutMeMeet = ({ data }) => {
           </StyledBottomCircle>
         </StyledImageWrapper>
         <StyledContentWrapper>
-          <StyledTitleWrapperElement>
+          <StyledTitleWrapperElement className="about-me-meet">
             {data.tytul ? parse(data.tytul) : null}
           </StyledTitleWrapperElement>
-          <StyledDescWrapperElement>
+          <StyledDescWrapperElement className="about-me-meet">
             {data.opis ? parse(data.opis) : null}
           </StyledDescWrapperElement>
           <Button
@@ -45,6 +48,7 @@ const AboutMeMeet = ({ data }) => {
             haswidth="355px"
             hasheight="88px"
             hasfontsize="20px"
+            className="about-me-meet-btn"
           />
         </StyledContentWrapper>
       </StyledAboutMeMeet>

@@ -11,7 +11,7 @@ import {
   StyledQuestionContent,
 } from "./StyledFAQElement";
 
-const FAQElement = ({ question, answer }) => {
+const FAQElement = ({ question, answer, isNormalFont }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const onToggle = (event) => {
@@ -37,7 +37,7 @@ const FAQElement = ({ question, answer }) => {
             bgColor={isOpen ? "var(--normalGreen)" : "var(--buttonBrownHover)"}
           />
         </StyledIconWrapper>
-        <StyledQuestionContent open={isOpen}>
+        <StyledQuestionContent isnormalfont={isNormalFont} open={isOpen}>
           {question ? parse(question) : null}
         </StyledQuestionContent>
       </StyledQuestionWrapper>

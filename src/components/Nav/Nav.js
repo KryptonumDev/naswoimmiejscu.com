@@ -14,77 +14,79 @@ import {
   StyledFooterNav,
 } from "./StyledNav";
 
-const Nav = ({ isOpen, isFooter, logoDesktop, logoMobile }) => {
+const Nav = ({ isOpen, isFooter, logoDesktop, logoMobile, openMenu }) => {
   return !isFooter ? (
     <StyledNav isopen={isOpen}>
       <StyledLogoWrapper>
-        <Logo isHeader="true" logoDesktop={logoDesktop} logoMobile={logoMobile} />
+        <Logo
+          isHeader="true"
+          logoDesktop={logoDesktop}
+          logoMobile={logoMobile}
+        />
       </StyledLogoWrapper>
       <StyledGreenCircle>
         <SecondGreenCircle />
       </StyledGreenCircle>
-      <Link to="/" activeClassName="activeLink">
+      <Link to="/" activeClassName="activeLink" onClick={openMenu}>
         <StyledCircleWrapper>
           <StyledCircle hasdeclaredwidth="30px" hasdeclaredheight="30px" />
         </StyledCircleWrapper>
         STRONA GŁÓWNA
       </Link>
       <div className="flex-wrapper">
-        <Link to="/mlodziez" activeClassName="activeLink">
+        <Link to="/mlodziez" activeClassName="activeLink" onClick={openMenu}>
           MŁODZIEŻ
         </Link>
         <span>/</span>
-        <Link to="/kobiety" activeClassName="activeLink">
+        <Link to="/kobiety" activeClassName="activeLink" onClick={openMenu}>
           KOBIETY
         </Link>
       </div>
-      <Link to="/o-mnie" activeClassName="activeLink">
+      <Link to="/o-mnie" activeClassName="activeLink" onClick={openMenu}>
         O MNIE
       </Link>
-      <Link to="/blog" activeClassName="activeLink">
+      <Link to="/blog" activeClassName="activeLink" onClick={openMenu}>
         BLOG
       </Link>
-      <Link to="/jak-dzialam" activeClassName="activeLink">
-        JAK DZIAŁAM
-      </Link>
-      <Link to="/calendly" activeClassName="activeLink">
+      <Link to="/calendly" activeClassName="activeLink" onClick={openMenu}>
         CALENDLY
       </Link>
-      <Link to="/kontakt" activeClassName="activeLink">
+      <Link to="/kontakt" activeClassName="activeLink" onClick={openMenu}>
         KONTAKT
       </Link>
       <StyledMobileWrapper>
-        <Link to="/polityka-prywatnosci">Polityka prywatności</Link>
-        <Link to="/regulamin">Regulamin</Link>
+        <Link to="/polityka-prywatnosci" onClick={openMenu}>
+          Polityka prywatności
+        </Link>
+        <Link to="/regulamin" onClick={openMenu}>
+          Regulamin
+        </Link>
       </StyledMobileWrapper>
     </StyledNav>
   ) : (
     <StyledFooterNav>
-      <Link to="/" activeClassName="activeLink">
+      <Link to="/" activeClassName="activeLink" onClick={openMenu}>
         STRONA GŁÓWNA
       </Link>
       <div className="flex-wrapper">
-        <Link to="/mlodziez" activeClassName="activeLink">
+        <Link to="/mlodziez" activeClassName="activeLink" onClick={openMenu}>
           MŁODZIEŻ
         </Link>
         <span>/</span>
-        <Link to="/kobiety" activeClassName="activeLink">
+        <Link to="/kobiety" activeClassName="activeLink" onClick={openMenu}>
           KOBIETY
         </Link>
       </div>
-      <Link to="/o-mnie" activeClassName="activeLink">
+      <Link to="/o-mnie" activeClassName="activeLink" onClick={openMenu}>
         O MNIE
       </Link>
-      <Link to="/blog" activeClassName="activeLink">
+      <Link to="/blog" activeClassName="activeLink" onClick={openMenu}>
         BLOG
       </Link>
-      <Link to="/jak-dzialam" activeClassName="activeLink">
-        JAK DZIAŁAM
-      </Link>
-      <Link to="/calendly" activeClassName="activeLink">
+      <Link to="/calendly" activeClassName="activeLink" onClick={openMenu}>
         CALENDLY
       </Link>
-      <Link to="/kontakt" activeClassName="activeLink">
+      <Link to="/kontakt" activeClassName="activeLink" onClick={openMenu}>
         KONTAKT
       </Link>
     </StyledFooterNav>

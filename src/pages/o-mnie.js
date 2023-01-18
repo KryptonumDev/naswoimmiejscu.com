@@ -15,15 +15,15 @@ const AboutMe = ({
   },
 }) => {
   return (
-    <div>
+    <>
       <AboutMeFirstSection data={oMnie.pierwszaSekcjaOMnie} />
       <AboutMeSecondSection data={oMnie.drugaSekcjaOMnie} />
       <AboutMeWhoIm data={oMnie.kimTerazJestem} />
       <AboutMeProcess data={oMnie.procesWspolpracyOMnie} />
       <AboutMeMeet data={oMnie.spotkajmySieOMnie} />
-      <FAQSection data={oMnie.faqOMnie} />
+      <FAQSection data={oMnie.faqOMnie} isNormalFont={true} />
       <HomeBlogSection />
-    </div>
+    </>
   );
 };
 

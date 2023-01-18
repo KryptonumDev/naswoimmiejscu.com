@@ -21,6 +21,10 @@ const AboutMeWhoIm = ({ data }) => {
     <Container>
       <StyledAboutMeWhoIm>
         <StyledLeftWrapper>
+          <StyledTitleWrapperElement className="who-im-about-me" ishide>
+            {data.tytul ? parse(data.tytul) : null}
+            <BiggerAnimate />
+          </StyledTitleWrapperElement>
           <StyledCircleWrapper>
             <StyledCircle hasdeclaredwidth="209px" hasdeclaredheight="209px" />
           </StyledCircleWrapper>
@@ -30,11 +34,11 @@ const AboutMeWhoIm = ({ data }) => {
           />
         </StyledLeftWrapper>
         <StyledRightWrapper>
-          <StyledTitleWrapperElement>
+          <StyledTitleWrapperElement className="who-im-about-me">
             {data.tytul ? parse(data.tytul) : null}
             <BiggerAnimate />
           </StyledTitleWrapperElement>
-          <StyledDescWrapperElement>
+          <StyledDescWrapperElement className="who-im-about-me">
             {data.opis ? parse(data.opis) : null}
           </StyledDescWrapperElement>
           <Button

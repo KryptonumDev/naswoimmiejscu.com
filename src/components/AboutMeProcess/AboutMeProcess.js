@@ -3,6 +3,7 @@ import parse from "html-react-parser";
 
 import Container from "../Container/Container";
 import Image from "../Image/Image";
+import BigGreenCircle from "../BigGreenCircle/BigGreenCircle";
 
 import {
   StyledAboutMeProcess,
@@ -15,6 +16,7 @@ import {
   StyledTitleWrapperElement,
   StyledDescWrapperElement,
   StyledButtonElement,
+  StyledMobileCircle,
 } from "./StyledAboutMeProcess";
 import { StyledCircle } from "../Circle/StyledCircle";
 
@@ -24,12 +26,12 @@ const AboutMeProcess = ({ data }) => {
       <StyledAboutMeProcess>
         <StyledContent>
           <StyledTextWrapper>
-            <StyledTitleWrapperElement>
+            <StyledTitleWrapperElement className="about-me-proccess">
               {data.procesWspolpracyTytul
                 ? parse(data.procesWspolpracyTytul)
                 : null}
             </StyledTitleWrapperElement>
-            <StyledDescWrapperElement>
+            <StyledDescWrapperElement className="about-me-proccess">
               {data.opis ? parse(data.opis) : null}
             </StyledDescWrapperElement>
           </StyledTextWrapper>
@@ -41,29 +43,41 @@ const AboutMeProcess = ({ data }) => {
                 hasdeclaredheight="176px"
               />
             </StyledCircleWrapper>
+            <StyledTitleWrapperElement className="about-me-proccess" ishide>
+              {data.procesWspolpracyTytul
+                ? parse(data.procesWspolpracyTytul)
+                : null}
+            </StyledTitleWrapperElement>
             <Image
               imageDesktop={data.zdjeciePoPrawo}
               imageMobile={data.zdjeciePoPrawoMobile}
             />
+            <StyledMobileCircle>
+              <BigGreenCircle />
+            </StyledMobileCircle>
           </StyledImageWrapper>
         </StyledContent>
         <StyledButtonsWrapper>
-          <StyledButtonWrapper>
-            <Image imageDesktop={data.ikonkaKobiet} objectFit="fill" />
+          <StyledButtonWrapper hideimage>
+            <Image imageDesktop={data.ikonkaKobiet} objectFit="contain" />
             <StyledButtonElement
               btnData={data.przyciskKobiety}
               variant="green"
               hasheight="88px"
               hasfontsize="20px"
+              haswidth="495px"
+              className="about-me-proccess-btn"
             />
           </StyledButtonWrapper>
           <StyledButtonWrapper bigsizeicon>
-            <Image imageDesktop={data.ikonkaMlodejOsoby} objectFit="fill" />
+            <Image imageDesktop={data.ikonkaMlodejOsoby} objectFit="contain" />
             <StyledButtonElement
               btnData={data.przyciskMlodeOsoby}
               variant="white"
               hasheight="88px"
               hasfontsize="20px"
+              haswidth="570px"
+              className="about-me-proccess-btn"
             />
           </StyledButtonWrapper>
         </StyledButtonsWrapper>

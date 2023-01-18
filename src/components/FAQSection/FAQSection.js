@@ -12,7 +12,7 @@ import {
 } from "./StyledFAQSection";
 import Button from "../Button/Button";
 
-const FAQSection = ({ data, btnWidth }) => {
+const FAQSection = ({ data, btnWidth, isNormalFont }) => {
   return (
     <StyledFAQSection>
       <StyledFAQWrapper>
@@ -25,6 +25,7 @@ const FAQSection = ({ data, btnWidth }) => {
               key={`${faq.pytanie} + ${faq.odpowiedz}`}
               question={faq.pytanie}
               answer={faq.odpowiedz}
+              isNormalFont={isNormalFont}
             />
           ))}
           <Button
@@ -33,6 +34,7 @@ const FAQSection = ({ data, btnWidth }) => {
             haswidth={btnWidth ? btnWidth : "355px"}
             hasheight="88px"
             hasfontsize="20px"
+            className="btn-faq-section"
           />
         </StyledFAQSWrapper>
       </StyledFAQWrapper>

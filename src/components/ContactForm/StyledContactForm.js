@@ -7,7 +7,7 @@ export const StyledContactForm = styled.div`
   background-color: var(--normalGreen);
   padding: 90px 130px 119px 81px;
   max-height: 1130px;
-  
+
   form {
     display: flex;
     flex-direction: column;
@@ -20,6 +20,7 @@ export const StyledContactForm = styled.div`
 
   @media only screen and (max-width: 992px) {
     max-width: unset;
+    max-height: unset;
   }
 `;
 
@@ -56,6 +57,10 @@ export const StyledCustomCheckbox = styled.div`
     position: relative;
     padding-left: 55px;
     max-width: 513px;
+
+    @media only screen and (max-width: 992px) {
+      max-width: unset;
+    }
 
     svg {
       width: 16px;
@@ -136,6 +141,10 @@ export const StyledInputWrapper = styled.div`
     height: 226px;
     font: 700 20px Roboto;
     padding: 20px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    max-width: unset;
   }
 `;
 

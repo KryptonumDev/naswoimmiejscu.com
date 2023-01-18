@@ -11,30 +11,66 @@ export const StyledAboutMeWhoIm = styled.div`
   gap: 40px;
   position: relative;
   z-index: 1;
+
+  @media only screen and (max-width: 992px) {
+    margin-top: 26px;
+    gap: 20px;
+    flex-direction: column;
+  }
 `;
 
 export const StyledLeftWrapper = styled.div`
   width: 50%;
   padding-left: 100px;
   position: relative;
+
+  @media only screen and (max-width: 1499px) {
+    padding-left: 0;
+  }
+
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+    max-width: 623px;
+  }
+
+  @media only screen and (max-width: 769px) {
+    padding-right: 70px;
+  }
 `;
 
 export const StyledRightWrapper = styled.div`
   max-width: 745px;
+  width: 50%;
 
   em {
     font-size: 20px;
     font-style: normal;
   }
+
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+    max-width: unset;
+    padding-right: 20px;
+  }
 `;
 
 export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
   margin-top: 33px;
-  display: flex;
+  display: ${({ ishide }) => (ishide ? "none" : "flex")};
+  align-items: center;
   gap: 20px;
 
   svg {
     padding-top: 10px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    display: ${({ ishide }) => (ishide ? "flex" : "none")};
+    margin-bottom: 20px;
+
+    svg {
+      display: none;
+    }
   }
 `;
 
@@ -45,4 +81,27 @@ export const StyledCircleWrapper = styled.div`
   top: 50%;
   transform: translateY(-50%);
   left: 50px;
+
+  @media only screen and (max-width: 1499px) {
+    display: none;
+  }
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+    z-index: 1;
+    top: auto;
+    bottom: -42px;
+    left: auto;
+    right: -42px;
+
+    div {
+      width: 84px;
+      height: 84px;
+      background-color: var(--normalGreen);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    right: 5%;
+  }
 `;
