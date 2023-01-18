@@ -1,10 +1,22 @@
 import React from "react";
+import parse from "html-react-parser";
 
-import { StyledSecondSectionYouth } from "./StyledSecondSectionYouth";
+import {
+  StyledSecondSectionYouth,
+  StyledLeftWrapper,
+  StyledRightWrapper,
+} from "./StyledSecondSectionYouth";
 
 const SecondSectionYouth = ({ data }) => {
   return (
-    <StyledSecondSectionYouth>SecondSectionYouth</StyledSecondSectionYouth>
+    <StyledSecondSectionYouth>
+      <StyledLeftWrapper>
+        {data.tekstPoLewo ? parse(data.tekstPoLewo) : null}
+      </StyledLeftWrapper>
+      <StyledRightWrapper>
+        {data.tekstPoPrawo ? parse(data.tekstPoPrawo) : null}
+      </StyledRightWrapper>
+    </StyledSecondSectionYouth>
   );
 };
 

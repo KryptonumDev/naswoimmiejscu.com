@@ -38,7 +38,7 @@ const Womens = ({
         image={efektWspolpracyKobiety.zdjeciePoPrawo}
         imageMobile={efektWspolpracyKobiety.zdjeciePoPrawoMobile}
         title={efektWspolpracyKobiety.tytul}
-        listElements={efektWspolpracyKobiety.elementyListy}
+        listElements={efektWspolpracyKobiety.elementListy}
         desc={efektWspolpracyKobiety.opis}
       />
       <MeetsFormwomens
