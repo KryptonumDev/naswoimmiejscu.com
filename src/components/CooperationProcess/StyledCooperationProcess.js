@@ -22,7 +22,13 @@ export const StyledCooperationProcess = styled.div`
 `;
 
 export const StyledLeftWrapper = styled.div`
-  transform: translateX(-100px);
+  transform: translateX(-5.208vw);
+  height: 390px;
+
+  .gatsby-image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
 
   @media only screen and (max-width: 992px) {
     transform: translateX(0);
@@ -31,11 +37,6 @@ export const StyledLeftWrapper = styled.div`
   @media only screen and (max-width: 360px) {
     height: 267px;
     width: 100%;
-
-    .gatsby-image-wrapper {
-      width: 100%;
-      height: 100%;
-    }
   }
 `;
 
@@ -45,6 +46,7 @@ export const StyledRightWrapper = styled.div`
   padding-right: 20px;
   position: relative;
   z-index: 1;
+  transform: translateX(-3.125vw);
 
   @media only screen and (max-width: 1167px) {
     padding-right: 20px;
@@ -54,6 +56,7 @@ export const StyledRightWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     width: 100%;
     padding: 102px 33px 0;
+    transform: translateX(0);
   }
 `;
 

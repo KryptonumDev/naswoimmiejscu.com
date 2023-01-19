@@ -14,6 +14,10 @@ export const StyledContactForm = styled.div`
     gap: 24px;
   }
 
+  @media only screen and (max-width: 1681px) {
+    padding: 90px 81px 119px 81px;
+  }
+
   @media only screen and (max-width: 1167px) {
     padding: 60px 34px;
   }
@@ -58,7 +62,7 @@ export const StyledCustomCheckbox = styled.div`
     padding-left: 55px;
     max-width: 513px;
 
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 1681px) {
       max-width: unset;
     }
 
@@ -143,7 +147,7 @@ export const StyledInputWrapper = styled.div`
     padding: 20px;
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1681px) {
     max-width: unset;
   }
 `;

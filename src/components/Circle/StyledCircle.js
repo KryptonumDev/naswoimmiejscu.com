@@ -22,4 +22,10 @@ export const StyledCircle = styled.div`
       height: 31px;
     }
   }
+
+  @media only screen and (max-width: 992px) {
+    &.about-me-second-circle {
+      opacity: 0.6;
+    }
+  }
 `;

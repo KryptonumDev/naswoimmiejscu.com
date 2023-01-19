@@ -5,7 +5,7 @@ export const StyledUnderCooperationProcess = styled.div`
   width: 100%;
   max-width: 1920px;
   position: relative;
-  
+
   @media only screen and (max-width: 992px) {
     margin-top: 30px;
   }
@@ -58,7 +58,7 @@ export const StyledContent = styled.div`
   margin: 50px auto 0;
   padding: 0 125px 0 180px;
   max-width: 1920px;
-  gap: 40px;
+  gap: clamp(100px, 8.698vw, 200px);
 
   @media only screen and (max-width: 1167px) {
     padding: 0 33px;

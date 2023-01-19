@@ -32,21 +32,38 @@ export const StyledQuestionWrapper = styled.summary`
 `;
 
 export const StyledAnswerWrapper = styled.div`
-  font: 300 24px Roboto;
+  font: 300 1.25vw Roboto;
   margin-top: 24px;
 
   strong {
     font-weight: 500;
+  }
+
+  @media only screen and (max-width: 1499px) {
+    font-size: 1.601vw;
+  }
+
+  @media only screen and (max-width: 992px) {
+    font-size: 2.419vw;
+  }
+
+  @media only screen and (max-width: 696px) {
+    font-size: 3.448vw;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 4.167vw;
   }
 `;
 
 export const StyledIconWrapper = styled.div``;
 
 export const StyledQuestionContent = styled.div`
-  font: 700 36px Roboto;
+  font: 700 1.875vw Roboto;
   cursor: pointer;
 
   @media only screen and (max-width: 992px) {
-    font-size: ${({ open, isnormalfont }) => (open ? isnormalfont ? "15px" : "32px" : "15px")};
+    font-size: ${({ open, isnormalfont }) =>
+      open ? (isnormalfont ? "4.444vw" : "8.889vw") : "4.444vw"};
   }
 `;

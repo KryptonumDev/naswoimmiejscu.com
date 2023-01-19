@@ -5,6 +5,7 @@ import Container from "../Container/Container";
 import Image from "../Image/Image";
 import AnimateIcon from "../AnimateIcon/AnimateIcon";
 import BigGreenCircle from "../BigGreenCircle/BigGreenCircle";
+import BiggerWhiteCircle from "../BiggerWhiteCircle/BiggerWhiteCircle";
 
 import {
   StyledAboutMeSecondSection,
@@ -14,6 +15,7 @@ import {
   StyledRightWrapper,
   StyledImageWrapper,
   StyledCircleWrapper,
+  StyledMobileCircle,
 } from "./StyledAboutMeSecondSection";
 import { StyledCircle } from "../Circle/StyledCircle";
 
@@ -25,8 +27,15 @@ const AboutMeSecondSection = ({ data }) => {
           {data.tytul ? parse(data.tytul) : null}
         </StyledTitleWrapper>
         <StyledContent>
+          <StyledMobileCircle>
+            <BiggerWhiteCircle />
+          </StyledMobileCircle>
           <StyledLeftWrapper>
-            <StyledCircle hasdeclaredwidth="36px" hasdeclaredheight="36px" />
+            <StyledCircle
+              hasdeclaredwidth="36px"
+              hasdeclaredheight="36px"
+              className="about-me-second-circle"
+            />
             <div>{data.opisPoLewo ? parse(data.opisPoLewo) : null}</div>
           </StyledLeftWrapper>
           <StyledRightWrapper>

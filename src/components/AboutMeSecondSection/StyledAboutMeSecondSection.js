@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const StyledAboutMeSecondSection = styled.div`
   width: 100%;
   margin-top: 60px;
+
+  @media only screen and (max-width: 992px) {
+    margin-top: 20px;
+  }
 `;
 
 export const StyledTitleWrapper = styled.div`
@@ -12,29 +16,29 @@ export const StyledTitleWrapper = styled.div`
   color: var(--normalGreen);
 
   @media only screen and (max-width: 1763px) {
-    font-size: 52px;
+    font-size: 2.95vw;
   }
 
   @media only screen and (max-width: 1499px) {
-    font-size: 42px;
+    font-size: 2.802vw;
   }
 
   @media only screen and (max-width: 1349px) {
-    font-size: 32px;
+    font-size: 2.372vw;
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: 42px;
+    font-size: 4.234vw;
     text-align: left;
     padding: 0 33px;
   }
 
   @media only screen and (max-width: 528px) {
-    font-size: 32px;
+    font-size: 6.061vw;
   }
 
   @media only screen and (max-width: 360px) {
-    font-size: 20px;
+    font-size: 5.556vw;
   }
 `;
 
@@ -44,6 +48,11 @@ export const StyledContent = styled.div`
   justify-content: space-between;
   margin-top: 89px;
   gap: 40px;
+  position: relative;
+
+  @media only screen and (max-width: 1499px) {
+    gap: clamp(100px, 8.698vw, 200px);
+  }
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
@@ -59,43 +68,51 @@ export const StyledLeftWrapper = styled.div`
   align-items: center;
   gap: 59px;
   padding-left: 20px;
-  flex: flex-shrink;
 
   div {
-    font: 300 22px Roboto;
+    font: 300 1.146vw Roboto;
     max-width: 655px;
 
-    @media only screen and (max-width: 1763px) {
-      font-size: 22px;
-    }
-
-    @media only screen and (max-width: 1499px) {
-      font-size: 20px;
-    }
-
-    @media only screen and (max-width: 1349px) {
-      font-size: 18px;
-    }
-
-    @media only screen and (max-width: 992px) {
-      font-size: 22px;
-    }
-
-    @media only screen and (max-width: 528px) {
-      font-size: 18px;
-    }
-
-    @media only screen and (max-width: 360px) {
-      font-size: 15px;
+    &:nth-child(2) {
+      width: 80%;
     }
 
     em {
       font-style: normal;
-      font-size: 14px;
+      font-size: 0.729vw;
+    }
+
+    @media only screen and (max-width: 1763px) {
+      font-size: 1.248vw;
+    }
+
+    @media only screen and (max-width: 1499px) {
+      font-size: 1.334vw;
+
+      &:nth-child(2) {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 992px) {
+      font-size: 2.218vw;
+      max-width: unset;
+
+      em {
+        font-size: 2.218vw;
+      }
+    }
+
+    @media only screen and (max-width: 528px) {
+      font-size: 3.409vw;
+    }
+
+    @media only screen and (max-width: 360px) {
+      font-size: 4.167vw;
     }
   }
 
-  @media only screen and (max-width: 1800px) {
+  @media only screen and (max-width: 1499px) {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 0;
@@ -116,40 +133,49 @@ export const StyledRightWrapper = styled.div`
   padding-left: 20px;
 
   div {
-    font: 300 22px Roboto;
+    font: 300 1.146vw Roboto;
     max-width: 655px;
 
-    @media only screen and (max-width: 1763px) {
-      font-size: 22px;
-    }
-
-    @media only screen and (max-width: 1499px) {
-      font-size: 20px;
-    }
-
-    @media only screen and (max-width: 1349px) {
-      font-size: 18px;
-    }
-
-    @media only screen and (max-width: 992px) {
-      font-size: 22px;
-    }
-
-    @media only screen and (max-width: 528px) {
-      font-size: 18px;
-    }
-
-    @media only screen and (max-width: 360px) {
-      font-size: 15px;
+    &:nth-child(2) {
+      width: 80%;
     }
 
     em {
       font-style: normal;
-      font-size: 14px;
+      font-size: 0.729vw;
+    }
+
+    @media only screen and (max-width: 1763px) {
+      font-size: 1.248vw;
+    }
+
+    @media only screen and (max-width: 1499px) {
+      font-size: 1.334vw;
+
+      &:nth-child(2) {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 992px) {
+      font-size: 2.218vw;
+      max-width: unset;
+
+      em {
+        font-size: 2.218vw;
+      }
+    }
+
+    @media only screen and (max-width: 528px) {
+      font-size: 3.409vw;
+    }
+
+    @media only screen and (max-width: 360px) {
+      font-size: 4.167vw;
     }
   }
 
-  @media only screen and (max-width: 1800px) {
+  @media only screen and (max-width: 1499px) {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 0;
@@ -175,27 +201,47 @@ export const StyledImageWrapper = styled.div`
 `;
 
 export const StyledCircleWrapper = styled.div`
-  width: 982px;
-  height: 982px;
+  width: 51.146vw;
+  height: 51.146vw;
   position: absolute;
-  top: 160px;
-  right: -500px;
-  z-index: 2;
+  top: 8.333vw;
+  right: -26.042vw;
+  z-index: 1;
 
   svg {
     width: 100%;
     height: 100%;
   }
 
-  @media only screen and (max-width: 1499px) {
-    width: 328px;
-    height: 328px;
-    right: -100px;
-    top: 200px;
+  @media only screen and (max-width: 666px) {
+    top: 20vw;
   }
 
-  @media only screen and (max-width: 777px) {
-    top: 130px;
-    right: -200px;
+  @media only screen and (max-width: 505px) {
+    top: 32vw;
+  }
+
+  @media only screen and (max-width: 441px) {
+    top: 45vw;
+  }
+
+  @media only screen and (max-width: 360px) {
+    width: 85.146vw;
+    height: 85.146vw;
+    top: 42vw;
+    right: -55.042vw;
+  }
+`;
+
+export const StyledMobileCircle = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 992px) {
+    width: 46.875vw;
+    height: 46.875vw;
+    position: absolute;
+    left: 0;
+    top: -80px;
+    z-index: -1;
   }
 `;

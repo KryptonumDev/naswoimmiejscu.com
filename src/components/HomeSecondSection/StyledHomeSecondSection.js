@@ -6,7 +6,7 @@ export const StyledHomeSecondSection = styled.section`
   justify-content: space-between;
   margin-top: 100px;
   padding-left: 55px;
-  gap: 40px;
+  gap: clamp(100px, 8.698vw, 200px);
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;
@@ -90,5 +90,20 @@ export const StyledMobileImage = styled.div`
   @media only screen and (max-width: 992px) {
     display: block;
     margin-top: 14px;
+    height: 61.492vw;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .gatsby-image-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    height: 310px;
   }
 `;

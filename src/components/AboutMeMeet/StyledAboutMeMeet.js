@@ -10,10 +10,10 @@ export const StyledAboutMeMeet = styled.div`
   justify-content: space-between;
   margin-top: 184px;
   align-items: center;
-  gap: 40px;
+  gap: clamp(100px, 8.698vw, 200px);
 
   @media only screen and (max-width: 992px) {
-    margin-top: 66px;
+    margin-top: 75px;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;

@@ -7,6 +7,7 @@ export const StyledHomeFAQSection = styled.div`
   margin: 160px auto 0;
   padding: 0 125px 0 180px;
   max-width: 1920px;
+  gap: clamp(100px, 8.698vw, 200px);
 
   @media only screen and (max-width: 1167px) {
     padding: 0 33px;
@@ -14,6 +15,7 @@ export const StyledHomeFAQSection = styled.div`
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
+    gap: 16px;
   }
 `;
 

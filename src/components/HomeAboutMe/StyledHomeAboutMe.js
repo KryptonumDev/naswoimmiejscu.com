@@ -5,7 +5,7 @@ export const StyledHomeAboutMe = styled.div`
   margin-top: 155px;
   justify-content: space-between;
   padding-left: 55px;
-  gap: 40px;
+  gap: clamp(100px, 8.698vw, 200px);
   position: relative;
 
   @media only screen and (max-width: 1167px) {
@@ -14,7 +14,7 @@ export const StyledHomeAboutMe = styled.div`
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
-    gap: 14px;
+    gap: 20px;
     margin-top: 32px;
   }
 `;
@@ -34,6 +34,11 @@ export const StyledLeftWrapper = styled.div`
   width: 45%;
   max-width: 606px;
   position: relative;
+
+  .gatsby-image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
 
   @media only screen and (max-width: 1167px) {
     width: 65%;
@@ -69,10 +74,10 @@ export const StyledGreenCircle = styled.div`
 
   @media only screen and (max-width: 992px) {
     display: block;
-    width: 328px;
-    height: 328px;
+    width: 33.065vw;
+    height: 33.065vw;
     position: absolute;
-    right: -220px;
+    right: -22.177vw;
     top: 0;
 
     svg {
@@ -81,7 +86,15 @@ export const StyledGreenCircle = styled.div`
     }
   }
 
-  @media only screen and (max-width: 400px) {
-    right: -250px;
+  @media only screen and (max-width: 680px) {
+    width: 48.235vw;
+    height: 48.235vw;
+    right: -26vw;
+  }
+
+  @media only screen and (max-width: 360px) {
+    width: 60.111vw;
+    height: 60.111vw;
+    right: -36vw;
   }
 `;

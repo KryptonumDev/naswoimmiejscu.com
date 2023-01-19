@@ -8,7 +8,7 @@ export const StyledAboutMeWhoIm = styled.div`
   margin-top: 177px;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: clamp(100px, 8.698vw, 200px);
   position: relative;
   z-index: 1;
 
@@ -30,17 +30,20 @@ export const StyledLeftWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
-    max-width: 623px;
+    max-width: 68%;
   }
 
   @media only screen and (max-width: 769px) {
     padding-right: 70px;
+    max-width: 90%;
   }
 `;
 
 export const StyledRightWrapper = styled.div`
   max-width: 745px;
   width: 50%;
+  position: relative;
+  z-index: 2;
 
   em {
     font-size: 20px;
@@ -66,7 +69,7 @@ export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
 
   @media only screen and (max-width: 992px) {
     display: ${({ ishide }) => (ishide ? "flex" : "none")};
-    margin-bottom: 20px;
+    margin: 32px 0;
 
     svg {
       display: none;

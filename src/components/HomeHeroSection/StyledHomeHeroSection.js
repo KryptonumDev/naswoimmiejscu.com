@@ -9,7 +9,7 @@ export const StyledHomeHeroSection = styled.div`
   position: relative;
   margin-top: 126px;
   padding-left: 55px;
-  gap: 40px;
+  gap: clamp(100px, 8.698vw, 200px);
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;
@@ -50,8 +50,8 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledTitleWrapper = styled.div`
-  font: 700 64px Roboto;
-  margin-top: 66px;
+  font: 700 3.333vw Roboto;
+  margin-top: 3.333vw;
 
   strong {
     color: var(--nromalBrown);
@@ -62,18 +62,25 @@ export const StyledTitleWrapper = styled.div`
     margin-top: 0;
   }
 
+  &.home-contact {
+    margin-top: 0;
+  }
+
   @media only screen and (max-width: 1763px) {
     &.home-hero-section,
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact,
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
     &.about-me-meet {
-      margin-top: 33px;
-      font-size: 52px;
+      margin-top: 1.872vw;
+      font-size: 2.95vw;
+    }
+
+    &.home-contact {
+      font-size: 2.95vw;
     }
   }
 
@@ -82,13 +89,16 @@ export const StyledTitleWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact,
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
     &.about-me-meet {
       margin-top: 0;
-      font-size: 42px;
+      font-size: 2.802vw;
+    }
+
+    &.home-contact {
+      font-size: 2.802vw;
     }
   }
 
@@ -97,12 +107,15 @@ export const StyledTitleWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact,
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
     &.about-me-meet {
-      font-size: 32px;
+      font-size: 2.372vw;
+    }
+
+    &.home-contact {
+      font-size: 2.372vw;
     }
   }
 
@@ -111,18 +124,21 @@ export const StyledTitleWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact,
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
     &.about-me-meet {
-      font-size: 42px;
+      font-size: 4.234vw;
+    }
+
+    &.home-contact {
+      font-size: 4.234vw;
     }
   }
 
   @media only screen and (max-width: 528px) {
     &.home-hero-section {
-      font-size: 28px;
+      font-size: 5.303vw;
     }
 
     &.home-second-section,
@@ -133,7 +149,11 @@ export const StyledTitleWrapper = styled.div`
     &.who-im-about-me,
     &.about-me-proccess,
     &.about-me-meet {
-      font-size: 32px;
+      font-size: 6.061vw;
+    }
+
+    &.about-me-first-section {
+      margin-top: 20px;
     }
   }
 
@@ -143,7 +163,7 @@ export const StyledTitleWrapper = styled.div`
     &.who-im-about-me,
     &.about-me-proccess,
     &.about-me-meet {
-      font-size: 22px;
+      font-size: 7.462vw;
     }
   }
 `;

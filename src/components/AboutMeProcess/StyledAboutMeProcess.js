@@ -13,6 +13,9 @@ export const StyledAboutMeProcess = styled.div`
 
   @media only screen and (max-width: 1499px) {
     padding-right: 0;
+  }
+
+  @media only screen and (max-width: 992px) {
     margin-top: 34px;
   }
 `;
@@ -21,7 +24,7 @@ export const StyledContent = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: clamp(100px, 8.698vw, 200px);
 
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
@@ -49,11 +52,12 @@ export const StyledImageWrapper = styled.div`
   margin-top: 100px;
 
   @media only screen and (max-width: 1499px) {
-    margin-top: 0;
+    margin-top: 60px;
   }
 
   @media only screen and (max-width: 992px) {
     padding-right: 70px;
+    margin-top: 0;
   }
 
   @media only screen and (max-width: 400px) {
@@ -124,6 +128,7 @@ export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
 
   @media only screen and (max-width: 992px) {
     display: ${({ ishide }) => (ishide ? "block" : "none")};
+    margin-bottom: 34px;
   }
 `;
 
@@ -153,20 +158,16 @@ export const StyledMobileCircle = styled.div`
 
   @media only screen and (max-width: 992px) {
     display: block;
-    width: 328px;
-    height: 328px;
+    width: 55.065vw;
+    height: 55.065vw;
     position: absolute;
-    top: 30%;
-    right: -180px;
+    top: 2%;
+    right: -35.145vw;
     z-index: -1;
 
     svg {
       width: 100%;
       height: 100%;
     }
-  }
-
-  @media only screen and (max-width: 400px) {
-    top: 10%;
   }
 `;

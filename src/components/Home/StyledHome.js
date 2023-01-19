@@ -9,9 +9,9 @@ export const StyledHome = styled.main`
 
 export const StyledCircleWrapper = styled.div`
   position: absolute;
-  top: 190px;
-  width: 982px;
-  height: 982px;
+  top: 9.896vw;
+  width: 51.146vw;
+  height: 51.146vw;
   left: -286px;
   z-index: -1;
 
@@ -27,14 +27,18 @@ export const StyledCircleWrapper = styled.div`
 
 export const StyledGreenCircleWrapper = styled.div`
   position: absolute;
-  top: 1600px;
-  width: 982px;
-  height: 982px;
-  right: -300px;
+  top: 79.333vw;
+  width: 51.146vw;
+  height: 51.146vw;
+  right: -25vw;
 
   > svg {
     width: 100%;
     height: 100%;
+  }
+
+  @media only screen and (max-width: 1330px) {
+    top: 96.333vw;
   }
 
   @media only screen and (max-width: 1167px) {
@@ -44,10 +48,10 @@ export const StyledGreenCircleWrapper = styled.div`
 
 export const StyledWhiteCircleWrapper = styled.div`
   position: absolute;
-  top: 2500px;
-  width: 982px;
-  height: 982px;
-  left: -960px;
+  top: 130.208vw;
+  width: 51.146vw;
+  height: 51.146vw;
+  left: -41.667vw;
   z-index: -1;
 
   > svg {
