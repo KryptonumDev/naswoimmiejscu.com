@@ -14,6 +14,7 @@ import {
   StyledRightWrapper,
   StyledCircleWrapper,
   StyledWhiteCircle,
+  StyledMobileCircleWrapper,
 } from "./StyledFirstSecionWomens";
 import { StyledCircle } from "../Circle/StyledCircle";
 
@@ -22,19 +23,33 @@ const FirstSecionWomens = ({ title, desc, icon, image, imageMobile }) => {
     <Container>
       <StyledFirstSecionWomens>
         <StyledLeftWrapper>
-          <StyledTitleWrapperElement>
+          <StyledTitleWrapperElement className="first-section-womens-youth">
             {title ? parse(title) : null}
+            <Image imageDesktop={icon} objectFit="contain" />
           </StyledTitleWrapperElement>
-          <StyledDescWrapper>{desc ? parse(desc) : null}</StyledDescWrapper>
+          <StyledDescWrapper className="first-section-womens-youth">
+            {desc ? parse(desc) : null}
+          </StyledDescWrapper>
           <StyledCirclesWrapper>
-            <StyledCircle />
-            <StyledCircle />
+            <StyledCircle
+              hasdeclaredwidth="22px"
+              hasdeclaredheight="22px"
+              hasdeclaredbg="var(--normalGreen)"
+            />
+            <StyledCircle
+              hasdeclaredwidth="22px"
+              hasdeclaredheight="22px"
+              hasdeclaredbg="var(--normalGreen)"
+            />
           </StyledCirclesWrapper>
         </StyledLeftWrapper>
         <StyledRightWrapper>
           <StyledCircleWrapper>
-            <StyledCircle />
+            <StyledCircle hasdeclaredbg="var(--normalGreen)" />
           </StyledCircleWrapper>
+          <StyledMobileCircleWrapper>
+            <StyledCircle hasdeclaredwidth="30px" hasdeclaredheight="30px" />
+          </StyledMobileCircleWrapper>
           <Image imageDesktop={image} imageMobile={imageMobile} />
         </StyledRightWrapper>
         <StyledWhiteCircle>

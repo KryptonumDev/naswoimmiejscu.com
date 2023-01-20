@@ -22,8 +22,12 @@ const EffectWomens = ({ image, imageMobile, title, listElements, desc }) => {
     <Container>
       <StyledEffectWomens>
         <StyledLeftWrapper>
-          <StyledTitleWrapper>{title ? parse(title) : null}</StyledTitleWrapper>
-          <StyledDescWrapper>{desc ? parse(desc) : null}</StyledDescWrapper>
+          <StyledTitleWrapper className="effect-womens-title">
+            {title ? parse(title) : null}
+          </StyledTitleWrapper>
+          <StyledDescWrapper className="effect-womens-title">
+            {desc ? parse(desc) : null}
+          </StyledDescWrapper>
           <StyledList>
             {listElements.map((li) => (
               <li>
@@ -35,7 +39,7 @@ const EffectWomens = ({ image, imageMobile, title, listElements, desc }) => {
         </StyledLeftWrapper>
         <StyledRightWrapper>
           <StyledCircleWrapper>
-            <StyledCircle />
+            <StyledCircle hasdeclaredbg="var(--normalGreen)" />
           </StyledCircleWrapper>
           <Image imageDesktop={image} imageMobil={imageMobile} />
         </StyledRightWrapper>

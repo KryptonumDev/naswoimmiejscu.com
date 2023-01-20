@@ -75,6 +75,14 @@ export const StyledLink = styled(Link)`
     }
   }
 
+  @media only screen and (max-width: 583px) {
+    &.second-section-womens-youth {
+      width: 100%;
+      min-height: 53px;
+      font-size: 11px;
+    }
+  }
+
   @media only screen and (max-width: 350px) {
     &.home-hero-section,
     &.home-second-section,

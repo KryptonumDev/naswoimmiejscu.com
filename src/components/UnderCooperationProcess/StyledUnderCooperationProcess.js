@@ -58,7 +58,7 @@ export const StyledContent = styled.div`
   margin: 50px auto 0;
   padding: 0 125px 0 180px;
   max-width: 1920px;
-  gap: clamp(100px, 8.698vw, 200px);
+  gap: clamp(40px, 8.698vw, 180px);
 
   @media only screen and (max-width: 1167px) {
     padding: 0 33px;

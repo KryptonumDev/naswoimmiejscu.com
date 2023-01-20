@@ -66,6 +66,18 @@ export const StyledTitleWrapper = styled.div`
     margin-top: 0;
   }
 
+  &.first-section-womens-youth {
+    font-size: 3vw;
+  }
+
+  &.second-section-womens-youth {
+    margin-top: 0;
+  }
+
+  &.effect-womens-title {
+    margin-top: 15px;
+  }
+
   @media only screen and (max-width: 1763px) {
     &.home-hero-section,
     &.home-second-section,
@@ -74,12 +86,19 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
+    &.about-me-meet,
+    &.meets-form-womens {
       margin-top: 1.872vw;
       font-size: 2.95vw;
     }
 
     &.home-contact {
+      font-size: 2.95vw;
+    }
+
+    &.first-section-womens-youth,
+    &.second-section-womens-youth,
+    &.effect-womens-title {
       font-size: 2.95vw;
     }
   }
@@ -92,12 +111,19 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
+    &.about-me-meet,
+    &.meets-form-womens {
       margin-top: 0;
       font-size: 2.802vw;
     }
 
     &.home-contact {
+      font-size: 2.802vw;
+    }
+
+    &.first-section-womens-youth,
+    &.second-section-womens-youth,
+    &.effect-womens-title {
       font-size: 2.802vw;
     }
   }
@@ -110,11 +136,18 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
+    &.about-me-meet,
+    &.meets-form-womens {
       font-size: 2.372vw;
     }
 
     &.home-contact {
+      font-size: 2.372vw;
+    }
+
+    &.first-section-womens-youth,
+    &.second-section-womens-youth,
+    &.effect-womens-title {
       font-size: 2.372vw;
     }
   }
@@ -127,12 +160,23 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
+    &.about-me-meet,
+    &.meets-form-womens {
       font-size: 4.234vw;
     }
 
     &.home-contact {
       font-size: 4.234vw;
+    }
+
+    &.first-section-womens-youth,
+    &.second-section-womens-youth,
+    &.effect-womens-title {
+      font-size: 4.234vw;
+    }
+
+    &.effect-womens-title {
+      margin-top: 30px;
     }
   }
 
@@ -148,12 +192,19 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
+    &.about-me-meet,
+    &.meets-form-womens {
       font-size: 6.061vw;
     }
 
     &.about-me-first-section {
       margin-top: 20px;
+    }
+
+    &.first-section-womens-youth,
+    &.second-section-womens-youth,
+    &.effect-womens-title {
+      font-size: 6.061vw;
     }
   }
 
@@ -165,16 +216,32 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-meet {
       font-size: 7.462vw;
     }
+
+    &.first-section-womens-youth,
+    &.second-section-womens-youth,
+    &.effect-womens-title,
+    &.meets-form-womens {
+      font-size: 5.7vw;
+    }
   }
 `;
 
 export const StyledDescWrapper = styled.div`
   margin: 32px 0 66px;
-  font: 300 26px Roboto;
+  font: 300 1.354vw Roboto;
   color: var(--normalBlack);
 
   strong {
     font-weight: 600;
+  }
+
+  &.first-section-womens-youth {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  &.effect-womens-title {
+    margin-bottom: 20px;
   }
 
   @media only screen and (max-width: 1763px) {
@@ -186,9 +253,16 @@ export const StyledDescWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
-      font-size: 22px;
+    &.about-me-meet,
+    &.meets-form-womens {
+      font-size: 1.248vw;
       margin-bottom: 33px;
+    }
+
+    &.first-section-womens-youth,
+    &.second-section-womens-youth,
+    &.effect-womens-title {
+      font-size: 1.248vw;
     }
   }
 
@@ -201,8 +275,15 @@ export const StyledDescWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
-      font-size: 20px;
+    &.about-me-meet,
+    &.second-section-womens-youth,
+    &.effect-womens-title,
+    &.meets-form-womens {
+      font-size: 1.334vw;
+    }
+
+    &.first-section-womens-youth {
+      font-size: 1.334vw;
     }
   }
 
@@ -215,8 +296,15 @@ export const StyledDescWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
-      font-size: 18px;
+    &.about-me-meet,
+    &.second-section-womens-youth,
+    &.effect-womens-title,
+    &.meets-form-womens {
+      font-size: 1.334vw;
+    }
+
+    &.first-section-womens-youth {
+      font-size: 1.334vw;
     }
   }
 
@@ -229,8 +317,16 @@ export const StyledDescWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
-      font-size: 22px;
+    &.about-me-meet,
+    &.second-section-womens-youth,
+    &.effect-womens-title,
+    &.meets-form-womens {
+      font-size: 2.218vw;
+    }
+
+    &.first-section-womens-youth {
+      font-size: 2.218vw;
+      margin-top: 14px;
     }
   }
 
@@ -243,9 +339,20 @@ export const StyledDescWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
+    &.about-me-meet,
+    &.meets-form-womens {
       margin-top: 14px;
-      font-size: 18px;
+      font-size: 3.409vw;
+    }
+
+    &.first-section-womens-youth,
+    &.second-section-womens-youth,
+    &.effect-womens-title {
+      font-size: 3.409vw;
+    }
+
+    &.second-section-womens-youth {
+      margin-bottom: 20px;
     }
   }
 
@@ -258,8 +365,15 @@ export const StyledDescWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
-    &.about-me-meet {
-      font-size: 15px;
+    &.about-me-meet,
+    &.effect-womens-title,
+    &.meets-form-womens {
+      font-size: 4.167vw;
+    }
+
+    &.first-section-womens-youth,
+    &.second-section-womens-youth {
+      font-size: 4.167vw;
     }
   }
 `;

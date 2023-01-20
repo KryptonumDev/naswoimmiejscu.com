@@ -36,8 +36,12 @@ const MeetsFormwomens = ({
           <Image imageDesktop={image} imageMobile={imageMobile} />
         </StyledLeftWrapper>
         <StyledRightWrapper>
-          <StyledTitleWrapper>{title ? parse(title) : null}</StyledTitleWrapper>
-          <StyledDescWrapper>{desc ? parse(desc) : null}</StyledDescWrapper>
+          <StyledTitleWrapper className="meets-form-womens">
+            {title ? parse(title) : null}
+          </StyledTitleWrapper>
+          <StyledDescWrapper className="meets-form-womens">
+            {desc ? parse(desc) : null}
+          </StyledDescWrapper>
           <StyledButtonsWrapper>
             <Button
               btnData={firstBtn}

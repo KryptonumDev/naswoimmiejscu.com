@@ -21,8 +21,11 @@ const GlobalStyle = createGlobalStyle`
         --arrowBlack: #203533;
         --errorColor: #D63D3D;
         --hrColor: #EBE2D3;
+        --grey: #E3E1DA;
+        --lightGreen: #9FF86F;
         overflow-x: hidden;
-    }
+        overflow-y: ${({ islayout }) => islayout ? "hidden" : "visible"};
+    } 
 
     body {
       overflow-x: hidden;

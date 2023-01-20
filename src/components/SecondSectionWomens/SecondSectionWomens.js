@@ -28,14 +28,19 @@ const SecondSectionWomens = ({ image, imageMobile, title, desc, btn }) => {
           <Image imageDesktop={image} imageMobile={imageMobile} />
         </StyledLeftWrapper>
         <StyledRightWrapper>
-          <StyledTitleWrapper>{title ? parse(title) : null}</StyledTitleWrapper>
-          <StyledDescWrapper>{desc ? parse(desc) : null}</StyledDescWrapper>
+          <StyledTitleWrapper className="second-section-womens-youth">
+            {title ? parse(title) : null}
+          </StyledTitleWrapper>
+          <StyledDescWrapper className="second-section-womens-youth">
+            {desc ? parse(desc) : null}
+          </StyledDescWrapper>
           <Button
             btnData={btn}
             variant="green"
             haswidth="495px"
             hasheight="88px"
             hasfontsize="20px"
+            className="second-section-womens-youth"
           />
         </StyledRightWrapper>
       </StyledSecondSectionWomens>

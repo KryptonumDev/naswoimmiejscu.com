@@ -1,11 +1,11 @@
 import React from "react";
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
 import Header from "../Header/Header";
 import GlobalStyle from "../../styles/GlobalStyle";
 import Footer from "../Footer/Footer";
 
-const GlobalTemplate = ({ children }) => {
+const GlobalTemplate = ({ children, isLayout }) => {
   return (
     <>
       <Helmet
@@ -15,10 +15,10 @@ const GlobalTemplate = ({ children }) => {
       >
         <meta name="robots" content="noindex" />
       </Helmet>
-      <GlobalStyle />
-      <Header />
+      <GlobalStyle islayout={isLayout} />
+      {!isLayout ? <Header /> : null}
       {children}
-      <Footer />
+      {!isLayout ? <Footer /> : null}
     </>
   );
 };
