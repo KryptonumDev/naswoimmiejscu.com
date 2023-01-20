@@ -111,7 +111,10 @@ const HomeBlogSection = () => {
   const recomendationSlider = (
     <>
       <StyledRecomendationSliderWrapper>
-        <Button btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk} />
+        <Button
+          btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk}
+          className="blog-recomendation-slider"
+        />
       </StyledRecomendationSliderWrapper>
     </>
   );
@@ -127,11 +130,19 @@ const HomeBlogSection = () => {
         hasdeclaredpadding="64px 87px 0 0"
         isactive={isLgUp ? isBlog : true}
       >
-        <StyledCircle hasdeclaredbg="var(--normalGreen)" />
+        <StyledCircle
+          hasdeclaredbg="var(--normalGreen)"
+          className="blog-mobile-section-hide"
+        />
         <StyledTitleElement className="home-blog-section-text">
           {stronaGlowna.sekcjaZBlogiem.blogTytul
             ? parse(stronaGlowna.sekcjaZBlogiem.blogTytul)
             : null}
+
+          <StyledCircle
+            hasdeclaredbg="var(--normalGreen)"
+            className="blog-mobile-section-show"
+          />
         </StyledTitleElement>
         <StyledDescWrapper2 isleft className="home-blog-section-text">
           {stronaGlowna.sekcjaZBlogiem.blogTytul
@@ -151,11 +162,13 @@ const HomeBlogSection = () => {
         hasdeclaredpadding="0 87px 0 0"
         isactive={isLgUp ? !isBlog : true}
       >
-        <StyledCircle />
+        <StyledCircle className="blog-mobile-section-hide" />
         <StyledTitleElement className="home-blog-section-text">
           {stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul
             ? parse(stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul)
             : null}
+
+          <StyledCircle className="blog-mobile-section-show" />
         </StyledTitleElement>
         <StyledDescWrapper2 className="home-blog-section-text">
           {stronaGlowna.sekcjaZBlogiem.rekomendacjeOpis

@@ -3,6 +3,7 @@ import {
   StyledTitleWrapper,
   StyledDescWrapper,
 } from "../HomeHeroSection/StyledHomeHeroSection";
+
 export const StyledHomeBlogSection = styled.div`
   width: 100%;
   display: flex;
@@ -27,6 +28,7 @@ export const StyledLeftWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
+    position: relative;
   }
 `;
 
@@ -41,6 +43,11 @@ export const StyledRightWrapper = styled.div`
 
 export const StyledTitleElement = styled(StyledTitleWrapper)`
   margin-top: 27px;
+
+  @media only screen and (max-width: 992px) {
+    position: relative;
+    z-index: 2;
+  }
 `;
 
 export const StyledDescWrapper2 = styled(StyledDescWrapper)`
@@ -50,6 +57,10 @@ export const StyledDescWrapper2 = styled(StyledDescWrapper)`
 
   strong {
     font-weight: 600;
+  }
+
+  @media only screen and (max-width: 992px) {
+    text-align: left;
   }
 `;
 
@@ -64,6 +75,13 @@ export const StyledContent = styled.button`
   padding: ${({ hasdeclaredpadding }) =>
     hasdeclaredpadding ? hasdeclaredpadding : "0"};
   opacity: ${({ isactive }) => (isactive ? "1" : "0.5")};
+
+  @media only screen and (max-width: 992px) {
+    align-items: flex-start;
+    align-self: flex-start;
+    position: relative;
+    margin-top: ${({ isright }) => (isright ? "64px" : "0")};
+  }
 `;
 
 export const StyledIconWrapper = styled.div`
@@ -71,6 +89,9 @@ export const StyledIconWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     display: block;
+    position: absolute;
+    top: 140px;
+    left: 0;
   }
 `;
 
@@ -87,6 +108,10 @@ export const StyledBlogSliderWrapper = styled.div`
 
   @media only screen and (max-width: 1167px) {
     padding-right: 33px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    align-items: flex-start;
   }
 `;
 

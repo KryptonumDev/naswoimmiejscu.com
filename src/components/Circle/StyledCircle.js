@@ -9,6 +9,10 @@ export const StyledCircle = styled.div`
   background-color: ${({ hasdeclaredbg }) =>
     hasdeclaredbg ? hasdeclaredbg : "var(--buttonBrownHover)"};
 
+  &.blog-mobile-section-show {
+    display: none;
+  }
+
   @media only screen and (max-width: 1225px) {
     &.home-about-me {
       width: 42px;
@@ -26,6 +30,18 @@ export const StyledCircle = styled.div`
   @media only screen and (max-width: 992px) {
     &.about-me-second-circle {
       opacity: 0.6;
+    }
+
+    &.blog-mobile-section-hide {
+      display: none;
+    }
+
+    &.blog-mobile-section-show {
+      position: absolute;
+      top: 50%;
+      right: -60px;
+      transform: translateY(-50%);
+      z-index: -1;
     }
   }
 `;

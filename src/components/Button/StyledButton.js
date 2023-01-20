@@ -81,6 +81,10 @@ export const StyledLink = styled(Link)`
     &.under-cooperation-process {
       display: none;
     }
+
+    &.blog-recomendation-slider {
+      display: none;
+    }
   }
 
   @media only screen and (max-width: 660px) {
