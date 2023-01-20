@@ -39,16 +39,20 @@ export const StyledAnswerWrapper = styled.div`
     font-weight: 500;
   }
 
+  @media only screen and (min-width: 1920px) {
+    font-size: 24px;
+  }
+
   @media only screen and (max-width: 1499px) {
     font-size: 1.601vw;
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: 2.419vw;
+    font-size: 2.218vw;
   }
 
   @media only screen and (max-width: 696px) {
-    font-size: 3.448vw;
+    font-size: 3.4vw;
   }
 
   @media only screen and (max-width: 360px) {
@@ -62,8 +66,17 @@ export const StyledQuestionContent = styled.div`
   font: 700 1.875vw Roboto;
   cursor: pointer;
 
+  @media only screen and (min-width: 1920px) {
+    font-size: 40px;
+  }
+
   @media only screen and (max-width: 992px) {
     font-size: ${({ open, isnormalfont }) =>
-      open ? (isnormalfont ? "4.444vw" : "8.889vw") : "4.444vw"};
+      open ? (isnormalfont ? "4.444vw" : "5.889vw") : "4.444vw"};
+  }
+
+  @media only screen and (max-width: 688px) {
+    font-size: ${({ open, isnormalfont }) =>
+      open ? (isnormalfont ? "4.0vw" : "5.0vw") : "4.0vw"};
   }
 `;

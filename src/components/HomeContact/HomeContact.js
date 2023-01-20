@@ -18,9 +18,6 @@ import {
 const HomeContact = ({ data }) => {
   return (
     <StyledHomeContact>
-      <StyledCircleWrapper>
-        <SmallWhiteCircle />
-      </StyledCircleWrapper>
       <StyledLeftWrapper>
         <StyledTitleWrapper className="home-contact">
           {data.tytul ? parse(data.tytul) : null}
@@ -29,6 +26,9 @@ const HomeContact = ({ data }) => {
           {data.opis ? parse(data.opis) : null}
         </StyledDescWrapperEdit>
         <StyledImageWrapper>
+          <StyledCircleWrapper>
+            <SmallWhiteCircle />
+          </StyledCircleWrapper>
           <Image imageDesktop={data.obraz} imageMobile={data.obrazMobile} />
         </StyledImageWrapper>
       </StyledLeftWrapper>

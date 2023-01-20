@@ -4,8 +4,8 @@ export const StyledHomeFAQSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 160px auto 0;
-  padding: 0 125px 0 180px;
+  margin: clamp(100px, 8.333vw, 160px) auto 0;
+  padding: 0 clamp(100, 6.51vw, 125px) 0 clamp(100, 9.375vw, 180px);
   max-width: 1920px;
   gap: clamp(100px, 8.698vw, 200px);
 
@@ -21,10 +21,10 @@ export const StyledHomeFAQSection = styled.div`
 
 export const StyledTextWrapper = styled.div`
   width: 50%;
-  font: 700 64px Roboto;
+  font: 700 3.333vw Roboto;
   display: flex;
   align-items: center;
-  padding-left: 45px;
+  padding-left: 225px;
   gap: 40px;
 
   p {
@@ -34,6 +34,10 @@ export const StyledTextWrapper = styled.div`
       color: var(--nromalBrown);
       font-weight: 700;
     }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    font-size: 64px;
   }
 
   @media only screen and (max-width: 1763px) {

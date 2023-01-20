@@ -14,7 +14,7 @@ export const StyledMeetsFormwomens = styled.div`
 `;
 
 export const StyledLeftWrapper = styled.div`
-  width: 50%;
+  width: 45%;
   position: relative;
 
   .gatsby-image-wrapper {
@@ -27,7 +27,7 @@ export const StyledLeftWrapper = styled.div`
 `;
 
 export const StyledRightWrapper = styled.div`
-  width: 50%;
+  width: 55%;
 
   @media only screen and (max-width: 992px) {
     width: 100%;

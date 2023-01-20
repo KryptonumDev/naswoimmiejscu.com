@@ -15,7 +15,10 @@ export const StyledLeftWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const StyledRightWrapper = styled.div``;
+export const StyledRightWrapper = styled.div`
+  margin-top: 3.802vw;
+  width: 50%;
+`;
 
 export const StyledTitleElement = styled.div`
   margin-top: 27px;
@@ -52,4 +55,18 @@ export const StyledIconWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     display: block;
   }
+`;
+
+export const StyledBlogSliderWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 152px;
+`;
+
+export const StyledRecomendationSliderWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 `;

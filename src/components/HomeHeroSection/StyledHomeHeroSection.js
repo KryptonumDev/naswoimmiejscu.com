@@ -7,7 +7,7 @@ export const StyledHomeHeroSection = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-top: 126px;
+  margin-top: clamp(100px, 6.563vw, 126px);
   padding-left: 55px;
   gap: clamp(100px, 8.698vw, 200px);
 
@@ -50,8 +50,8 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledTitleWrapper = styled.div`
-  font: 700 3.333vw Roboto;
-  margin-top: 3.333vw;
+  font: 700 3.333vw/1.2em Roboto;
+  margin-top: clamp(20px, 3.333vw, 64px);
 
   strong {
     color: var(--nromalBrown);
@@ -76,6 +76,10 @@ export const StyledTitleWrapper = styled.div`
 
   &.effect-womens-title {
     margin-top: 15px;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    font-size: 64px;
   }
 
   @media only screen and (max-width: 1763px) {
@@ -138,17 +142,17 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-proccess,
     &.about-me-meet,
     &.meets-form-womens {
-      font-size: 2.372vw;
+      font-size: 3.372vw;
     }
 
     &.home-contact {
-      font-size: 2.372vw;
+      font-size: 3.372vw;
     }
 
     &.first-section-womens-youth,
     &.second-section-womens-youth,
     &.effect-womens-title {
-      font-size: 2.372vw;
+      font-size: 3.372vw;
     }
   }
 
@@ -228,7 +232,7 @@ export const StyledTitleWrapper = styled.div`
 
 export const StyledDescWrapper = styled.div`
   margin: 32px 0 66px;
-  font: 300 1.354vw Roboto;
+  font: 300 1.354vw/1.4em Roboto;
   color: var(--normalBlack);
 
   strong {
@@ -242,6 +246,14 @@ export const StyledDescWrapper = styled.div`
 
   &.effect-womens-title {
     margin-bottom: 20px;
+  }
+
+  &.home-second-section {
+    margin-bottom: 15px;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    font-size: 26px;
   }
 
   @media only screen and (max-width: 1763px) {
@@ -292,7 +304,6 @@ export const StyledDescWrapper = styled.div`
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
-    &.home-contact,
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-proccess,
@@ -300,11 +311,12 @@ export const StyledDescWrapper = styled.div`
     &.second-section-womens-youth,
     &.effect-womens-title,
     &.meets-form-womens {
-      font-size: 1.334vw;
+      font-size: 1.734vw;
     }
 
-    &.first-section-womens-youth {
-      font-size: 1.334vw;
+    &.first-section-womens-youth,
+    &.home-contact {
+      font-size: 1.734vw;
     }
   }
 
@@ -327,6 +339,23 @@ export const StyledDescWrapper = styled.div`
     &.first-section-womens-youth {
       font-size: 2.218vw;
       margin-top: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 808px) {
+    &.home-hero-section,
+    &.home-second-section,
+    &.cooperation-process,
+    &.home-about-me,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-proccess,
+    &.about-me-meet,
+    &.meets-form-womens,
+    &.first-section-womens-youth,
+    &.second-section-womens-youth,
+    &.effect-womens-title {
+      font-size: 2.9vw;
     }
   }
 

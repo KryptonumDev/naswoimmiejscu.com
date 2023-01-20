@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledHomeAboutMe = styled.div`
   display: flex;
-  margin-top: 155px;
+  margin-top: clamp(100px, 8.073vw, 155px);
   justify-content: space-between;
   padding-left: 55px;
   gap: clamp(100px, 8.698vw, 200px);
@@ -41,7 +41,7 @@ export const StyledLeftWrapper = styled.div`
   }
 
   @media only screen and (max-width: 1167px) {
-    width: 65%;
+    width: 80%;
     max-width: unset;
   }
 `;
@@ -86,15 +86,9 @@ export const StyledGreenCircle = styled.div`
     }
   }
 
-  @media only screen and (max-width: 680px) {
-    width: 48.235vw;
-    height: 48.235vw;
-    right: -26vw;
-  }
-
   @media only screen and (max-width: 360px) {
     width: 60.111vw;
     height: 60.111vw;
-    right: -36vw;
+    right: -50vw;
   }
 `;

@@ -4,7 +4,7 @@ import { StyledDescWrapper } from "../HomeHeroSection/StyledHomeHeroSection";
 export const StyledHomeContact = styled.div`
   width: 100%;
   max-width: 1920px;
-  margin: 90px auto 0;
+  margin: clamp(70px, 4.688vw, 90px) auto 0;
   padding: 0 0 0 183px;
   display: flex;
   justify-content: space-between;
@@ -27,6 +27,7 @@ export const StyledHomeContact = styled.div`
 
 export const StyledLeftWrapper = styled.div`
   padding-left: 30px;
+  position: relative;
 
   @media only screen and (max-width: 1167px) {
     padding-left: 33px;
@@ -42,6 +43,7 @@ export const StyledRightWrapper = styled.div``;
 export const StyledImageWrapper = styled.div`
   transform: translateX(-30px);
   height: 32.708vw;
+  max-height: 628px;
 
   .gatsby-image-wrapper {
     width: 100%;
@@ -69,8 +71,9 @@ export const StyledCircleWrapper = styled.div`
   width: 21.875vw;
   height: 21.875vw;
   position: absolute;
-  top: 26.208vw;
-  left: -6.25vw;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -15.104vw;
   z-index: 1;
 
   svg {
@@ -78,42 +81,22 @@ export const StyledCircleWrapper = styled.div`
     height: 100%;
   }
 
-  @media only screen and (max-width: 1539px) {
-    top: 35.208vw;
-    left: -3.25vw;
+  @media only screen and (min-width: 1920px) {
+    width: 420px;
+    height: 420px;
+    left: -290px;
+    top: 50%;
   }
 
-  @media only screen and (max-width: 1310px) {
-    top: 43.208vw;
-    left: 0;
-  }
-
-  @media only screen and (max-width: 1167px) {
-    top: 470px;
-    left: -140px;
-  }
-
-  @media only screen and (max-width: 992px) {
-    top: 290px;
-    left: -9.145vw;
-  }
-
-  @media only screen and (max-width: 657px) {
-    width: 199px;
-    height: 199px;
-    left: -90px;
-    top: 310px;
-  }
-
-  @media only screen and (max-width: 529px) {
-    top: 280px;
-  }
-
-  @media only screen and (max-width: 422 px) {
-    top: 300px;
+  @media only screen and (max-width: 824px) {
+    width: 30.937vw;
+    height: 30.937vw;
+    left: -20vw;
   }
 
   @media only screen and (max-width: 360px) {
-    top: 260px;
+    width: 52.5vw;
+    height: 52.5vw;
+    left: -40vw;
   }
 `;

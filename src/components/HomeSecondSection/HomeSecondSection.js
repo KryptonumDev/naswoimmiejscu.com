@@ -52,7 +52,7 @@ const HomeSecondSection = ({ data }) => {
                 bgColor={isWomens ? "var(--btnGrey)" : null}
               />
               <StyledText
-                hasdeclaredfontsize="32px"
+                hasdeclaredfontsize="clamp(26px, 1.667vw, 32px)"
                 hasdeclaredfontweight="700"
                 hasdeclaredfontcolor={
                   isWomens ? "var(--btnGrey)" : "var(--normalBlack)"
@@ -72,7 +72,7 @@ const HomeSecondSection = ({ data }) => {
                 imageSize={isWomens ? null : "34px"}
               />
               <StyledText
-                hasdeclaredfontsize="32px"
+                hasdeclaredfontsize="clamp(26px, 1.667vw, 32px)"
                 hasdeclaredfontweight="700"
                 hasdeclaredfontcolor={
                   isWomens ? "var(--normalBlack)" : "var(--btnGrey)"

@@ -37,8 +37,10 @@ const HomeHeroSection = ({ data }) => {
             variant="green"
             haswidth="355px"
             hasheight="88px"
+            hasClampHeight="4.583vw"
             hasfontsize="20px"
             className="home-hero-section"
+            hasClampWidth="18.490vw"
           />
         </StyledRightWrapper>
       </StyledHomeHeroSection>

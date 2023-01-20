@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import parse from "html-react-parser";
 import { useStaticQuery, graphql } from "gatsby";
+import Slider from "react-slick";
+
+import BlogHomeCard from "../BlogHomeCard/BlogHomeCard";
+import Button from "../Button/Button";
 
 import AHASvg from "../AHASvg/AHASvg";
 
@@ -13,7 +17,12 @@ import {
   StyledDescWrapper,
   StyledTitleElement,
   StyledIconWrapper,
+  StyledBlogSliderWrapper,
+  StyledRecomendationSliderWrapper,
 } from "./StyledHomeBlogSection";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const HomeBlogSection = () => {
   const {
@@ -43,6 +52,16 @@ const HomeBlogSection = () => {
     }
   `);
   const [isBlog, setIsBlog] = useState(true);
+  const slider = useRef(null);
+  const settings = {
+    dots: false,
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    swipeToSlide: true,
+  };
 
   return (
     <StyledHomeBlogSection>
@@ -90,9 +109,48 @@ const HomeBlogSection = () => {
       </StyledLeftWrapper>
       <StyledRightWrapper>
         {isBlog ? (
-          <div>tutaj będzie blog</div>
+          <StyledBlogSliderWrapper>
+            <Slider ref={slider} {...settings}>
+              <BlogHomeCard
+                image=""
+                title="dsadsa"
+                desc="dsadsa"
+                date="dsadsa"
+                slug=""
+              />
+              <BlogHomeCard
+                image=""
+                title="dsadsa"
+                desc="dsadsa"
+                date="dsadsa"
+                slug=""
+              />
+              <BlogHomeCard
+                image=""
+                title="dsadsa"
+                desc="dsadsa"
+                date="dsadsa"
+                slug=""
+              />
+              <BlogHomeCard
+                image=""
+                title="dsadsa"
+                desc="dsadsa"
+                date="dsadsa"
+                slug=""
+              />
+            </Slider>
+            <Button
+              btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}
+              className="blog-slider-btn"
+            />
+          </StyledBlogSliderWrapper>
         ) : (
-          <div>tutaj będą rekomendacje</div>
+          <StyledRecomendationSliderWrapper>
+            <Button
+              btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk}
+            />
+          </StyledRecomendationSliderWrapper>
         )}
       </StyledRightWrapper>
     </StyledHomeBlogSection>

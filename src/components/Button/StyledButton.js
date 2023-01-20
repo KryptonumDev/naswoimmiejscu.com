@@ -6,11 +6,18 @@ export const StyledLink = styled(Link)`
     variant === "green" ? "var(--normalGreen)" : "transparent"};
   border: ${({ variant }) =>
     variant === "green" ? "none" : "1px solid var(--normalBlack)"};
-  width: ${({ hasdeclaredwidth }) =>
-    hasdeclaredwidth ? hasdeclaredwidth : "355px"};
+  width: clamp(
+    277px,
+    ${({ hasclampwidth }) => (hasclampwidth ? hasclampwidth : "18.490vw")},
+    ${({ hasdeclaredwidth }) => (hasdeclaredwidth ? hasdeclaredwidth : "355px")}
+  );
   border-radius: 64px;
-  min-height: ${({ hasdeclaredheight }) =>
-    hasdeclaredheight ? hasdeclaredheight : "88px"};
+  min-height: clamp(
+    73px,
+    ${({ hasclampheight }) => (hasclampheight ? hasclampheight : "4.583vw")},
+    ${({ hasdeclaredheight }) =>
+      hasdeclaredheight ? hasdeclaredheight : "88px"}
+  );
   transition: background-color 250ms;
   cursor: pointer;
   text-transform: uppercase;
@@ -44,6 +51,11 @@ export const StyledLink = styled(Link)`
     @media only screen and (max-width: 1167px) {
       display: none;
     }
+  }
+
+  &.blog-slider-btn {
+    margin-right: 30px;
+    margin-top: 80px;
   }
 
   @media only screen and (max-width: 1499px) {

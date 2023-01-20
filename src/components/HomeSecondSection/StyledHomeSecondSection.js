@@ -4,7 +4,7 @@ export const StyledHomeSecondSection = styled.section`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: clamp(62px, 5.208vw, 100px);
   padding-left: 55px;
   gap: clamp(100px, 8.698vw, 200px);
 
@@ -32,6 +32,7 @@ export const StyledRightWrapper = styled.div`
   width: 50%;
   display: flex;
   justify-content: flex-end;
+  max-heiht: 1080px;
 
   @media only screen and (max-width: 992px) {
     display: none;
@@ -47,7 +48,7 @@ export const StyledContent = styled.div`
 `;
 
 export const StyledContentWrapper = styled.div`
-  font: 300 20px Roboto;
+  font: 300 clamp(20px, 1.142px, 22px) Roboto;
   margin: 25px 0;
 
   strong {
@@ -55,11 +56,15 @@ export const StyledContentWrapper = styled.div`
   }
 
   @media only screen and (max-width: 1499px) {
-    font-size: 18px;
+    font-size: clamp(16, 1.201vw, 20);
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: 22px;
+    font-size: 2.218vw;
+  }
+
+  @media only screen and (max-width: 808px) {
+    font-size: 2.9vw;
   }
 
   @media only screen and (max-width: 528px) {

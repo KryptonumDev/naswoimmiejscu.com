@@ -40,14 +40,15 @@ export const StyledTextWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     max-width: unset;
     margin-bottom: 0;
+    font-size: 2.218vw;
   }
 
   @media only screen and (max-width: 528px) {
-    font-size: 18px;
+    font-size: 3.409vw;
   }
 
   @media only screen and (max-width: 360px) {
-    font-size: 15px;
+    font-size: 4.167vw;
   }
 `;
 

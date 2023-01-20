@@ -11,6 +11,8 @@ const Button = ({
   hasheight,
   hasfontsize,
   className,
+  hasClampWidth,
+  hasClampHeight,
 }) => {
   return text ? (
     <StyledButton
@@ -32,6 +34,8 @@ const Button = ({
       hasdeclaredheight={hasheight}
       hasfontsize={hasfontsize}
       className={className}
+      hasclampwidth={hasClampWidth}
+      hasclampheight={hasClampHeight}
     >
       {btnData.title}
     </StyledLink>
