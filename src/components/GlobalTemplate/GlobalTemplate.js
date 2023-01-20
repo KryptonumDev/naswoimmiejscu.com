@@ -7,6 +7,13 @@ import Footer from "../Footer/Footer";
 const GlobalTemplate = ({ children }) => {
   return (
     <>
+      <Helmet
+        htmlAttributes={{
+          lang: "pl",
+        }}
+      >
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <GlobalStyle />
       <Header />
       {children}
