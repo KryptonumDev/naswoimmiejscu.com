@@ -1,11 +1,22 @@
 import styled from "styled-components";
-
+import {
+  StyledTitleWrapper,
+  StyledDescWrapper,
+} from "../HomeHeroSection/StyledHomeHeroSection";
 export const StyledHomeBlogSection = styled.div`
   width: 100%;
   display: flex;
   padding-left: 185px;
   max-width: 1920px;
   margin: 0 auto;
+
+  @media only screen and (max-width: 1167px) {
+    padding-left: 33px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledLeftWrapper = styled.div`
@@ -13,21 +24,27 @@ export const StyledLeftWrapper = styled.div`
   border-right: 1px solid var(--hrColor);
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+  }
 `;
 
 export const StyledRightWrapper = styled.div`
   margin-top: 3.802vw;
   width: 50%;
+
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+  }
 `;
 
-export const StyledTitleElement = styled.div`
+export const StyledTitleElement = styled(StyledTitleWrapper)`
   margin-top: 27px;
-  font: 700 64px Roboto;
 `;
 
-export const StyledDescWrapper = styled.div`
+export const StyledDescWrapper2 = styled(StyledDescWrapper)`
   margin-top: 27px;
-  font: 300 26px Roboto;
   text-align: ${({ isleft }) => (isleft ? "left" : "right")};
   max-width: 623px;
 
@@ -63,6 +80,14 @@ export const StyledBlogSliderWrapper = styled.div`
   flex-direction: column;
   align-items: flex-end;
   padding-right: 152px;
+
+  .slick-slider {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1167px) {
+    padding-right: 33px;
+  }
 `;
 
 export const StyledRecomendationSliderWrapper = styled.div`

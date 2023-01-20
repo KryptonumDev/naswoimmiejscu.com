@@ -8,13 +8,15 @@ import Button from "../Button/Button";
 
 import AHASvg from "../AHASvg/AHASvg";
 
+import { useScreenService } from "../../utils/useScreenService";
+
 import { StyledCircle } from "../Circle/StyledCircle";
 import {
   StyledHomeBlogSection,
   StyledContent,
   StyledLeftWrapper,
   StyledRightWrapper,
-  StyledDescWrapper,
+  StyledDescWrapper2,
   StyledTitleElement,
   StyledIconWrapper,
   StyledBlogSliderWrapper,
@@ -53,6 +55,8 @@ const HomeBlogSection = () => {
   `);
   const [isBlog, setIsBlog] = useState(true);
   const slider = useRef(null);
+  const { isLgUp } = useScreenService();
+
   const settings = {
     dots: false,
     infinite: false,
@@ -63,96 +67,129 @@ const HomeBlogSection = () => {
     swipeToSlide: true,
   };
 
+  const blogSlider = (
+    <>
+      <StyledBlogSliderWrapper>
+        <Slider ref={slider} {...settings}>
+          <BlogHomeCard
+            image=""
+            title="dsadsa"
+            desc="dsadsa"
+            date="dsadsa"
+            slug=""
+          />
+          <BlogHomeCard
+            image=""
+            title="dsadsa"
+            desc="dsadsa"
+            date="dsadsa"
+            slug=""
+          />
+          <BlogHomeCard
+            image=""
+            title="dsadsa"
+            desc="dsadsa"
+            date="dsadsa"
+            slug=""
+          />
+          <BlogHomeCard
+            image=""
+            title="dsadsa"
+            desc="dsadsa"
+            date="dsadsa"
+            slug=""
+          />
+        </Slider>
+        <Button
+          btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}
+          className="blog-slider-btn"
+        />
+      </StyledBlogSliderWrapper>
+    </>
+  );
+
+  const recomendationSlider = (
+    <>
+      <StyledRecomendationSliderWrapper>
+        <Button btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk} />
+      </StyledRecomendationSliderWrapper>
+    </>
+  );
+
+  const blogText = (
+    <>
+      <StyledIconWrapper>
+        <AHASvg />
+      </StyledIconWrapper>
+      <StyledContent
+        onClick={isLgUp ? () => setIsBlog(true) : null}
+        type="button"
+        hasdeclaredpadding="64px 87px 0 0"
+        isactive={isLgUp ? isBlog : true}
+      >
+        <StyledCircle hasdeclaredbg="var(--normalGreen)" />
+        <StyledTitleElement className="home-blog-section-text">
+          {stronaGlowna.sekcjaZBlogiem.blogTytul
+            ? parse(stronaGlowna.sekcjaZBlogiem.blogTytul)
+            : null}
+        </StyledTitleElement>
+        <StyledDescWrapper2 isleft className="home-blog-section-text">
+          {stronaGlowna.sekcjaZBlogiem.blogTytul
+            ? parse(stronaGlowna.sekcjaZBlogiem.blogOpis)
+            : null}
+        </StyledDescWrapper2>
+      </StyledContent>
+    </>
+  );
+
+  const recomendationText = (
+    <>
+      <StyledContent
+        onClick={isLgUp ? () => setIsBlog(false) : null}
+        type="button"
+        isright
+        hasdeclaredpadding="0 87px 0 0"
+        isactive={isLgUp ? !isBlog : true}
+      >
+        <StyledCircle />
+        <StyledTitleElement className="home-blog-section-text">
+          {stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul
+            ? parse(stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul)
+            : null}
+        </StyledTitleElement>
+        <StyledDescWrapper2 className="home-blog-section-text">
+          {stronaGlowna.sekcjaZBlogiem.rekomendacjeOpis
+            ? parse(stronaGlowna.sekcjaZBlogiem.rekomendacjeOpis)
+            : null}
+        </StyledDescWrapper2>
+      </StyledContent>
+    </>
+  );
+
+  const leftWrapper = (
+    <>
+      {isLgUp ? (
+        blogText
+      ) : (
+        <>
+          {blogText}
+          {blogSlider}
+          {recomendationText}
+          {recomendationSlider}
+        </>
+      )}
+      {isLgUp ? recomendationText : null}
+    </>
+  );
+
+  const desktopElements = <>{isBlog ? blogSlider : recomendationSlider}</>;
+
   return (
     <StyledHomeBlogSection>
-      <StyledLeftWrapper>
-        <StyledIconWrapper>
-          <AHASvg />
-        </StyledIconWrapper>
-        <StyledContent
-          onClick={() => setIsBlog(true)}
-          type="button"
-          hasdeclaredpadding="64px 87px 0 0"
-          isactive={isBlog}
-        >
-          <StyledCircle hasdeclaredbg="var(--normalGreen)" />
-          <StyledTitleElement>
-            {stronaGlowna.sekcjaZBlogiem.blogTytul
-              ? parse(stronaGlowna.sekcjaZBlogiem.blogTytul)
-              : null}
-          </StyledTitleElement>
-          <StyledDescWrapper isleft>
-            {stronaGlowna.sekcjaZBlogiem.blogTytul
-              ? parse(stronaGlowna.sekcjaZBlogiem.blogOpis)
-              : null}
-          </StyledDescWrapper>
-        </StyledContent>
-        <StyledContent
-          onClick={() => setIsBlog(false)}
-          type="button"
-          isright
-          hasdeclaredpadding="0 87px 0 0"
-          isactive={!isBlog}
-        >
-          <StyledCircle />
-          <StyledTitleElement>
-            {stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul
-              ? parse(stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul)
-              : null}
-          </StyledTitleElement>
-          <StyledDescWrapper>
-            {stronaGlowna.sekcjaZBlogiem.rekomendacjeOpis
-              ? parse(stronaGlowna.sekcjaZBlogiem.rekomendacjeOpis)
-              : null}
-          </StyledDescWrapper>
-        </StyledContent>
-      </StyledLeftWrapper>
-      <StyledRightWrapper>
-        {isBlog ? (
-          <StyledBlogSliderWrapper>
-            <Slider ref={slider} {...settings}>
-              <BlogHomeCard
-                image=""
-                title="dsadsa"
-                desc="dsadsa"
-                date="dsadsa"
-                slug=""
-              />
-              <BlogHomeCard
-                image=""
-                title="dsadsa"
-                desc="dsadsa"
-                date="dsadsa"
-                slug=""
-              />
-              <BlogHomeCard
-                image=""
-                title="dsadsa"
-                desc="dsadsa"
-                date="dsadsa"
-                slug=""
-              />
-              <BlogHomeCard
-                image=""
-                title="dsadsa"
-                desc="dsadsa"
-                date="dsadsa"
-                slug=""
-              />
-            </Slider>
-            <Button
-              btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}
-              className="blog-slider-btn"
-            />
-          </StyledBlogSliderWrapper>
-        ) : (
-          <StyledRecomendationSliderWrapper>
-            <Button
-              btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk}
-            />
-          </StyledRecomendationSliderWrapper>
-        )}
-      </StyledRightWrapper>
+      <StyledLeftWrapper>{leftWrapper}</StyledLeftWrapper>
+      {isLgUp ? (
+        <StyledRightWrapper>{desktopElements}</StyledRightWrapper>
+      ) : null}
     </StyledHomeBlogSection>
   );
 };

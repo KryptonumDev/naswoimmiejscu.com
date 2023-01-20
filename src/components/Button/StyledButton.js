@@ -56,6 +56,10 @@ export const StyledLink = styled(Link)`
   &.blog-slider-btn {
     margin-right: 30px;
     margin-top: 80px;
+
+    @media only screen and (max-width: 1569px) {
+      margin-right: 0;
+    }
   }
 
   @media only screen and (max-width: 1499px) {
