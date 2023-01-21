@@ -3,6 +3,7 @@ import parse from "html-react-parser";
 
 import ContactForm from "../ContactForm/ContactForm";
 import FAQElement from "../FAQElement/FAQElement";
+import Button from "../Button/Button";
 
 import {
   StyledFAQSection,
@@ -10,13 +11,17 @@ import {
   StyledTitleWrapper,
   StyledFAQSWrapper,
 } from "./StyledFAQSection";
-import Button from "../Button/Button";
 
-const FAQSection = ({ data, btnWidth, isNormalFont }) => {
+const FAQSection = ({
+  smallMgBottom,
+  data,
+  btnWidth,
+  isNormalFont,
+}) => {
   return (
     <StyledFAQSection>
       <StyledFAQWrapper>
-        <StyledTitleWrapper>
+        <StyledTitleWrapper smallmg={smallMgBottom}>
           {data.tytul ? parse(data.tytul) : null}
         </StyledTitleWrapper>
         <StyledFAQSWrapper>
@@ -33,8 +38,11 @@ const FAQSection = ({ data, btnWidth, isNormalFont }) => {
             variant="green"
             haswidth={btnWidth ? btnWidth : "355px"}
             hasheight="88px"
-            hasfontsize="20px"
             className="btn-faq-section"
+            hasClampWidth="25.781vw"
+            hasfontsize="clamp(16px, 1.042vw, 20px)"
+            hasBasicWidth="300px"
+            hasBasicHeight="53px"
           />
         </StyledFAQSWrapper>
       </StyledFAQWrapper>

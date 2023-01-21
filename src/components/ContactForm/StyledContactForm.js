@@ -132,6 +132,17 @@ export const StyledInputWrapper = styled.div`
     font: 700 20px Roboto;
     padding: 20px;
     color: var(--arrowBlack);
+
+    &:focus-visible {
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: var(--buttonBrownHover);
+      outline-offset: 4px;
+    }
+
+    @media only screen and (max-width: 992px) {
+      height: 60px;
+    }
   }
 
   textarea {
@@ -145,6 +156,13 @@ export const StyledInputWrapper = styled.div`
     height: 226px;
     font: 700 20px Roboto;
     padding: 20px;
+
+    &:focus-visible {
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: var(--buttonBrownHover);
+      outline-offset: 4px;
+    }
   }
 
   @media only screen and (max-width: 1681px) {
@@ -161,6 +179,13 @@ export const StyledSubmit = styled.button`
   font: 700 20px Roboto;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:focus-visible {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--buttonBrownHover);
+    outline-offset: 4px;
+  }
 
   @media only screen and (max-width: 375px) {
     width: 100%;

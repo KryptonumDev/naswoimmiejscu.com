@@ -11,7 +11,7 @@ export const StyledFooter = styled.footer`
 
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
-    gap: 83px;
+    gap: ${({ smallgap }) => (smallgap ? "0" : "83px")};
     padding-right: 33px;
   }
 `;
@@ -144,5 +144,28 @@ export const StyledSmallGreenCircle = styled.div`
   @media only screen and (max-width: 451px) {
     right: -250px;
     top: 240px;
+  }
+`;
+
+export const StyledMobileGreenCircle = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: -230px;
+    width: 328px;
+    height: 328px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 340px) {
+    display: none;
   }
 `;

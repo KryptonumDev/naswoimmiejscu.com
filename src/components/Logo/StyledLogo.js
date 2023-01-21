@@ -8,6 +8,13 @@ export const StyledLogo = styled(Link)`
     hasdeclaredmargin ? hasdeclaredmargin : "0"};
   display: block;
 
+  &:focus-visible {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--hoverGreen);
+    outline-offset: 4px;
+  }
+
   @media only screen and (max-width: 1748px) {
     max-width: ${({ isheader, hasmaxwidth }) =>
       isheader ? "400px" : hasmaxwidth};

@@ -4,6 +4,9 @@ import parse from "html-react-parser";
 
 import FAQSection from "../components/FAQSection/FAQSection";
 import Image from "../components/Image/Image";
+import Button from "../components/Button/Button";
+import Container from "../components/Container/Container";
+import WhiteCircle from "../components/WhiteCircle/WhiteCircle";
 
 import {
   StyledFAQMargin,
@@ -12,14 +15,14 @@ import {
   StyledRightWrapper,
   StyledCircleWrapper,
   StyledButtonsWrapper,
+  StyledMobileCircle,
+  StyledBigWhiteCircle,
 } from "../components/Contact/StyledFAQMargin";
 import { StyledCircle } from "../components/Circle/StyledCircle";
-import Container from "../components/Container/Container";
 import {
   StyledDescWrapper,
   StyledTitleWrapper,
 } from "../components/HomeHeroSection/StyledHomeHeroSection";
-import Button from "../components/Button/Button";
 
 const Contact = ({
   data: {
@@ -34,7 +37,7 @@ const Contact = ({
             <StyledTitleWrapper className="contact-page">
               {kontakt.tytulKontakt ? parse(kontakt.tytulKontakt) : null}
             </StyledTitleWrapper>
-            <StyledDescWrapper>
+            <StyledDescWrapper className="contact-page">
               {kontakt.opis ? parse(kontakt.opis) : null}
             </StyledDescWrapper>
             <StyledButtonsWrapper>
@@ -42,14 +45,22 @@ const Contact = ({
                 btnData={kontakt.pierwszyPrzycisk}
                 variant="green"
                 haswidth="495px"
+                hasClampWidth="25.781vw"
                 hasheight="88px"
-                hasfontsize="20px"
+                hasfontsize="clamp(16px, 1.042vw, 20px)"
+                hasBasicWidth="300px"
+                className="contact-page-btn"
+                hasBasicHeight="53px"
               />
               <Button
                 btnData={kontakt.drugiPrzycisk}
                 haswidth="495px"
                 hasheight="88px"
-                hasfontsize="20px"
+                hasClampWidth="25.781vw"
+                hasfontsize="clamp(16px, 1.042vw, 20px)"
+                hasBasicWidth="300px"
+                className="contact-page-btn"
+                hasBasicHeight="53px"
               />
             </StyledButtonsWrapper>
           </StyledLeftWrapper>
@@ -61,11 +72,21 @@ const Contact = ({
             <StyledCircleWrapper>
               <StyledCircle hasdeclaredbg="var(--normalGreen)" />
             </StyledCircleWrapper>
+            <StyledMobileCircle>
+              <StyledCircle
+                hasdeclaredbg="var(--buttonBrownHover)"
+                hasdeclaredwidth="30px"
+                hasdeclaredheight="31px"
+              />
+            </StyledMobileCircle>
+            <StyledBigWhiteCircle>
+              <WhiteCircle />
+            </StyledBigWhiteCircle>
           </StyledRightWrapper>
         </StyledContentWrapper>
       </Container>
       <StyledFAQMargin>
-        <FAQSection data={kontakt.kontaktFaq} btnWidth="495px" />
+        <FAQSection data={kontakt.kontaktFaq} btnWidth="495px" smallMgBottom />
       </StyledFAQMargin>
     </>
   );
@@ -73,9 +94,23 @@ const Contact = ({
 
 export default Contact;
 
+export { Head } from "../components/Head/Head";
+
 export const query = graphql`
   query contactQuery {
     wpPage(id: { eq: "cG9zdDoyNTk=" }) {
+      seo {
+        canonical
+        metaDesc
+        opengraphSiteName
+        title
+        opengraphUrl
+        opengraphImage {
+          localFile {
+            publicURL
+          }
+        }
+      }
       kontakt {
         tytulKontakt
         drugiPrzycisk {
@@ -94,7 +129,7 @@ export const query = graphql`
           title
           localFile {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(quality: 100)
             }
           }
         }
@@ -103,7 +138,7 @@ export const query = graphql`
           title
           localFile {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(quality: 100)
             }
           }
         }

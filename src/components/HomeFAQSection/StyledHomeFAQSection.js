@@ -5,7 +5,7 @@ export const StyledHomeFAQSection = styled.div`
   display: flex;
   justify-content: space-between;
   margin: clamp(100px, 8.333vw, 160px) auto 0;
-  padding: 0 clamp(100, 6.51vw, 125px) 0 clamp(100, 9.375vw, 180px);
+  padding: 0 clamp(100px, 6.51vw, 125px) 0 clamp(100px, 9.375vw, 180px);
   max-width: 1920px;
   gap: clamp(100px, 8.698vw, 200px);
 
@@ -24,8 +24,8 @@ export const StyledTextWrapper = styled.div`
   font: 700 3.333vw Roboto;
   display: flex;
   align-items: center;
-  padding-left: 225px;
   gap: 40px;
+  padding-left: 80px;
 
   p {
     max-width: 475px;
@@ -74,7 +74,7 @@ export const StyledFAQWrapper = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 55px;
+  gap: clamp(19px, 2.865vw, 55px);
   padding-left: 20px;
 
   @media only screen and (max-width: 992px) {

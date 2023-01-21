@@ -1,12 +1,15 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import parse from "html-react-parser";
+import { useLocation } from "@reach/router";
 
 import Container from "../Container/Container";
 import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
 import WhiteCircle from "../WhiteCircle/WhiteCircle";
 import Button from "../Button/Button";
+import BigGreenCircle from "../BigGreenCircle/BigGreenCircle";
+import SmallGreenCircle from "../SmallGreenCircle/SmallGreenCircle";
 
 import {
   StyledFooter,
@@ -19,10 +22,12 @@ import {
   StyledFooterLinks,
   StyledRightWrapperContent,
   StyledSmallGreenCircle,
+  StyledMobileGreenCircle,
 } from "./StyledFooter";
-import SmallGreenCircle from "../SmallGreenCircle/SmallGreenCircle";
+import { useScreenService } from "../../utils/useScreenService";
 
 const Footer = () => {
+  const location = useLocation();
   const data = useStaticQuery(graphql`
     query footerData {
       wpPage(id: { eq: "cG9zdDoxOA==" }) {
@@ -41,7 +46,7 @@ const Footer = () => {
               title
               localFile {
                 childImageSharp {
-                  gatsbyImageData
+                  gatsbyImageData(quality: 100)
                 }
               }
             }
@@ -50,7 +55,7 @@ const Footer = () => {
               title
               localFile {
                 childImageSharp {
-                  gatsbyImageData
+                  gatsbyImageData(quality: 100)
                 }
               }
             }
@@ -60,10 +65,11 @@ const Footer = () => {
     }
   `);
   const shortData = data.wpPage.global.stopka;
+  const { isLgUp } = useScreenService();
 
   return (
     <Container className="footer">
-      <StyledFooter>
+      <StyledFooter smallgap={location.pathname === "/kontakt/" && !isLgUp}>
         <StyledLeftWrapper>
           <Logo
             hadDeclaredMargin="0 0 54px 0"
@@ -94,19 +100,21 @@ const Footer = () => {
           </StyledSmallGreenCircle>
         </StyledLeftWrapper>
         <StyledRightWrapper>
-          <StyledRightWrapperContent>
-            {shortData.tekstObokPrzycisku
-              ? parse(shortData.tekstObokPrzycisku)
-              : null}
-            <Button
-              btnData={shortData.przycisk}
-              variant="green"
-              haswidth="366px"
-              hasheight="88px"
-              hasfontsize="24px"
-              className="footer"
-            />
-          </StyledRightWrapperContent>
+          {location.pathname === "/kontakt/" && !isLgUp ? null : (
+            <StyledRightWrapperContent>
+              {shortData.tekstObokPrzycisku
+                ? parse(shortData.tekstObokPrzycisku)
+                : null}
+              <Button
+                btnData={shortData.przycisk}
+                variant="green"
+                haswidth="366px"
+                hasheight="88px"
+                hasfontsize="24px"
+                className="footer"
+              />
+            </StyledRightWrapperContent>
+          )}
           <StyledFooterLinks hideMobile>
             <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
             <Link to="/regulamin">Regulamin</Link>
@@ -115,6 +123,9 @@ const Footer = () => {
         <StyledCircleWrapper>
           <WhiteCircle />
         </StyledCircleWrapper>
+        <StyledMobileGreenCircle>
+          <BigGreenCircle />
+        </StyledMobileGreenCircle>
       </StyledFooter>
     </Container>
   );

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Formik, Field } from "formik";
 import parse from "html-react-parser";
+import axios from "axios";
 
 import Image from "../Image/Image";
 
@@ -18,6 +19,7 @@ import {
 import { initialState, contactSchema } from "./form.constants";
 
 const ContactForm = () => {
+  const [isSend, setIsSend] = useState(false);
   const data = useStaticQuery(graphql`
     query contactQueryForm {
       wpPage(id: { eq: "cG9zdDoxOA==" }) {
@@ -34,7 +36,7 @@ const ContactForm = () => {
               title
               localFile {
                 childImageSharp {
-                  gatsbyImageData
+                  gatsbyImageData(quality: 100)
                 }
               }
             }
@@ -46,8 +48,22 @@ const ContactForm = () => {
 
   const shortData = data.wpPage.global.formularzKontaktowy;
 
-  const handleSubmit = () => {
-    console.log("elo");
+  const handleSubmit = async (data, { setSubmitting }) => {
+    // const formData = new FormData();
+    // for (let field of Object.keys(data)) {
+    //   formData.append(field, data[field]);
+    // }
+    // try {
+    //   await axios.post(
+    //     `${process.env.GATSBY_WORDPRESS_URL}/wp-json/contact-form-7/v1/contact-forms/39/feedback`,
+    //     formData
+    //   );
+    //   setSubmitting(false);
+    //   setIsSend(true);
+    // } catch (err) {
+    //   console.error("handleSubmit", err);
+    // }
+    console.log("elo", data);
   };
 
   return (

@@ -55,16 +55,30 @@ const Womens = ({
 
 export default Womens;
 
+export { Head } from "../components/Head/Head";
+
 export const query = graphql`
   query womensQuery {
     wpPage(id: { eq: "cG9zdDozMjk=" }) {
+      seo {
+        canonical
+        metaDesc
+        opengraphSiteName
+        title
+        opengraphUrl
+        opengraphImage {
+          localFile {
+            publicURL
+          }
+        }
+      }
       kobiety {
         pierwszaSekcjaKobiety {
           ikonkaObokTytulu {
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -74,7 +88,7 @@ export const query = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -82,7 +96,7 @@ export const query = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -99,7 +113,7 @@ export const query = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -107,7 +121,7 @@ export const query = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -121,7 +135,7 @@ export const query = graphql`
               altText
               localFile {
                 childImageSharp {
-                  gatsbyImageData
+                  gatsbyImageData(quality: 100)
                 }
               }
             }
@@ -130,7 +144,7 @@ export const query = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -138,7 +152,7 @@ export const query = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -153,7 +167,7 @@ export const query = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -161,7 +175,7 @@ export const query = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }

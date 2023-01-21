@@ -24,7 +24,7 @@ const Header = () => {
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -33,7 +33,7 @@ const Header = () => {
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }

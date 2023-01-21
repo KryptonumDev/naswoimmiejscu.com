@@ -52,9 +52,23 @@ const PrivacyPolicy = ({
 
 export default PrivacyPolicy;
 
+export { Head } from "../components/Head/Head";
+
 export const query = graphql`
   query privacyPolicyQuery {
     wpPage(id: { eq: "cG9zdDozMjU=" }) {
+      seo {
+        canonical
+        metaDesc
+        opengraphSiteName
+        title
+        opengraphUrl
+        opengraphImage {
+          localFile {
+            publicURL
+          }
+        }
+      }
       politykaPrywatnosCi {
         kontent
         tytul

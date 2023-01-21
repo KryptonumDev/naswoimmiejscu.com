@@ -7,7 +7,7 @@ export const StyledLink = styled(Link)`
   border: ${({ variant }) =>
     variant === "green" ? "none" : "1px solid var(--normalBlack)"};
   width: clamp(
-    277px,
+    ${({ hasbasicwidth }) => (hasbasicwidth ? hasbasicwidth : "277px")},
     ${({ hasclampwidth }) => (hasclampwidth ? hasclampwidth : "18.490vw")},
     ${({ hasdeclaredwidth }) => (hasdeclaredwidth ? hasdeclaredwidth : "355px")}
   );
@@ -69,8 +69,7 @@ export const StyledLink = styled(Link)`
     &.home-about-me,
     &.footer,
     &.abotu-me-who-im,
-    &.about-me-meet-btn,
-    &.btn-faq-section {
+    &.about-me-meet-btn {
       width: 277px;
       min-height: 73px;
       font-size: 16px;
@@ -103,15 +102,18 @@ export const StyledLink = styled(Link)`
     }
   }
 
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: 360px) {
     &.home-hero-section,
     &.home-second-section,
     &.home-about-me,
     &.footer,
     &.abotu-me-who-im,
     &.about-me-meet-btn,
-    &.btn-faq-section {
+    &.btn-faq-section,
+    &.contact-page-btn {
       width: 100%;
+      font-size: 11px;
+      min-height: 53px;
     }
   }
 `;

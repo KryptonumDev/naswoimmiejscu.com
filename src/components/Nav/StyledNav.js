@@ -17,6 +17,13 @@ export const StyledNav = styled.nav`
       color: var(--normalBlack);
       font-weight: 700;
     }
+
+    &:focus-visible {
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: var(--hoverGreen);
+      outline-offset: 4px;
+    }
   }
 
   .flex-wrapper {
@@ -98,6 +105,13 @@ export const StyledMobileWrapper = styled.div`
       text-transform: normal;
       font: 600 14px Roboto;
       color: var(--normalBlack);
+
+      &:focus-visible {
+        outline-width: 1px;
+        outline-style: solid;
+        outline-color: var(--hoverGreen);
+        outline-offset: 4px;
+      }
     }
   }
 `;
@@ -141,6 +155,13 @@ export const StyledFooterNav = styled.div`
     &.activeLink {
       color: var(--normalBlack);
       font-weight: 700;
+    }
+
+    &:focus-visible {
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: var(--hoverGreen);
+      outline-offset: 4px;
     }
   }
 

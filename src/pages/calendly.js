@@ -21,9 +21,23 @@ const Calendly = ({
 
 export default Calendly;
 
+export { Head } from "../components/Head/Head";
+
 export const query = graphql`
   query calendlyQuery {
     wpPage(id: { eq: "cG9zdDoyODU=" }) {
+      seo {
+        canonical
+        metaDesc
+        opengraphSiteName
+        title
+        opengraphUrl
+        opengraphImage {
+          localFile {
+            publicURL
+          }
+        }
+      }
       calendly {
         lista
         opisPodTytulem
@@ -53,7 +67,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -62,7 +76,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -72,7 +86,7 @@ export const query = graphql`
           title
           localFile {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(quality: 100)
             }
           }
         }
@@ -81,7 +95,7 @@ export const query = graphql`
           title
           localFile {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(quality: 100)
             }
           }
         }

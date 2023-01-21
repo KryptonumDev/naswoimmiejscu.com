@@ -20,7 +20,11 @@ import {
   StyledWhiteCircleWrapper,
 } from "../components/Home/StyledHome";
 
-const IndexPage = ({ data: { wpPage: { stronaGlowna }} }) => {
+const IndexPage = ({
+  data: {
+    wpPage: { stronaGlowna },
+  },
+}) => {
   return (
     <StyledHome>
       <HomeHeroSection data={stronaGlowna.pierwszaSekcjaHomePage} />
@@ -32,7 +36,9 @@ const IndexPage = ({ data: { wpPage: { stronaGlowna }} }) => {
         <GreenCircle />
       </StyledGreenCircleWrapper>
       <CooperationProcess data={stronaGlowna.procesWspolpracyHomePage} />
-      <UnderCooperationProcess data={stronaGlowna.sekcjaPodProcesemWspolpracy} />
+      <UnderCooperationProcess
+        data={stronaGlowna.sekcjaPodProcesemWspolpracy}
+      />
       <StyledWhiteCircleWrapper>
         <WhiteCircle />
       </StyledWhiteCircleWrapper>
@@ -49,9 +55,23 @@ const IndexPage = ({ data: { wpPage: { stronaGlowna }} }) => {
 
 export default IndexPage;
 
+export { Head } from "../components/Head/Head";
+
 export const query = graphql`
   query homePageQuery {
     wpPage(id: { eq: "cG9zdDoyOA==" }) {
+      seo {
+        canonical
+        metaDesc
+        opengraphSiteName
+        title
+        opengraphUrl
+        opengraphImage {
+          localFile {
+            publicURL
+          }
+        }
+      }
       stronaGlowna {
         pierwszaSekcjaHomePage {
           opisPoPrawo
@@ -66,7 +86,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -74,7 +94,7 @@ export const query = graphql`
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
             title
@@ -86,7 +106,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -95,7 +115,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -120,7 +140,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -129,7 +149,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -142,7 +162,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -151,7 +171,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -186,7 +206,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -195,7 +215,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -208,7 +228,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }
@@ -217,7 +237,7 @@ export const query = graphql`
             title
             localFile {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
               }
             }
           }

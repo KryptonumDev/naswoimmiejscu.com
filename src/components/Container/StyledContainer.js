@@ -5,6 +5,7 @@ export const StyledContainer = styled.section`
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 128px;
+  overflow-y: ${({ hidey }) => (hidey ? "hidden" : "visible")};
 
   @media only screen and (max-width: 1167px) {
     padding: 0 33px;

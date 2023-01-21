@@ -15,7 +15,7 @@ export const StyledFAQSection = styled.div`
 
   @media only screen and (max-width: 992px) {
     margin-top: 30px;
-    gap: 20px;
+    gap: 40px;
     padding-left: 0;
     flex-direction: column;
   }
@@ -34,7 +34,7 @@ export const StyledFAQWrapper = styled.div`
 export const StyledTitleWrapper = styled.div`
   margin-top: 60px;
   font: 700 64px Roboto;
-  margin-bottom: 128px;
+  margin-bottom: ${({ smallmg }) => (smallmg ? "80px" : "128px")};
 
   @media only screen and (max-width: 1763px) {
     font-size: 2.95vw;
@@ -67,5 +67,5 @@ export const StyledFAQSWrapper = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 60px;
+  gap: clamp(30px, 3.125vw, 60px);
 `;

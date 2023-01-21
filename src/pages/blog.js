@@ -65,9 +65,23 @@ const Blog = ({
 
 export default Blog;
 
+export { Head } from "../components/Head/Head";
+
 export const query = graphql`
   query blogQuery {
     wpPage(id: { eq: "cG9zdDo0ODM=" }) {
+      seo {
+        canonical
+        metaDesc
+        opengraphSiteName
+        title
+        opengraphUrl
+        opengraphImage {
+          localFile {
+            publicURL
+          }
+        }
+      }
       blog {
         tytul
       }

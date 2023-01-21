@@ -96,7 +96,8 @@ export const StyledTitleWrapper = styled.div`
       font-size: 2.95vw;
     }
 
-    &.home-contact {
+    &.home-contact,
+    &.contact-page {
       font-size: 2.95vw;
     }
 
@@ -122,7 +123,8 @@ export const StyledTitleWrapper = styled.div`
       font-size: 2.802vw;
     }
 
-    &.home-contact {
+    &.home-contact,
+    &.contact-page {
       font-size: 2.802vw;
     }
 
@@ -148,7 +150,8 @@ export const StyledTitleWrapper = styled.div`
       font-size: 3.372vw;
     }
 
-    &.home-contact {
+    &.home-contact,
+    &.contact-page {
       font-size: 3.372vw;
     }
 
@@ -173,7 +176,8 @@ export const StyledTitleWrapper = styled.div`
       font-size: 4.234vw;
     }
 
-    &.home-contact {
+    &.home-contact,
+    &.contact-page {
       font-size: 4.234vw;
     }
 
@@ -212,7 +216,8 @@ export const StyledTitleWrapper = styled.div`
 
     &.first-section-womens-youth,
     &.second-section-womens-youth,
-    &.effect-womens-title {
+    &.effect-womens-title,
+    &.contact-page {
       font-size: 6.061vw;
     }
   }
@@ -223,7 +228,8 @@ export const StyledTitleWrapper = styled.div`
     &.who-im-about-me,
     &.about-me-proccess,
     &.about-me-meet,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.contact-page {
       font-size: 7.462vw;
     }
 
@@ -280,7 +286,8 @@ export const StyledDescWrapper = styled.div`
     &.first-section-womens-youth,
     &.second-section-womens-youth,
     &.effect-womens-title,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.contact-page {
       font-size: 1.248vw;
     }
   }
@@ -298,7 +305,8 @@ export const StyledDescWrapper = styled.div`
     &.second-section-womens-youth,
     &.effect-womens-title,
     &.meets-form-womens,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.contact-page {
       font-size: 1.334vw;
     }
 
@@ -319,7 +327,8 @@ export const StyledDescWrapper = styled.div`
     &.second-section-womens-youth,
     &.effect-womens-title,
     &.meets-form-womens,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.contact-page {
       font-size: 1.734vw;
     }
 
@@ -342,7 +351,8 @@ export const StyledDescWrapper = styled.div`
     &.second-section-womens-youth,
     &.effect-womens-title,
     &.meets-form-womens,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.contact-page {
       font-size: 2.218vw;
     }
 
@@ -365,7 +375,8 @@ export const StyledDescWrapper = styled.div`
     &.first-section-womens-youth,
     &.second-section-womens-youth,
     &.effect-womens-title,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.contact-page {
       font-size: 2.9vw;
     }
   }
@@ -388,7 +399,8 @@ export const StyledDescWrapper = styled.div`
     &.first-section-womens-youth,
     &.second-section-womens-youth,
     &.effect-womens-title,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.contact-page {
       font-size: 3.409vw;
     }
 
@@ -414,7 +426,8 @@ export const StyledDescWrapper = styled.div`
 
     &.first-section-womens-youth,
     &.second-section-womens-youth,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.contact-page {
       font-size: 4.167vw;
     }
   }
