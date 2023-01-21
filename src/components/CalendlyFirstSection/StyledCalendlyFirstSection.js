@@ -3,13 +3,111 @@ import styled from "styled-components";
 export const StyledCalendlyFirstSection = styled.div`
   display: flex;
   width: 100%;
-  gap: 40px;
+  gap: clamp(80px, 8.438vw, 162px);
   justify-content: space-between;
-  margin-top: 139px;
+  margin-top: clamp(100px, 7.24vw, 139px);
+
+  @media only screen and (max-width: 992px) {
+    flex-direction: column-reverse;
+    gap: 20px;
+    margin-top: 84px;
+  }
 `;
 
-export const StyledLeftWrapper = styled.div``;
+export const StyledLeftWrapper = styled.div`
+  width: 50%;
 
-export const StyledRightWrapper = styled.div``;
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+  }
+`;
 
-export const StyledList = styled.div``;
+export const StyledRightWrapper = styled.div`
+  width: 50%;
+  position: relative;
+
+  .gatsby-image-wrapper {
+    height: 100%;
+  }
+
+  @media only screen and (max-width: 992px) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: 630px) {
+    width: 100%;
+  }
+`;
+
+export const StyledList = styled.div`
+  font: 300 1.354vw/1.4em Roboto;
+  color: var(--normalBlack);
+  margin-bottom: 40px;
+
+  @media only screen and (min-width: 1920px) {
+    font-size: 26px;
+  }
+
+  ul {
+    margin-left: 24px;
+
+    li {
+      color: var(--normalGreen);
+
+      p {
+        color: var(--normalBlack);
+      }
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1763px) {
+    font-size: 1.248vw;
+  }
+
+  @media only screen and (max-width: 1499px) {
+    font-size: 1.334vw;
+  }
+
+  @media only screen and (max-width: 1349px) {
+    font-size: 1.734vw;
+  }
+
+  @media only screen and (max-width: 992px) {
+    font-size: 2.218vw;
+  }
+
+  @media only screen and (max-width: 808px) {
+    font-size: 2.9vw;
+  }
+
+  @media only screen and (max-width: 528px) {
+    font-size: 3.409vw;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 4.167vw;
+  }
+`;
+
+export const StyledCircleWrapper = styled.div`
+  position: absolute;
+  bottom: -50px;
+  z-index: 2;
+  right: -50px;
+`;
+
+export const StyledMobileCircle = styled.div`
+  display: none;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  z-index: 1;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+  }
+`;

@@ -11,6 +11,7 @@ export const StyledAboutMeFirstSection = styled.div`
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
     gap: 16px;
+    margin-top: 84px;
   }
 `;
 

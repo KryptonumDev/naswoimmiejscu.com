@@ -86,7 +86,12 @@ const Contact = ({
         </StyledContentWrapper>
       </Container>
       <StyledFAQMargin>
-        <FAQSection data={kontakt.kontaktFaq} btnWidth="495px" smallMgBottom />
+        <FAQSection
+          hasLeftPadding
+          data={kontakt.kontaktFaq}
+          btnWidth="495px"
+          smallMgBottom
+        />
       </StyledFAQMargin>
     </>
   );

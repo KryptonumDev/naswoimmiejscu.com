@@ -22,18 +22,21 @@ const CalendlyLastSection = ({ data }) => {
     <Container>
       <StyledCalendlyLastSection>
         <StyledLeftWrapper>
-          <StyledTitleWrapper>
+          <StyledTitleWrapper className="calendly-last-section">
             {data.tytulStrony ? parse(data.tytulStrony) : null}
           </StyledTitleWrapper>
-          <StyledDescWrapper>
+          <StyledDescWrapper className="calendly-last-section">
             {data.opis ? parse(data.opis) : null}
           </StyledDescWrapper>
           <Button
             btnData={data.przycisk}
-            variant="green"
             haswidth="495px"
+            hasClampWidth="25.781vw"
+            className="calenldy-first-section"
             hasheight="88px"
-            hasfontsize="20px"
+            hasfontsize="clamp(16px, 1.042vw, 20px)"
+            hasBasicWidth="300px"
+            hasBasicHeight="53px"
           />
         </StyledLeftWrapper>
         <StyledRightWrapper>

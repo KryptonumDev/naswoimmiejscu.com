@@ -5,10 +5,10 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 80px;
+  padding-top: 80px;
 
   @media only screen and (max-width: 1167px) {
-    margin-top: 24px;
+    padding-top: 24px;
   }
 `;
 

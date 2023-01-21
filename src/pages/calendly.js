@@ -13,7 +13,12 @@ const Calendly = ({
   return (
     <>
       <CalendlyFirstSection data={calendly} />
-      <FAQSection data={calendly.faqCalendly} btnWidth="495px" />
+      <FAQSection
+        smallMgBottom
+        data={calendly.faqCalendly}
+        btnWidth="495px"
+        hasLeftPadding
+      />
       <CalendlyLastSection data={calendly.ostatniaSekcjaStronyCalendly} />
     </>
   );
@@ -42,6 +47,11 @@ export const query = graphql`
         lista
         opisPodTytulem
         tytulStrony
+        przycisk {
+          target
+          title
+          url
+        }
         faqCalendly {
           tytul
           przycisk {

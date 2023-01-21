@@ -15,6 +15,7 @@ export const StyledContentWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
     margin-bottom: 59px;
+    margin-top: 84px;
   }
 `;
 

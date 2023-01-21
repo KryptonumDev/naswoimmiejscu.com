@@ -7,7 +7,7 @@ export const StyledFAQSection = styled.div`
   gap: clamp(100px, 8.698vw, 200px);
   max-width: 1920px;
   margin: 100px auto 0;
-  padding-left: 128px;
+  padding-left: ${({ hasleftpadding }) => (hasleftpadding ? "182px" : "128px")};
 
   @media only screen and (max-width: 1167px) {
     padding-left: 33px;
@@ -34,7 +34,7 @@ export const StyledFAQWrapper = styled.div`
 export const StyledTitleWrapper = styled.div`
   margin-top: 60px;
   font: 700 64px Roboto;
-  margin-bottom: ${({ smallmg }) => (smallmg ? "80px" : "128px")};
+  margin-bottom: ${({ smallmg }) => (smallmg ? "60px" : "128px")};
 
   @media only screen and (max-width: 1763px) {
     font-size: 2.95vw;

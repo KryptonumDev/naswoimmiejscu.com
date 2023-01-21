@@ -70,7 +70,8 @@ export const StyledTitleWrapper = styled.div`
     font-size: 3vw;
   }
 
-  &.second-section-womens-youth {
+  &.second-section-womens-youth,
+  &.calendly-first-section {
     margin-top: 0;
   }
 
@@ -97,7 +98,9 @@ export const StyledTitleWrapper = styled.div`
     }
 
     &.home-contact,
-    &.contact-page {
+    &.contact-page,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 2.95vw;
     }
 
@@ -124,7 +127,9 @@ export const StyledTitleWrapper = styled.div`
     }
 
     &.home-contact,
-    &.contact-page {
+    &.contact-page,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 2.802vw;
     }
 
@@ -146,7 +151,9 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-proccess,
     &.about-me-meet,
     &.meets-form-womens,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 3.372vw;
     }
 
@@ -172,7 +179,9 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-proccess,
     &.about-me-meet,
     &.meets-form-womens,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 4.234vw;
     }
 
@@ -206,7 +215,9 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-proccess,
     &.about-me-meet,
     &.meets-form-womens,
-    &.home-blog-section-text {
+    &.home-blog-section-text,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 6.061vw;
     }
 
@@ -229,7 +240,9 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-proccess,
     &.about-me-meet,
     &.home-blog-section-text,
-    &.contact-page {
+    &.contact-page,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 7.462vw;
     }
 
@@ -287,7 +300,9 @@ export const StyledDescWrapper = styled.div`
     &.second-section-womens-youth,
     &.effect-womens-title,
     &.home-blog-section-text,
-    &.contact-page {
+    &.contact-page,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 1.248vw;
     }
   }
@@ -306,7 +321,9 @@ export const StyledDescWrapper = styled.div`
     &.effect-womens-title,
     &.meets-form-womens,
     &.home-blog-section-text,
-    &.contact-page {
+    &.contact-page,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 1.334vw;
     }
 
@@ -328,7 +345,9 @@ export const StyledDescWrapper = styled.div`
     &.effect-womens-title,
     &.meets-form-womens,
     &.home-blog-section-text,
-    &.contact-page {
+    &.contact-page,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 1.734vw;
     }
 
@@ -352,13 +371,20 @@ export const StyledDescWrapper = styled.div`
     &.effect-womens-title,
     &.meets-form-womens,
     &.home-blog-section-text,
-    &.contact-page {
+    &.contact-page,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 2.218vw;
     }
 
     &.first-section-womens-youth {
       font-size: 2.218vw;
       margin-top: 14px;
+    }
+
+    &.calendly-first-section {
+      margin-bottom: 20px;
+      margin-top: 20px;
     }
   }
 
@@ -376,7 +402,9 @@ export const StyledDescWrapper = styled.div`
     &.second-section-womens-youth,
     &.effect-womens-title,
     &.home-blog-section-text,
-    &.contact-page {
+    &.contact-page,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 2.9vw;
     }
   }
@@ -400,7 +428,9 @@ export const StyledDescWrapper = styled.div`
     &.second-section-womens-youth,
     &.effect-womens-title,
     &.home-blog-section-text,
-    &.contact-page {
+    &.contact-page,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 3.409vw;
     }
 
@@ -420,7 +450,9 @@ export const StyledDescWrapper = styled.div`
     &.about-me-proccess,
     &.about-me-meet,
     &.effect-womens-title,
-    &.meets-form-womens {
+    &.meets-form-womens,
+    &.calendly-first-section,
+    &.calendly-last-section {
       font-size: 4.167vw;
     }
 

@@ -113,10 +113,15 @@ export const StyledLink = styled(Link)`
     &.abotu-me-who-im,
     &.about-me-meet-btn,
     &.btn-faq-section,
-    &.contact-page-btn {
+    &.contact-page-btn,
+    &.calenldy-first-section {
       width: 100%;
       font-size: 11px;
       min-height: 53px;
+    }
+
+    &.btn-faq-section {
+      min-height: 73px;
     }
   }
 `;

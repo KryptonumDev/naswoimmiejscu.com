@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
         --grey: #E3E1DA;
         --lightGreen: #9FF86F;
         overflow-x: hidden;
-        overflow-y: ${({ islayout }) => islayout ? "hidden" : "visible"};
+        overflow-y: ${({ islayout }) => (islayout ? "hidden" : "visible")};
     } 
 
     body {
