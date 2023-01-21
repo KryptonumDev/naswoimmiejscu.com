@@ -44,7 +44,11 @@ const UnderCooperationProcess = ({ data }) => {
             variant="green"
             haswidth="355px"
             hasheight="88px"
-            hasfontsize="20px"
+            hasClampHeight="4.583vw"
+            hasfontsize="clamp(16px, 1.042vw, 20px)"
+            hasClampWidth="18.490vw"
+            hasBasicWidth="277px"
+            hasBasicHeight="73px"
             className="under-cooperation-process"
           />
           <StyledFirstIcon>

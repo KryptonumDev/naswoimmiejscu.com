@@ -18,7 +18,7 @@ export const StyledLink = styled(Link)`
     ${({ hasdeclaredheight }) =>
       hasdeclaredheight ? hasdeclaredheight : "88px"}
   );
-  transition: background-color 250ms;
+  transition: background-color 250ms, color 250ms, border 250ms;
   cursor: pointer;
   text-transform: uppercase;
   font: 700 ${({ hasfontsize }) => (hasfontsize ? hasfontsize : "20px")} Roboto;
@@ -32,6 +32,9 @@ export const StyledLink = styled(Link)`
   &:hover {
     background-color: ${({ variant }) =>
       variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
+    color: ${({ variant }) =>
+      variant === "green" ? null : "var(--normalWhite)"};
+    border: none;
   }
 
   &:focus-visible {
@@ -54,8 +57,8 @@ export const StyledLink = styled(Link)`
   }
 
   &.blog-slider-btn {
-    margin-right: 30px;
-    margin-top: 80px;
+    margin-right: clamp(40px, 8.917vw, 182px);
+    margin-top: 30px;
 
     @media only screen and (max-width: 1569px) {
       margin-right: 0;

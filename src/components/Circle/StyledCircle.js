@@ -39,9 +39,10 @@ export const StyledCircle = styled.div`
     &.blog-mobile-section-show {
       position: absolute;
       top: 50%;
-      right: -60px;
+      right: -70px;
       transform: translateY(-50%);
       z-index: -1;
+      display: block;
     }
   }
 `;

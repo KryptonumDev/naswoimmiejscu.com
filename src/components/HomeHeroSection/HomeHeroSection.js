@@ -34,13 +34,15 @@ const HomeHeroSection = ({ data }) => {
           </StyledDescWrapper>
           <Button
             btnData={data.przyciskPoPrawo}
+            className="home-hero-section"
             variant="green"
             haswidth="355px"
             hasheight="88px"
             hasClampHeight="4.583vw"
-            hasfontsize="20px"
-            className="home-hero-section"
+            hasfontsize="clamp(16px, 1.042vw, 20px)"
             hasClampWidth="18.490vw"
+            hasBasicWidth="277px"
+            hasBasicHeight="73px"
           />
         </StyledRightWrapper>
       </StyledHomeHeroSection>

@@ -108,9 +108,13 @@ const Footer = () => {
               <Button
                 btnData={shortData.przycisk}
                 variant="green"
-                haswidth="366px"
+                haswidth="355px"
                 hasheight="88px"
-                hasfontsize="24px"
+                hasClampHeight="4.583vw"
+                hasfontsize="clamp(20px, 1.242vw, 24px)"
+                hasClampWidth="18.490vw"
+                hasBasicWidth="277px"
+                hasBasicHeight="73px"
                 className="footer"
               />
             </StyledRightWrapperContent>
