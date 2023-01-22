@@ -2,11 +2,10 @@
 import React from "react";
 
 export function Head({ data }) {
-  const seo = data.wpPage?.seo;
-  // ??
-  // data.wpArtykul?.seo ??
-  // data.wpKolekcje?.seo ??
-  // data.wpWystawa?.seo;
+  const seo = data.wpPage?.seo ??
+   data.wpCaseStudy?.seo ??
+   data.wpPost?.seo;
+   
   const canonical = "https://naswoimmiejscu.com" + seo.opengraphUrl + "/";
 
   if (seo.opengraphUrl === "/404") {
