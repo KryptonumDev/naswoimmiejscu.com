@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledPrivacyPolicy = styled.div``;
+export const StyledPrivacyPolicy = styled.div`
+  margin-top: clamp(100, 8.646vw, 166px);
+`;
 
 export const StyledTitleWrapper = styled.div``;
 

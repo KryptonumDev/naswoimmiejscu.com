@@ -15,7 +15,8 @@ const CustomButton = ({
   imageSize,
   tabIndex,
   hasIcon,
-  iconColor
+  iconColor,
+  hasTransform,
 }) => {
   return (
     <StyledCustomButton
@@ -27,6 +28,7 @@ const CustomButton = ({
       imagesize={imageSize}
       tabIndex={tabIndex}
       iconColor={iconColor}
+      hastransform={hasTransform}
     >
       {hasIcon ? <Arrow /> : <Image imageDesktop={image} />}
     </StyledCustomButton>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import parse from "html-react-parser";
 
 import CustomButton from "../CustomButton/CustomButton";
@@ -24,6 +24,13 @@ import { StyledText } from "../Text/StyledText";
 const HomeSecondSection = ({ data }) => {
   const [isWomens, setIsWomens] = useState(false);
 
+  const handleChange = useCallback(
+    (womens) => {
+      setIsWomens(womens ? true : false);
+    },
+    [setIsWomens]
+  );
+
   return (
     <Container>
       <StyledHomeSecondSection>
@@ -41,14 +48,12 @@ const HomeSecondSection = ({ data }) => {
             {data.opisPoLewo ? parse(data.opisPoLewo) : null}
           </StyledDescWrapper>
           <StyledIconsWrapper>
-            <div>
+            <div onClick={() => handleChange(false)}>
               <CustomButton
-                onClick={() => setIsWomens(false)}
+                onClick={() => handleChange(false)}
                 type="button"
                 image={data.ikonkaPoLewo}
-                hasWidth={isWomens ? "92px" : null}
-                hasHeight={isWomens ? "78px" : null}
-                imageSize={isWomens ? "34px" : null}
+                hasTransform={isWomens ? false : true}
                 bgColor={isWomens ? "var(--btnGrey)" : null}
               />
               <StyledText
@@ -61,15 +66,13 @@ const HomeSecondSection = ({ data }) => {
                 {data.tekstDoIkonkiMlodziez}
               </StyledText>
             </div>
-            <div>
+            <div onClick={() => handleChange(true)}>
               <CustomButton
-                hasWidth={isWomens ? null : "92px"}
-                hasHeight={isWomens ? null : "78px"}
+                hasTransform={isWomens ? true : false}
                 bgColor={isWomens ? null : "var(--btnGrey)"}
                 image={data.ikonkaKobiety}
-                onClick={() => setIsWomens(true)}
+                onClick={() => handleChange(true)}
                 type="button"
-                imageSize={isWomens ? null : "34px"}
               />
               <StyledText
                 hasdeclaredfontsize="clamp(26px, 1.667vw, 32px)"

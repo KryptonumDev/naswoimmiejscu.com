@@ -6,7 +6,7 @@ export const StyledHomeSecondSection = styled.section`
   justify-content: space-between;
   margin-top: clamp(62px, 5.208vw, 100px);
   padding-left: 55px;
-  gap: clamp(100px, 8.698vw, 200px);
+  gap: clamp(100px, 9.375vw, 180px);
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;
@@ -75,13 +75,34 @@ export const StyledContentWrapper = styled.div`
 export const StyledIconsWrapper = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 26px;
 
   > div {
     display: flex;
     align-items: center;
     gap: 22px;
+    cursor: pointer;
+    transition: 250ms opacity linear;
+
+    button {
+      transition: 250ms background-color linear;
+    }
+
+    p {
+      transition: 250ms color linear;
+    }
+
+    &:hover {
+      opacity: 0.6;
+
+      button {
+        background-color: var(--buttonBrownHover);
+      }
+
+      p {
+        color: var(--normalBlack);
+      }
+    }
   }
 
   @media only screen and (max-width: 1349px) {

@@ -44,8 +44,9 @@ export const StyledTitleWrapper = styled.div`
 
 export const StyledErrorMessage = styled(ErrorMessage)`
   padding-left: 20px;
-  font: 500 18px Roboto;
+  font: 500 20px Roboto;
   color: var(--errorColor);
+  margin-top: 10px;
 `;
 
 export const StyledCustomCheckbox = styled.div`
@@ -78,7 +79,8 @@ export const StyledCustomCheckbox = styled.div`
 
     &:after {
       content: "";
-      border: 2px solid ${({ iserror }) => (iserror ? "#D63D3D" : "#3E635D")};
+      border: 2px solid
+        ${({ iserror }) => (iserror ? "var(--errorColor)" : "#3E635D")};
       width: 43px;
       height: 43px;
       display: block;
@@ -114,6 +116,7 @@ export const StyledInputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2px;
+  background-color: transparent;
 
   label {
     font: 700 20px Roboto;
@@ -125,8 +128,8 @@ export const StyledInputWrapper = styled.div`
   input {
     width: 100%;
     background-color: transparent;
-    border: 1px solid
-      ${({ iserror }) => (iserror ? "var(--errorColor)" : "var(--arrowBlack)")};
+    border: ${({ iserror }) =>
+      iserror ? "3px solid var(--errorColor)" : "1px solid var(--arrowBlack)"};
     height: 66px;
     border-radius: 32px;
     font: 700 20px Roboto;
@@ -138,6 +141,7 @@ export const StyledInputWrapper = styled.div`
       outline-style: solid;
       outline-color: var(--buttonBrownHover);
       outline-offset: 4px;
+      background-color: transparent;
     }
 
     @media only screen and (max-width: 992px) {
@@ -150,8 +154,8 @@ export const StyledInputWrapper = styled.div`
     width: 100%;
     background-color: transparent;
     color: var(--arrowBlack);
-    border: 1px solid
-      ${({ iserror }) => (iserror ? "var(--errorColor)" : "var(--arrowBlack)")};
+    border: ${({ iserror }) =>
+      iserror ? "3px solid var(--errorColor)" : "1px solid var(--arrowBlack)"};
     resize: none;
     height: 226px;
     font: 700 20px Roboto;
@@ -179,6 +183,13 @@ export const StyledSubmit = styled.button`
   font: 700 20px Roboto;
   text-transform: uppercase;
   cursor: pointer;
+  transition: color 250ms, background-color 250ms;
+
+  &:hover {
+    color: var(--normalWhite);
+    background-color: var(--buttonBrownHover);
+    border: none;
+  }
 
   &:focus-visible {
     outline-width: 1px;
@@ -201,4 +212,11 @@ export const StyledIconTitle = styled.div`
     top: -20px;
     left: -10px;
   }
+`;
+
+export const StyledSuccessMessage = styled.div`
+  width: 100%;
+  text-align: center;
+  font: 300 20px Roboto;
+  color: var(--normalBlack);
 `;

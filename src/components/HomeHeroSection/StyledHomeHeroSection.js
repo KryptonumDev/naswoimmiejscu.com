@@ -7,9 +7,10 @@ export const StyledHomeHeroSection = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-top: clamp(100px, 6.563vw, 126px);
+  margin-top: clamp(100px, 6.198vw, 119px);
+  align-items: center;
   padding-left: 55px;
-  gap: clamp(100px, 8.698vw, 200px);
+  gap: clamp(100px, 8.698vw, 167px);
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;
@@ -28,6 +29,10 @@ export const StyledHomeHeroSection = styled.div`
 export const StyledLeftWrapper = styled.div`
   position: relative;
   width: 40%;
+
+  .gatsby-image-wrapper {
+    width: 100%;
+  }
 
   @media only screen and (max-width: 992px) {
     width: 100%;
@@ -51,28 +56,14 @@ export const StyledRightWrapper = styled.div`
 
 export const StyledTitleWrapper = styled.div`
   font: 700 3.333vw/1.2em Roboto;
-  margin-top: clamp(20px, 3.333vw, 64px);
 
   strong {
     color: var(--nromalBrown);
     font-weight: 700;
   }
 
-  &.contact-page {
-    margin-top: 0;
-  }
-
-  &.home-contact {
-    margin-top: 0;
-  }
-
   &.first-section-womens-youth {
     font-size: 3vw;
-  }
-
-  &.second-section-womens-youth,
-  &.calendly-first-section {
-    margin-top: 0;
   }
 
   &.effect-womens-title {
@@ -93,7 +84,6 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-proccess,
     &.about-me-meet,
     &.meets-form-womens {
-      margin-top: 1.872vw;
       font-size: 2.95vw;
     }
 
@@ -256,12 +246,16 @@ export const StyledTitleWrapper = styled.div`
 `;
 
 export const StyledDescWrapper = styled.div`
-  margin: 32px 0 66px;
+  margin: 24px 0 73px;
   font: 300 1.354vw/1.4em Roboto;
   color: var(--normalBlack);
 
   strong {
     font-weight: 600;
+  }
+
+  &.home-about-me {
+    margin-bottom: 44px;
   }
 
   &.first-section-womens-youth {
@@ -275,6 +269,14 @@ export const StyledDescWrapper = styled.div`
 
   &.home-second-section {
     margin-bottom: 15px;
+  }
+
+  &.home-hero-section {
+    max-width: 723px;
+  }
+
+  &.cooperation-process {
+    margin-bottom: 0;
   }
 
   @media only screen and (min-width: 1920px) {
@@ -375,6 +377,10 @@ export const StyledDescWrapper = styled.div`
     &.calendly-first-section,
     &.calendly-last-section {
       font-size: 2.218vw;
+    }
+
+    &.home-hero-section {
+      max-width: unset;
     }
 
     &.first-section-womens-youth {

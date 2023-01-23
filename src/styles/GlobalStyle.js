@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
         --normalBlack: #000000;
         --btnGrey: #D9D9D9;
         --arrowBlack: #203533;
-        --errorColor: #D63D3D;
+        --errorColor: #7C0C0C;
         --hrColor: #EBE2D3;
         --grey: #E3E1DA;
         --lightGreen: #9FF86F;

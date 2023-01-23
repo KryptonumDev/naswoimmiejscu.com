@@ -5,7 +5,7 @@ export const StyledAboutMeFirstSection = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 96px;
-  gap: clamp(100px, 8.698vw, 200px);
+  gap: clamp(100px, 10.156vw, 195px);
   position: relative;
 
   @media only screen and (max-width: 992px) {

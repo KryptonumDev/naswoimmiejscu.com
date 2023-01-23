@@ -6,7 +6,7 @@ export const StyledHeading = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: clamp(80px, 8.385vw, 180px);
+  margin-top: clamp(80px, 8.021vw, 154px);
   font: 700 clamp(22px, 3.333vw, 64px) Roboto;
   align-items: center;
 `;

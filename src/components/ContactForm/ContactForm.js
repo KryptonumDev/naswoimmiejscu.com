@@ -14,6 +14,7 @@ import {
   StyledInputWrapper,
   StyledSubmit,
   StyledIconTitle,
+  StyledSuccessMessage,
 } from "./StyledContactForm";
 
 import { initialState, contactSchema } from "./form.constants";
@@ -31,6 +32,7 @@ const ContactForm = () => {
             trescWiadomosciLabel
             tytul
             wyrazamZgodeLabel
+            trescWiadomoscPoPoprawnymWyslaniu
             formIcon {
               altText
               title
@@ -48,22 +50,32 @@ const ContactForm = () => {
 
   const shortData = data.wpPage.global.formularzKontaktowy;
 
-  const handleSubmit = async (data, { setSubmitting }) => {
-    // const formData = new FormData();
-    // for (let field of Object.keys(data)) {
-    //   formData.append(field, data[field]);
-    // }
-    // try {
-    //   await axios.post(
-    //     `${process.env.GATSBY_WORDPRESS_URL}/wp-json/contact-form-7/v1/contact-forms/39/feedback`,
-    //     formData
-    //   );
-    //   setSubmitting(false);
-    //   setIsSend(true);
-    // } catch (err) {
-    //   console.error("handleSubmit", err);
-    // }
-    console.log("elo", data);
+  const handleSubmit = async (data, { setSubmitting, resetForm }) => {
+    setSubmitting(true);
+    const formData = new FormData();
+    console.log(
+      "moje dane: ",
+      data,
+      `${process.env.GATSBY_WORDPRESS_URL}/wp-json/contact-form-7/v1/contact-forms/${process.env.GATSBY_WORDPRESS_FORM_ID}/feedback`
+    );
+
+    for (let field of Object.keys(data)) {
+      formData.append(field, data[field]);
+    }
+
+    try {
+      await axios.post(
+        `${process.env.GATSBY_WORDPRESS_URL}/wp-json/contact-form-7/v1/contact-forms/${process.env.GATSBY_WORDPRESS_FORM_ID}/feedback`,
+        formData
+      );
+      setSubmitting(false);
+      setIsSend(true);
+      resetForm();
+    } catch (err) {
+      setSubmitting(false);
+      setIsSend(false);
+      console.error("handleSubmit", err);
+    }
   };
 
   return (
@@ -129,6 +141,13 @@ const ContactForm = () => {
             <StyledSubmit type="submit" disabled={isSubmitting}>
               {shortData.tekstWPrzycisku}
             </StyledSubmit>
+            {isSend ? (
+              <StyledSuccessMessage>
+                {shortData.trescWiadomoscPoPoprawnymWyslaniu
+                  ? parse(shortData.trescWiadomoscPoPoprawnymWyslaniu)
+                  : null}
+              </StyledSuccessMessage>
+            ) : null}
           </form>
         )}
       </Formik>

@@ -13,6 +13,8 @@ export const StyledCustomButton = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: transform 250ms;
+  transform: scale(${({ hastransform }) => (hastransform ? "1" : "0.6")});
 
   img {
     width: ${({ imagesize }) => (imagesize ? imagesize : "initial")};
@@ -25,6 +27,6 @@ export const StyledCustomButton = styled.button`
   }
 
   svg {
-    fill: ${({ iconColor }) => iconColor ? iconColor : "var(--normalWhite)"};
+    fill: ${({ iconColor }) => (iconColor ? iconColor : "var(--normalWhite)")};
   }
 `;

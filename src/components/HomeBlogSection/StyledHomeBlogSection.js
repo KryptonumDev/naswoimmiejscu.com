@@ -78,6 +78,11 @@ export const StyledContent = styled.button`
   padding: ${({ hasdeclaredpadding }) =>
     hasdeclaredpadding ? hasdeclaredpadding : "0"};
   opacity: ${({ isactive }) => (isactive ? "1" : "0.5")};
+  transition: opacity 250ms linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   &:focus-visible {
     outline-width: 1px;
@@ -105,48 +110,20 @@ export const StyledIconWrapper = styled.div`
   }
 `;
 
-export const StyledBlogSliderWrapper = styled.div`
+export const StyledDesktopScroll = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+`;
 
-  > div {
+export const StyledBlogSliderWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .slick-slider {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-    padding-right: clamp(40px, 7.917vw, 152px);
-    overflow-y: hidden;
-    max-height: 800px;
-
-    &:after {
-      content: "";
-      width: 100%;
-      height: 450px;
-      background: rgb(255, 255, 255);
-      background: linear-gradient(to top, #fff, transparent);
-      bottom: 0;
-      left: 0;
-      position: absolute;
-
-      @media only screen and (max-width: 992px) {
-        display: none;
-      }
-    }
-
-    .slick-slider {
-      width: 100%;
-    }
-
-    // .slick-slide {
-    //   margin: 20px 0;
-    // }
-
-    @media only screen and (max-width: 992px) {
-      align-items: flex-start;
-    }
   }
 
   @media only screen and (max-width: 1167px) {
@@ -167,4 +144,31 @@ export const StyledRecomendationSliderWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+`;
+
+export const StyledScrollWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: clamp(40px, 7.917vw, 152px);
+  max-height: 800px;
+  overflow-y: scroll;
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 450px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(to top, #fff, transparent);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
+  }
 `;

@@ -5,7 +5,7 @@ export const StyledCalendlyFirstSection = styled.div`
   width: 100%;
   gap: clamp(80px, 8.438vw, 162px);
   justify-content: space-between;
-  margin-top: clamp(100px, 7.24vw, 139px);
+  margin-top: clamp(100px, 7.24vw, 135px);
 
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;

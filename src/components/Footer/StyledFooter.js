@@ -101,7 +101,7 @@ export const StyledCircleWrapper = styled.div`
 `;
 
 export const StyledFooterLinks = styled.div`
-  display: flex;
+  display: ${({ hideMobile }) => (hideMobile ? "flex" : "none")};
   gap: 28px;
   margin-top: 36px;
   align-self: flex-end;

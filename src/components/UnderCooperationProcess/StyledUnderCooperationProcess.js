@@ -12,7 +12,7 @@ export const StyledUnderCooperationProcess = styled.div`
 `;
 
 export const StyledLeftWrapper = styled.div`
-  width: 50%;
+  width: 40%;
 
   @media only screen and (max-width: 992px) {
     width: 100%;
@@ -20,7 +20,7 @@ export const StyledLeftWrapper = styled.div`
 `;
 
 export const StyledRightWrapper = styled.div`
-  width: 50%;
+  width: 60%;
 
   @media only screen and (max-width: 992px) {
     width: 100%;
@@ -31,7 +31,7 @@ export const StyledTextWrapper = styled.div`
   font: 300 20px Roboto;
   color: var(--normalBlack);
   max-width: 584px;
-  margin-bottom: 50px;
+  margin-bottom: 38px;
 
   strong {
     font-weight: 600;
@@ -77,7 +77,7 @@ export const StyledAnimationWrapper = styled.div`
 `;
 
 export const StyledLine = styled.div`
-  width: 90%;
+  width: 87vw;
   height: 2px;
   background-color: var(--normalBlack);
   max-width: 1671px;
@@ -90,9 +90,9 @@ export const StyledLine = styled.div`
 
 export const StyledFirstIcon = styled.div`
   position: absolute;
-  left: 53%;
+  left: 48vw;
   transform: translateX(-50%);
-  top: -18px;
+  top: -22px;
 
   @media only screen and (max-width: 1167px) {
     display: none;

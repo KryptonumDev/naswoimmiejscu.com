@@ -4,6 +4,7 @@ export const StyledHomeAboutMe = styled.div`
   display: flex;
   margin-top: clamp(100px, 8.073vw, 155px);
   justify-content: space-between;
+  align-items: center;
   padding-left: 55px;
   gap: clamp(100px, 8.698vw, 200px);
   position: relative;
