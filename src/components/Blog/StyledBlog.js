@@ -12,7 +12,12 @@ export const StyledHeading = styled.div`
 `;
 
 export const StyledSlidesWrapper = styled.div`
-  margin-top: clamp(24px, 8.333vw, 160px);
+  margin: clamp(24px, 8.333vw, 160px) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 1007px;
 `;
 
 export const StyledCategories = styled.div`

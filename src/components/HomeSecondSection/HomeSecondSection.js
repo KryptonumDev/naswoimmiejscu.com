@@ -54,7 +54,7 @@ const HomeSecondSection = ({ data }) => {
                 type="button"
                 image={data.ikonkaPoLewo}
                 hasTransform={isWomens ? false : true}
-                bgColor={isWomens ? "var(--btnGrey)" : null}
+                bgColor={isWomens ? "var(--btnGrey)" : "var(--normalGreen)"}
               />
               <StyledText
                 hasdeclaredfontsize="clamp(26px, 1.667vw, 32px)"
@@ -69,7 +69,7 @@ const HomeSecondSection = ({ data }) => {
             <div onClick={() => handleChange(true)}>
               <CustomButton
                 hasTransform={isWomens ? true : false}
-                bgColor={isWomens ? null : "var(--btnGrey)"}
+                bgColor={isWomens ? "var(--normalGreen)" : "var(--btnGrey)"}
                 image={data.ikonkaKobiety}
                 onClick={() => handleChange(true)}
                 type="button"

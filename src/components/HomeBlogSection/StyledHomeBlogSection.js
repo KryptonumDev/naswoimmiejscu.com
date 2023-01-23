@@ -8,6 +8,7 @@ export const StyledHomeBlogSection = styled.div`
   width: 100%;
   display: flex;
   padding-left: 185px;
+  padding-bottom: 57px;
   max-width: 1920px;
   margin: 0 auto;
 
@@ -22,13 +23,23 @@ export const StyledHomeBlogSection = styled.div`
 
 export const StyledLeftWrapper = styled.div`
   width: 50%;
-  border-right: 1px solid var(--hrColor);
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 1px;
+    height: 131%;
+    background-color: var(--hrColor);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
 
   @media only screen and (max-width: 992px) {
     width: 100%;
-    position: relative;
   }
 `;
 
@@ -56,6 +67,7 @@ export const StyledDescWrapper2 = styled(StyledDescWrapper)`
   max-width: 623px;
   position: relative;
   z-index: 1;
+  margin-bottom: 0;
 
   strong {
     font-weight: 600;
@@ -115,6 +127,24 @@ export const StyledDesktopScroll = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  position: relative;
+  gap: 86px;
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 450px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.6), transparent);
+    bottom: 174px;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
+  }
 `;
 
 export const StyledBlogSliderWrapper = styled.div`
@@ -154,21 +184,22 @@ export const StyledScrollWrapper = styled.div`
   align-items: flex-end;
   padding-right: clamp(40px, 7.917vw, 152px);
   max-height: 800px;
+  min-height: 800px;
   overflow-y: scroll;
+  gap: clamp(20px, 2.917vw, 56px);
 
-  &:after {
-    content: "";
-    width: 100%;
-    height: 450px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(to top, #fff, transparent);
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    pointer-events: none;
+  scrollbar-color: var(--normalGreen) rgba(103, 134, 190, 0.3);
+  scrollbar-width: thin;
 
-    @media only screen and (max-width: 992px) {
-      display: none;
-    }
+  ::-webkit-scrollbar {
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background: rgba(103, 134, 190, 0.3);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--normalGreen);
+    border-radius: 6px;
   }
 `;

@@ -12,7 +12,9 @@ import {
   StyledTitleWrapper,
   StyledImage,
   StyledCircleWrapper,
+  StyledBottomCircle,
 } from "./StyledHomeHeroSection";
+import { StyledCircle } from "../Circle/StyledCircle";
 
 const HomeHeroSection = ({ data }) => {
   return (
@@ -24,6 +26,13 @@ const HomeHeroSection = ({ data }) => {
             imageDesktop={data.zdjeciePoLewo}
             imageMobile={data.zdjeciePoLewoMobile}
           />
+          <StyledBottomCircle>
+            <StyledCircle
+              hasdeclaredwidth="128px"
+              hasdeclaredheight="128px"
+              hasdeclaredbg="var(--normalGreen)"
+            />
+          </StyledBottomCircle>
         </StyledLeftWrapper>
         <StyledRightWrapper>
           <StyledTitleWrapper className="home-hero-section">

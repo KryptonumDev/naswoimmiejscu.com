@@ -13,9 +13,17 @@ import {
 } from "./StyledBlogHomeCard";
 import { StyledText } from "../Text/StyledText";
 
-const BlogHomeCard = ({ image, title, desc, date, slug }) => {
+const BlogHomeCard = ({
+  imageDesktop,
+  imageMobile,
+  title,
+  desc,
+  date,
+  slug,
+}) => {
+  console.log(imageDesktop);
   return (
-    <StyledBlogHomeCard to="/">
+    <StyledBlogHomeCard to={`artykul/${slug}`}>
       <StyledTextWrapper>
         <StyledTitle>{title ? parse(title) : null};</StyledTitle>
         <StyledDesc>{desc ? parse(desc) : null};</StyledDesc>
@@ -32,7 +40,9 @@ const BlogHomeCard = ({ image, title, desc, date, slug }) => {
         </StyledDate>
       </StyledTextWrapper>
       <StyledImageWrapper>
-        {/* <Image imageDesktop={image} /> */}
+        {imageDesktop ? (
+          <Image imageDesktop={imageDesktop} imageMobile={imageMobile} />
+        ) : null}
       </StyledImageWrapper>
     </StyledBlogHomeCard>
   );

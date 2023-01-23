@@ -11,7 +11,6 @@ export const StyledBlogHomeCard = styled(Link)`
   cursor: pointer;
   padding-left: clamp(30px, 3.6vw, 70px);
   align-items: center;
-  margin-bottom: clamp(20px, 2.917vw, 56px);
 
   &:focus-visible {
     outline-width: 1px;
@@ -47,7 +46,13 @@ export const StyledImageWrapper = styled.div`
   width: 65%;
   max-width: 419px;
   min-height: 220px;
-  background-color: red;
+
+  .gatsby-image-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 419px;
+    max-height: 220px;
+  }
 
   @media only screen and (max-width: 992px) {
     width: 100%;

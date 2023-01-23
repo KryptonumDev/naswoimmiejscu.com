@@ -24,6 +24,7 @@ export const StyledCircle = styled.div`
     &.home-hero-section {
       width: 30px;
       height: 31px;
+      background-color: var(--normalGreen);
     }
   }
 

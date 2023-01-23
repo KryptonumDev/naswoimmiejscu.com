@@ -2,6 +2,7 @@ import React, { useState, useRef, useMemo } from "react";
 import parse from "html-react-parser";
 import { useStaticQuery, graphql } from "gatsby";
 import Slider from "react-slick";
+import { motion, AnimatePresence } from "framer-motion";
 
 import BlogHomeCard from "../BlogHomeCard/BlogHomeCard";
 import Button from "../Button/Button";
@@ -22,6 +23,8 @@ import {
   StyledIconWrapper,
   StyledBlogSliderWrapper,
   StyledRecomendationSliderWrapper,
+  StyledScrollWrapper,
+  StyledDesktopScroll,
 } from "./StyledHomeBlogSection";
 
 import "slick-carousel/slick/slick.css";
@@ -30,8 +33,42 @@ import "slick-carousel/slick/slick-theme.css";
 const HomeBlogSection = () => {
   const {
     wpPage: { stronaGlowna },
+    allWpPost: { edges },
   } = useStaticQuery(graphql`
     query homeBlog {
+      allWpPost {
+        edges {
+          node {
+            slug
+            title
+            date
+            artykul {
+              miniaturka {
+                krotkiOpisDoMiniaturki
+                tekstPrzycisku
+                zdjecieDoMiniaturki {
+                  altText
+                  title
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+                zdjecieDoMiniaturkiMobile {
+                  altText
+                  title
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
       wpPage(id: { eq: "cG9zdDoyOA==" }) {
         stronaGlowna {
           sekcjaZBlogiem {
@@ -61,26 +98,13 @@ const HomeBlogSection = () => {
   const settings = {
     dots: false,
     infinite: false,
+    vertical: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    infinite: true,
-    // swipeToSlide: true,
+    verticalSwiping: false,
+    autoplay: false,
+    infinite: false,
     responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          vertical: false,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          verticalSwiping: false,
-          autoplay: false,
-          infinite: false,
-        },
-      },
       {
         breakpoint: 776,
         settings: {
@@ -95,44 +119,43 @@ const HomeBlogSection = () => {
     ],
   };
 
-  const blogSlider = (
-    <StyledBlogSliderWrapper>
-      <div>
-        <Slider ref={slider} {...settings}>
+  const desktopScrollBlog = (
+    <StyledDesktopScroll>
+      <StyledScrollWrapper>
+        {edges.map(({ node }) => (
           <BlogHomeCard
-            image=""
-            title="Lorem ipsum dolor"
-            desc="Lorem ipsum dolor sit amet, consecteturelit, sed do eiusmod tempor incididunt ut dolore magna aliqua. Quis ipsum"
-            date="Warszawa, 01.10.2022 r."
-            slug=""
+            key={node.slug}
+            slug={node.slug}
+            title={node.title}
+            desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
+            date={node.date}
+            imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
+            imageMobile={node.artykul.miniaturka.zdjecieDoMiniaturkiMobile}
           />
-          <BlogHomeCard
-            image=""
-            title="Lorem ipsum dolor"
-            desc="Lorem ipsum dolor sit amet, consecteturelit, sed do eiusmod tempor incididunt ut dolore magna aliqua. Quis ipsum"
-            date="Warszawa, 01.10.2022 r."
-            slug=""
-          />
-          <BlogHomeCard
-            image=""
-            title="Lorem ipsum dolor"
-            desc="Lorem ipsum dolor sit amet, consecteturelit, sed do eiusmod tempor incididunt ut dolore magna aliqua. Quis ipsum"
-            date="Warszawa, 01.10.2022 r."
-            slug=""
-          />
-          <BlogHomeCard
-            image=""
-            title="Lorem ipsum dolor sit"
-            desc="Lorem ipsum dolor sit amet, consecteturelit, sed do eiusmod tempor incididunt ut dolore magna aliqua. Quis ipsum"
-            date="Warszawa, 01.10.2022 r."
-            slug=""
-          />
-        </Slider>
-      </div>
+        ))}
+      </StyledScrollWrapper>
       <Button
         btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}
         className="blog-slider-btn"
       />
+    </StyledDesktopScroll>
+  );
+
+  const blogSlider = (
+    <StyledBlogSliderWrapper>
+      <Slider ref={slider} {...settings}>
+        {edges.map(({ node }) => (
+          <BlogHomeCard
+            key={node.slug}
+            slug={node.slug}
+            title={node.title}
+            desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
+            date={node.date}
+            imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
+            imageMobile={node.artykul.miniaturka.zdjecieDoMiniaturkiMobile}
+          />
+        ))}
+      </Slider>
     </StyledBlogSliderWrapper>
   );
 
@@ -220,7 +243,18 @@ const HomeBlogSection = () => {
     </>
   );
 
-  const desktopElements = <>{isBlog ? blogSlider : recomendationSlider}</>;
+  const desktopElements = (
+    <AnimatePresence key={isBlog}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        key={isBlog}
+      >
+        {isBlog ? desktopScrollBlog : recomendationSlider}
+      </motion.div>
+    </AnimatePresence>
+  );
 
   return (
     <StyledHomeBlogSection>

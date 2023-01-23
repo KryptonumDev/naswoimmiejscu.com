@@ -21,7 +21,7 @@ module.exports = {
       options: {
         defaults: {
           formats: [`auto`, `webp`],
-          placeholder: 'tracedSVG',
+          placeholder: 'DOMINANT_COLOR',
           quality: 100,
           backgroundColor: `transparent`,
         }

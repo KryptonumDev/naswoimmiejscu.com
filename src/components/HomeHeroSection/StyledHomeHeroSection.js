@@ -36,17 +36,14 @@ export const StyledLeftWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
-    padding-right: 88px;
-  }
-
-  @media only screen and (max-width: 360px) {
-    padding-right: 40px;
   }
 `;
 
 export const StyledRightWrapper = styled.div`
   max-width: 806px;
   width: 60%;
+  position: relative;
+  z-index: 1;
 
   @media only screen and (max-width: 992px) {
     max-width: unset;
@@ -482,5 +479,16 @@ export const StyledCircleWrapper = styled(StyledCircle)`
   @media only screen and (max-width: 1167px) {
     top: -15px;
     left: -15px;
+  }
+`;
+
+export const StyledBottomCircle = styled.div`
+  display: none;
+  position: absolute;
+  right: -50px;
+  bottom: -80px;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
   }
 `;
