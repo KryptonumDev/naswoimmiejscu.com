@@ -26,7 +26,7 @@ export const StyledBlogHomeCard = styled(Link)`
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
     gap: 16px;
-    width: 246px;
+    width: 277px;
     margin-right: 20px;
     padding-left: 0;
   }
@@ -49,13 +49,13 @@ export const StyledImageWrapper = styled.div`
 
   .gatsby-image-wrapper {
     width: 100%;
-    height: 100%;
+    height: 220px;
     max-width: 419px;
-    max-height: 220px;
   }
 
   @media only screen and (max-width: 992px) {
     width: 100%;
+    height: 100%;
   }
 `;
 

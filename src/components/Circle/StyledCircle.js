@@ -13,6 +13,12 @@ export const StyledCircle = styled.div`
     display: none;
   }
 
+  &.avatar-circle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
   @media only screen and (max-width: 1225px) {
     &.home-about-me {
       width: 42px;

@@ -22,6 +22,7 @@ export const StyledHomeContact = styled.div`
 
   @media only screen and (max-width: 992px) {
     gap: 0;
+    margin: clamp(33px, 3.327vw, 45px) auto 0;
   }
 `;
 

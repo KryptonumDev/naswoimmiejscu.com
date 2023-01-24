@@ -74,11 +74,19 @@ export const StyledCopyright = styled.div`
 
 export const StyledTopText = styled.div`
   font: 700 20px Roboto;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 16px;
+  }
 `;
 
 export const StyledBottomText = styled.div`
   margin-top: 11px;
   font: 300 13px Roboto;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 11px;
+  }
 `;
 
 export const StyledCircleWrapper = styled.div`

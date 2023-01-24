@@ -26,11 +26,9 @@ export const query = graphql`
       }
       caseStudyArtykul {
         miniaturkaCaseStudy {
-          miasto
-          nazwaOsobyDoMiniaturki
-          ocenaOd1Do5
           opisDoMiniaturki
-          wiek
+          podpisPodIminiem
+          nazwaOsobyDoMiniaturki
           avatar {
             altText
             title

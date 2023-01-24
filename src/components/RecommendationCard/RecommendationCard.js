@@ -1,35 +1,50 @@
 import React from "react";
 import { StyledCircle } from "../Circle/StyledCircle";
+import parse from "html-react-parser";
+
+import Image from "../Image/Image";
 
 import {
   StyledRecommendationCard,
   StyledAvatarWrapper,
-  StyledCityWrapper,
   StyledDescriptionWrapper,
   StyledImage,
   StyledTextContent,
-  StyledStarsWrapper,
   StyledNameWrapper,
+  StyledDescImageWrapper,
+  StyledMobileIcon,
 } from "./StyledRecommendationCard";
 
-const RecommendationCard = () => {
+const RecommendationCard = ({
+  slug,
+  avatar,
+  name,
+  nameDesc,
+  desc,
+  isDiffBg,
+}) => {
   return (
-    <StyledRecommendationCard>
+    <StyledRecommendationCard to={`/case/${slug}`} hasdeclaredbg={isDiffBg}>
       <StyledAvatarWrapper>
         <StyledImage>
-          tutaj bedzie zdjęcie
-          <StyledCircle />
+          <Image imageDesktop={avatar} />
+          <StyledCircle
+            hasdeclaredwidth="27px"
+            hasdeclaredheight="27px"
+            hasdeclaredbg="var(--lightGreen)"
+            className="avatar-circle"
+          />
         </StyledImage>
         <StyledTextContent>
-          <StyledStarsWrapper>gwiazdki</StyledStarsWrapper>
-          <StyledNameWrapper>Imie</StyledNameWrapper>
-          <StyledCityWrapper>
-            <div>ikonka miasto</div>
-            <div>ikonka wiek</div>
-          </StyledCityWrapper>
+          <StyledNameWrapper>{name ? parse(name) : null}</StyledNameWrapper>
+          <StyledDescImageWrapper>
+            {nameDesc ? parse(nameDesc) : null}
+          </StyledDescImageWrapper>
         </StyledTextContent>
       </StyledAvatarWrapper>
-      <StyledDescriptionWrapper>długi opis</StyledDescriptionWrapper>
+      <StyledDescriptionWrapper>
+        {desc ? parse(desc) : null}
+      </StyledDescriptionWrapper>
     </StyledRecommendationCard>
   );
 };

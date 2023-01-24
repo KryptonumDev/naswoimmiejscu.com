@@ -28,10 +28,10 @@ const FAQElement = ({ question, answer, isNormalFont }) => {
       open={isOpen}
     >
       <StyledQuestionWrapper open={isOpen}>
-        <StyledIconWrapper>
+        <StyledIconWrapper open={isOpen}>
           <CustomButton
-            hasWidth="51px"
-            hasHeight="44px"
+            hasWidth="71px"
+            hasHeight="64px"
             hasIcon
             iconColor={isOpen ? "var(--arrowBlack)" : "var(--normalWhite)"}
             bgColor={isOpen ? "var(--normalGreen)" : "var(--buttonBrownHover)"}

@@ -6,7 +6,7 @@ export const StyledHamburgerButton = styled.button`
   @media only screen and (max-width: 1167px) {
     position: fixed;
     z-index: 11;
-    right: 29px;
+    right: 33px;
     top: 24px;
     cursor: pointer;
     border: 0;

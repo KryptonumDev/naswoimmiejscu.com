@@ -22,7 +22,7 @@ export const StyledHomeHeroSection = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    margin-top: 82px;
+    margin-top: 63px;
   }
 `;
 
@@ -36,6 +36,14 @@ export const StyledLeftWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
+  }
+
+  @media only screen and (max-width: 360px) {
+    height: 225px;
+
+    .gatsby-image-wrapper {
+      height: 100%;
+    }
   }
 `;
 
@@ -229,8 +237,16 @@ export const StyledTitleWrapper = styled.div`
     &.home-blog-section-text,
     &.contact-page,
     &.calendly-first-section,
-    &.calendly-last-section {
-      font-size: 7.462vw;
+    &.calendly-last-section,
+    &.home-second-section,
+    &.cooperation-process,
+    &.home-about-me,
+    &.home-contact {
+      font-size: 8.889vw;
+    }
+
+    &.home-hero-section {
+      font-size: 6.111vw;
     }
 
     &.first-section-womens-youth,

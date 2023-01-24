@@ -16,6 +16,7 @@ export const StyledHomeFAQSection = styled.div`
   @media only screen and (max-width: 992px) {
     flex-direction: column;
     gap: 16px;
+    margin-top: 75px;
   }
 `;
 
@@ -74,11 +75,11 @@ export const StyledFAQWrapper = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: clamp(19px, 2.865vw, 55px);
+  gap: clamp(19px, 2.448vw, 47px);
   padding-left: 20px;
 
   @media only screen and (max-width: 992px) {
-    margin-top: 35px;
+    margin-top: 0;
     padding-left: 0;
     width: 100%;
   }

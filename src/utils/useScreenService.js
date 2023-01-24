@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export const breakpointsValues = {
   sm: 360,
   md: 768,
-  lg: 992,
+  lg: 993,
   xl: 1167,
 };
 

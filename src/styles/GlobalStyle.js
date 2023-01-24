@@ -18,11 +18,13 @@ const GlobalStyle = createGlobalStyle`
         --normalWhite: #ffffff; 
         --normalBlack: #000000;
         --btnGrey: #D9D9D9;
+        --recomendationSecond: #F6F2E1;
         --arrowBlack: #203533;
         --errorColor: #7C0C0C;
         --hrColor: #EBE2D3;
         --grey: #E3E1DA;
         --lightGreen: #9FF86F;
+        --paginationNormal: #BBA383;
         overflow-x: hidden;
         overflow-y: ${({ islayout }) => (islayout ? "hidden" : "visible")};
     } 

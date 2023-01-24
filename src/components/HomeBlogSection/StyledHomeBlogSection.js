@@ -18,6 +18,7 @@ export const StyledHomeBlogSection = styled.div`
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
+    padding-bottom: 30px;
   }
 `;
 
@@ -76,6 +77,7 @@ export const StyledDescWrapper2 = styled(StyledDescWrapper)`
   @media only screen and (max-width: 992px) {
     text-align: left;
     margin-top: 44px;
+    max-width: unset;
   }
 `;
 
@@ -91,10 +93,7 @@ export const StyledContent = styled.button`
     hasdeclaredpadding ? hasdeclaredpadding : "0"};
   opacity: ${({ isactive }) => (isactive ? "1" : "0.5")};
   transition: opacity 250ms linear;
-
-  &:hover {
-    opacity: 0.8;
-  }
+  width: 100%;
 
   &:focus-visible {
     outline-width: 1px;
@@ -103,11 +102,20 @@ export const StyledContent = styled.button`
     outline-offset: 4px;
   }
 
+  @media only screen and (min-width: 992px) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   @media only screen and (max-width: 992px) {
     align-items: flex-start;
     align-self: flex-start;
     position: relative;
-    margin-top: ${({ isright }) => (isright ? "64px" : "0")};
+    padding-right: 33px;
+    padding-top: ${({ isright }) => (isright ? "0" : "24px")};
+    margin-top: ${({ isright }) => (isright ? "32px" : "0")};
+    margin-bottom: ${({ isright }) => (isright ? "0" : "30px")};
   }
 `;
 
@@ -117,8 +125,8 @@ export const StyledIconWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     display: block;
     position: absolute;
-    top: 140px;
-    left: 0;
+    top: 90px;
+    left: 20px;
   }
 `;
 
@@ -126,7 +134,7 @@ export const StyledDesktopScroll = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: ${({ notpadding }) => (notpadding ? "flex-start" : "flex-end")};
   position: relative;
   gap: 86px;
 
@@ -140,6 +148,7 @@ export const StyledDesktopScroll = styled.div`
     left: 0;
     position: absolute;
     pointer-events: none;
+    display: ${({ notpadding }) => (notpadding ? "none" : "block")};
 
     @media only screen and (max-width: 992px) {
       display: none;
@@ -152,7 +161,8 @@ export const StyledBlogSliderWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  .slick-slider {
+  .slick-slider,
+  .slick-slide {
     width: 100%;
   }
 
@@ -162,18 +172,40 @@ export const StyledBlogSliderWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     align-items: flex-start;
+    position: relative;
+
+    .slick-dots {
+      li {
+        margin-right: 18px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.slick-active {
+          button {
+            background-color: var(--buttonBrownHover);
+          }
+        }
+
+        button {
+          width: 24px;
+          height: 24px;
+          background-color: var(--paginationNormal);
+          border-radius: 50%;
+
+          &::before {
+            content: "";
+          }
+        }
+      }
+    }
   }
 
   @media only screen and (max-width: 604px) {
-    padding-right: 0;
-    min-width: 604px;
+    padding-right: ${({ isright }) => (isright ? "33px" : "0")};
+    min-width: ${({ isright }) => (isright ? "unset" : "604px")};
   }
-`;
-
-export const StyledRecomendationSliderWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 `;
 
 export const StyledScrollWrapper = styled.div`
@@ -182,11 +214,13 @@ export const StyledScrollWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-right: clamp(40px, 7.917vw, 152px);
+  padding-right: ${({ notpadding }) =>
+    notpadding ? null : "clamp(40px, 7.917vw, 152px)"};
   max-height: 800px;
   min-height: 800px;
   overflow-y: scroll;
-  gap: clamp(20px, 2.917vw, 56px);
+  gap: ${({ notpadding }) =>
+    notpadding ? null : "clamp(20px, 2.917vw, 56px)"};
 
   scrollbar-color: var(--normalGreen) rgba(103, 134, 190, 0.3);
   scrollbar-width: thin;

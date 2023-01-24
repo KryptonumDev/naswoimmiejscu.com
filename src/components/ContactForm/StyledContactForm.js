@@ -39,6 +39,7 @@ export const StyledTitleWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     font-size: 24px;
+    margin-bottom: 20px;
   }
 `;
 

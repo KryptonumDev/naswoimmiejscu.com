@@ -18,9 +18,14 @@ export const StyledBlogCard = styled(Link)`
 
 export const StyledImageWrapper = styled.div`
   width: 35%;
+  max-width: 436px;
   height: 390px;
-  background-color: red;
   position: relative;
+
+  .gatsby-image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
 
   @media only screen and (max-width: 768px) {
     width: 100%;

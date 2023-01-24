@@ -7,7 +7,7 @@ export const StyledUnderCooperationProcess = styled.div`
   position: relative;
 
   @media only screen and (max-width: 992px) {
-    margin-top: 30px;
+    margin-top: 0;
   }
 `;
 
@@ -68,7 +68,7 @@ export const StyledContent = styled.div`
   @media only screen and (max-width: 992px) {
     flex-direction: column;
     margin-top: 0;
-    gap: 12px;
+    gap: 33px;
   }
 `;
 
@@ -101,14 +101,13 @@ export const StyledFirstIcon = styled.div`
   @media only screen and (max-width: 992px) {
     display: ${({ ishide }) => (ishide ? "none" : "flex")};
     position: relative;
-    margin: 0 auto;
+    margin: 33px auto 0;
     left: auto;
     top: auto;
     transform: translateX(0);
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
   }
 `;
 
@@ -132,7 +131,7 @@ export const StyledSecondIcon = styled.div`
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-top: 75px;
   }
 `;
 

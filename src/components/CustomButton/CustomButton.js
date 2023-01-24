@@ -2,8 +2,11 @@ import React from "react";
 
 import Arrow from "../Arrow/Arrow";
 import Image from "../Image/Image";
+import ArrowDesktop from "../ArrowDesktop/ArrowDesktop";
 
 import { StyledCustomButton } from "./StyledCustomButton";
+
+import { useScreenService } from "../../utils/useScreenService";
 
 const CustomButton = ({
   bgColor,
@@ -18,6 +21,8 @@ const CustomButton = ({
   iconColor,
   hasTransform,
 }) => {
+  const { isLgUp } = useScreenService();
+
   return (
     <StyledCustomButton
       bgcolor={bgColor}
@@ -30,7 +35,15 @@ const CustomButton = ({
       iconColor={iconColor}
       hastransform={hasTransform}
     >
-      {hasIcon ? <Arrow /> : <Image imageDesktop={image} />}
+      {hasIcon ? (
+        isLgUp ? (
+          <ArrowDesktop />
+        ) : (
+          <Arrow />
+        )
+      ) : (
+        <Image imageDesktop={image} />
+      )}
     </StyledCustomButton>
   );
 };

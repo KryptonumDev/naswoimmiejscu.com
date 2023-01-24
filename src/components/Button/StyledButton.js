@@ -58,6 +58,14 @@ export const StyledLink = styled(Link)`
 
   &.blog-slider-btn {
     margin-right: clamp(40px, 8.917vw, 182px);
+
+    @media only screen and (max-width: 992px) {
+      margin-right: 0;
+    }
+  }
+
+  &.blog-recomendation-slider {
+    margin-left: clamp(120px, 10.521vw, 202px);
   }
 
   @media only screen and (max-width: 1499px) {
@@ -65,6 +73,8 @@ export const StyledLink = styled(Link)`
     &.home-second-section,
     &.under-cooperation-process,
     &.home-about-me,
+    &.blog-recomendation-slider,
+    &.blog-slider-btn,
     &.footer,
     &.abotu-me-who-im,
     &.about-me-meet-btn {
@@ -81,6 +91,10 @@ export const StyledLink = styled(Link)`
 
     &.blog-recomendation-slider {
       display: none;
+    }
+
+    &.blog-slider-btn {
+      margin-top: 66px;
     }
   }
 
@@ -101,9 +115,6 @@ export const StyledLink = styled(Link)`
   }
 
   @media only screen and (max-width: 360px) {
-    &.home-hero-section,
-    &.home-second-section,
-    &.home-about-me,
     &.footer,
     &.abotu-me-who-im,
     &.about-me-meet-btn,
@@ -115,8 +126,24 @@ export const StyledLink = styled(Link)`
       min-height: 53px;
     }
 
+    &.home-hero-section,
+    &.home-second-section,
+    &.home-about-me,
+    &.blog-recomendation-slider,
+    &.blog-slider-btn {
+      min-height: 73px;
+    }
+
     &.btn-faq-section {
       min-height: 73px;
+    }
+  }
+
+  @media only screen and (max-width: 340px) {
+    &.home-hero-section,
+    &.home-second-section,
+    &.home-about-me {
+      width: 100%;
     }
   }
 `;

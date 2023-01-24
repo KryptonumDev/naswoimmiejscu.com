@@ -26,30 +26,32 @@ const IndexPage = ({
   },
 }) => {
   return (
-    <StyledHome>
-      <HomeHeroSection data={stronaGlowna.pierwszaSekcjaHomePage} />
-      <StyledCircleWrapper>
-        <WhiteCircle />
-      </StyledCircleWrapper>
-      <HomeSecondSection data={stronaGlowna.drugaSekcjaHomePage} />
-      <StyledGreenCircleWrapper>
-        <GreenCircle />
-      </StyledGreenCircleWrapper>
-      <CooperationProcess data={stronaGlowna.procesWspolpracyHomePage} />
-      <UnderCooperationProcess
-        data={stronaGlowna.sekcjaPodProcesemWspolpracy}
-      />
-      <StyledWhiteCircleWrapper>
-        <WhiteCircle />
-      </StyledWhiteCircleWrapper>
-      <HomeFAQSection data={stronaGlowna.stronaGlownaFaq} />
-      <HomeAboutMe data={stronaGlowna.oMnie} />
-      <StyledWhiteSecondCircleWrapper>
-        <WhiteCircle />
-      </StyledWhiteSecondCircleWrapper>
-      <HomeContact data={stronaGlowna.spotkajmySie} />
+    <>
+      <StyledHome>
+        <HomeHeroSection data={stronaGlowna.pierwszaSekcjaHomePage} />
+        <StyledCircleWrapper>
+          <WhiteCircle />
+        </StyledCircleWrapper>
+        <HomeSecondSection data={stronaGlowna.drugaSekcjaHomePage} />
+        <StyledGreenCircleWrapper>
+          <GreenCircle />
+        </StyledGreenCircleWrapper>
+        <CooperationProcess data={stronaGlowna.procesWspolpracyHomePage} />
+        <UnderCooperationProcess
+          data={stronaGlowna.sekcjaPodProcesemWspolpracy}
+        />
+        <StyledWhiteCircleWrapper>
+          <WhiteCircle />
+        </StyledWhiteCircleWrapper>
+        <HomeFAQSection data={stronaGlowna.stronaGlownaFaq} />
+        <HomeAboutMe data={stronaGlowna.oMnie} />
+        <StyledWhiteSecondCircleWrapper>
+          <WhiteCircle />
+        </StyledWhiteSecondCircleWrapper>
+        <HomeContact data={stronaGlowna.spotkajmySie} />
+      </StyledHome>
       <HomeBlogSection />
-    </StyledHome>
+    </>
   );
 };
 

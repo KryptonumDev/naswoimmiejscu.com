@@ -9,6 +9,7 @@ import Button from "../Button/Button";
 import RecommendationCard from "../RecommendationCard/RecommendationCard";
 
 import AHASvg from "../AHASvg/AHASvg";
+import QuoteIcon from "../QuoteIcon/QuoteIcon";
 
 import { useScreenService } from "../../utils/useScreenService";
 
@@ -22,10 +23,11 @@ import {
   StyledTitleElement,
   StyledIconWrapper,
   StyledBlogSliderWrapper,
-  StyledRecomendationSliderWrapper,
   StyledScrollWrapper,
   StyledDesktopScroll,
 } from "./StyledHomeBlogSection";
+
+import { StyledMobileIcon } from "../RecommendationCard/StyledRecommendationCard";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -34,6 +36,7 @@ const HomeBlogSection = () => {
   const {
     wpPage: { stronaGlowna },
     allWpPost: { edges },
+    allWpCaseStudy: { edges: caseStudy },
   } = useStaticQuery(graphql`
     query homeBlog {
       allWpPost {
@@ -89,34 +92,56 @@ const HomeBlogSection = () => {
           }
         }
       }
+      allWpCaseStudy {
+        edges {
+          node {
+            slug
+            caseStudyArtykul {
+              miniaturkaCaseStudy {
+                opisDoMiniaturki
+                podpisPodIminiem
+                nazwaOsobyDoMiniaturki
+                avatar {
+                  altText
+                  title
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   `);
   const [isBlog, setIsBlog] = useState(true);
   const slider = useRef(null);
+  const secondSlider = useRef(null);
   const { isLgUp } = useScreenService();
 
   const settings = {
     dots: false,
     infinite: false,
     vertical: false,
-    slidesToShow: 3,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    verticalSwiping: false,
+    autoplay: false,
+    infinite: true,
+  };
+
+  const settingsRec = {
+    dots: true,
+    infinite: false,
+    vertical: false,
+    slidesToShow: 1,
     slidesToScroll: 1,
     verticalSwiping: false,
     autoplay: false,
     infinite: false,
-    responsive: [
-      {
-        breakpoint: 776,
-        settings: {
-          vertical: false,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          verticalSwiping: false,
-          autoplay: false,
-          infinite: false,
-        },
-      },
-    ],
   };
 
   const desktopScrollBlog = (
@@ -137,6 +162,9 @@ const HomeBlogSection = () => {
       <Button
         btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}
         className="blog-slider-btn"
+        haswidth="366px"
+        hasheight="88px"
+        hasfontsize="20px"
       />
     </StyledDesktopScroll>
   );
@@ -156,17 +184,73 @@ const HomeBlogSection = () => {
           />
         ))}
       </Slider>
+      <Button
+        btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}
+        className="blog-slider-btn"
+        haswidth="366px"
+        hasheight="88px"
+        hasfontsize="20px"
+      />
     </StyledBlogSliderWrapper>
   );
 
-  const recomendationSlider = (
-    <StyledRecomendationSliderWrapper>
-      <RecommendationCard />
+  const recomendationScroll = (
+    <StyledDesktopScroll notpadding>
+      <StyledScrollWrapper notpadding>
+        {caseStudy.map(({ node }, index) => (
+          <RecommendationCard
+            slug={node.slug}
+            avatar={node.caseStudyArtykul.miniaturkaCaseStudy.avatar}
+            name={
+              node.caseStudyArtykul.miniaturkaCaseStudy.nazwaOsobyDoMiniaturki
+            }
+            nameDesc={
+              node.caseStudyArtykul.miniaturkaCaseStudy.podpisPodIminiem
+            }
+            desc={node.caseStudyArtykul.miniaturkaCaseStudy.opisDoMiniaturki}
+            isDiffBg={index % 2 ? false : true}
+          />
+        ))}
+      </StyledScrollWrapper>
       <Button
         btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk}
         className="blog-recomendation-slider"
+        haswidth="366px"
+        hasheight="88px"
+        hasfontsize="20px"
       />
-    </StyledRecomendationSliderWrapper>
+    </StyledDesktopScroll>
+  );
+
+  const recomendationSlider = (
+    <StyledBlogSliderWrapper isright>
+      <Slider ref={secondSlider} {...settingsRec}>
+        {caseStudy.map(({ node }, index) => (
+          <RecommendationCard
+            slug={node.slug}
+            avatar={node.caseStudyArtykul.miniaturkaCaseStudy.avatar}
+            name={
+              node.caseStudyArtykul.miniaturkaCaseStudy.nazwaOsobyDoMiniaturki
+            }
+            nameDesc={
+              node.caseStudyArtykul.miniaturkaCaseStudy.podpisPodIminiem
+            }
+            desc={node.caseStudyArtykul.miniaturkaCaseStudy.opisDoMiniaturki}
+            isDiffBg={index % 2 ? false : true}
+          />
+        ))}
+      </Slider>
+      <StyledMobileIcon>
+        <QuoteIcon />
+      </StyledMobileIcon>
+      <Button
+        btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk}
+        className="blog-recomendation-slider"
+        haswidth="366px"
+        hasheight="88px"
+        hasfontsize="20px"
+      />
+    </StyledBlogSliderWrapper>
   );
 
   const blogText = (
@@ -251,7 +335,7 @@ const HomeBlogSection = () => {
         exit={{ opacity: 0 }}
         key={isBlog}
       >
-        {isBlog ? desktopScrollBlog : recomendationSlider}
+        {isBlog ? desktopScrollBlog : recomendationScroll}
       </motion.div>
     </AnimatePresence>
   );

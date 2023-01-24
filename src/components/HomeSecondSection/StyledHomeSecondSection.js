@@ -108,6 +108,10 @@ export const StyledIconsWrapper = styled.div`
   @media only screen and (max-width: 1349px) {
     flex-direction: column;
   }
+
+  @media only screen and (max-width: 992px) {
+    gap: 0;
+  }
 `;
 
 export const StyledMobileImage = styled.div`

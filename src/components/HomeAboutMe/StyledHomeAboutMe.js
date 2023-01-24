@@ -17,6 +17,7 @@ export const StyledHomeAboutMe = styled.div`
     flex-direction: column;
     gap: 20px;
     margin-top: 32px;
+    align-items: flex-start;
   }
 `;
 

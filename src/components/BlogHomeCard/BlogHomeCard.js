@@ -21,7 +21,6 @@ const BlogHomeCard = ({
   date,
   slug,
 }) => {
-  console.log(imageDesktop);
   return (
     <StyledBlogHomeCard to={`artykul/${slug}`}>
       <StyledTextWrapper>

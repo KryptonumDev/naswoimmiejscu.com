@@ -27,6 +27,6 @@ export const StyledCustomButton = styled.button`
   }
 
   svg {
-    fill: ${({ iconColor }) => (iconColor ? iconColor : "var(--normalWhite)")};
+    color: ${({ iconColor }) => (iconColor ? iconColor : "var(--normalWhite)")};
   }
 `;
