@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import parse from "html-react-parser";
 
@@ -15,49 +15,39 @@ import { StyledText } from "../components/Text/StyledText";
 const Blog = ({
   data: {
     wpPage: { blog },
+    allWpPost: { edges },
   },
 }) => {
+  const [categories, setCategories] = useState([]);
+
   return (
     <Container>
       <StyledHeading>
         {blog?.tytul ? parse(blog.tytul) : null}
         <StyledCategories>
-          <StyledText
-            hasdeclaredfontcolor="var(--normalBlack)"
-            hasdeclaredtexttransform="uppercase"
-          >
-            kategoria 1(2)
-          </StyledText>
-          <StyledText
-            hasdeclaredfontcolor="var(--normalBlack)"
-            hasdeclaredtexttransform="uppercase"
-          >
-            kategoria 1(2)
-          </StyledText>
-          <StyledText
-            hasdeclaredfontcolor="var(--normalBlack)"
-            hasdeclaredtexttransform="uppercase"
-          >
-            kategoria 1(2)
-          </StyledText>
-          <StyledText
-            hasdeclaredfontcolor="var(--normalBlack)"
-            hasdeclaredtexttransform="uppercase"
-          >
-            kategoria 1(2)
-          </StyledText>
+          {/* {categories.group(({ name }) => name).map((category) => (
+            <StyledText
+              hasdeclaredfontcolor="var(--normalBlack)"
+              hasdeclaredtexttransform="uppercase"
+            >
+              {category}(2)
+            </StyledText>
+          ))} */}
         </StyledCategories>
       </StyledHeading>
       <StyledSlidesWrapper>
-        <BlogCard
-          category="nazwa kategorii"
-          title="Lorem ipsum dolor sit"
-          desc="Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut dolore magna aliqua. Quis ipsum"
-          date="01.10.2022"
-          btnText="POZNAJ"
-          slug=""
-          image=""
-        />
+        {edges.map(({ node }) => (
+          <BlogCard
+            category={node.categories.nodes[0].name}
+            title={node.title}
+            desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
+            date={node.date}
+            btnText={node.artykul.miniaturka.tekstPrzycisku}
+            slug={node.slug}
+            imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
+            imageMobile={node.artykul.miniaturka.zdjecieDoMiniaturkiMobile}
+          />
+        ))}
       </StyledSlidesWrapper>
     </Container>
   );
@@ -84,6 +74,44 @@ export const query = graphql`
       }
       blog {
         tytul
+      }
+    }
+    allWpPost {
+      edges {
+        node {
+          slug
+          title
+          date
+          artykul {
+            miniaturka {
+              krotkiOpisDoMiniaturki
+              tekstPrzycisku
+              zdjecieDoMiniaturki {
+                altText
+                title
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
+              }
+              zdjecieDoMiniaturkiMobile {
+                altText
+                title
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
+              }
+            }
+          }
+          categories {
+            nodes {
+              name
+            }
+          }
+        }
       }
     }
   }

@@ -13,15 +13,24 @@ import {
   StyledMobileCategory,
 } from "./StyledBlogCard";
 
-const BlogCard = ({ category, title, desc, date, btnText, slug, image }) => {
+const BlogCard = ({
+  category,
+  title,
+  desc,
+  date,
+  btnText,
+  slug,
+  imageDesktop,
+  imageMobile,
+}) => {
   const btnData = {
-    url: slug,
+    url: `/artykul/${slug}`,
     title: btnText,
     target: null,
   };
 
   return (
-    <StyledBlogCard to="/">
+    <StyledBlogCard to={`/artykul/${slug}`}>
       <StyledImageWrapper>
         <StyledMobileCategory>
           <StyledText
@@ -33,7 +42,7 @@ const BlogCard = ({ category, title, desc, date, btnText, slug, image }) => {
             {category}
           </StyledText>
         </StyledMobileCategory>
-        {/* <Image imageDesktop={image} /> */}
+        <Image imageDesktop={imageDesktop} imageMobile={imageMobile} />
       </StyledImageWrapper>
       <StyledTextWrapper>
         <StyledText
