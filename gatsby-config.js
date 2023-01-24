@@ -21,7 +21,7 @@ module.exports = {
       options: {
         defaults: {
           formats: [`auto`, `webp`],
-          placeholder: 'DOMINANT_COLOR',
+          placeholder: 'dominantColor',
           quality: 100,
           backgroundColor: `transparent`,
         }
