@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
         --grey: #E3E1DA;
         --lightGreen: #9FF86F;
         --paginationNormal: #BBA383;
+        --hoverGrey: #E2E2E2;
         overflow-x: hidden;
         overflow-y: ${({ islayout }) => (islayout ? "hidden" : "visible")};
     } 

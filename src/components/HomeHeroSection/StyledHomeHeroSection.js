@@ -260,7 +260,7 @@ export const StyledTitleWrapper = styled.div`
 
 export const StyledDescWrapper = styled.div`
   margin: 24px 0 73px;
-  font: 300 1.354vw/1.4em Roboto;
+  font: 300 1.354vw/1.2em Roboto;
   color: var(--normalBlack);
 
   strong {

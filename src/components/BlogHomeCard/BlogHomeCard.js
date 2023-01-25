@@ -20,9 +20,10 @@ const BlogHomeCard = ({
   desc,
   date,
   slug,
+  isCase,
 }) => {
   return (
-    <StyledBlogHomeCard to={`artykul/${slug}`}>
+    <StyledBlogHomeCard to={`artykul/${slug}`} iscase={isCase}>
       <StyledTextWrapper>
         <StyledTitle>{title ? parse(title) : null};</StyledTitle>
         <StyledDesc>{desc ? parse(desc) : null};</StyledDesc>

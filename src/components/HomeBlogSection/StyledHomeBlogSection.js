@@ -7,10 +7,11 @@ import {
 export const StyledHomeBlogSection = styled.div`
   width: 100%;
   display: flex;
-  padding-left: 185px;
+  padding-left: ${({ iscase }) => (iscase ? "129px" : "185px")};
   padding-bottom: 57px;
   max-width: 1920px;
   margin: 0 auto;
+  gap: ${({ iscase }) => (iscase ? "clamp(90px, 7.240vw, 139px)" : "0")};
 
   @media only screen and (max-width: 1167px) {
     padding-left: 33px;
@@ -30,6 +31,7 @@ export const StyledLeftWrapper = styled.div`
 
   &:after {
     content: "";
+    display: ${({ iscase }) => (iscase ? "none" : "block")};
     width: 1px;
     height: 131%;
     background-color: var(--hrColor);
@@ -45,7 +47,7 @@ export const StyledLeftWrapper = styled.div`
 `;
 
 export const StyledRightWrapper = styled.div`
-  margin-top: 3.6vw;
+  margin-top: ${({ iscase }) => (iscase ? "0" : "3.6vw")};
   width: 50%;
 
   @media only screen and (max-width: 992px) {
@@ -236,4 +238,33 @@ export const StyledScrollWrapper = styled.div`
     background: var(--normalGreen);
     border-radius: 6px;
   }
+`;
+
+export const StyledLeftCaseWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const StyledCaseTitle = styled.div`
+  font: 700 64px Roboto;
+  margin-bottom: 58px;
+`;
+
+export const StyledDescCase = styled.div`
+  font: 300 26px/1.2em Roboto;
+  margin-bottom: 120px;
+`;
+
+export const StyledAddnotationFirst = styled.div`
+  font: italic 600 26px Roboto;
+`;
+
+export const StyledAddnotationSecondDiv = styled.div`
+  font: 300 26px Roboto;
+  text-align: right;
+  margin-top: 10px;
+  max-width: 710px;
 `;

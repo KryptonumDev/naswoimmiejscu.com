@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import BlogHomeCard from "../BlogHomeCard/BlogHomeCard";
 import Button from "../Button/Button";
 import RecommendationCard from "../RecommendationCard/RecommendationCard";
+import MeetSomebody from "../MeetSomebody/MeetSomebody";
 
 import AHASvg from "../AHASvg/AHASvg";
 import QuoteIcon from "../QuoteIcon/QuoteIcon";
@@ -25,6 +26,11 @@ import {
   StyledBlogSliderWrapper,
   StyledScrollWrapper,
   StyledDesktopScroll,
+  StyledLeftCaseWrapper,
+  StyledCaseTitle,
+  StyledDescCase,
+  StyledAddnotationFirst,
+  StyledAddnotationSecondDiv,
 } from "./StyledHomeBlogSection";
 
 import { StyledMobileIcon } from "../RecommendationCard/StyledRecommendationCard";
@@ -32,7 +38,16 @@ import { StyledMobileIcon } from "../RecommendationCard/StyledRecommendationCard
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const HomeBlogSection = () => {
+const HomeBlogSection = ({
+  isCase,
+  addnotationSecond,
+  addnotationFirst,
+  blogTitle,
+  blogOpis,
+  anotherPerson,
+  iconImage,
+  tekstDoLinku,
+}) => {
   const {
     wpPage: { stronaGlowna },
     allWpPost: { edges },
@@ -144,6 +159,30 @@ const HomeBlogSection = () => {
     infinite: false,
   };
 
+  const leftSectionCase = (
+    <StyledLeftCaseWrapper>
+      {anotherPerson ? (
+        <MeetSomebody
+          data={anotherPerson}
+          icon={iconImage}
+          tekstDoLinku={tekstDoLinku}
+        />
+      ) : null}
+      <div>
+        <StyledCaseTitle>{blogTitle ? parse(blogTitle) : null}</StyledCaseTitle>
+        <StyledDescCase>{blogOpis ? parse(blogOpis) : null}</StyledDescCase>
+      </div>
+      <div>
+        <StyledAddnotationFirst>
+          {addnotationFirst ? parse(addnotationFirst) : null}
+        </StyledAddnotationFirst>
+        <StyledAddnotationSecondDiv>
+          {addnotationSecond ? parse(addnotationSecond) : null}
+        </StyledAddnotationSecondDiv>
+      </div>
+    </StyledLeftCaseWrapper>
+  );
+
   const desktopScrollBlog = (
     <StyledDesktopScroll>
       <StyledScrollWrapper>
@@ -156,6 +195,7 @@ const HomeBlogSection = () => {
             date={node.date}
             imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
             imageMobile={node.artykul.miniaturka.zdjecieDoMiniaturkiMobile}
+            isCase={isCase}
           />
         ))}
       </StyledScrollWrapper>
@@ -181,6 +221,7 @@ const HomeBlogSection = () => {
             date={node.date}
             imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
             imageMobile={node.artykul.miniaturka.zdjecieDoMiniaturkiMobile}
+            isCase={isCase}
           />
         ))}
       </Slider>
@@ -199,6 +240,7 @@ const HomeBlogSection = () => {
       <StyledScrollWrapper notpadding>
         {caseStudy.map(({ node }, index) => (
           <RecommendationCard
+            key={node.slug}
             slug={node.slug}
             avatar={node.caseStudyArtykul.miniaturkaCaseStudy.avatar}
             name={
@@ -227,6 +269,7 @@ const HomeBlogSection = () => {
       <Slider ref={secondSlider} {...settingsRec}>
         {caseStudy.map(({ node }, index) => (
           <RecommendationCard
+            key={node.slug}
             slug={node.slug}
             avatar={node.caseStudyArtykul.miniaturkaCaseStudy.avatar}
             name={
@@ -314,7 +357,13 @@ const HomeBlogSection = () => {
   const leftWrapper = (
     <>
       {isLgUp ? (
-        blogText
+        isCase ? (
+          leftSectionCase
+        ) : (
+          blogText
+        )
+      ) : isCase ? (
+        <>{blogSlider}</>
       ) : (
         <>
           {blogText}
@@ -323,7 +372,7 @@ const HomeBlogSection = () => {
           {recomendationSlider}
         </>
       )}
-      {isLgUp ? recomendationText : null}
+      {isLgUp && !isCase ? recomendationText : null}
     </>
   );
 
@@ -341,10 +390,12 @@ const HomeBlogSection = () => {
   );
 
   return (
-    <StyledHomeBlogSection>
-      <StyledLeftWrapper>{leftWrapper}</StyledLeftWrapper>
+    <StyledHomeBlogSection iscase={isCase}>
+      <StyledLeftWrapper iscase={isCase}>{leftWrapper}</StyledLeftWrapper>
       {isLgUp ? (
-        <StyledRightWrapper>{desktopElements}</StyledRightWrapper>
+        <StyledRightWrapper iscase={isCase}>
+          {desktopElements}
+        </StyledRightWrapper>
       ) : null}
     </StyledHomeBlogSection>
   );

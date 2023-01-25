@@ -9,7 +9,7 @@ export const StyledBlogHomeCard = styled(Link)`
   text-decoration: none;
   color: var(--normalBlack);
   cursor: pointer;
-  padding-left: clamp(30px, 3.6vw, 70px);
+  padding-left: ${({ iscase }) => (iscase ? "0" : "clamp(30px, 3.6vw, 70px)")};
   align-items: center;
 
   &:focus-visible {

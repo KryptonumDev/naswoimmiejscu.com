@@ -40,7 +40,7 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledList = styled.div`
-  font: 300 1.354vw/1.4em Roboto;
+  font: 300 1.354vw/1.2em Roboto;
   color: var(--normalBlack);
   margin-bottom: 40px;
 
