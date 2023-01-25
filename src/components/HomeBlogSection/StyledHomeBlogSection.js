@@ -7,7 +7,7 @@ import {
 export const StyledHomeBlogSection = styled.div`
   width: 100%;
   display: flex;
-  padding-left: ${({ iscase }) => (iscase ? "129px" : "185px")};
+  padding-left: 128px;
   padding-bottom: 57px;
   max-width: 1920px;
   margin: 0 auto;
