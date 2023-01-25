@@ -14,6 +14,8 @@ import {
   StyledGreenCircle,
   StyledBrownCircle,
   StyledBigGreenCircle,
+  StyledCirclesWrapper,
+  StyledMobileCircle,
 } from "../components/PrivacyPolicy/StyledPrivacyPolicy";
 import { StyledCircle } from "../components/Circle/StyledCircle";
 
@@ -35,7 +37,7 @@ const PrivacyPolicy = ({
           <BigGreenCircle />
         </StyledBigGreenCircle>
         <StyledBrownCircle>
-          <StyledCircle />
+          <StyledCircle hasdeclaredbg="var(--normalGreen)" />
         </StyledBrownCircle>
         <StyledTitleWrapper>
           {politykaPrywatnosCi.tytul ? parse(politykaPrywatnosCi.tytul) : null}
@@ -44,6 +46,27 @@ const PrivacyPolicy = ({
           {politykaPrywatnosCi.kontent
             ? parse(politykaPrywatnosCi.kontent)
             : null}
+
+          <StyledCirclesWrapper>
+            <StyledCircle
+              hasdeclaredbg="var(--normalGreen)"
+              hasdeclaredwidth="22px"
+              hasdeclaredheight="22px"
+            />
+            <StyledCircle
+              hasdeclaredbg="var(--normalGreen)"
+              hasdeclaredwidth="22px"
+              hasdeclaredheight="22px"
+            />
+            <StyledCircle
+              hasdeclaredbg="var(--normalGreen)"
+              hasdeclaredwidth="22px"
+              hasdeclaredheight="22px"
+            />
+          </StyledCirclesWrapper>
+          <StyledMobileCircle>
+            <StyledCircle hasdeclaredbg="var(--normalGreen)" />
+          </StyledMobileCircle>
         </StyledDescWrapper>
       </StyledPrivacyPolicy>
     </Container>

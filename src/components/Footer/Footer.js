@@ -72,7 +72,8 @@ const Footer = () => {
       <StyledFooter
         smallgap={
           (location.pathname === "/kontakt/" ||
-            location.pathname === "/calendly/") &&
+            location.pathname === "/calendly/" ||
+            location.pathname === "/polityka-prywatnosci/") &&
           !isLgUp
         }
       >
@@ -107,7 +108,8 @@ const Footer = () => {
         </StyledLeftWrapper>
         <StyledRightWrapper>
           {(location.pathname === "/kontakt/" ||
-            location.pathname === "/calendly/") &&
+            location.pathname === "/calendly/" ||
+            location.pathname === "/polityka-prywatnosci/") &&
           !isLgUp ? null : (
             <StyledRightWrapperContent>
               {shortData.tekstObokPrzycisku
