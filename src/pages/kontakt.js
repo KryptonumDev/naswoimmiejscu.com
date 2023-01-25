@@ -30,7 +30,7 @@ const Contact = ({
   },
 }) => {
   return (
-    <>
+    <main>
       <Container>
         <StyledContentWrapper>
           <StyledLeftWrapper>
@@ -93,7 +93,7 @@ const Contact = ({
           isNormalFont
         />
       </StyledFAQMargin>
-    </>
+    </main>
   );
 };
 

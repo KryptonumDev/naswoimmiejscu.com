@@ -25,51 +25,55 @@ const PrivacyPolicy = ({
   },
 }) => {
   return (
-    <Container>
-      <StyledPrivacyPolicy>
-        <StyledWhiteCircle>
-          <WhiteCircle />
-        </StyledWhiteCircle>
-        <StyledGreenCircle>
-          <StyledCircle />
-        </StyledGreenCircle>
-        <StyledBigGreenCircle>
-          <BigGreenCircle />
-        </StyledBigGreenCircle>
-        <StyledBrownCircle>
-          <StyledCircle hasdeclaredbg="var(--normalGreen)" />
-        </StyledBrownCircle>
-        <StyledTitleWrapper>
-          {politykaPrywatnosCi.tytul ? parse(politykaPrywatnosCi.tytul) : null}
-        </StyledTitleWrapper>
-        <StyledDescWrapper>
-          {politykaPrywatnosCi.kontent
-            ? parse(politykaPrywatnosCi.kontent)
-            : null}
-
-          <StyledCirclesWrapper>
-            <StyledCircle
-              hasdeclaredbg="var(--normalGreen)"
-              hasdeclaredwidth="22px"
-              hasdeclaredheight="22px"
-            />
-            <StyledCircle
-              hasdeclaredbg="var(--normalGreen)"
-              hasdeclaredwidth="22px"
-              hasdeclaredheight="22px"
-            />
-            <StyledCircle
-              hasdeclaredbg="var(--normalGreen)"
-              hasdeclaredwidth="22px"
-              hasdeclaredheight="22px"
-            />
-          </StyledCirclesWrapper>
-          <StyledMobileCircle>
+    <main>
+      <Container>
+        <StyledPrivacyPolicy>
+          <StyledWhiteCircle>
+            <WhiteCircle />
+          </StyledWhiteCircle>
+          <StyledGreenCircle>
+            <StyledCircle />
+          </StyledGreenCircle>
+          <StyledBigGreenCircle>
+            <BigGreenCircle />
+          </StyledBigGreenCircle>
+          <StyledBrownCircle>
             <StyledCircle hasdeclaredbg="var(--normalGreen)" />
-          </StyledMobileCircle>
-        </StyledDescWrapper>
-      </StyledPrivacyPolicy>
-    </Container>
+          </StyledBrownCircle>
+          <StyledTitleWrapper>
+            {politykaPrywatnosCi.tytul
+              ? parse(politykaPrywatnosCi.tytul)
+              : null}
+          </StyledTitleWrapper>
+          <StyledDescWrapper>
+            {politykaPrywatnosCi.kontent
+              ? parse(politykaPrywatnosCi.kontent)
+              : null}
+
+            <StyledCirclesWrapper>
+              <StyledCircle
+                hasdeclaredbg="var(--normalGreen)"
+                hasdeclaredwidth="22px"
+                hasdeclaredheight="22px"
+              />
+              <StyledCircle
+                hasdeclaredbg="var(--normalGreen)"
+                hasdeclaredwidth="22px"
+                hasdeclaredheight="22px"
+              />
+              <StyledCircle
+                hasdeclaredbg="var(--normalGreen)"
+                hasdeclaredwidth="22px"
+                hasdeclaredheight="22px"
+              />
+            </StyledCirclesWrapper>
+            <StyledMobileCircle>
+              <StyledCircle hasdeclaredbg="var(--normalGreen)" />
+            </StyledMobileCircle>
+          </StyledDescWrapper>
+        </StyledPrivacyPolicy>
+      </Container>
+    </main>
   );
 };
 

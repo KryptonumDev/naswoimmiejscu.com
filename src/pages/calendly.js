@@ -11,7 +11,7 @@ const Calendly = ({
   },
 }) => {
   return (
-    <>
+    <main>
       <CalendlyFirstSection data={calendly} />
       <FAQSection
         data={calendly.faqCalendly}
@@ -20,7 +20,7 @@ const Calendly = ({
         isNormalFont
       />
       <CalendlyLastSection data={calendly.ostatniaSekcjaStronyCalendly} />
-    </>
+    </main>
   );
 };
 

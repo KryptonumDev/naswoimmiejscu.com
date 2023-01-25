@@ -21,7 +21,7 @@ const Youth = ({
   },
 }) => {
   return (
-    <>
+    <main>
       <FirstSecionWomens
         title={pierwszaSekcjaMlodziez.tytul}
         desc={pierwszaSekcjaMlodziez.opis}
@@ -52,7 +52,7 @@ const Youth = ({
         image={formaSpotkanMlodziez.obrazPoLewo}
         imageMobile={formaSpotkanMlodziez.obrazPoLewoMobile}
       />
-    </>
+    </main>
   );
 };
 

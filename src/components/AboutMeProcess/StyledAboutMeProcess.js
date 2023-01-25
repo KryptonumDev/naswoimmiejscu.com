@@ -44,6 +44,7 @@ export const StyledTextWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
+    max-width: unset;
   }
 `;
 
@@ -152,6 +153,11 @@ export const StyledButtonElement = styled(Button)`
       variant === "white" ? "var(--normalWhite)" : null};
     border-color: ${({ variant }) =>
       variant === "white" ? "var(--normalBrown)" : null};
+  }
+
+  @media only screen and (max-width: 424px) {
+    padding: 0;
+    width: 100%;
   }
 `;
 

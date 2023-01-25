@@ -85,6 +85,8 @@ const AboutMeProcess = ({ data }) => {
               hasheight="88px"
               hasfontsize="20px"
               haswidth="495px"
+              hasBasicWidth="300px"
+              hasClampWidth="25.781vw"
               className="about-me-proccess-btn"
             />
           </StyledButtonWrapper>
@@ -96,6 +98,8 @@ const AboutMeProcess = ({ data }) => {
               hasheight="88px"
               hasfontsize="20px"
               haswidth="570px"
+              hasClampWidth="25.781vw"
+              hasBasicWidth="300px"
               className="about-me-proccess-btn"
             />
           </StyledButtonWrapper>

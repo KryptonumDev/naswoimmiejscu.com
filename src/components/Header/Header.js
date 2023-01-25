@@ -49,32 +49,30 @@ const Header = () => {
   };
 
   return (
-    <Container>
-      <StyledHeader>
-        <StyledLogoWrapperHeader>
-          <Logo
-            isHeader="true"
-            logoDesktop={shortData.logo}
-            logoMobile={shortData.logoMobile}
-          />
-        </StyledLogoWrapperHeader>
-        <Nav
-          isOpen={isOpen}
+    <StyledHeader>
+      <StyledLogoWrapperHeader>
+        <Logo
+          isHeader="true"
           logoDesktop={shortData.logo}
           logoMobile={shortData.logoMobile}
-          openMenu={handleOpenMenu}
         />
-        <Button
-          btnData={shortData.przycisk}
-          variant="green"
-          haswidth="254px"
-          hasheight="78px"
-          hasfontsize="16px"
-          className="header-btn"
-        />
-        <HamburgerButton openMenu={handleOpenMenu} isOpen={isOpen} />
-      </StyledHeader>
-    </Container>
+      </StyledLogoWrapperHeader>
+      <Nav
+        isOpen={isOpen}
+        logoDesktop={shortData.logo}
+        logoMobile={shortData.logoMobile}
+        openMenu={handleOpenMenu}
+      />
+      <Button
+        btnData={shortData.przycisk}
+        variant="green"
+        haswidth="254px"
+        hasheight="78px"
+        hasfontsize="16px"
+        className="header-btn"
+      />
+      <HamburgerButton openMenu={handleOpenMenu} isOpen={isOpen} />
+    </StyledHeader>
   );
 };
 

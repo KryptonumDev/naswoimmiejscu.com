@@ -19,7 +19,7 @@ const Womens = ({
   },
 }) => {
   return (
-    <>
+    <main>
       <FirstSecionWomens
         title={pierwszaSekcjaKobiety.tytul}
         desc={pierwszaSekcjaKobiety.opis}
@@ -50,7 +50,7 @@ const Womens = ({
         image={formaSpotkanKobiety.obrazPoLewo}
         imageMobile={formaSpotkanKobiety.obrazPoLewoMobile}
       />
-    </>
+    </main>
   );
 };
 

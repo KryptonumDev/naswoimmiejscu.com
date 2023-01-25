@@ -15,7 +15,7 @@ const AboutMe = ({
   },
 }) => {
   return (
-    <>
+    <main>
       <AboutMeFirstSection data={oMnie.pierwszaSekcjaOMnie} />
       <AboutMeSecondSection data={oMnie.drugaSekcjaOMnie} />
       <AboutMeWhoIm data={oMnie.kimTerazJestem} />
@@ -23,7 +23,7 @@ const AboutMe = ({
       <AboutMeMeet data={oMnie.spotkajmySieOMnie} />
       <FAQSection data={oMnie.faqOMnie} smallMgBottom isNormalFont />
       <HomeBlogSection recDif />
-    </>
+    </main>
   );
 };
 

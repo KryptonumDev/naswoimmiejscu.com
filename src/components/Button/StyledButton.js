@@ -5,7 +5,9 @@ export const StyledLink = styled(Link)`
   background-color: ${({ variant }) =>
     variant === "green" ? "var(--normalGreen)" : "transparent"};
   border: ${({ variant }) =>
-    variant === "green" ? "1px solid transparent" : "1px solid var(--normalBlack)"};
+    variant === "green"
+      ? "1px solid transparent"
+      : "1px solid var(--normalBlack)"};
   width: clamp(
     ${({ hasbasicwidth }) => (hasbasicwidth ? hasbasicwidth : "277px")},
     ${({ hasclampwidth }) => (hasclampwidth ? hasclampwidth : "18.490vw")},
@@ -77,7 +79,8 @@ export const StyledLink = styled(Link)`
     &.blog-slider-btn,
     &.footer,
     &.abotu-me-who-im,
-    &.about-me-meet-btn {
+    &.about-me-meet-btn,
+    &.btn-faq-section {
       width: 277px;
       min-height: 73px;
       font-size: 16px;
@@ -105,7 +108,6 @@ export const StyledLink = styled(Link)`
       margin-top: 32px;
     }
 
-    &.btn-faq-section,
     &.calenldy-last-section {
       width: 302px;
       font-size: 16px;

@@ -23,36 +23,38 @@ const NotFoundPage = ({
   },
 }) => {
   return (
-    <Container hideY>
-      <Styled404>
-        <StyledWhiteCircle>
-          <WhiteCircle />
-        </StyledWhiteCircle>
-        <Image imageDesktop={page404.logo} />
-        <StyledTitle>{page404 ? parse(page404.tytul) : null}</StyledTitle>
-        <StyledDescWrapper>
-          {page404.opisPierwszaLinijka
-            ? parse(page404.opisPierwszaLinijka)
-            : null}
-        </StyledDescWrapper>
-        <StyledSecondDescWrapper>
-          {page404.opisDrugaLinijka ? parse(page404.opisDrugaLinijka) : null}
-        </StyledSecondDescWrapper>
-        <Button
-          btnData={page404.przycisk}
-          variant="green"
-          haswidth="495px"
-          hasClampWidth="25.781vw"
-          hasheight="88px"
-          hasfontsize="clamp(16px, 1.042vw, 20px)"
-          hasBasicWidth="300px"
-          hasBasicHeight="53px"
-        />
-        <StyledCircleWrapper>
-          <BigGreenCircle />
-        </StyledCircleWrapper>
-      </Styled404>
-    </Container>
+    <main>
+      <Container hideY>
+        <Styled404>
+          <StyledWhiteCircle>
+            <WhiteCircle />
+          </StyledWhiteCircle>
+          <Image imageDesktop={page404.logo} />
+          <StyledTitle>{page404 ? parse(page404.tytul) : null}</StyledTitle>
+          <StyledDescWrapper>
+            {page404.opisPierwszaLinijka
+              ? parse(page404.opisPierwszaLinijka)
+              : null}
+          </StyledDescWrapper>
+          <StyledSecondDescWrapper>
+            {page404.opisDrugaLinijka ? parse(page404.opisDrugaLinijka) : null}
+          </StyledSecondDescWrapper>
+          <Button
+            btnData={page404.przycisk}
+            variant="green"
+            haswidth="495px"
+            hasClampWidth="25.781vw"
+            hasheight="88px"
+            hasfontsize="clamp(16px, 1.042vw, 20px)"
+            hasBasicWidth="300px"
+            hasBasicHeight="53px"
+          />
+          <StyledCircleWrapper>
+            <BigGreenCircle />
+          </StyledCircleWrapper>
+        </Styled404>
+      </Container>
+    </main>
   );
 };
 

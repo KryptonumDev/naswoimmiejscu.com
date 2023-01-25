@@ -26,7 +26,7 @@ export const StyledCircle = styled.div`
     }
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1167px) {
     &.home-hero-section {
       width: 30px;
       height: 31px;

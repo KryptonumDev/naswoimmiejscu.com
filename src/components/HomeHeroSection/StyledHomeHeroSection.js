@@ -299,12 +299,12 @@ export const StyledDescWrapper = styled.div`
     max-width: 723px;
   }
 
-  &.second-section-womens-youth{
+  &.second-section-womens-youth {
     margin-top: clamp(30px, 3.646vw, 70px);
     margin-bottom: 39px;
   }
 
-  &.first-section-womens-youth{
+  &.first-section-womens-youth {
     margin-top: clamp(20px, 3.385vw, 65px);
   }
 
@@ -527,17 +527,19 @@ export const StyledCircleWrapper = styled(StyledCircle)`
   left: -50px;
   z-index: 1;
 
+  @media only screen and (max-width: 1167px) {
+    &.home-hero-section {
+      left: -16px;
+      top: -16px;
+    }
+  }
+
   @media only screen and (max-width: 992px) {
     top: -20px;
     left: auto;
     right: -20px;
     width: 64px;
     height: 64px;
-
-    &.home-hero-section {
-      left: -16px;
-      top: -16px;
-    }
 
     div {
       width: 64px;
