@@ -5,7 +5,7 @@ export const StyledLink = styled(Link)`
   background-color: ${({ variant }) =>
     variant === "green" ? "var(--normalGreen)" : "transparent"};
   border: ${({ variant }) =>
-    variant === "green" ? "none" : "1px solid var(--normalBlack)"};
+    variant === "green" ? "1px solid transparent" : "1px solid var(--normalBlack)"};
   width: clamp(
     ${({ hasbasicwidth }) => (hasbasicwidth ? hasbasicwidth : "277px")},
     ${({ hasclampwidth }) => (hasclampwidth ? hasclampwidth : "18.490vw")},
@@ -18,7 +18,7 @@ export const StyledLink = styled(Link)`
     ${({ hasdeclaredheight }) =>
       hasdeclaredheight ? hasdeclaredheight : "88px"}
   );
-  transition: background-color 250ms, color 250ms, border 250ms;
+  transition: background-color 300ms, color 300ms, border 300ms;
   cursor: pointer;
   text-transform: uppercase;
   font: 700 ${({ hasfontsize }) => (hasfontsize ? hasfontsize : "20px")} Roboto;
@@ -34,7 +34,7 @@ export const StyledLink = styled(Link)`
       variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
     color: ${({ variant }) =>
       variant === "green" ? null : "var(--normalWhite)"};
-    border: none;
+    border: 1px solid transparent;
   }
 
   &:focus-visible {

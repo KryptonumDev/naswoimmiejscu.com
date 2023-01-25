@@ -5,12 +5,22 @@ export const StyledBlog = styled.div``;
 export const StyledHeading = styled.div`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   justify-content: space-between;
   margin-top: clamp(80px, 8.021vw, 154px);
   font: 700 clamp(22px, 3.333vw, 64px) Roboto;
   align-items: center;
   position: relative;
   z-index: 4;
+
+  h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(22px, ${22 / 480 * 100}vw, 64px);
+    line-height: 110%;
+  }
 `;
 
 export const StyledSlidesWrapper = styled.div`
@@ -24,7 +34,7 @@ export const StyledSlidesWrapper = styled.div`
 
   overflow: hidden;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 
   &::before{
     content: '';
@@ -53,4 +63,13 @@ export const StyledSlidesWrapper = styled.div`
 export const StyledCategories = styled.div`
   display: flex;
   gap: 20px;
+
+  p{
+    font-variant-numeric: normal;
+  }
+
+  a{
+    text-decoration: none;
+
+  }
 `;

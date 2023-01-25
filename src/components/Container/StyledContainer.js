@@ -24,4 +24,8 @@ export const StyledContainer = styled.section`
       padding: 0;
     }
   }
+
+  @media only screen and (max-width: 992px) {
+    padding: 0 20px;
+  }
 `;

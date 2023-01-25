@@ -1,6 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { graphql } from "gatsby";
-import parse from "html-react-parser";
+import React, { useMemo } from "react";
+import { graphql, Link } from "gatsby";
 
 import Container from "../Container/Container";
 import BlogCard from "../BlogCard/BlogCard";
@@ -14,11 +13,12 @@ import { StyledText } from "../Text/StyledText";
 
 const Blog = ({
     data: {
-        wpPage: { blog },
         allWpPost: { edges },
+        allWpCategory: { nodes }
     },
     pageContext: {
-        slug
+        slug,
+        name
     }
 }) => {
     const posts = useMemo(() => {
@@ -35,21 +35,33 @@ const Blog = ({
             })
             return isAccepted
         })
-    }, [])
+    }, [edges, slug])
 
     return (
         <Container>
             <StyledHeading>
-                {blog?.tytul ? parse(blog.tytul) : null}
+                <h1>Blog – {slug ? name : 'listing'}</h1>
                 <StyledCategories>
-                    {/* {categories.group(({ name }) => name).map((category) => (
-            <StyledText
-              hasdeclaredfontcolor="var(--normalBlack)"
-              hasdeclaredtexttransform="uppercase"
-            >
-              {category}(2)
-            </StyledText>
-          ))} */}
+                    {slug && (
+                        <Link to={'/blog/'}>
+                            <StyledText
+                                hasdeclaredfontcolor="var(--normalBlack)"
+                                hasdeclaredtexttransform="uppercase"
+                            >
+                                blog ({edges.length})
+                            </StyledText>
+                        </Link>
+                    )}
+                    {nodes.filter(el => el.slug !== slug).map(({ slug, name, count }) => (
+                        <Link to={'/blog/' + slug + '/'}>
+                            <StyledText
+                                hasdeclaredfontcolor="var(--normalBlack)"
+                                hasdeclaredtexttransform="uppercase"
+                            >
+                                {name} ({count})
+                            </StyledText>
+                        </Link>
+                    ))}
                 </StyledCategories>
             </StyledHeading>
             <StyledSlidesWrapper>
@@ -59,7 +71,7 @@ const Blog = ({
                         title={node.title}
                         desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
                         date={node.date}
-                        btnText={node.artykul.miniaturka.tekstPrzycisku}
+                        btnText={'POZNAJ TĘ NOWOŚĆ'}
                         slug={node.slug}
                         imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
                         imageMobile={node.artykul.miniaturka.zdjecieDoMiniaturkiMobile}
@@ -89,9 +101,6 @@ export const query = graphql`
           }
         }
       }
-      blog {
-        tytul
-      }
     }
     allWpCategory(filter: {count: {gt: 0}}) {
       nodes {
@@ -105,7 +114,7 @@ export const query = graphql`
         node {
           slug
           title
-          date
+          date(formatString: "DD.MM.YYYY r.")
           artykul {
             miniaturka {
               krotkiOpisDoMiniaturki

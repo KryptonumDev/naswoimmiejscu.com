@@ -54,11 +54,6 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const blogArchiveData = await graphql(`
     {
-      wpPage(id: { eq: "cG9zdDo0ODM=" }) {
-        blog {
-          tytul
-        }
-      }
       allWpCategory(filter: {count: {gt: 0}}) {
         nodes {
           name
@@ -87,7 +82,8 @@ exports.createPages = async ({ actions, graphql }) => {
       ),
       context: {
         id: id,
-        slug: slug
+        slug: slug,
+        name: name
       },
     });
   });

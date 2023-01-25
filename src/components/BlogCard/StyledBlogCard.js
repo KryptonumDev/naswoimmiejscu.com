@@ -13,18 +13,46 @@ export const StyledBlogCard = styled(Link)`
 
   @media only screen and (max-width: 768px) {
     flex-direction: column;
+    max-width: 436px;
+    margin: 0 auto;
+  }
+
+  .image img{
+    transition: transform .3s ease-out;
+  }
+
+  &:hover{
+    .image{
+      img{
+        transform: scale(1.05);
+      }
+    }
+
+    
+  .link {
+    background-color: var(--hoverGreen);
+    border: 1px solid transparent;
+  }
   }
 `;
 
 export const StyledImageWrapper = styled.div`
   width: 35%;
-  max-width: 436px;
-  height: 390px;
+  min-width: 400px;
   position: relative;
 
+  @media (max-width: 1024px) {
+    min-width: 350px;
+  }
+
+  @media (max-width: 480px) {
+    min-width: unset;
+  }
+
   .gatsby-image-wrapper {
+    max-width: 436px;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1.11794871795/1;
   }
 
   @media only screen and (max-width: 768px) {
@@ -40,6 +68,15 @@ export const StyledTextWrapper = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
   }
+
+  @media (max-width: 360px) {
+    .link{
+      width: 100%;
+      font-size: 11px;
+      min-height: 53px;
+    }
+  }
+
 `;
 
 export const StyledTitleWrapper = styled.div`
@@ -49,8 +86,8 @@ export const StyledTitleWrapper = styled.div`
 
 export const StyledDescWrapper = styled.div`
   max-width: 400px;
-  font: 400 clamp(11px, 0.833vw, 16px) Roboto;
-  margin-bottom: 4px;
+  font: 400 clamp(11px, ${11 / 480 * 100}vw, 16px) Roboto;
+  margin-bottom: 10px;
 `;
 
 export const StyledMobileCategory = styled.div`

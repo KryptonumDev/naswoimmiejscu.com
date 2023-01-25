@@ -45,7 +45,7 @@ const Nav = ({ isOpen, isFooter, logoDesktop, logoMobile, openMenu }) => {
       <Link to="/o-mnie" activeClassName="activeLink" onClick={openMenu}>
         O MNIE
       </Link>
-      <Link to="/blog" activeClassName="activeLink" onClick={openMenu}>
+      <Link partiallyActive={true} to="/blog" activeClassName="activeLink" onClick={openMenu}>
         BLOG
       </Link>
       <Link to="/calendly" activeClassName="activeLink" onClick={openMenu}>
