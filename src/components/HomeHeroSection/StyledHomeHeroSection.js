@@ -195,7 +195,8 @@ export const StyledTitleWrapper = styled.div`
       margin-top: 30px;
     }
 
-    &.about-me-first-section {
+    &.about-me-first-section,
+    &.contact-page {
       margin-top: 0;
     }
   }
@@ -245,7 +246,8 @@ export const StyledTitleWrapper = styled.div`
     &.home-hero-section,
     &.about-me-first-section,
     &.who-im-about-me,
-    &.about-me-meet {
+    &.about-me-meet,
+    &.contact-page {
       font-size: 6.111vw;
     }
 
@@ -286,6 +288,11 @@ export const StyledDescWrapper = styled.div`
 
   &.home-hero-section {
     max-width: 723px;
+  }
+
+  &.contact-page {
+    margin-top: clamp(30px, 3.646vw, 70px);
+    margin-bottom: clamp(20px, 2.083vw, 40px);
   }
 
   &.cooperation-process,
@@ -405,6 +412,11 @@ export const StyledDescWrapper = styled.div`
     &.calendly-first-section {
       margin-bottom: 20px;
       margin-top: 20px;
+    }
+
+    &.contact-page {
+      margin-top: 10px;
+      margin-bottom: 67px;
     }
   }
 

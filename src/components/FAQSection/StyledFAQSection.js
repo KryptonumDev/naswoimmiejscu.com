@@ -41,16 +41,16 @@ export const StyledTitleWrapper = styled.div`
   }
 
   @media only screen and (max-width: 1499px) {
-    font-size: 2.802vw;
+    font-size: 3.402vw;
   }
 
   @media only screen and (max-width: 1349px) {
-    font-size: 2.372vw;
+    font-size: 3.872vw;
   }
 
   @media only screen and (max-width: 992px) {
     font-size: 4.234vw;
-    margin-bottom: 44px;
+    margin-bottom: 29px;
     margin-top: 0;
   }
 

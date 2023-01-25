@@ -5,17 +5,20 @@ export const StyledFAQMargin = styled.div`
 `;
 
 export const StyledContentWrapper = styled.div`
-  margin-top: clamp(100px, 7.292vw, 140px);
+  margin-top: clamp(130px, 7.917vw, 152px);
   gap: 4.167vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-bottom: clamp(90px, 5.708vw, 113px);
 
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
-    margin-bottom: 59px;
+    margin-bottom: 0;
     margin-top: 84px;
+    align-items: flex-start;
+    gap: clamp(0, 1.042vw, 20px);
   }
 `;
 
@@ -43,6 +46,11 @@ export const StyledRightWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     margin-bottom: 20px;
+    width: 85%;
+  }
+
+  @media only screen and (max-width: 668px) {
+    width: 100%;
   }
 `;
 
@@ -53,7 +61,7 @@ export const StyledCircleWrapper = styled.div`
 `;
 
 export const StyledButtonsWrapper = styled.div`
-  gap: 31px;
+  gap: clamp(11px, 1.615vw, 31px);
   display: flex;
   flex-direction: column;
 
