@@ -140,22 +140,22 @@ export const StyledDesktopScroll = styled.div`
   position: relative;
   gap: 86px;
 
-  &:after {
-    content: "";
-    width: 100%;
-    height: 450px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.6), transparent);
-    bottom: 174px;
-    left: 0;
-    position: absolute;
-    pointer-events: none;
-    display: ${({ notpadding }) => (notpadding ? "none" : "block")};
+  // &:after {
+  //   content: "";
+  //   width: 100%;
+  //   height: 450px;
+  //   background: rgb(255, 255, 255);
+  //   background: linear-gradient(to top, rgba(255, 255, 255, 0.6), transparent);
+  //   bottom: 174px;
+  //   left: 0;
+  //   position: absolute;
+  //   pointer-events: none;
+  //   display: ${({ notpadding }) => (notpadding ? "none" : "block")};
 
-    @media only screen and (max-width: 992px) {
-      display: none;
-    }
-  }
+  //   @media only screen and (max-width: 992px) {
+  //     display: none;
+  //   }
+  // }
 `;
 
 export const StyledBlogSliderWrapper = styled.div`
