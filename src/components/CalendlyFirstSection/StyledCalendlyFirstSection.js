@@ -5,12 +5,14 @@ export const StyledCalendlyFirstSection = styled.div`
   width: 100%;
   gap: clamp(80px, 8.438vw, 162px);
   justify-content: space-between;
+  align-items: center;
   margin-top: clamp(100px, 7.24vw, 135px);
 
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
     gap: 20px;
     margin-top: 84px;
+    align-items: flex-start;
   }
 `;
 
@@ -25,6 +27,7 @@ export const StyledLeftWrapper = styled.div`
 export const StyledRightWrapper = styled.div`
   width: 50%;
   position: relative;
+  align-self: flex-start;
 
   .gatsby-image-wrapper {
     height: 100%;
@@ -42,7 +45,7 @@ export const StyledRightWrapper = styled.div`
 export const StyledList = styled.div`
   font: 300 1.354vw/1.2em Roboto;
   color: var(--normalBlack);
-  margin-bottom: 40px;
+  margin-bottom: clamp(20px, 2.917vw, 56px);
 
   @media only screen and (min-width: 1920px) {
     font-size: 26px;

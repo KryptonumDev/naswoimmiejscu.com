@@ -14,10 +14,10 @@ const Calendly = ({
     <>
       <CalendlyFirstSection data={calendly} />
       <FAQSection
-        smallMgBottom
         data={calendly.faqCalendly}
         btnWidth="495px"
-        hasLeftPadding
+        smallMgBottom
+        isNormalFont
       />
       <CalendlyLastSection data={calendly.ostatniaSekcjaStronyCalendly} />
     </>

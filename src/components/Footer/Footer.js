@@ -69,7 +69,13 @@ const Footer = () => {
 
   return (
     <Container className="footer">
-      <StyledFooter smallgap={location.pathname === "/kontakt/" && !isLgUp}>
+      <StyledFooter
+        smallgap={
+          (location.pathname === "/kontakt/" ||
+            location.pathname === "/calendly/") &&
+          !isLgUp
+        }
+      >
         <StyledLeftWrapper>
           <Logo
             hadDeclaredMargin="0 0 54px 0"
@@ -100,7 +106,9 @@ const Footer = () => {
           </StyledSmallGreenCircle>
         </StyledLeftWrapper>
         <StyledRightWrapper>
-          {location.pathname === "/kontakt/" && !isLgUp ? null : (
+          {(location.pathname === "/kontakt/" ||
+            location.pathname === "/calendly/") &&
+          !isLgUp ? null : (
             <StyledRightWrapperContent>
               {shortData.tekstObokPrzycisku
                 ? parse(shortData.tekstObokPrzycisku)

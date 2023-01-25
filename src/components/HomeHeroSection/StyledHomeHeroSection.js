@@ -199,6 +199,10 @@ export const StyledTitleWrapper = styled.div`
     &.contact-page {
       margin-top: 0;
     }
+
+    &.calendly-last-section {
+      margin-bottom: 10px;
+    }
   }
 
   @media only screen and (max-width: 528px) {
@@ -235,7 +239,6 @@ export const StyledTitleWrapper = styled.div`
     &.home-blog-section-text,
     &.contact-page,
     &.calendly-first-section,
-    &.calendly-last-section,
     &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
@@ -247,7 +250,8 @@ export const StyledTitleWrapper = styled.div`
     &.about-me-first-section,
     &.who-im-about-me,
     &.about-me-meet,
-    &.contact-page {
+    &.contact-page,
+    &.calendly-last-section {
       font-size: 6.111vw;
     }
 
@@ -267,6 +271,11 @@ export const StyledDescWrapper = styled.div`
 
   strong {
     font-weight: 600;
+  }
+
+  &.calendly-last-section {
+    margin-top: 0;
+    margin-bottom: clamp(30px, 2.344vw, 45px);
   }
 
   &.home-about-me {
@@ -298,6 +307,10 @@ export const StyledDescWrapper = styled.div`
   &.cooperation-process,
   &.about-me-first-section {
     margin-bottom: 0;
+  }
+
+  &.calendly-first-section {
+    margin: clamp(20px, 3.385vw, 65px) 0;
   }
 
   @media only screen and (min-width: 1920px) {
@@ -505,9 +518,17 @@ export const StyledCircleWrapper = styled(StyledCircle)`
   left: -50px;
   z-index: 1;
 
-  @media only screen and (max-width: 1167px) {
-    top: -15px;
-    left: -15px;
+  @media only screen and (max-width: 992px) {
+    top: -20px;
+    left: auto;
+    right: -20px;
+    width: 64px;
+    height: 64px;
+
+    div {
+      width: 64px;
+      height: 64px;
+    }
   }
 `;
 

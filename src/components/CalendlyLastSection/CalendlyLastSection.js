@@ -14,6 +14,7 @@ import {
   StyledCalendlyLastSection,
   StyledLeftWrapper,
   StyledRightWrapper,
+  StyledGreenBigCircle,
 } from "./StyledCalendlyLastSection";
 import { StyledCircle } from "../Circle/StyledCircle";
 
@@ -32,7 +33,7 @@ const CalendlyLastSection = ({ data }) => {
             btnData={data.przycisk}
             haswidth="495px"
             hasClampWidth="25.781vw"
-            className="calenldy-first-section"
+            className="calenldy-last-section"
             hasheight="88px"
             hasfontsize="clamp(16px, 1.042vw, 20px)"
             hasBasicWidth="300px"
@@ -47,6 +48,23 @@ const CalendlyLastSection = ({ data }) => {
             imageDesktop={data.zdjeciePoPrawo}
             imageMobile={data.zdjeciePoPrawoMobile}
           />
+          <StyledGreenBigCircle>
+            <svg
+              width="721"
+              height="721"
+              viewBox="0 0 721 721"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="360.5"
+                cy="360.5"
+                r="333"
+                stroke="#0BC76D"
+                stroke-width="55"
+              />
+            </svg>
+          </StyledGreenBigCircle>
         </StyledRightWrapper>
       </StyledCalendlyLastSection>
     </Container>
