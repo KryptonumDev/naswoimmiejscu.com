@@ -21,7 +21,6 @@ const BlogCard = ({
   btnText,
   slug,
   imageDesktop,
-  imageMobile,
 }) => {
   const btnData = {
     url: `/artykul/${slug}`,
@@ -42,7 +41,7 @@ const BlogCard = ({
             {category}
           </StyledText>
         </StyledMobileCategory>
-        <Image imageDesktop={imageDesktop} imageMobile={imageMobile} />
+        <Image className="image" imageDesktop={imageDesktop} />
       </StyledImageWrapper>
       <StyledTextWrapper>
         <StyledText
@@ -54,19 +53,21 @@ const BlogCard = ({
           {category}
         </StyledText>
         <StyledTitleWrapper>{title}</StyledTitleWrapper>
-        <StyledDescWrapper>{desc}</StyledDescWrapper>
+        <StyledDescWrapper dangerouslySetInnerHTML={{__html: desc}}></StyledDescWrapper>
         <StyledText
           hasdeclaredfontcolor="var(--normalBlack)"
           hasdeclaredfontweight="700"
           hasdeclaredmargin="0 0 30px 0"
         >
-          {date} r.
+          {date}
         </StyledText>
         <Button
+          variant={'green'}
           btnData={btnData}
           haswidth="245px"
           hasheight="78px"
           hasfontsize="16px"
+          className='link'
         />
       </StyledTextWrapper>
     </StyledBlogCard>
