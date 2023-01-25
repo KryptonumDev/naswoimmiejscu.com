@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledFAQElement = styled.details`
   width: 100%;
-  max-width: 800px;
 
   &:focus-visible {
     outline-width: 1px;
@@ -19,6 +18,7 @@ export const StyledFAQElement = styled.details`
 
   @media only screen and (max-width: 992px) {
     max-width: unset;
+    margin-left: -5px;
 
     &[open] {
       svg {
@@ -71,6 +71,8 @@ export const StyledAnswerWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     font-size: 2.218vw;
+    margin-left: 4px;
+    margin-top: 2px;
   }
 
   @media only screen and (max-width: 696px) {

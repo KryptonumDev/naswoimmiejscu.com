@@ -93,8 +93,16 @@ export const StyledLink = styled(Link)`
       display: none;
     }
 
+    &.blog-recomendation-slider-show {
+      margin: 120px auto 0;
+    }
+
     &.blog-slider-btn {
       margin-top: 66px;
+    }
+
+    &.btn-faq-section {
+      margin-top: 32px;
     }
   }
 
@@ -103,6 +111,13 @@ export const StyledLink = styled(Link)`
       width: 100%;
       font-size: 11px;
       min-height: 53px;
+    }
+
+    &.abotu-me-who-im,
+    &.about-me-meet-btn,
+    &.btn-faq-section,
+    &.blog-recomendation-slider-show {
+      font-size: 16px;
     }
   }
 
@@ -116,9 +131,6 @@ export const StyledLink = styled(Link)`
 
   @media only screen and (max-width: 360px) {
     &.footer,
-    &.abotu-me-who-im,
-    &.about-me-meet-btn,
-    &.btn-faq-section,
     &.contact-page-btn,
     &.calenldy-first-section {
       width: 100%;
@@ -130,7 +142,8 @@ export const StyledLink = styled(Link)`
     &.home-second-section,
     &.home-about-me,
     &.blog-recomendation-slider,
-    &.blog-slider-btn {
+    &.blog-slider-btn &.btn-faq-section,
+    &.blog-recomendation-slider-show {
       min-height: 73px;
     }
 
@@ -142,7 +155,11 @@ export const StyledLink = styled(Link)`
   @media only screen and (max-width: 340px) {
     &.home-hero-section,
     &.home-second-section,
-    &.home-about-me {
+    &.home-about-me,
+    &.abotu-me-who-im,
+    &.about-me-meet-btn,
+    &.btn-faq-section,
+    &.blog-recomendation-slider-show {
       width: 100%;
     }
   }

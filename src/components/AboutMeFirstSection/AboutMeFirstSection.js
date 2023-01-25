@@ -45,8 +45,8 @@ const AboutMeFirstSection = ({ data }) => {
           <StyledMobileBottomCircle>
             <StyledCircle
               hasdeclaredbg="var(--normalGreen)"
-              hasdeclaredwidth="100px"
-              hasdeclaredheight="100px"
+              hasdeclaredwidth="128px"
+              hasdeclaredheight="128px"
             />
           </StyledMobileBottomCircle>
         </StyledRightWrapper>

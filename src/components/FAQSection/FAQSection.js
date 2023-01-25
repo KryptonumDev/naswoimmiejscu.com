@@ -12,8 +12,6 @@ import {
   StyledFAQSWrapper,
 } from "./StyledFAQSection";
 
-import { useScreenService } from "../../utils/useScreenService";
-
 const FAQSection = ({
   smallMgBottom,
   data,
@@ -21,8 +19,6 @@ const FAQSection = ({
   isNormalFont,
   hasLeftPadding,
 }) => {
-  const { isLgUp } = useScreenService();
-
   return (
     <StyledFAQSection hasleftpadding={hasLeftPadding}>
       <StyledFAQWrapper>
@@ -40,14 +36,14 @@ const FAQSection = ({
           ))}
           <Button
             btnData={data.przycisk}
-            variant={isLgUp ? "green" : null}
+            variant={"green"}
             haswidth={btnWidth ? btnWidth : "355px"}
             hasheight="88px"
             className="btn-faq-section"
             hasClampWidth="25.781vw"
             hasfontsize="clamp(16px, 1.042vw, 20px)"
-            hasBasicWidth="300px"
-            hasBasicHeight="53px"
+            hasBasicWidth="277px"
+            hasBasicHeight="73px"
           />
         </StyledFAQSWrapper>
       </StyledFAQWrapper>

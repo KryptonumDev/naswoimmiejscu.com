@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const StyledAboutMeSecondSection = styled.div`
   width: 100%;
-  margin-top: 60px;
+  margin-top: 78px;
+  position: relative;
 
   @media only screen and (max-width: 992px) {
     margin-top: 20px;
@@ -46,7 +47,7 @@ export const StyledContent = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 89px;
+  margin-top: 71px;
   gap: 40px;
   position: relative;
 
@@ -100,15 +101,25 @@ export const StyledLeftWrapper = styled.div`
 
       em {
         font-size: 2.218vw;
+        margin-bottom: 8px;
+        display: block;
       }
     }
 
     @media only screen and (max-width: 528px) {
       font-size: 3.409vw;
+
+      em {
+        font-size: 3.409vw;
+      }
     }
 
     @media only screen and (max-width: 360px) {
       font-size: 4.167vw;
+
+      em {
+        font-size: 4.167vw;
+      }
     }
   }
 
@@ -163,15 +174,25 @@ export const StyledRightWrapper = styled.div`
 
       em {
         font-size: 2.218vw;
+        margin-bottom: 8px;
+        display: block;
       }
     }
 
     @media only screen and (max-width: 528px) {
       font-size: 3.409vw;
+
+      em {
+        font-size: 3.409vw;
+      }
     }
 
     @media only screen and (max-width: 360px) {
       font-size: 4.167vw;
+
+      em {
+        font-size: 4.167vw;
+      }
     }
   }
 
@@ -204,8 +225,8 @@ export const StyledCircleWrapper = styled.div`
   width: 51.146vw;
   height: 51.146vw;
   position: absolute;
-  top: 8.333vw;
-  right: -26.042vw;
+  top: 6.533vw;
+  right: -32.042vw;
   z-index: 1;
 
   svg {
@@ -237,11 +258,24 @@ export const StyledMobileCircle = styled.div`
   display: none;
 
   @media only screen and (max-width: 992px) {
+    display: block;
     width: 46.875vw;
     height: 46.875vw;
     position: absolute;
-    left: 0;
-    top: -80px;
+    left: -22.177vw;
+    top: -40px;
     z-index: -1;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    width: 129.167vw;
+    height: 129.167vw;
+    left: -62.177vw;
+    top: -30px;
   }
 `;

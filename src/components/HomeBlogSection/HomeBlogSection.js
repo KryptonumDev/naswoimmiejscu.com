@@ -47,6 +47,7 @@ const HomeBlogSection = ({
   anotherPerson,
   iconImage,
   tekstDoLinku,
+  recDif,
 }) => {
   const {
     wpPage: { stronaGlowna },
@@ -280,15 +281,20 @@ const HomeBlogSection = ({
             }
             desc={node.caseStudyArtykul.miniaturkaCaseStudy.opisDoMiniaturki}
             isDiffBg={index % 2 ? false : true}
+            recDif={recDif}
           />
         ))}
       </Slider>
-      <StyledMobileIcon>
+      <StyledMobileIcon recdif={recDif}>
         <QuoteIcon />
       </StyledMobileIcon>
       <Button
         btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk}
-        className="blog-recomendation-slider"
+        className={
+          recDif
+            ? "blog-recomendation-slider-show"
+            : "blog-recomendation-slider"
+        }
         haswidth="366px"
         hasheight="88px"
         hasfontsize="20px"

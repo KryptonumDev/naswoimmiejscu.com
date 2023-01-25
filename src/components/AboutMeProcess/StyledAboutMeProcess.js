@@ -8,8 +8,8 @@ import {
 
 export const StyledAboutMeProcess = styled.div`
   width: 100%;
-  margin-top: 94px;
-  padding-right: 150px;
+  margin-top: clamp(50px, 7.813vw, 94px);
+  padding-right: clamp(100px, 7.813vw, 150px);
 
   @media only screen and (max-width: 1499px) {
     padding-right: 0;
@@ -70,7 +70,7 @@ export const StyledButtonsWrapper = styled.div`
   display: flex;
   gap: 61px;
   padding-left: 80px;
-  margin-top: 30px;
+  margin-top: 82px;
 
   @media only screen and (max-width: 1550px) {
     flex-direction: column;
@@ -99,6 +99,8 @@ export const StyledButtonWrapper = styled.div`
     img,
     .gatsby-image-wrapper {
       display: ${({ hideimage }) => (hideimage ? "none" : "block")};
+      width: 42px;
+      height: 42px;
     }
   }
 `;
@@ -169,5 +171,29 @@ export const StyledMobileCircle = styled.div`
       width: 100%;
       height: 100%;
     }
+  }
+
+  @media only screen and (max-width: 360px) {
+    width: 91.111vw;
+    height: 91.111vw;
+    right: -64vw;
+  }
+`;
+
+export const StyledWhiteDesktopCircle = styled.div`
+  width: 40.313vw;
+  height: 40.313vw;
+  position: absolute;
+  right: -35.417vw;
+  bottom: -70%;
+  z-index: -1;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media only screen and (max-width: 992px) {
+    display: none;
   }
 `;

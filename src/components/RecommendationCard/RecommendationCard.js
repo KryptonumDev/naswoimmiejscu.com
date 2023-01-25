@@ -22,10 +22,11 @@ const RecommendationCard = ({
   nameDesc,
   desc,
   isDiffBg,
+  recDif,
 }) => {
   return (
     <StyledRecommendationCard to={`/case/${slug}`} hasdeclaredbg={isDiffBg}>
-      <StyledAvatarWrapper>
+      <StyledAvatarWrapper recdiff={recDif}>
         <StyledImage>
           <Image imageDesktop={avatar} />
           <StyledCircle
@@ -42,7 +43,7 @@ const RecommendationCard = ({
           </StyledDescImageWrapper>
         </StyledTextContent>
       </StyledAvatarWrapper>
-      <StyledDescriptionWrapper>
+      <StyledDescriptionWrapper recdiff={recDif}>
         {desc ? parse(desc) : null}
       </StyledDescriptionWrapper>
     </StyledRecommendationCard>

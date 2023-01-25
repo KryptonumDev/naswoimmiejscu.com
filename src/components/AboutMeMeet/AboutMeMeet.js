@@ -13,6 +13,7 @@ import {
   StyledBottomCircle,
   StyledDescWrapperElement,
   StyledTitleWrapperElement,
+  StyledMobileWhiteCircle,
 } from "./StyledAboutMeMeet";
 import { StyledCircle } from "../Circle/StyledCircle";
 
@@ -27,6 +28,23 @@ const AboutMeMeet = ({ data }) => {
           <StyledTopCircle>
             <StyledCircle />
           </StyledTopCircle>
+          <StyledMobileWhiteCircle>
+            <svg
+              width="353"
+              height="389"
+              viewBox="0 0 353 389"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="194.5"
+                cy="194.5"
+                r="159"
+                stroke="white"
+                stroke-width="71"
+              />
+            </svg>
+          </StyledMobileWhiteCircle>
           <Image
             imageDesktop={data.zdjeciePoLewo}
             imageMobile={data.zdjeciePoLewoMobile}

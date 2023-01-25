@@ -26,7 +26,7 @@ export const StyledAvatarWrapper = styled.div`
   gap: 16px;
 
   @media only screen and (max-width: 992px) {
-    display: none;
+    display: ${({ recdiff }) => (recdiff ? "flex" : "none")};
   }
 `;
 
@@ -54,11 +54,11 @@ export const StyledDescriptionWrapper = styled.div`
   margin-top: 4px;
 
   @media only screen and (max-width: 992px) {
-    text-align: center;
-    font-style: italic;
+    text-align: ${({ recdiff }) => (recdiff ? "left" : "center")};
+    font-style: ${({ recdiff }) => (recdiff ? "normal" : "italic")};
     color: var(--normalBlack);
     position: relative;
-    font-weight: 700;
+    font-weight: ${({ recdiff }) => (recdiff ? "300" : "700")};
   }
 `;
 
@@ -71,7 +71,7 @@ export const StyledMobileIcon = styled.div`
   display: none;
 
   @media only screen and (max-width: 992px) {
-    display: block;
+    display: ${({ recdif }) => (recdif ? "none" : "block")};
     position: absolute;
     top: 35px;
     left: -10px;

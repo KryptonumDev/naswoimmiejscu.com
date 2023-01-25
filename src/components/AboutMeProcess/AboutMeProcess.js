@@ -4,6 +4,7 @@ import parse from "html-react-parser";
 import Container from "../Container/Container";
 import Image from "../Image/Image";
 import BigGreenCircle from "../BigGreenCircle/BigGreenCircle";
+import WhiteCircle from "../WhiteCircle/WhiteCircle";
 
 import {
   StyledAboutMeProcess,
@@ -17,6 +18,7 @@ import {
   StyledDescWrapperElement,
   StyledButtonElement,
   StyledMobileCircle,
+  StyledWhiteDesktopCircle,
 } from "./StyledAboutMeProcess";
 import { StyledCircle } from "../Circle/StyledCircle";
 
@@ -55,6 +57,23 @@ const AboutMeProcess = ({ data }) => {
             <StyledMobileCircle>
               <BigGreenCircle />
             </StyledMobileCircle>
+            <StyledWhiteDesktopCircle>
+              <svg
+                width="774"
+                height="774"
+                viewBox="0 0 774 774"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="387"
+                  cy="387"
+                  r="351.5"
+                  stroke="white"
+                  stroke-width="71"
+                />
+              </svg>
+            </StyledWhiteDesktopCircle>
           </StyledImageWrapper>
         </StyledContent>
         <StyledButtonsWrapper>

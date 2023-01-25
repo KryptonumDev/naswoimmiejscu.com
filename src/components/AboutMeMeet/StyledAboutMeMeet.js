@@ -8,9 +8,9 @@ export const StyledAboutMeMeet = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 184px;
+  margin-top: clamp(120px, 9.583vw, 184px);
   align-items: center;
-  gap: clamp(100px, 8.698vw, 200px);
+  gap: clamp(100px, 8.802vw, 169px);
 
   @media only screen and (max-width: 992px) {
     margin-top: 75px;
@@ -22,16 +22,25 @@ export const StyledAboutMeMeet = styled.div`
 
 export const StyledImageWrapper = styled.div`
   max-width: 606px;
-  width: 50%;
+  width: 40%;
   position: relative;
+
+  .gatsby-image-wrapper {
+    width: 100%;
+  }
 
   @media only screen and (max-width: 992px) {
     width: 100%;
   }
+
+  @media only screen and (max-width: 360px) {
+    width: 88%;
+    margin: 0 auto;
+  }
 `;
 
 export const StyledContentWrapper = styled.div`
-  width: 50%;
+  width: 60%;
   max-width: 805px;
 
   @media only screen and (max-width: 992px) {
@@ -86,8 +95,34 @@ export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
   display: ${({ ishide }) => (ishide ? "none" : "block")};
 
   @media only screen and (max-width: 992px) {
-    margin-bottom: 45px;
+    margin-bottom: 26px;
     margin-top: 68px;
     display: ${({ ishide }) => (ishide ? "block" : "none")};
+  }
+`;
+
+export const StyledMobileWhiteCircle = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+    width: 77.283vw;
+    height: 77.283vw;
+    position: absolute;
+    right: -50.403vw;
+    top: -12.097vw;
+    z-index: -1;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    top: -32vw;
+    right: -57vw;
+    width: 108.056vw;
+    height: 108.056vw;
   }
 `;

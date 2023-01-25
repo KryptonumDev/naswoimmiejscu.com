@@ -4,7 +4,8 @@ export const StyledAboutMeFirstSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 96px;
+  align-items: center;
+  margin-top: 108px;
   gap: clamp(100px, 10.156vw, 195px);
   position: relative;
 
@@ -64,6 +65,7 @@ export const StyledMobileBottomCircle = styled.div`
     position: absolute;
     bottom: -50px;
     right: -50px;
+    z-index: -1;
   }
 `;
 

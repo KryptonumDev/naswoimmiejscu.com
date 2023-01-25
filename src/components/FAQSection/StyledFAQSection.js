@@ -4,9 +4,9 @@ export const StyledFAQSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: clamp(100px, 8.698vw, 200px);
+  gap: clamp(80px, 5.521vw, 106px);
   max-width: 1920px;
-  margin: 100px auto 0;
+  margin: clamp(60px, 5.208vw, 100px) auto 0;
   padding-left: ${({ hasleftpadding }) => (hasleftpadding ? "182px" : "128px")};
 
   @media only screen and (max-width: 1167px) {
@@ -68,4 +68,8 @@ export const StyledFAQSWrapper = styled.div`
   width: 100%;
   flex-direction: column;
   gap: clamp(30px, 3.125vw, 60px);
+
+  @media only screen and (max-width: 992px) {
+    gap: 0;
+  }
 `;

@@ -194,6 +194,10 @@ export const StyledTitleWrapper = styled.div`
     &.effect-womens-title {
       margin-top: 30px;
     }
+
+    &.about-me-first-section {
+      margin-top: 0;
+    }
   }
 
   @media only screen and (max-width: 528px) {
@@ -216,10 +220,6 @@ export const StyledTitleWrapper = styled.div`
       font-size: 6.061vw;
     }
 
-    &.about-me-first-section {
-      margin-top: 20px;
-    }
-
     &.first-section-womens-youth,
     &.second-section-womens-youth,
     &.effect-womens-title,
@@ -230,10 +230,7 @@ export const StyledTitleWrapper = styled.div`
 
   @media only screen and (max-width: 360px) {
     &.home-hero-section,
-    &.about-me-first-section,
     &.who-im-about-me,
-    &.about-me-proccess,
-    &.about-me-meet,
     &.home-blog-section-text,
     &.contact-page,
     &.calendly-first-section,
@@ -245,7 +242,10 @@ export const StyledTitleWrapper = styled.div`
       font-size: 8.889vw;
     }
 
-    &.home-hero-section {
+    &.home-hero-section,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-meet {
       font-size: 6.111vw;
     }
 
@@ -288,7 +288,8 @@ export const StyledDescWrapper = styled.div`
     max-width: 723px;
   }
 
-  &.cooperation-process {
+  &.cooperation-process,
+  &.about-me-first-section {
     margin-bottom: 0;
   }
 

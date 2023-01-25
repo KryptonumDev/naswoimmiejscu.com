@@ -5,7 +5,6 @@ import Container from "../Container/Container";
 import Image from "../Image/Image";
 import AnimateIcon from "../AnimateIcon/AnimateIcon";
 import BigGreenCircle from "../BigGreenCircle/BigGreenCircle";
-import BiggerWhiteCircle from "../BiggerWhiteCircle/BiggerWhiteCircle";
 
 import {
   StyledAboutMeSecondSection,
@@ -28,7 +27,21 @@ const AboutMeSecondSection = ({ data }) => {
         </StyledTitleWrapper>
         <StyledContent>
           <StyledMobileCircle>
-            <BiggerWhiteCircle />
+            <svg
+              width="338"
+              height="465"
+              viewBox="0 0 338 465"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="105.5"
+                cy="232.5"
+                r="197"
+                stroke="white"
+                stroke-width="71"
+              />
+            </svg>
           </StyledMobileCircle>
           <StyledLeftWrapper>
             <StyledCircle

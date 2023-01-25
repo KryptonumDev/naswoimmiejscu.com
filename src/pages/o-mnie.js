@@ -21,8 +21,8 @@ const AboutMe = ({
       <AboutMeWhoIm data={oMnie.kimTerazJestem} />
       <AboutMeProcess data={oMnie.procesWspolpracyOMnie} />
       <AboutMeMeet data={oMnie.spotkajmySieOMnie} />
-      <FAQSection data={oMnie.faqOMnie} isNormalFont={true} />
-      <HomeBlogSection />
+      <FAQSection data={oMnie.faqOMnie} smallMgBottom isNormalFont />
+      <HomeBlogSection recDif />
     </>
   );
 };
