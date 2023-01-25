@@ -8,6 +8,7 @@ import {
   StyledTextWrapper,
   StyledFAQWrapper,
   StyledMobileSubHeading,
+  StyledTitle,
 } from "./StyledHomeFAQSection";
 
 const HomeFAQSection = ({ data }) => {
@@ -20,6 +21,9 @@ const HomeFAQSection = ({ data }) => {
         {data.tekstMobilePodTytulem ? parse(data.tekstMobilePodTytulem) : null}
       </StyledMobileSubHeading>
       <StyledFAQWrapper>
+        {data.tytulPoPrawo ? (
+          <StyledTitle>{parse(data.tytulPoPrawo)}</StyledTitle>
+        ) : null}
         {data.element.map((faq) => (
           <FAQElement
             key={faq.pytanie + faq.odpowiedz}

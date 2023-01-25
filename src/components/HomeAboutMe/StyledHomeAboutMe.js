@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 export const StyledHomeAboutMe = styled.div`
   display: flex;
-  margin-top: clamp(100px, 8.073vw, 155px);
-  justify-content: space-between;
+  margin-top: clamp(100px, 13.177vw, 253px);
   align-items: center;
-  padding-left: 55px;
-  gap: clamp(100px, 8.698vw, 200px);
+  gap: clamp(100px, 8.698vw, 169px);
   position: relative;
 
   @media only screen and (max-width: 1167px) {

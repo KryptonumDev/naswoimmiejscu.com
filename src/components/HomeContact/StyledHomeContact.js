@@ -5,12 +5,12 @@ export const StyledHomeContact = styled.div`
   width: 100%;
   max-width: 1920px;
   margin: clamp(70px, 4.688vw, 90px) auto 0;
-  padding: 0 0 0 183px;
+  padding: 0 0 0 128px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  gap: clamp(100px, 8.698vw, 200px);
+  gap: clamp(100px, 8.958vw, 172px);
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;

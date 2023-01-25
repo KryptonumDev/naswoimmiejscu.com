@@ -36,7 +36,9 @@ export const StyledFAQElement = styled.details`
 
 export const StyledQuestionWrapper = styled.summary`
   display: flex;
+  align-items: center;
   gap: 3px;
+  transform: translateX(-10px);
 
   &:focus-visible {
     outline-width: 1px;
@@ -52,7 +54,7 @@ export const StyledQuestionWrapper = styled.summary`
 `;
 
 export const StyledAnswerWrapper = styled.div`
-  font: 300 1.25vw Roboto;
+  font: 300 clamp(20px, 1.25vw, 24px) Roboto;
   margin-top: 24px;
 
   strong {
@@ -91,12 +93,18 @@ export const StyledIconWrapper = styled.div`
     width: 75%;
     height: 75%;
   }
+
+  @media only screen and (max-width: 992px) {
+    svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
 `;
 
 export const StyledQuestionContent = styled.div`
-  font: ${({ open }) => (open ? "700" : "400")} 1.875vw Roboto;
+  font: 700 clamp(32px, 2.083vw, 40px) Roboto;
   cursor: pointer;
-  margin-top: 10px;
 
   @media only screen and (min-width: 1920px) {
     font-size: 40px;

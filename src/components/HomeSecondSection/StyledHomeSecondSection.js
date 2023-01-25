@@ -40,7 +40,7 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledContent = styled.div`
-  min-height: 450px;
+  min-height: 500px;
 
   @media only screen and (max-width: 992px) {
     min-height: unset;
@@ -94,22 +94,11 @@ export const StyledIconsWrapper = styled.div`
 
     &:hover {
       opacity: 0.6;
-
-      button {
-        background-color: var(--buttonBrownHover);
-      }
-
-      p {
-        color: var(--normalBlack);
-      }
     }
   }
 
   @media only screen and (max-width: 1349px) {
     flex-direction: column;
-  }
-
-  @media only screen and (max-width: 992px) {
     gap: 0;
   }
 `;

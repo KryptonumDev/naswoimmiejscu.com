@@ -33,8 +33,8 @@ const FAQElement = ({ question, answer, isNormalFont }) => {
             hasWidth="71px"
             hasHeight="64px"
             hasIcon
-            iconColor={isOpen ? "var(--arrowBlack)" : "var(--normalWhite)"}
-            bgColor={isOpen ? "var(--normalGreen)" : "var(--buttonBrownHover)"}
+            iconColor={isOpen ? "var(--normalWhite)" : "var(--arrowBlack)"}
+            bgColor={isOpen ? "var(--buttonBrownHover)" : "var(--normalGreen)"}
           />
         </StyledIconWrapper>
         <StyledQuestionContent isnormalfont={isNormalFont} open={isOpen}>

@@ -190,6 +190,7 @@ export const query = graphql`
         stronaGlownaFaq {
           tytulPoLewej
           tekstMobilePodTytulem
+          tytulPoPrawo
           element {
             odpowiedz
             pytanie

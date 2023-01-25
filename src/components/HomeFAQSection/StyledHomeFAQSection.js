@@ -7,7 +7,7 @@ export const StyledHomeFAQSection = styled.div`
   margin: clamp(100px, 8.333vw, 160px) auto 0;
   padding: 0 clamp(100px, 6.51vw, 125px) 0 clamp(100px, 9.375vw, 180px);
   max-width: 1920px;
-  gap: clamp(100px, 8.698vw, 200px);
+  gap: 40px;
 
   @media only screen and (max-width: 1167px) {
     padding: 0 33px;
@@ -21,15 +21,19 @@ export const StyledHomeFAQSection = styled.div`
 `;
 
 export const StyledTextWrapper = styled.div`
-  width: 50%;
+  width: 45%;
   font: 700 3.333vw Roboto;
   display: flex;
   align-items: center;
   gap: 40px;
-  padding-left: 80px;
+  padding-left: 40px;
+  position: relative;
 
   p {
     max-width: 475px;
+    position: absolute;
+    top: 440px;
+    left: 40px;
 
     strong {
       color: var(--nromalBrown);
@@ -62,6 +66,9 @@ export const StyledTextWrapper = styled.div`
     width: 100%;
 
     p {
+      position: relative;
+      top: auto;
+      left: auto;
       max-width: unset;
     }
   }
@@ -72,16 +79,16 @@ export const StyledTextWrapper = styled.div`
 `;
 
 export const StyledFAQWrapper = styled.div`
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
-  gap: clamp(19px, 2.448vw, 47px);
-  padding-left: 20px;
+  gap: clamp(19px, 2.188vw, 42px);
 
   @media only screen and (max-width: 992px) {
     margin-top: 0;
     padding-left: 0;
     width: 100%;
+    gap: 5px;
   }
 `;
 
@@ -107,3 +114,12 @@ export const StyledMobileSubHeading = styled.div`
     font-size: 15px;
   }
 `;
+
+export const StyledTitle = styled.div`
+  font: 700 clamp(44px, 3.333vw, 64px) Roboto;
+  margin-bottom: calc(64px - clamp(19px, 2.188vw, 42px));
+
+  @media only screen and (max-width: 992px){
+    display: none;
+  }
+`
