@@ -64,17 +64,7 @@ const HomeBlogSection = ({
             artykul {
               miniaturka {
                 krotkiOpisDoMiniaturki
-                tekstPrzycisku
                 zdjecieDoMiniaturki {
-                  altText
-                  title
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData
-                    }
-                  }
-                }
-                zdjecieDoMiniaturkiMobile {
                   altText
                   title
                   localFile {
@@ -195,7 +185,6 @@ const HomeBlogSection = ({
             desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
             date={node.date}
             imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
-            imageMobile={node.artykul.miniaturka.zdjecieDoMiniaturkiMobile}
             isCase={isCase}
           />
         ))}
@@ -221,7 +210,6 @@ const HomeBlogSection = ({
             desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
             date={node.date}
             imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
-            imageMobile={node.artykul.miniaturka.zdjecieDoMiniaturkiMobile}
             isCase={isCase}
           />
         ))}

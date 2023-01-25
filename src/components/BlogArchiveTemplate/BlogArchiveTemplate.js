@@ -74,7 +74,6 @@ const Blog = ({
                         btnText={'POZNAJ TĘ NOWOŚĆ'}
                         slug={node.slug}
                         imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
-                        imageMobile={node.artykul.miniaturka.zdjecieDoMiniaturkiMobile}
                     />
                 ))}
             </StyledSlidesWrapper>
@@ -118,17 +117,7 @@ export const query = graphql`
           artykul {
             miniaturka {
               krotkiOpisDoMiniaturki
-              tekstPrzycisku
               zdjecieDoMiniaturki {
-                altText
-                title
-                localFile {
-                  childImageSharp {
-                    gatsbyImageData
-                  }
-                }
-              }
-              zdjecieDoMiniaturkiMobile {
                 altText
                 title
                 localFile {
