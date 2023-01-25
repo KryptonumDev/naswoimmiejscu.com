@@ -37,7 +37,9 @@ const SecondSectionWomens = ({ image, imageMobile, title, desc, btn }) => {
           <Button
             btnData={btn}
             variant="green"
-            haswidth="495px"
+            hasClampWidth="25.938vw"
+            hasBasicWidth="300px"
+            haswidth="498px"
             hasheight="88px"
             hasfontsize="20px"
             className="second-section-womens-youth"

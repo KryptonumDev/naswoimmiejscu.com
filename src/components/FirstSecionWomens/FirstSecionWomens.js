@@ -18,7 +18,7 @@ import {
 } from "./StyledFirstSecionWomens";
 import { StyledCircle } from "../Circle/StyledCircle";
 
-const FirstSecionWomens = ({ title, desc, icon, image, imageMobile }) => {
+const FirstSecionWomens = ({ title, desc, icon, image, imageMobile, womens }) => {
   return (
     <Container>
       <StyledFirstSecionWomens>
@@ -44,7 +44,7 @@ const FirstSecionWomens = ({ title, desc, icon, image, imageMobile }) => {
           </StyledCirclesWrapper>
         </StyledLeftWrapper>
         <StyledRightWrapper>
-          <StyledCircleWrapper>
+          <StyledCircleWrapper iswomens={womens}>
             <StyledCircle hasdeclaredbg="var(--normalGreen)" />
           </StyledCircleWrapper>
           <StyledMobileCircleWrapper>
@@ -53,7 +53,21 @@ const FirstSecionWomens = ({ title, desc, icon, image, imageMobile }) => {
           <Image imageDesktop={image} imageMobile={imageMobile} />
         </StyledRightWrapper>
         <StyledWhiteCircle>
-          <WhiteCircle />
+          <svg
+            width="534"
+            height="774"
+            viewBox="0 0 534 774"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="387"
+              cy="387"
+              r="351.5"
+              stroke="white"
+              stroke-width="71"
+            />
+          </svg>
         </StyledWhiteCircle>
       </StyledFirstSecionWomens>
     </Container>

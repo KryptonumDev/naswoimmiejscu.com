@@ -26,6 +26,7 @@ const Womens = ({
         icon={pierwszaSekcjaKobiety.ikonkaObokTytulu}
         image={pierwszaSekcjaKobiety.zdjeciePoPrawo}
         imageMobile={pierwszaSekcjaKobiety.zdjeciePoPrawoMobile}
+        womens={true}
       />
       <SecondSectionWomens
         image={drugaSekcjaKobiety.zdjeciePoLewo}

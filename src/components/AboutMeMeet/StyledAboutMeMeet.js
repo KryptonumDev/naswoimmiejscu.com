@@ -7,7 +7,6 @@ import {
 export const StyledAboutMeMeet = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
   margin-top: clamp(120px, 9.583vw, 184px);
   align-items: center;
   gap: clamp(100px, 8.802vw, 169px);

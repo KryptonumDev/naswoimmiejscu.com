@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { StyledTitleWrapper } from "../HomeHeroSection/StyledHomeHeroSection";
 
 export const StyledFirstSecionWomens = styled.div`
-  gap: clamp(100px, 7.698vw, 200px);
+  gap: clamp(60px, 5.469vw, 105px);
   display: flex;
   justify-content: space-between;
   width: 100%;
   position: relative;
-  margin-top: 97px;
+  margin-top: clamp(97px, 5.990vw, 115px);
 
   @media only screen and (max-width: 992px) {
     gap: 20px;
@@ -21,6 +21,8 @@ export const StyledLeftWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
+    position: relative;
+    z-index: 3;
   }
 `;
 
@@ -49,12 +51,12 @@ export const StyledCircleWrapper = styled.div`
   z-index: 2;
 
   @media only screen and (max-width: 992px) {
-    bottom: -20px;
-    right: -20px;
+    bottom: ${({ iswomens }) => iswomens ? "-40px" : "-20px"};
+    right: ${({ iswomens }) => iswomens ? "-40px" : "-20px"};
 
     div {
-      width: 40px;
-      height: 40px;
+      width: ${({ iswomens }) => iswomens ? "100px" : "40px"};
+      height: ${({ iswomens }) => iswomens ? "100px" : "40px"};
     }
   }
 `;

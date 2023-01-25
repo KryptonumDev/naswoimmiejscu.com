@@ -211,6 +211,10 @@ export const StyledRightWrapper = styled.div`
 export const StyledImageWrapper = styled.div`
   margin-top: 60px;
   position: relative;
+  
+  .gatsby-image-wrapper{
+    width: 100%;
+  }
 
   @media only screen and (max-width: 992px) {
     height: 297px;

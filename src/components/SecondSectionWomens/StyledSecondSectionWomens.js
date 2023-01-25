@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StyledSecondSectionWomens = styled.div`
-  gap: clamp(100px, 5.573vw, 200px);
+  gap: clamp(40px, 4.583vw, 88px);
   width: 100%;
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-top: 10.417vw;
+  margin-top: clamp(120px, 9.583vw, 184px);
 
   @media only screen and (max-width: 992px) {
     gap: 20px;
@@ -21,10 +21,6 @@ export const StyledSecondSectionWomens = styled.div`
 export const StyledLeftWrapper = styled.div`
   width: 40%;
   padding-left: 85px;
-
-  .gatsby-image-wrapper {
-    height: 100%;
-  }
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;

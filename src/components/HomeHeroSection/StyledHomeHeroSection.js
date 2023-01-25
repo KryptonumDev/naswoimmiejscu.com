@@ -299,6 +299,15 @@ export const StyledDescWrapper = styled.div`
     max-width: 723px;
   }
 
+  &.second-section-womens-youth{
+    margin-top: clamp(30px, 3.646vw, 70px);
+    margin-bottom: 39px;
+  }
+
+  &.first-section-womens-youth{
+    margin-top: clamp(20px, 3.385vw, 65px);
+  }
+
   &.contact-page {
     margin-top: clamp(30px, 3.646vw, 70px);
     margin-bottom: clamp(20px, 2.083vw, 40px);
@@ -524,6 +533,11 @@ export const StyledCircleWrapper = styled(StyledCircle)`
     right: -20px;
     width: 64px;
     height: 64px;
+
+    &.home-hero-section {
+      left: -16px;
+      top: -16px;
+    }
 
     div {
       width: 64px;
