@@ -50,4 +50,45 @@ exports.createPages = async ({ actions, graphql }) => {
       },
     });
   });
+
+
+  const blogArchiveData = await graphql(`
+    {
+      wpPage(id: { eq: "cG9zdDo0ODM=" }) {
+        blog {
+          tytul
+        }
+      }
+      allWpCategory(filter: {count: {gt: 0}}) {
+        nodes {
+          name
+          slug
+          id
+        }
+      }
+  }
+  `);
+
+  createPage({
+    path: `/blog/`,
+    component: require.resolve(
+      "./src/components/BlogArchiveTemplate/BlogArchiveTemplate.js"
+    ),
+    context: {
+      id: 'cG9zdDo0ODM=',
+    },
+  });
+
+  blogArchiveData.data.allWpCategory.nodes.map(({ name, slug, id }) => {
+    createPage({
+      path: `/blog/${slug}/`,
+      component: require.resolve(
+        "./src/components/BlogArchiveTemplate/BlogArchiveTemplate.js"
+      ),
+      context: {
+        id: id,
+        slug: slug
+      },
+    });
+  });
 };
