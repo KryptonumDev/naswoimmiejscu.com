@@ -22,10 +22,12 @@ const HomeHeroSection = ({ data }) => {
       <StyledHomeHeroSection>
         <StyledLeftWrapper>
           <StyledCircleWrapper className="home-hero-section" />
-          <StyledImage
-            imageDesktop={data.zdjeciePoLewo}
-            imageMobile={data.zdjeciePoLewoMobile}
-          />
+          {data.zdjeciePoLewo ? (
+            <StyledImage
+              imageDesktop={data.zdjeciePoLewo}
+              imageMobile={data.zdjeciePoLewoMobile}
+            />
+          ) : null}
           <StyledBottomCircle>
             <StyledCircle
               hasdeclaredwidth="128px"
@@ -41,18 +43,20 @@ const HomeHeroSection = ({ data }) => {
           <StyledDescWrapper className="home-hero-section">
             {data.opisPoPrawo ? parse(data.opisPoPrawo) : null}
           </StyledDescWrapper>
-          <Button
-            btnData={data.przyciskPoPrawo}
-            className="home-hero-section"
-            variant="green"
-            haswidth="355px"
-            hasheight="88px"
-            hasClampHeight="4.583vw"
-            hasfontsize="clamp(16px, 1.042vw, 20px)"
-            hasClampWidth="18.490vw"
-            hasBasicWidth="277px"
-            hasBasicHeight="73px"
-          />
+          {data.przyciskPoPrawo ? (
+            <Button
+              btnData={data.przyciskPoPrawo}
+              className="home-hero-section"
+              variant="green"
+              haswidth="355px"
+              hasheight="88px"
+              hasClampHeight="4.583vw"
+              hasfontsize="clamp(16px, 1.042vw, 20px)"
+              hasClampWidth="18.490vw"
+              hasBasicWidth="277px"
+              hasBasicHeight="73px"
+            />
+          ) : null}
         </StyledRightWrapper>
       </StyledHomeHeroSection>
     </Container>

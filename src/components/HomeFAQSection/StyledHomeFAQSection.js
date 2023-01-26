@@ -32,7 +32,7 @@ export const StyledTextWrapper = styled.div`
   p {
     max-width: 475px;
     position: absolute;
-    top: 440px;
+    top: 250px;
     left: 40px;
 
     strong {
@@ -82,13 +82,13 @@ export const StyledFAQWrapper = styled.div`
   width: 55%;
   display: flex;
   flex-direction: column;
-  gap: clamp(19px, 2.188vw, 42px);
+  gap: clamp(36px, 2.656vw, 51px);
 
   @media only screen and (max-width: 992px) {
     margin-top: 0;
     padding-left: 0;
     width: 100%;
-    gap: 5px;
+    gap: 19px;
   }
 `;
 
@@ -119,7 +119,7 @@ export const StyledTitle = styled.div`
   font: 700 clamp(44px, 3.333vw, 64px) Roboto;
   margin-bottom: calc(64px - clamp(19px, 2.188vw, 42px));
 
-  @media only screen and (max-width: 992px){
+  @media only screen and (max-width: 992px) {
     display: none;
   }
-`
+`;

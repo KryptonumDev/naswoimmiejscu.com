@@ -61,7 +61,7 @@ const CalendlyLastSection = ({ data }) => {
                 cy="360.5"
                 r="333"
                 stroke="#0BC76D"
-                stroke-width="55"
+                strokeWidth="55"
               />
             </svg>
           </StyledGreenBigCircle>

@@ -18,7 +18,6 @@ export const StyledFAQElement = styled.details`
 
   @media only screen and (max-width: 992px) {
     max-width: unset;
-    margin-left: -5px;
 
     &[open] {
       svg {
@@ -37,8 +36,7 @@ export const StyledFAQElement = styled.details`
 export const StyledQuestionWrapper = styled.summary`
   display: flex;
   align-items: center;
-  gap: 3px;
-  transform: translateX(-10px);
+  gap: 17px;
 
   &:focus-visible {
     outline-width: 1px;
@@ -71,8 +69,7 @@ export const StyledAnswerWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     font-size: 2.218vw;
-    margin-left: 4px;
-    margin-top: 2px;
+    margin-top: 15px;
   }
 
   @media only screen and (max-width: 696px) {
@@ -85,22 +82,12 @@ export const StyledAnswerWrapper = styled.div`
 `;
 
 export const StyledIconWrapper = styled.div`
-  width: 71px;
-  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   svg {
-    width: 75%;
-    height: 75%;
-  }
-
-  @media only screen and (max-width: 992px) {
-    svg {
-      width: 26px;
-      height: 26px;
-    }
+    width: 63%;
   }
 `;
 

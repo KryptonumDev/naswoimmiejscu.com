@@ -8,7 +8,7 @@ const BiggerWhiteCircle = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="-144" cy="387" r="351.5" stroke="white" stroke-width="71" />
+    <circle cx="-144" cy="387" r="351.5" stroke="white" strokeWidth="71" />
   </svg>
 );
 

@@ -41,7 +41,7 @@ const AboutMeMeet = ({ data }) => {
                 cy="194.5"
                 r="159"
                 stroke="white"
-                stroke-width="71"
+                strokeWidth="71"
               />
             </svg>
           </StyledMobileWhiteCircle>

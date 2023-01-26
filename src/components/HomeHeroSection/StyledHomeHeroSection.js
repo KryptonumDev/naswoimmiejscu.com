@@ -14,15 +14,12 @@ export const StyledHomeHeroSection = styled.div`
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;
+    margin-top: 38px;
   }
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
     gap: 14px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    margin-top: 63px;
   }
 `;
 

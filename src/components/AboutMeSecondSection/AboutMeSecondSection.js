@@ -39,7 +39,7 @@ const AboutMeSecondSection = ({ data }) => {
                 cy="232.5"
                 r="197"
                 stroke="white"
-                stroke-width="71"
+                strokeWidth="71"
               />
             </svg>
           </StyledMobileCircle>

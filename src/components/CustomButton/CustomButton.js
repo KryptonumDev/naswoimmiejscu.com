@@ -19,6 +19,7 @@ const CustomButton = ({
   tabIndex,
   hasIcon,
   iconColor,
+  isFAQ,
   hasTransform,
 }) => {
   const { isLgUp } = useScreenService();
@@ -34,6 +35,7 @@ const CustomButton = ({
       tabIndex={tabIndex}
       iconColor={iconColor}
       hastransform={hasTransform}
+      isfaq={isFAQ}
     >
       {hasIcon ? (
         isLgUp ? (

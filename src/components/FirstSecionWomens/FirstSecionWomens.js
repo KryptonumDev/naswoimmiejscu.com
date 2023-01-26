@@ -2,7 +2,6 @@ import React from "react";
 import parse from "html-react-parser";
 
 import Image from "../Image/Image";
-import WhiteCircle from "../WhiteCircle/WhiteCircle";
 import Container from "../Container/Container";
 
 import { StyledDescWrapper } from "../HomeHeroSection/StyledHomeHeroSection";
@@ -18,7 +17,14 @@ import {
 } from "./StyledFirstSecionWomens";
 import { StyledCircle } from "../Circle/StyledCircle";
 
-const FirstSecionWomens = ({ title, desc, icon, image, imageMobile, womens }) => {
+const FirstSecionWomens = ({
+  title,
+  desc,
+  icon,
+  image,
+  imageMobile,
+  womens,
+}) => {
   return (
     <Container>
       <StyledFirstSecionWomens>
@@ -65,7 +71,7 @@ const FirstSecionWomens = ({ title, desc, icon, image, imageMobile, womens }) =>
               cy="387"
               r="351.5"
               stroke="white"
-              stroke-width="71"
+              strokeWidth="71"
             />
           </svg>
         </StyledWhiteCircle>

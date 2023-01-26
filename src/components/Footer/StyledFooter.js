@@ -161,7 +161,7 @@ export const StyledMobileGreenCircle = styled.div`
   @media only screen and (max-width: 992px) {
     display: block;
     position: absolute;
-    top: 40%;
+    bottom: -10vw;
     transform: translateY(-50%);
     right: -230px;
     width: 328px;
@@ -173,7 +173,7 @@ export const StyledMobileGreenCircle = styled.div`
     }
   }
 
-  @media only screen and (max-width: 340px) {
+  @media only screen and (max-width: 346px) {
     display: none;
   }
 `;

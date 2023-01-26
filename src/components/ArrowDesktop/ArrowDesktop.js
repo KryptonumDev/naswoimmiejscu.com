@@ -5,9 +5,9 @@ const ArrowDesktop = () => (
     <path
       d="M8.5 12L16.5 20L24.5 12"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

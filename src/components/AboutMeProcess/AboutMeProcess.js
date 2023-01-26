@@ -4,7 +4,6 @@ import parse from "html-react-parser";
 import Container from "../Container/Container";
 import Image from "../Image/Image";
 import BigGreenCircle from "../BigGreenCircle/BigGreenCircle";
-import WhiteCircle from "../WhiteCircle/WhiteCircle";
 
 import {
   StyledAboutMeProcess,
@@ -70,7 +69,7 @@ const AboutMeProcess = ({ data }) => {
                   cy="387"
                   r="351.5"
                   stroke="white"
-                  stroke-width="71"
+                  strokeWidth="71"
                 />
               </svg>
             </StyledWhiteDesktopCircle>

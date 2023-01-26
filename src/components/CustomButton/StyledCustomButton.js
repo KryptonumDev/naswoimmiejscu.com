@@ -14,7 +14,10 @@ export const StyledCustomButton = styled.button`
   justify-content: center;
   cursor: pointer;
   transition: transform 250ms;
-  transform: scale(${({ hastransform }) => (hastransform ? null : "0.6")});
+  transform: scale(
+    ${({ hastransform, isfaq }) =>
+      !isfaq ? (hastransform ? null : "0.6") : null}
+  );
 
   img {
     width: ${({ imagesize }) => (imagesize ? imagesize : "initial")};

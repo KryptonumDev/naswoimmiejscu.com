@@ -35,7 +35,12 @@ const BlogHomeCard = ({
             hasdeclaredtextalign="right"
             hasdeclaredmargin="10px 0 0 0"
           >
-            {date}
+            {new Date(date).toLocaleString("pl", {
+              year: "numeric",
+              month: "numeric",
+              day: "numeric",
+            })}{" "}
+            r.
           </StyledText>
         </StyledDate>
       </StyledTextWrapper>
