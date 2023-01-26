@@ -26,7 +26,7 @@ const HomeSecondSection = ({ data }) => {
 
   const handleChange = useCallback(
     (womens) => {
-      setIsWomens(womens ? true : false);
+      setIsWomens(womens);
     },
     [setIsWomens]
   );
@@ -53,7 +53,7 @@ const HomeSecondSection = ({ data }) => {
                 onClick={() => handleChange(false)}
                 type="button"
                 image={data.ikonkaPoLewo}
-                hasTransform={isWomens ? false : true}
+                className={isWomens ? 'button' : 'button active'}
                 bgColor={isWomens ? "var(--btnGrey)" : "var(--normalGreen)"}
               />
               <StyledText
@@ -68,7 +68,7 @@ const HomeSecondSection = ({ data }) => {
             </div>
             <div onClick={() => handleChange(true)}>
               <CustomButton
-                hasTransform={isWomens ? true : false}
+                className={isWomens ? 'active button' : 'button'}
                 bgColor={isWomens ? "var(--normalGreen)" : "var(--btnGrey)"}
                 image={data.ikonkaKobiety}
                 onClick={() => handleChange(true)}
@@ -125,6 +125,7 @@ const HomeSecondSection = ({ data }) => {
         </StyledLeftWrapper>
         <StyledRightWrapper>
           <Image
+            className='image'
             imageDesktop={data.zdjeciePoPrawo}
             imageMobil={data.zdjeciePoPrawoMobile}
           />

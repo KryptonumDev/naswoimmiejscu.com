@@ -13,11 +13,13 @@ export const StyledCustomButton = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 250ms;
-  transform: scale(
-    ${({ hastransform, isfaq }) =>
-      !isfaq ? (hastransform ? null : "0.6") : null}
-  );
+  transition: all 300ms !important;
+  transform: scale(${({ isfaq }) => isfaq ? "1" : "0.6"});
+
+  &.active{
+    transform: scale(1);
+    opacity: 1 !important;
+  }
 
   img {
     width: ${({ imagesize }) => (imagesize ? imagesize : "initial")};

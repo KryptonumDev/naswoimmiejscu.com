@@ -32,7 +32,12 @@ export const StyledRightWrapper = styled.div`
   width: 50%;
   display: flex;
   justify-content: flex-end;
-  max-heiht: 1080px;
+  max-height: 1080px;
+  height: fit-content;
+  margin: auto;
+  .image{
+    height: fit-content;
+  }
 
   @media only screen and (max-width: 992px) {
     display: none;
@@ -92,7 +97,7 @@ export const StyledIconsWrapper = styled.div`
       transition: 250ms color linear;
     }
 
-    &:hover {
+    &:hover .button {
       opacity: 0.6;
     }
   }

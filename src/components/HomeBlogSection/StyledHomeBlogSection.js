@@ -33,7 +33,7 @@ export const StyledLeftWrapper = styled.div`
     content: "";
     display: ${({ iscase }) => (iscase ? "none" : "block")};
     width: 1px;
-    height: 131%;
+    height: 100%;
     background-color: var(--hrColor);
     position: absolute;
     right: 0;
@@ -94,7 +94,7 @@ export const StyledContent = styled.button`
   align-self: ${({ isright }) => (isright ? "flex-end" : "flex-start")};
   padding: ${({ hasdeclaredpadding }) =>
     hasdeclaredpadding ? hasdeclaredpadding : "0"};
-  transition: opacity 250ms linear;
+  transition: opacity 250ms linear !important;
   width: 100%;
   opacity: ${({ isactive }) => (isactive ? "1" : "0.5")};
 

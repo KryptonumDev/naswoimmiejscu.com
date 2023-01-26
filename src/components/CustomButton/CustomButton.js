@@ -21,6 +21,7 @@ const CustomButton = ({
   iconColor,
   isFAQ,
   hasTransform,
+  className
 }) => {
   const { isLgUp } = useScreenService();
 
@@ -36,6 +37,7 @@ const CustomButton = ({
       iconColor={iconColor}
       hastransform={hasTransform}
       isfaq={isFAQ}
+      className={className}
     >
       {hasIcon ? (
         isLgUp ? (

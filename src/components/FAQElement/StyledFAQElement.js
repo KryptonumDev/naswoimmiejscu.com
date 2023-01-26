@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const StyledFAQElement = styled.details`
   width: 100%;
 
+  svg{
+    transition: all .25s;
+  }
+
   &:focus-visible {
     outline-width: 1px;
     outline-style: solid;
