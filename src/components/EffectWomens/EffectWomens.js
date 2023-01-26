@@ -10,6 +10,7 @@ import {
   StyledRightWrapper,
   StyledList,
   StyledCircleWrapper,
+  StyledElements,
 } from "./StyledEffectWomens";
 import {
   StyledDescWrapper,
@@ -17,10 +18,17 @@ import {
 } from "../HomeHeroSection/StyledHomeHeroSection";
 import { StyledCircle } from "../Circle/StyledCircle";
 
-const EffectWomens = ({ image, imageMobile, title, listElements, desc }) => {
+const EffectWomens = ({
+  image,
+  imageMobile,
+  title,
+  listElements,
+  desc,
+  isWomens,
+}) => {
   return (
     <Container>
-      <StyledEffectWomens>
+      <StyledEffectWomens iswomens={isWomens}>
         <StyledLeftWrapper>
           <StyledTitleWrapper className="effect-womens-title">
             {title ? parse(title) : null}
@@ -28,14 +36,25 @@ const EffectWomens = ({ image, imageMobile, title, listElements, desc }) => {
           <StyledDescWrapper className="effect-womens-title">
             {desc ? parse(desc) : null}
           </StyledDescWrapper>
-          <StyledList>
-            {listElements.map((li) => (
-              <li>
-                <Image imageDesktop={li.ikonka} />
-                {li.tekstListy ? parse(li.tekstListy) : null}
-              </li>
-            ))}
-          </StyledList>
+          {isWomens ? (
+            <StyledElements>
+              {listElements.map((li) => (
+                <div>
+                  <Image imageDesktop={li.ikonka} objectFit="contain" />
+                  {li.tekstListy ? parse(li.tekstListy) : null}
+                </div>
+              ))}
+            </StyledElements>
+          ) : (
+            <StyledList>
+              {listElements.map((li) => (
+                <li>
+                  <Image imageDesktop={li.ikonka} />
+                  {li.tekstListy ? parse(li.tekstListy) : null}
+                </li>
+              ))}
+            </StyledList>
+          )}
         </StyledLeftWrapper>
         <StyledRightWrapper>
           <StyledCircleWrapper>
