@@ -1,15 +1,72 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import Container from "../Container/Container";
 import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Button from "../Button/Button";
 import { StyledText } from "../Text/StyledText";
+import Hero from "../ArticleHero/ArticelHero";
 
-const ArticleTemplate = ({ data: { wpPost: { content }, global: { globalComponets: { contactSection } } } }) => {
+import './../../styles/wp.min.css'
+
+const slugTransform = (string) => {
+  return string.toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+const getNestedHeadings = (headingElements) => {
+  const nestedHeadings = [];
+
+  headingElements.forEach((heading, index) => {
+    const { innerText: title } = heading;
+    let id = slugTransform(title)
+    heading.id = id
+
+    if (title === 'Problem' || title === 'Solution' || title === 'Result') {
+      return null
+    }
+
+    if (heading.nodeName === "H2") {
+      nestedHeadings.push({ id, title, items: [], pseudo: false });
+    } else if (heading.nodeName === "H3" && nestedHeadings.length > 0 && !nestedHeadings[nestedHeadings.length - 1].pseudo) {
+      nestedHeadings[nestedHeadings.length - 1].items.push({
+        id,
+        title,
+        pseudo: false
+      });
+    } else if (heading.nodeName === "H3") {
+      nestedHeadings.push({ id, title, items: [], pseudo: true });
+    }
+  });
+
+  return nestedHeadings;
+};
+
+const useHeadingsData = () => {
+  const [nestedHeadings, setNestedHeadings] = useState([]);
+
+  useEffect(() => {
+    const headingElements = Array.from(
+      document.getElementById('post-content').querySelectorAll("h2, h3")
+    );
+
+    const newNestedHeadings = getNestedHeadings(headingElements);
+    setNestedHeadings(newNestedHeadings);
+  }, []);
+
+  return { nestedHeadings };
+};
+
+const ArticleTemplate = ({ data: { wpPost: { title, categories, artykul, content }, global: { globalComponets: { contactSection } } } }) => {
+  const { nestedHeadings } = useHeadingsData()
+
   return (
     <Container>
-      <Content dangerouslySetInnerHTML={{ __html: content }} />
+      <Hero headings={nestedHeadings} title={title} categories={categories.nodes} data={artykul.trescArtykulu} />
+      <Content id='post-content' dangerouslySetInnerHTML={{ __html: content }} />
       <Contact>
         <div>
           <div className="title" dangerouslySetInnerHTML={{ __html: contactSection.title }} />
@@ -54,6 +111,7 @@ export const query = graphql`
       }
     }
     wpPost(id: { eq: $postId }) {
+      title
       content
       seo {
         canonical
@@ -81,6 +139,7 @@ export const query = graphql`
           }
         }
         trescArtykulu {
+          description
           tekstDoZdjecia
           zdjecieWyrozniajaceNaPodstronieArt {
             altText
@@ -96,6 +155,7 @@ export const query = graphql`
       categories {
         nodes {
           name
+          slug
         }
       }
       content
@@ -104,20 +164,95 @@ export const query = graphql`
 `;
 
 const Content = styled.div`
+  margin-top: 60px;
 
+  @media (max-width: 820px) {
+    max-width: 650px;
+    margin: 60px auto 0 auto;
+  }
+
+  h2{
+    margin-bottom: 32px;
+    font:700 clamp(22px, ${48 / 1920 * 100}vw, 48px) Roboto;
+
+    @media (max-width: 820px) {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+  }
+
+  p{
+    font-weight: 300;
+    font-size: clamp(15px, ${26 / 1920 * 100}vw, 26px);
+    line-height: 130%;
+  }
+
+  .wp-block-column{
+    max-width: 772px;
+
+    & > * + * {
+      margin-top: 16px;
+    }
+  }
+
+  .wp-block-button__link{
+    margin-top: 24px;
+
+    @media (max-width: 820px) {
+      margin-top: 0;
+    }
+
+    @media (max-width: 360px) {
+      width: 100% !important;
+      font-size: 11px !important;
+      min-height: 53px;
+    }
+  }
+
+  .wp-block-button{
+    @media (max-width: 360px) {
+      display: block !important;
+    }
+  }
+
+  .wp-block-columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 64px;
+
+    @media (max-width: 1024px) {
+      grid-gap: 32px;
+    }
+
+    @media (max-width: 820px) {
+      grid-template-columns: 1fr;
+      grid-gap: 16px;
+    }
+  }
+
+  .wp-block-image{
+    margin: 0;
+  }
+
+  .size-full{
+    width: 100%;
+  }
 `
 
 const Contact = styled.div`
-  margin-top: 160px;
+  margin-top: clamp(120px, ${160 / 1920 * 100}vw, 160px);
+  margin-bottom: clamp(120px, ${160 / 1920 * 100}vw, 160px);
   display: grid;
   grid-template-columns: 768fr 796fr;
   grid-gap: 64px;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     display: flex;
     flex-direction: column-reverse;
     gap: 30px;
+    max-width: 650px;
+    margin: 60px auto;
   }
 
   @media (max-width: 360px) {
@@ -133,7 +268,7 @@ const Contact = styled.div`
     margin-bottom: 20px;
     font:700 3.333vw/1.2em Roboto;
 
-    @media (max-width: 768px) {
+    @media (max-width: 820px) {
       font-size: 22px;
     }
   }
