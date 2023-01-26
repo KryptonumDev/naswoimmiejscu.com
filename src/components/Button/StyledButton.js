@@ -177,6 +177,10 @@ export const StyledLink = styled(Link)`
       width: 100%;
     }
 
+    &.blog-slider-btn {
+      width: 250px;
+    }
+
     &.calenldy-last-section {
       font-size: 11px;
     }

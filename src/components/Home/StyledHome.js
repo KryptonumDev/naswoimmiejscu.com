@@ -98,7 +98,7 @@ export const StyledWhiteSecondCircleWrapper = styled.div`
   }
 
   @media only screen and (min-width: 1920px) {
-    top: 4780px;
+    top: 4580px;
     width: 982px;
     height: 982px;
     right: -560px;

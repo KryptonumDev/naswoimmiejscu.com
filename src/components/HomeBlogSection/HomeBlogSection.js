@@ -189,13 +189,15 @@ const HomeBlogSection = ({
           />
         ))}
       </StyledScrollWrapper>
-      <Button
-        btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}
-        className="blog-slider-btn"
-        haswidth="366px"
-        hasheight="88px"
-        hasfontsize="20px"
-      />
+      {stronaGlowna.sekcjaZBlogiem.blogPrzycisk ? (
+        <Button
+          btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}
+          className="blog-slider-btn"
+          haswidth="366px"
+          hasheight="88px"
+          hasfontsize="20px"
+        />
+      ) : null}
     </StyledDesktopScroll>
   );
 
@@ -214,13 +216,15 @@ const HomeBlogSection = ({
           />
         ))}
       </Slider>
-      <Button
-        btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}
-        className="blog-slider-btn"
-        haswidth="366px"
-        hasheight="88px"
-        hasfontsize="20px"
-      />
+      {stronaGlowna.sekcjaZBlogiem.blogPrzycisk ? (
+        <Button
+          btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}
+          className="blog-slider-btn"
+          haswidth="366px"
+          hasheight="88px"
+          hasfontsize="20px"
+        />
+      ) : null}
     </StyledBlogSliderWrapper>
   );
 
@@ -243,13 +247,15 @@ const HomeBlogSection = ({
           />
         ))}
       </StyledScrollWrapper>
-      <Button
-        btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk}
-        className="blog-recomendation-slider"
-        haswidth="366px"
-        hasheight="88px"
-        hasfontsize="20px"
-      />
+      {stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk ? (
+        <Button
+          btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk}
+          className="blog-recomendation-slider"
+          haswidth="366px"
+          hasheight="88px"
+          hasfontsize="20px"
+        />
+      ) : null}
     </StyledDesktopScroll>
   );
 
@@ -276,17 +282,19 @@ const HomeBlogSection = ({
       <StyledMobileIcon recdif={recDif}>
         <QuoteIcon />
       </StyledMobileIcon>
-      <Button
-        btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk}
-        className={
-          recDif
-            ? "blog-recomendation-slider-show"
-            : "blog-recomendation-slider"
-        }
-        haswidth="366px"
-        hasheight="88px"
-        hasfontsize="20px"
-      />
+      {stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk ? (
+        <Button
+          btnData={stronaGlowna.sekcjaZBlogiem.rekomendacjePrzycisk}
+          className={
+            recDif
+              ? "blog-recomendation-slider-show"
+              : "blog-recomendation-slider"
+          }
+          haswidth="366px"
+          hasheight="88px"
+          hasfontsize="20px"
+        />
+      ) : null}
     </StyledBlogSliderWrapper>
   );
 
@@ -338,7 +346,7 @@ const HomeBlogSection = ({
           ? parse(stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul)
           : null}
 
-        <StyledCircle className="blog-mobile-section-show" />
+        <StyledCircle className="blog-mobile-section-show blog-mobile-section-show--recomendation" />
       </StyledTitleElement>
       <StyledDescWrapper2 className="home-blog-section-text">
         {stronaGlowna.sekcjaZBlogiem.rekomendacjeOpis

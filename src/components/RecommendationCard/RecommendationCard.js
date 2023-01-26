@@ -25,7 +25,10 @@ const RecommendationCard = ({
   recDif,
 }) => {
   return (
-    <StyledRecommendationCard to={`/case/${slug}`} hasdeclaredbg={isDiffBg}>
+    <StyledRecommendationCard
+      to={`/case/${slug}`}
+      hasdeclaredbg={isDiffBg ? "true" : null}
+    >
       <StyledAvatarWrapper recdiff={recDif}>
         <StyledImage>
           <Image imageDesktop={avatar} />

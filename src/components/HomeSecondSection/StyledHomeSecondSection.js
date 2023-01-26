@@ -101,6 +101,16 @@ export const StyledIconsWrapper = styled.div`
     flex-direction: column;
     gap: 0;
   }
+
+  @media only screen and (max-width: 992px) {
+    gap: 26px;
+    flex-direction: row;
+  }
+
+  @media only screen and (max-width: 623px) {
+    flex-direction: column;
+    gap: 0;
+  }
 `;
 
 export const StyledMobileImage = styled.div`

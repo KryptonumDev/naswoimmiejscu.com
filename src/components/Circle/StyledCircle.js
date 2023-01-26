@@ -43,13 +43,18 @@ export const StyledCircle = styled.div`
       display: none;
     }
 
-    &.blog-mobile-section-show {
+    &.blog-mobile-section-show,
+    &.blog-mobile-section-show--recomendation {
       position: absolute;
       top: 50%;
       right: -70px;
       transform: translateY(-50%);
       z-index: -1;
       display: block;
+    }
+
+    &.blog-mobile-section-show--recomendation {
+      right: -58px;
     }
   }
 `;
