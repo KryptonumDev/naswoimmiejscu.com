@@ -4,8 +4,9 @@ import { useStaticQuery, graphql } from "gatsby";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
 import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
-import Container from "../Container/Container";
 import Nav from "../Nav/Nav";
+
+import scrollLock from "../../utils/scrollLock";
 
 import { StyledHeader, StyledLogoWrapperHeader } from "./StyledHeader";
 
@@ -47,6 +48,14 @@ const Header = () => {
   const handleOpenMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      scrollLock.enable('header')
+    } else {
+      scrollLock.disable('header')
+    }
+  }, [isOpen])
 
   return (
     <StyledHeader>
