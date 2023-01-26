@@ -5,7 +5,7 @@ export const StyledFAQMargin = styled.div`
 `;
 
 export const StyledContentWrapper = styled.div`
-  margin-top: clamp(130px, 7.917vw, 152px);
+  margin-top: clamp(80px, 7.917vw, 152px);
   gap: 4.167vw;
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,7 @@ export const StyledContentWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
     margin-bottom: 0;
-    margin-top: 84px;
+    margin-top: 38px;
     align-items: flex-start;
     gap: clamp(0, 1.042vw, 20px);
   }
