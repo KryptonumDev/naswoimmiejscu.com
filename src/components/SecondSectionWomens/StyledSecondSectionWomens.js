@@ -47,8 +47,8 @@ export const StyledRightWrapper = styled.div`
 
 export const StyledGreenCircleWrapper = styled.div`
   position: absolute;
-  bottom: -19.042vw;
-  left: -24.458vw;
+  bottom: -17.042vw;
+  left: -15.458vw;
   z-index: 1;
   width: 37.552vw;
   height: 37.552vw;

@@ -23,7 +23,21 @@ const SecondSectionWomens = ({ image, imageMobile, title, desc, btn }) => {
       <StyledSecondSectionWomens>
         <StyledLeftWrapper>
           <StyledGreenCircleWrapper>
-            <BigGreenCircle />
+            <svg
+              width="345"
+              height="721"
+              viewBox="0 0 345 721"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="-15.5"
+                cy="360.5"
+                r="333"
+                stroke="#0BC76D"
+                stroke-width="55"
+              />
+            </svg>
           </StyledGreenCircleWrapper>
           <Image imageDesktop={image} imageMobile={imageMobile} />
         </StyledLeftWrapper>
