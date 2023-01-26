@@ -25,10 +25,11 @@ const MeetsFormwomens = ({
   desc,
   image,
   imageMobile,
+  isWomens,
 }) => {
   return (
     <Container>
-      <StyledMeetsFormwomens>
+      <StyledMeetsFormwomens iswomens={isWomens}>
         <StyledLeftWrapper>
           <StyledCircleWrapper>
             <StyledCircle />

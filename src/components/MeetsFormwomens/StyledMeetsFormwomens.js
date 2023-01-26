@@ -5,13 +5,16 @@ export const StyledMeetsFormwomens = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 8.958vw;
+  align-items: center;
+  margin-top: ${({ iswomens }) =>
+    iswomens ? "clamp(160px, 29.375vw, 564px)" : "8.958vw"};
   margin-bottom: clamp(150px, 9.115vw, 175px);
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
     gap: 20px;
     margin-bottom: 56px;
+    align-items: flex-start;
   }
 `;
 

@@ -5,6 +5,7 @@ import FirstSecionWomens from "../components/FirstSecionWomens/FirstSecionWomens
 import SecondSectionWomens from "../components/SecondSectionWomens/SecondSectionWomens";
 import EffectWomens from "../components/EffectWomens/EffectWomens";
 import MeetsFormwomens from "../components/MeetsFormwomens/MeetsFormwomens";
+import HomeBlogSection from "../components/HomeBlogSection/HomeBlogSection";
 
 const Womens = ({
   data: {
@@ -14,6 +15,7 @@ const Womens = ({
         drugaSekcjaKobiety,
         efektWspolpracyKobiety,
         formaSpotkanKobiety,
+        sekcjaZBlogiemKobiety,
       },
     },
   },
@@ -41,6 +43,7 @@ const Womens = ({
         title={efektWspolpracyKobiety.tytul}
         listElements={efektWspolpracyKobiety.elementListy}
         desc={efektWspolpracyKobiety.opis}
+        isWomens={true}
       />
       <MeetsFormwomens
         firstBtn={formaSpotkanKobiety.pierwszyPrzycisk}
@@ -48,7 +51,22 @@ const Womens = ({
         title={formaSpotkanKobiety.tytul}
         desc={formaSpotkanKobiety.opis}
         image={formaSpotkanKobiety.obrazPoLewo}
+        isWomens={true}
         imageMobile={formaSpotkanKobiety.obrazPoLewoMobile}
+      />
+      <HomeBlogSection
+        addnotationSecond={
+          sekcjaZBlogiemKobiety.adnotacjaNaDoleStronyDrugaLinijka
+        }
+        addnotationFirst={
+          sekcjaZBlogiemKobiety.adnotacjaNaDoleStronyPierwszaLinia
+        }
+        blogTitle={sekcjaZBlogiemKobiety.blogTytul}
+        blogOpis={sekcjaZBlogiemKobiety.blogOpis}
+        anotherPerson={sekcjaZBlogiemKobiety.linkDoInnejOsoby}
+        iconImage={sekcjaZBlogiemKobiety.ikonkaDoLinku}
+        tekstDoLinku={sekcjaZBlogiemKobiety.tekstDoLinku}
+        isCase={true}
       />
     </main>
   );
@@ -74,6 +92,41 @@ export const query = graphql`
         }
       }
       kobiety {
+        sekcjaZBlogiemKobiety {
+          adnotacjaNaDoleStronyDrugaLinijka
+          adnotacjaNaDoleStronyPierwszaLinia
+          blogOpis
+          blogTytul
+          tekstDoLinku
+          linkDoInnejOsoby {
+            ... on WpCaseStudy {
+              id
+              slug
+              caseStudyArtykul {
+                miniaturkaCaseStudy {
+                  avatar {
+                    altText
+                    title
+                    localFile {
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          ikonkaDoLinku {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData(quality: 100)
+              }
+            }
+          }
+        }
         pierwszaSekcjaKobiety {
           ikonkaObokTytulu {
             altText

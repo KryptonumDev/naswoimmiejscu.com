@@ -289,6 +289,7 @@ export const StyledDescWrapper = styled.div`
 
   &.effect-womens-title {
     margin-bottom: 20px;
+    max-width: 752px;
   }
 
   &.home-second-section {

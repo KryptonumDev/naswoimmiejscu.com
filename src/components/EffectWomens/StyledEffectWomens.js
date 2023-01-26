@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const StyledEffectWomens = styled.div`
-  gap: clamp(80px, 5.469vw, 105px);
+  gap: ${({ iswomens }) =>
+    iswomens ? "clamp(20px, 1.3vw, 29px)" : "clamp(80px, 5.469vw, 105px)"};
   width: 100%;
   display: flex;
   margin-top: 10.417vw;
+  justify-content: space-between;
   position: relative;
   z-index: 1;
 
@@ -16,7 +18,7 @@ export const StyledEffectWomens = styled.div`
 `;
 
 export const StyledLeftWrapper = styled.div`
-  width: 55%;
+  width: 57%;
   padding-left: 100px;
 
   @media only screen and (max-width: 1455px) {
@@ -29,8 +31,9 @@ export const StyledLeftWrapper = styled.div`
 `;
 
 export const StyledRightWrapper = styled.div`
-  width: 45%;
+  width: 43%;
   position: relative;
+  max-width: 642px;
 
   @media only screen and (max-width: 992px) {
     width: 100%;
@@ -118,6 +121,48 @@ export const StyledCircleWrapper = styled.div`
       background-color: var(--buttonBrownHover);
       width: 66px;
       height: 66px;
+    }
+  }
+`;
+
+export const StyledElements = styled.div`
+  width: 100%;
+  gap: 32px;
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  > div {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 16px;
+    background-color: var(--womensBox);
+    border-radius: 8px;
+
+    &:last-child {
+      background-color: var(--normalGreen);
+      max-width: 507px;
+      align-items: flex-start;
+
+      p {
+        font-size: clamp(20px, 1.242vw, 26px);
+      }
+    }
+
+    .gatsby-image-wrapper {
+      display: block;
+      min-width: 27px;
+      height: 27px;
+    }
+
+    p {
+      font: 300 clamp(16px, 1.042vw, 20px) Roboto;
+
+      strong {
+        font-weight: 600;
+      }
     }
   }
 `;
