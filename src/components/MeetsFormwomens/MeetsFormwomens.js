@@ -46,16 +46,21 @@ const MeetsFormwomens = ({
             <Button
               btnData={firstBtn}
               variant="green"
+              hasClampWidth="25.938vw"
+              hasBasicWidth="300px"
+              haswidth="498px"
               hasheight="88px"
-              hasfontsize="20px"
-              haswidth="495px"
+              hasfontsize="clamp(16px, 1.042vw, 20px)"
+              className="second-section-womens-youth"
             />
             <Button
               btnData={secondBtn}
-              variant="white"
+              hasClampWidth="25.938vw"
+              hasBasicWidth="300px"
+              haswidth="498px"
               hasheight="88px"
-              hasfontsize="20px"
-              haswidth="495px"
+              hasfontsize="clamp(16px, 1.042vw, 20px)"
+              className="second-section-womens-youth"
             />
           </StyledButtonsWrapper>
         </StyledRightWrapper>

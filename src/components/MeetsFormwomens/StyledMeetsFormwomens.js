@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 export const StyledMeetsFormwomens = styled.div`
-  gap: clamp(100px, 7.708vw, 200px);
+  gap: clamp(100px, 7.708vw, 148px);
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 8.958vw;
+  margin-bottom: clamp(150px, 9.115vw, 175px);
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
     gap: 20px;
+    margin-bottom: 56px;
   }
 `;
 

@@ -41,7 +41,7 @@ const SecondSectionWomens = ({ image, imageMobile, title, desc, btn }) => {
             hasBasicWidth="300px"
             haswidth="498px"
             hasheight="88px"
-            hasfontsize="20px"
+            hasfontsize="clamp(16px, 1.042vw, 20px)"
             className="second-section-womens-youth"
           />
         </StyledRightWrapper>

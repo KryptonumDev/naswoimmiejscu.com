@@ -4,7 +4,7 @@ export const StyledCalendlyLastSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: clamp(50px, 4.635vw, 89px);
+  margin-top: clamp(70px, 4.635vw, 89px);
   margin-bottom: clamp(160px, 9.115vw, 175px);
   gap: clamp(48px, 3.333vw, 64px);
   align-items: center;

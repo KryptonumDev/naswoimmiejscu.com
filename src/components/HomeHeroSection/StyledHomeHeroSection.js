@@ -192,7 +192,7 @@ export const StyledTitleWrapper = styled.div`
     }
 
     &.effect-womens-title {
-      margin-top: 30px;
+      margin-top: 21px;
     }
 
     &.about-me-first-section,
@@ -436,9 +436,18 @@ export const StyledDescWrapper = styled.div`
       margin-top: 20px;
     }
 
+    &.second-section-womens-youth {
+      margin-top: 13px;
+      margin-bottom: 27px;
+    }
+
     &.contact-page {
       margin-top: 10px;
       margin-bottom: 67px;
+    }
+
+    &.effect-womens-title {
+      margin: 16px 0 35px;
     }
   }
 

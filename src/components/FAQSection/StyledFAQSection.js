@@ -7,10 +7,11 @@ export const StyledFAQSection = styled.div`
   gap: clamp(80px, 5.521vw, 106px);
   max-width: 1920px;
   margin: clamp(60px, 5.208vw, 100px) auto 0;
-  padding-left: ${({ hasleftpadding }) => (hasleftpadding ? "182px" : "128px")};
+  padding-left: ${({ hasleftpadding }) =>
+    hasleftpadding ? "182px" : "clamp(32px, 6.667vw, 128px)"};
 
-  @media only screen and (max-width: 1167px) {
-    padding-left: 33px;
+  @media only screen and (max-width: 1472px) {
+    padding: 0 0 0 clamp(33px, 3vw, 60px);
   }
 
   @media only screen and (max-width: 992px) {
@@ -67,7 +68,7 @@ export const StyledFAQSWrapper = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: clamp(30px, 3.125vw, 60px);
+  gap: clamp(30px, 2.5vw, 48px);
 
   @media only screen and (max-width: 992px) {
     gap: 0;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledEffectWomens = styled.div`
-  gap: clamp(100px, 5.469vw, 200px);
+  gap: clamp(80px, 5.469vw, 105px);
   width: 100%;
   display: flex;
   margin-top: 10.417vw;
@@ -11,6 +11,7 @@ export const StyledEffectWomens = styled.div`
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
     gap: 0;
+    margin-top: 44px;
   }
 `;
 
@@ -85,6 +86,12 @@ export const StyledList = styled.ul`
         @media only screen and (max-width: 992px) {
             font-size: 2.218vw;
             margin-left: 18px;
+            margin-bottom: 2px;
+
+            .gatsby-image-wrapper{
+              max-width: 22px;
+              top: -2px;
+            }
         }
     
         @media only screen and (max-width: 528px) {
@@ -105,7 +112,7 @@ export const StyledCircleWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     left: -33px;
-    top: -33px;
+    top: -23px;
 
     div {
       background-color: var(--buttonBrownHover);

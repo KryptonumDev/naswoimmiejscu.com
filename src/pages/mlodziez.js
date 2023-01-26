@@ -6,6 +6,7 @@ import SecondSectionYouth from "../components/SecondSectionYouth/SecondSectionYo
 import SecondSectionWomens from "../components/SecondSectionWomens/SecondSectionWomens";
 import MeetsFormwomens from "../components/MeetsFormwomens/MeetsFormwomens";
 import EffectWomens from "../components/EffectWomens/EffectWomens";
+import HomeBlogSection from "../components/HomeBlogSection/HomeBlogSection";
 
 const Youth = ({
   data: {
@@ -16,6 +17,7 @@ const Youth = ({
         jakMogeCiPomocMlodziez,
         efektWspolpracyMlodziez,
         formaSpotkanMlodziez,
+        sekcjaZBlogiemMlodzie,
       },
     },
   },
@@ -52,6 +54,18 @@ const Youth = ({
         image={formaSpotkanMlodziez.obrazPoLewo}
         imageMobile={formaSpotkanMlodziez.obrazPoLewoMobile}
       />
+      <HomeBlogSection
+        addnotationSecond={
+          sekcjaZBlogiemMlodzie.adnotacjaNaDoleStronyDrugaLinijka
+        }
+        addnotationFirst={sekcjaZBlogiemMlodzie.adnotacjaNaDoleStronyPi}
+        blogTitle={sekcjaZBlogiemMlodzie.blogTytul}
+        blogOpis={sekcjaZBlogiemMlodzie.blogOpis}
+        anotherPerson={sekcjaZBlogiemMlodzie.linkDoInnejOsoby}
+        iconImage={sekcjaZBlogiemMlodzie.ikonkaDoLinku}
+        tekstDoLinku={sekcjaZBlogiemMlodzie.tekstDoLinku}
+        isCase={true}
+      />
     </main>
   );
 };
@@ -76,6 +90,41 @@ export const query = graphql`
         }
       }
       mlodziez {
+        sekcjaZBlogiemMlodzie {
+          adnotacjaNaDoleStronyDrugaLinijka
+          adnotacjaNaDoleStronyPi
+          blogOpis
+          blogTytul
+          tekstDoLinku
+          linkDoInnejOsoby {
+            ... on WpCaseStudy {
+              id
+              slug
+              caseStudyArtykul {
+                miniaturkaCaseStudy {
+                  avatar {
+                    altText
+                    title
+                    localFile {
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          ikonkaDoLinku {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData(quality: 100)
+              }
+            }
+          }
+        }
         drugaSekcjaMlodziez {
           tekstPoLewo
           tekstPoPrawo
