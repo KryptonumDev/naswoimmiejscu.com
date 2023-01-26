@@ -139,12 +139,16 @@ export const StyledLink = styled(Link)`
   }
 
   @media only screen and (max-width: 360px) {
-    &.footer,
     &.contact-page-btn,
     &.calenldy-first-section {
       width: 100%;
       font-size: 11px;
       min-height: 53px;
+    }
+
+    &.footer {
+      width: 100%;
+      min-height: 73px;
     }
 
     &.calenldy-last-section {

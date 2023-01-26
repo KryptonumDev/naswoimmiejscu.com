@@ -11,6 +11,10 @@ export const StyledAboutMeProcess = styled.div`
   margin-top: clamp(50px, 7.813vw, 94px);
   padding-right: clamp(100px, 7.813vw, 150px);
 
+  @media only screen and (max-width: 1719px) {
+    padding-right: clamp(60px, 3.813vw, 110px);
+  }
+
   @media only screen and (max-width: 1499px) {
     padding-right: 0;
   }
@@ -71,7 +75,7 @@ export const StyledButtonsWrapper = styled.div`
   display: flex;
   gap: 61px;
   padding-left: 80px;
-  margin-top: 82px;
+  margin-top: 42px;
 
   @media only screen and (max-width: 1550px) {
     flex-direction: column;
@@ -127,6 +131,7 @@ export const StyledCircleWrapper = styled.div`
 
 export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
   margin-top: 0;
+  margin-bottom: clamp(60px, 4.948vw, 95px);
   display: ${({ ishide }) => (ishide ? "none" : "block")};
 
   @media only screen and (max-width: 992px) {
@@ -135,7 +140,9 @@ export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
   }
 `;
 
-export const StyledDescWrapperElement = styled(StyledDescWrapper)``;
+export const StyledDescWrapperElement = styled(StyledDescWrapper)`
+  margin-bottom: 0;
+`;
 
 export const StyledButtonElement = styled(Button)`
   width: initial;
@@ -190,8 +197,8 @@ export const StyledWhiteDesktopCircle = styled.div`
   width: 40.313vw;
   height: 40.313vw;
   position: absolute;
-  right: -35.417vw;
-  bottom: -70%;
+  right: -32.417vw;
+  bottom: -50%;
   z-index: -1;
 
   svg {

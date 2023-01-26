@@ -6,7 +6,7 @@ export const StyledAboutMeSecondSection = styled.div`
   position: relative;
 
   @media only screen and (max-width: 992px) {
-    margin-top: 20px;
+    margin-top: 0;
   }
 `;
 
@@ -47,7 +47,7 @@ export const StyledContent = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 71px;
+  margin-top: clamp(40px, 3.698vw, 71px);
   gap: 40px;
   position: relative;
 
@@ -209,10 +209,10 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledImageWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: clamp(30px, 2.865vw, 55px);
   position: relative;
-  
-  .gatsby-image-wrapper{
+
+  .gatsby-image-wrapper {
     width: 100%;
   }
 

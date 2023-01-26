@@ -43,7 +43,9 @@ export const StyledImage = styled.div`
   }
 `;
 
-export const StyledTextContent = styled.div``;
+export const StyledTextContent = styled.div`
+  width: calc(100% - 91px - 16px);
+`;
 
 export const StyledNameWrapper = styled.div`
   font: 700 18px/1.2em Roboto;

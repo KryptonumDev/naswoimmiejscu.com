@@ -71,6 +71,6 @@ export const StyledFAQSWrapper = styled.div`
   gap: clamp(30px, 2.5vw, 48px);
 
   @media only screen and (max-width: 992px) {
-    gap: 0;
+    gap: 20px;
   }
 `;
