@@ -12,8 +12,6 @@ import MeetSomebody from "../MeetSomebody/MeetSomebody";
 import AHASvg from "../AHASvg/AHASvg";
 import QuoteIcon from "../QuoteIcon/QuoteIcon";
 
-import { useScreenService } from "../../utils/useScreenService";
-
 import { StyledCircle } from "../Circle/StyledCircle";
 import {
   StyledHomeBlogSection,
@@ -37,6 +35,7 @@ import { StyledMobileIcon } from "../RecommendationCard/StyledRecommendationCard
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styled from "styled-components";
 
 const HomeBlogSection = ({
   isCase,
@@ -126,11 +125,9 @@ const HomeBlogSection = ({
   const [isBlog, setIsBlog] = useState(true);
   const slider = useRef(null);
   const secondSlider = useRef(null);
-  const { isLgUp } = useScreenService();
 
   const settings = {
     dots: false,
-    infinite: false,
     vertical: false,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -141,7 +138,6 @@ const HomeBlogSection = ({
 
   const settingsRec = {
     dots: true,
-    infinite: false,
     vertical: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -298,16 +294,16 @@ const HomeBlogSection = ({
     </StyledBlogSliderWrapper>
   );
 
-  const blogText = (
+  const BlogText = (mobile) => (
     <>
       <StyledIconWrapper>
         <AHASvg />
       </StyledIconWrapper>
       <StyledContent
-        onClick={isLgUp ? () => setIsBlog(true) : null}
+        onClick={() => setIsBlog(true)}
         type="button"
         hasdeclaredpadding="64px 87px 0 0"
-        isactive={isLgUp ? isBlog : true}
+        isactive={isBlog}
       >
         <StyledCircle
           hasdeclaredbg="var(--normalGreen)"
@@ -332,13 +328,14 @@ const HomeBlogSection = ({
     </>
   );
 
-  const recomendationText = (
+  const RecomendationText = ({ mobile }) => (
     <StyledContent
-      onClick={isLgUp ? () => setIsBlog(false) : null}
+      onClick={() => setIsBlog(false)}
       type="button"
       isright
       hasdeclaredpadding="0 87px 0 0"
-      isactive={isLgUp ? !isBlog : true}
+      isactive={!isBlog}
+      className={mobile ? 'mobile' : 'desctop'}
     >
       <StyledCircle className="blog-mobile-section-hide" />
       <StyledTitleElement className="home-blog-section-text">
@@ -358,23 +355,35 @@ const HomeBlogSection = ({
 
   const leftWrapper = (
     <>
-      {isLgUp ? (
-        isCase ? (
-          leftSectionCase
-        ) : (
-          blogText
-        )
-      ) : isCase ? (
-        <>{blogSlider}</>
-      ) : (
-        <>
-          {blogText}
+      {/* 993 + dodane do css */}
+      {
+        isCase
+          ? leftSectionCase
+          : null
+      }
+
+      {/* all widths */}
+      {
+        isCase
+          ? null
+          : <BlogText />
+      }
+
+      {/* 993 - dodane do css */}
+      {isCase
+        ? { blogSlider }
+        : <>
           {blogSlider}
-          {recomendationText}
+          <RecomendationText mobile={true} />
           {recomendationSlider}
         </>
-      )}
-      {isLgUp && !isCase ? recomendationText : null}
+      }
+
+      {/* 993 + dodane do css */}
+      {isCase
+        ? null
+        : <RecomendationText mobile={false} />
+      }
     </>
   );
 
@@ -393,14 +402,18 @@ const HomeBlogSection = ({
 
   return (
     <StyledHomeBlogSection iscase={isCase}>
-      <StyledLeftWrapper iscase={isCase}>{leftWrapper}</StyledLeftWrapper>
-      {isLgUp ? (
-        <StyledRightWrapper iscase={isCase}>
-          {desktopElements}
-        </StyledRightWrapper>
-      ) : null}
+      <StyledLeftWrapper iscase={isCase}>
+        {leftWrapper}
+      </StyledLeftWrapper>
+      <StyledRightWrapper iscase={isCase}>
+        {desktopElements}
+      </StyledRightWrapper>
     </StyledHomeBlogSection>
   );
 };
 
 export default HomeBlogSection;
+
+const Mobile = styled.div`
+
+`

@@ -25,13 +25,13 @@ const BlogHomeCard = ({
   return (
     <StyledBlogHomeCard to={`artykul/${slug}`} iscase={isCase}>
       <StyledTextWrapper>
-        <StyledTitle>{title ? parse(title) : null};</StyledTitle>
-        <StyledDesc>{desc ? parse(desc) : null};</StyledDesc>
+        <StyledTitle>{title ? parse(title) : null}</StyledTitle>
+        <StyledDesc>{desc ? parse(desc) : null}</StyledDesc>
         <StyledDate>
           <StyledText
             hasdeclaredfontweight="700"
             hasdeclaredfontcolor="var(--normalBlack)"
-            hasdeclaredfontsize="clamp(10px, 0.677vw, 13px)"
+            hasdeclaredfontsize="13px"
             hasdeclaredtextalign="right"
             hasdeclaredmargin="10px 0 0 0"
           >

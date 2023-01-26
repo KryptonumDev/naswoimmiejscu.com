@@ -44,20 +44,18 @@ const Blog = ({
         <circle cx="387" cy="387" r="351.5" stroke="#0BC76D" stroke-width="71" />
       </Circle>
       <StyledHeading>
-        <h1>Blog – {slug ? name : 'listing'}</h1>
+        <h1>Blog{slug ? ' – ' + name : ''}</h1>
         <StyledCategories>
-          {slug && (
-            <Link to={'/blog/'}>
-              <StyledText
-                hasdeclaredfontcolor="var(--normalBlack)"
-                hasdeclaredtexttransform="uppercase"
-              >
-                blog ({edges.length})
-              </StyledText>
-            </Link>
-          )}
-          {nodes.filter(el => el.slug !== slug).map(({ slug, name, count }) => (
-            <Link to={'/blog/' + slug + '/'}>
+          <Link activeClassName="active" to={'/blog/'}>
+            <StyledText
+              hasdeclaredfontcolor="var(--normalBlack)"
+              hasdeclaredtexttransform="uppercase"
+            >
+              blog ({edges.length})
+            </StyledText>
+          </Link>
+          {nodes.map(({ slug, name, count }) => (
+            <Link activeClassName="active" to={'/blog/' + slug + '/'}>
               <StyledText
                 hasdeclaredfontcolor="var(--normalBlack)"
                 hasdeclaredtexttransform="uppercase"
@@ -147,6 +145,6 @@ export const query = graphql`
 const Circle = styled.svg`
   position: absolute;
   right: -500px;
-  top: 65%;
+  top: 30%;
   z-index: 0;
 `

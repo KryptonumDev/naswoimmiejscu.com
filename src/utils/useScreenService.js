@@ -7,7 +7,7 @@ export const breakpointsValues = {
   xl: 1167,
 };
 
-export const getWindowWidth = () => window && window.innerWidth;
+export const getWindowWidth = () => window ? window.innerWidth : 0;
 
 export const useScreenService = () => {
   const [isSm, setIsSm] = useState(false);

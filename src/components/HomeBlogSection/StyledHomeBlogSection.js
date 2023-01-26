@@ -52,6 +52,7 @@ export const StyledRightWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
+    display: none;
   }
 `;
 
@@ -93,9 +94,23 @@ export const StyledContent = styled.button`
   align-self: ${({ isright }) => (isright ? "flex-end" : "flex-start")};
   padding: ${({ hasdeclaredpadding }) =>
     hasdeclaredpadding ? hasdeclaredpadding : "0"};
-  opacity: ${({ isactive }) => (isactive ? "1" : "0.5")};
   transition: opacity 250ms linear;
   width: 100%;
+  opacity: ${({ isactive }) => (isactive ? "1" : "0.5")};
+
+  &.mobile{
+    display: none !important;
+  }
+
+  @media (max-width: 992px) {
+    opacity: 1;
+    &.desctop{
+      display: none !important;
+    }
+    &.mobile{
+      display: flex !important;  
+    }
+  }
 
   &:focus-visible {
     outline-width: 1px;
@@ -143,8 +158,12 @@ export const StyledDesktopScroll = styled.div`
 
 export const StyledBlogSliderWrapper = styled.div`
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
+
+  @media (max-width: 993px) {
+    display: flex;
+  }
 
   .slick-slider,
   .slick-slide {
@@ -209,6 +228,10 @@ export const StyledScrollWrapper = styled.div`
 
   scrollbar-color: var(--normalGreen) rgba(103, 134, 190, 0.3);
   scrollbar-width: thin;
+  @media (max-width: 1360px){
+  padding-right: ${({ notpadding }) =>
+    notpadding ? null : "40px"};
+  }
 
   ::-webkit-scrollbar {
     height: 6px;
@@ -229,6 +252,11 @@ export const StyledLeftCaseWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  display: none;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
 export const StyledCaseTitle = styled.div`

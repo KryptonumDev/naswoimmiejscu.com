@@ -31,6 +31,10 @@ const GlobalStyle = createGlobalStyle`
         overflow-y: ${({ islayout }) => (islayout ? "hidden" : "visible")};
     } 
 
+    #gatsby-focus-wrapper{
+      overflow: hidden;
+    }
+
     body {
       overflow-x: hidden;
       width: 100%;

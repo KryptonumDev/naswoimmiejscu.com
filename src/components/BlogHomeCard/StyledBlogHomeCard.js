@@ -12,6 +12,10 @@ export const StyledBlogHomeCard = styled(Link)`
   padding-left: ${({ iscase }) => (iscase ? "0" : "clamp(30px, 3.6vw, 70px)")};
   align-items: center;
 
+  @media (max-width: 1360px){
+    padding-left: ${({ iscase }) => (iscase ? "0" : "30px")};
+  }
+
   &:focus-visible {
     outline-width: 1px;
     outline-style: solid;
@@ -68,7 +72,7 @@ export const StyledTitle = styled.div`
 `;
 
 export const StyledDesc = styled.div`
-  font: 300 clamp(10px, 0.677vw, 13px) Roboto;
+  font: 300 13px Roboto;
   margin-top: 10px;
 
   @media only screen and (max-width: 432px) {
@@ -77,6 +81,7 @@ export const StyledDesc = styled.div`
 `;
 
 export const StyledDate = styled.div`
+  font-size: 13px;
   @media only screen and (max-width: 992px) {
     p {
       text-align: left;

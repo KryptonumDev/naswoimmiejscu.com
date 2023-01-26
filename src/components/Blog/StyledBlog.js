@@ -65,6 +65,10 @@ export const StyledCategories = styled.div`
   display: flex;
   gap: 20px;
 
+  .active p{
+    font-weight: 700;
+  }
+
   p{
     font-variant-numeric: normal;
   }
