@@ -380,7 +380,7 @@ const HomeBlogSection = ({
 
       {/* 993 - dodane do css */}
       {isCase
-        ? { blogSlider }
+        ? blogSlider
         : <>
           {blogSlider}
           <RecomendationText mobile={true} />

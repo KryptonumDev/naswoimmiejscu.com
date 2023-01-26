@@ -253,7 +253,7 @@ export const StyledLeftCaseWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  display: none;
+  display: flex;
 
   @media (max-width: 1024px) {
     display: none;
