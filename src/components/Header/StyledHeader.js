@@ -17,6 +17,7 @@ export const StyledHeader = styled.header`
 
   @media only screen and (max-width: 1167px) {
     padding-top: 24px;
+    height: 72px;
   }
 `;
 
