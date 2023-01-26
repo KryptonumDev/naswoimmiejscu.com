@@ -2,7 +2,6 @@ import React from "react";
 import parse from "html-react-parser";
 
 import Image from "../Image/Image";
-import WhiteCircle from "../WhiteCircle/WhiteCircle";
 import Container from "../Container/Container";
 
 import { StyledDescWrapper } from "../HomeHeroSection/StyledHomeHeroSection";

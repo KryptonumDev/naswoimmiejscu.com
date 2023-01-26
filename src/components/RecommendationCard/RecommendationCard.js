@@ -12,7 +12,6 @@ import {
   StyledTextContent,
   StyledNameWrapper,
   StyledDescImageWrapper,
-  StyledMobileIcon,
 } from "./StyledRecommendationCard";
 
 const RecommendationCard = ({

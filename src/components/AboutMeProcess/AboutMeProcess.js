@@ -4,7 +4,6 @@ import parse from "html-react-parser";
 import Container from "../Container/Container";
 import Image from "../Image/Image";
 import BigGreenCircle from "../BigGreenCircle/BigGreenCircle";
-import WhiteCircle from "../WhiteCircle/WhiteCircle";
 
 import {
   StyledAboutMeProcess,
