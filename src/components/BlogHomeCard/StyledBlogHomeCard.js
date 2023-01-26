@@ -27,27 +27,27 @@ export const StyledBlogHomeCard = styled(Link)`
     padding-left: 20px;
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     flex-direction: column-reverse;
     gap: 16px;
-    width: 277px;
-    margin-right: 20px;
-    padding-left: 0;
+    width: auto;
+    margin-right: 10px;
+    padding-left: 10px;
   }
 `;
 
 export const StyledTextWrapper = styled.div`
-  width: 35%;
+  width: 45%;
   text-align: right;
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
     text-align: left;
   }
 `;
 
 export const StyledImageWrapper = styled.div`
-  width: 65%;
+  width: 55%;
   max-width: 419px;
   min-height: 220px;
 
@@ -57,7 +57,7 @@ export const StyledImageWrapper = styled.div`
     max-width: 419px;
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
     height: 100%;
   }
@@ -82,7 +82,7 @@ export const StyledDesc = styled.div`
 
 export const StyledDate = styled.div`
   font-size: 13px;
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     p {
       text-align: left;
     }

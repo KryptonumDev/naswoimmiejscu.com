@@ -128,16 +128,25 @@ const HomeBlogSection = ({
 
   const settings = {
     dots: false,
+    arrows: false,
     vertical: false,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     verticalSwiping: false,
     autoplay: false,
     infinite: true,
+    responsive: [{
+      breakpoint: 876,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    }]
   };
 
   const settingsRec = {
     dots: true,
+    arrows: false,
     vertical: false,
     slidesToShow: 1,
     slidesToScroll: 1,

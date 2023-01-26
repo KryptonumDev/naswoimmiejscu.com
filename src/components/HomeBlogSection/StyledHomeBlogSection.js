@@ -13,11 +13,11 @@ export const StyledHomeBlogSection = styled.div`
   margin: 0 auto;
   gap: ${({ iscase }) => (iscase ? "clamp(90px, 7.240vw, 139px)" : "0")};
 
-  @media only screen and (max-width: 1167px) {
+  @media only screen and (max-width: 1240px) {
     padding-left: 33px;
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     flex-direction: column;
     padding-bottom: 30px;
   }
@@ -41,7 +41,7 @@ export const StyledLeftWrapper = styled.div`
     z-index: 1;
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
   }
 `;
@@ -50,7 +50,7 @@ export const StyledRightWrapper = styled.div`
   margin-top: ${({ iscase }) => (iscase ? "0" : "3.6vw")};
   width: 50%;
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
     display: none;
   }
@@ -59,7 +59,7 @@ export const StyledRightWrapper = styled.div`
 export const StyledTitleElement = styled(StyledTitleWrapper)`
   margin-top: 27px;
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     position: relative;
     z-index: 1;
   }
@@ -77,7 +77,7 @@ export const StyledDescWrapper2 = styled(StyledDescWrapper)`
     font-weight: 600;
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     text-align: left;
     margin-top: 44px;
     max-width: unset;
@@ -102,7 +102,7 @@ export const StyledContent = styled.button`
     display: none !important;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1024px) {
     opacity: 1;
     &.desctop{
       display: none !important;
@@ -119,13 +119,13 @@ export const StyledContent = styled.button`
     outline-offset: 4px;
   }
 
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 1024px) {
     &:hover {
       opacity: 0.8;
     }
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     align-items: flex-start;
     align-self: flex-start;
     position: relative;
@@ -139,7 +139,7 @@ export const StyledContent = styled.button`
 export const StyledIconWrapper = styled.div`
   display: none;
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     display: block;
     position: absolute;
     top: 90px;
@@ -161,7 +161,7 @@ export const StyledBlogSliderWrapper = styled.div`
   display: none;
   flex-direction: column;
 
-  @media (max-width: 993px) {
+  @media (max-width: 1024px) {
     display: flex;
   }
 
@@ -170,11 +170,12 @@ export const StyledBlogSliderWrapper = styled.div`
     width: 100%;
   }
 
-  @media only screen and (max-width: 1167px) {
-    padding-right: 33px;
+  @media only screen and (max-width: 1024px) {
+    padding: 0 33px 0 0;
+    margin: 0 -10px;
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     align-items: flex-start;
     position: relative;
 
@@ -254,7 +255,7 @@ export const StyledLeftCaseWrapper = styled.div`
   justify-content: space-between;
   display: none;
 
-  @media (max-width: 992px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `;

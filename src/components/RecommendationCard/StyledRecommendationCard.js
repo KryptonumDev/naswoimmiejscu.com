@@ -13,7 +13,7 @@ export const StyledRecommendationCard = styled(Link)`
   background-color: ${({ hasdeclaredbg }) =>
     hasdeclaredbg ? null : "var(--recomendationSecond)"};
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     padding: 64px 0 24px 0;
     background-color: transparent;
   }
@@ -25,7 +25,7 @@ export const StyledAvatarWrapper = styled.div`
   align-items: center;
   gap: 16px;
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     display: ${({ recdiff }) => (recdiff ? "flex" : "none")};
   }
 `;
@@ -55,7 +55,7 @@ export const StyledDescriptionWrapper = styled.div`
   font: 300 15px/1.2em Roboto;
   margin-top: 4px;
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     text-align: ${({ recdiff }) => (recdiff ? "left" : "center")};
     font-style: ${({ recdiff }) => (recdiff ? "normal" : "italic")};
     color: var(--normalBlack);
@@ -72,7 +72,7 @@ export const StyledDescImageWrapper = styled.div`
 export const StyledMobileIcon = styled.div`
   display: none;
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     display: ${({ recdif }) => (recdif ? "none" : "block")};
     position: absolute;
     top: 35px;

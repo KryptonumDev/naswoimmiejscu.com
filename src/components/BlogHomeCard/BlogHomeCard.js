@@ -50,6 +50,7 @@ const BlogHomeCard = ({
         ) : null}
       </StyledImageWrapper>
     </StyledBlogHomeCard>
+    
   );
 };
 
