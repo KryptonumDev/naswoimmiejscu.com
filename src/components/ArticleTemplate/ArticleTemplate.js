@@ -266,7 +266,7 @@ const Contact = styled.div`
 
   .title{
     margin-bottom: 20px;
-    font:700 3.333vw/1.2em Roboto;
+    font:700 clamp(22px, ${48 / 1920 * 100}vw, 48px)  Roboto;
 
     @media (max-width: 820px) {
       font-size: 22px;
@@ -274,7 +274,7 @@ const Contact = styled.div`
   }
 
   .text{
-    font: 300 1.354vw/1.2em Roboto;
+    font: 300 clamp(15px, ${26 / 1920 * 100}vw, 26px) Roboto;
     margin-bottom: 30px;
 
     @media (max-width: 1200px) {
