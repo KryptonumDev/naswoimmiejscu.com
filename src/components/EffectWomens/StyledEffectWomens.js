@@ -5,7 +5,8 @@ export const StyledEffectWomens = styled.div`
     iswomens ? "clamp(20px, 1.3vw, 29px)" : "clamp(80px, 5.469vw, 105px)"};
   width: 100%;
   display: flex;
-  margin-top: 10.417vw;
+  margin-top: ${({ iswomens }) =>
+    iswomens ? "clamp(240px, 15.625vw, 300px)" : "10.417vw"};
   justify-content: space-between;
   position: relative;
   z-index: 1;

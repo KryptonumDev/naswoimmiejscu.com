@@ -6,8 +6,7 @@ export const StyledMeetsFormwomens = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: ${({ iswomens }) =>
-    iswomens ? "clamp(160px, 29.375vw, 564px)" : "8.958vw"};
+  margin-top: 8.958vw;
   margin-bottom: clamp(150px, 9.115vw, 175px);
 
   @media only screen and (max-width: 992px) {
@@ -33,6 +32,7 @@ export const StyledLeftWrapper = styled.div`
 
 export const StyledRightWrapper = styled.div`
   width: 55%;
+  position: relative;
 
   @media only screen and (max-width: 992px) {
     width: 100%;
@@ -58,4 +58,12 @@ export const StyledCircleWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     display: none;
   }
+`;
+
+export const StyledAhaWrapper = styled.div`
+  position: absolute;
+  top: -20px;
+  right: -80px;
+  width: clamp(400px, 37.969vw, 729px);
+  height: clamp(120px, 13.75vw, 264px);
 `;
