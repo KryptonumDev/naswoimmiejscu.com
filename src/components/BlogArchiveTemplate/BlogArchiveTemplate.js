@@ -5,80 +5,84 @@ import Container from "../Container/Container";
 import BlogCard from "../BlogCard/BlogCard";
 
 import {
-    StyledHeading,
-    StyledSlidesWrapper,
-    StyledCategories,
+  StyledHeading,
+  StyledSlidesWrapper,
+  StyledCategories,
 } from "../Blog/StyledBlog";
 import { StyledText } from "../Text/StyledText";
+import styled from "styled-components";
 
 const Blog = ({
-    data: {
-        allWpPost: { edges },
-        allWpCategory: { nodes }
-    },
-    pageContext: {
-        slug,
-        name
-    }
+  data: {
+    allWpPost: { edges },
+    allWpCategory: { nodes }
+  },
+  pageContext: {
+    slug,
+    name
+  }
 }) => {
-    const posts = useMemo(() => {
-        if (!slug) {
-            return edges
+  const posts = useMemo(() => {
+    if (!slug) {
+      return edges
+    }
+    return edges.filter(({ node }) => {
+      let isAccepted = false
+      node.categories.nodes.every(element => {
+        if (element.slug === slug) {
+          isAccepted = true
         }
-        return edges.filter(({ node }) => {
-            let isAccepted = false
-            node.categories.nodes.every(element => {
-                if (element.slug === slug) {
-                    isAccepted = true
-                }
-                return !isAccepted
-            })
-            return isAccepted
-        })
-    }, [edges, slug])
+        return !isAccepted
+      })
+      return isAccepted
+    })
+  }, [edges, slug])
 
-    return (
-        <Container>
-            <StyledHeading>
-                <h1>Blog – {slug ? name : 'listing'}</h1>
-                <StyledCategories>
-                    {slug && (
-                        <Link to={'/blog/'}>
-                            <StyledText
-                                hasdeclaredfontcolor="var(--normalBlack)"
-                                hasdeclaredtexttransform="uppercase"
-                            >
-                                blog ({edges.length})
-                            </StyledText>
-                        </Link>
-                    )}
-                    {nodes.filter(el => el.slug !== slug).map(({ slug, name, count }) => (
-                        <Link to={'/blog/' + slug + '/'}>
-                            <StyledText
-                                hasdeclaredfontcolor="var(--normalBlack)"
-                                hasdeclaredtexttransform="uppercase"
-                            >
-                                {name} ({count})
-                            </StyledText>
-                        </Link>
-                    ))}
-                </StyledCategories>
-            </StyledHeading>
-            <StyledSlidesWrapper>
-                {posts.map(({ node }) => (
-                    <BlogCard
-                        category={node.categories.nodes[0].name}
-                        title={node.title}
-                        desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
-                        date={node.date}
-                        btnText={'POZNAJ TĘ NOWOŚĆ'}
-                        slug={node.slug}
-                        imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
-                    />
-                ))}
-            </StyledSlidesWrapper>
-        </Container>
-    );
+  return (
+    <Container>
+      <Circle className="circle" width="774" height="774" viewBox="0 0 774 774" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="387" cy="387" r="351.5" stroke="#0BC76D" stroke-width="71" />
+      </Circle>
+      <StyledHeading>
+        <h1>Blog – {slug ? name : 'listing'}</h1>
+        <StyledCategories>
+          {slug && (
+            <Link to={'/blog/'}>
+              <StyledText
+                hasdeclaredfontcolor="var(--normalBlack)"
+                hasdeclaredtexttransform="uppercase"
+              >
+                blog ({edges.length})
+              </StyledText>
+            </Link>
+          )}
+          {nodes.filter(el => el.slug !== slug).map(({ slug, name, count }) => (
+            <Link to={'/blog/' + slug + '/'}>
+              <StyledText
+                hasdeclaredfontcolor="var(--normalBlack)"
+                hasdeclaredtexttransform="uppercase"
+              >
+                {name} ({count})
+              </StyledText>
+            </Link>
+          ))}
+        </StyledCategories>
+      </StyledHeading>
+      <StyledSlidesWrapper>
+        {posts.map(({ node }) => (
+          <BlogCard
+            category={node.categories.nodes[0].name}
+            title={node.title}
+            desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
+            date={node.date}
+            btnText={'POZNAJ TĘ NOWOŚĆ'}
+            slug={node.slug}
+            imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
+          />
+        ))}
+      </StyledSlidesWrapper>
+    </Container>
+  );
 };
 
 export default Blog;
@@ -139,3 +143,10 @@ export const query = graphql`
     }
   }
 `;
+
+const Circle = styled.svg`
+  position: absolute;
+  right: -500px;
+  top: 65%;
+  z-index: 0;
+`

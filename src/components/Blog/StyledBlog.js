@@ -36,6 +36,7 @@ export const StyledSlidesWrapper = styled.div`
   position: relative;
   z-index: 0;
 
+
   &::before{
     content: '';
     position: fixed;

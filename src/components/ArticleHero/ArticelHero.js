@@ -68,6 +68,7 @@ const Hero = ({ title, categories, headings, data: { description, tekstDoZdjecia
 
 export default Hero
 
+
 const Wrapper = styled.div`
     margin-top: clamp(120px, ${160 / 1920 * 100}vw, 160px);
     width: fit-content;
@@ -77,6 +78,7 @@ const Wrapper = styled.div`
     'left top'
     'left bottom';
     grid-gap: 100px;
+
 
     .svg-flex-mobile{
         display: none;

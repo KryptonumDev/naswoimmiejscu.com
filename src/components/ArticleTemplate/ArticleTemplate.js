@@ -80,6 +80,12 @@ const ArticleTemplate = ({ data: { wpPost: { title, categories, artykul, content
           <GatsbyImage image={contactSection.image.localFile.childImageSharp.gatsbyImageData} alt={contactSection.image.altText} />
         </ImageWrapper>
       </Contact>
+      <Circle width="721" height="721" viewBox="0 0 721 721" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="360.5" cy="360.5" r="333" stroke="#0BC76D" stroke-width="55" />
+      </Circle>
+      <SecondCircle width="721" height="721" viewBox="0 0 721 721" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="360.5" cy="360.5" r="333" stroke="#0BC76D" stroke-width="55" />
+      </SecondCircle>
     </Container>
   )
 };
@@ -162,6 +168,37 @@ export const query = graphql`
     }
   }
 `;
+
+const Circle = styled.svg`
+  position: absolute;
+  right: -370px;
+  bottom: -130px;
+
+  @media (max-width: 1880px) {
+    width: 600px;
+    height: 600px;
+  }
+  @media (max-width: 1440px) {
+    right: -450px;
+    bottom: -180px;
+  }
+  @media (max-width: 1180px) {
+    display: none;
+  }
+` 
+
+const SecondCircle = styled.svg`
+  position: absolute;
+  left: -370px;
+  bottom: 40%;
+  z-index: -1;
+  @media (max-width: 1440px) {
+    bottom: 30%;
+  }
+  @media (max-width: 1180px) {
+    display: none;
+  }
+`
 
 const Content = styled.div`
   margin-top: 60px;
@@ -246,6 +283,7 @@ const Contact = styled.div`
   grid-template-columns: 768fr 796fr;
   grid-gap: 64px;
   align-items: center;
+  position: relative;
 
   @media (max-width: 820px) {
     display: flex;

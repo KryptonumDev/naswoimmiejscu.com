@@ -45,10 +45,6 @@ const Header = () => {
   const shortData = data.wpPage.global;
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleOpenMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   useEffect(() => {
     if (isOpen) {
       scrollLock.enable('header')
@@ -70,7 +66,7 @@ const Header = () => {
         isOpen={isOpen}
         logoDesktop={shortData.logo}
         logoMobile={shortData.logoMobile}
-        openMenu={handleOpenMenu}
+        openMenu={() => { setIsOpen(false) }}
       />
       <Button
         btnData={shortData.przycisk}
@@ -80,7 +76,7 @@ const Header = () => {
         hasfontsize="16px"
         className="header-btn"
       />
-      <HamburgerButton openMenu={handleOpenMenu} isOpen={isOpen} />
+      <HamburgerButton openMenu={() => { setIsOpen(!isOpen) }} isOpen={isOpen} />
     </StyledHeader>
   );
 };

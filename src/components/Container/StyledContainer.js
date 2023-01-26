@@ -6,6 +6,7 @@ export const StyledContainer = styled.section`
   max-width: 1920px;
   padding: 0 clamp(32px, 6.667vw, 128px);
   overflow-y: ${({ hidey }) => (hidey ? "hidden" : "visible")};
+  position: relative;
 
   @media only screen and (max-width: 1472px) {
     padding: 0 clamp(33px, 3vw, 60px);
