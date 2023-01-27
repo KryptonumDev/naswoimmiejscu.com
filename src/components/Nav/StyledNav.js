@@ -12,9 +12,15 @@ export const StyledNav = styled.nav`
     color: var(--normalGrey);
     text-decoration: none;
     position: relative;
+    transition: color .4s ease-out, font-weight .4s ease-out;
 
     &.activeLink {
       color: var(--normalBlack);
+      font-weight: 700;
+    }
+
+    &:hover{
+      color: var(--normalBlack) !important;
       font-weight: 700;
     }
 
@@ -190,7 +196,7 @@ export const StyledFooterNav = styled.div`
 
   @media only screen and (max-width: 992px){
     flex-direction: column;
-    gap; 14px;
+    gap: 14px;
     align-items: flex-start;
     
     a,

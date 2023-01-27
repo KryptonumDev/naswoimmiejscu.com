@@ -27,15 +27,16 @@ const FAQSection = ({
           {data.tytul ? parse(data.tytul) : null}
         </StyledTitleWrapper>
         <StyledFAQSWrapper>
-          {data.element.map((faq) => (
+          {data.element.map((faq, index) => (
             <FAQElement
+              index={index}
               key={`${faq.pytanie} + ${faq.odpowiedz}`}
               question={faq.pytanie}
               answer={faq.odpowiedz}
               isNormalFont={isNormalFont}
             />
           ))}
-          {!isContactPage && data.przycisk ? 
+          {!isContactPage && data.przycisk ?
             <Button
               btnData={data.przycisk}
               variant={"green"}

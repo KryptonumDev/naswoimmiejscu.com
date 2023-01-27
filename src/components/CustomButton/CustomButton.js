@@ -7,6 +7,7 @@ import ArrowDesktop from "../ArrowDesktop/ArrowDesktop";
 import { StyledCustomButton } from "./StyledCustomButton";
 
 import { useScreenService } from "../../utils/useScreenService";
+import styled from "styled-components";
 
 const CustomButton = ({
   bgColor,
@@ -16,14 +17,13 @@ const CustomButton = ({
   onClick,
   type,
   imageSize,
-  tabIndex,
+  tabIndex = 0,
   hasIcon,
   iconColor,
   isFAQ,
   hasTransform,
-  className
+  className,
 }) => {
-  const { isLgUp } = useScreenService();
 
   return (
     <StyledCustomButton
@@ -39,17 +39,36 @@ const CustomButton = ({
       isfaq={isFAQ}
       className={className}
     >
-      {hasIcon ? (
-        isLgUp ? (
-          <ArrowDesktop />
-        ) : (
-          <Arrow />
-        )
-      ) : (
-        <Image imageDesktop={image} />
-      )}
+      {hasIcon
+        ? <>
+          <ArrowWrapper className='desctop'>
+            <ArrowDesktop />
+          </ArrowWrapper>
+          <ArrowWrapper className='mobile'>
+            <Arrow />
+          </ArrowWrapper>
+        </>
+        : <Image imageDesktop={image} />
+      }
     </StyledCustomButton>
   );
 };
 
 export default CustomButton;
+
+
+const ArrowWrapper = styled.div`
+  &.mobile{
+    display: none;
+  }
+
+  @media(max-width: 992px){
+    &.desctop{
+      display: none;
+    }
+    &.mobile{
+      display: block;
+    }
+  }
+
+`

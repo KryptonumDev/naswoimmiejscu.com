@@ -7,6 +7,10 @@ export const StyledFAQElement = styled.details`
     transition: all .25s;
   }
 
+  &:hover{
+
+  }
+
   &:focus-visible {
     outline-width: 1px;
     outline-style: solid;
@@ -16,7 +20,7 @@ export const StyledFAQElement = styled.details`
 
   &[open] {
     svg {
-      transform: rotateZ(-90deg);
+      transform: rotateZ(-90deg) !important;
     }
   }
 
@@ -47,6 +51,14 @@ export const StyledQuestionWrapper = styled.summary`
     outline-style: solid;
     outline-color: var(--hoverGreen);
     outline-offset: 4px;
+  }
+
+  
+
+  &:hover{
+    svg{
+      transform: rotateZ(-15deg);
+    }
   }
 
   @media only screen and (max-width: 992px) {
@@ -105,21 +117,21 @@ export const StyledQuestionContent = styled.div`
 
   @media only screen and (max-width: 992px) {
     font-size: ${({ open, isnormalfont }) =>
-      open ? (isnormalfont ? "3.0vw" : "4.0vw") : "3.0vw"};
+    open ? (isnormalfont ? "3.0vw" : "4.0vw") : "3.0vw"};
   }
 
   @media only screen and (max-width: 688px) {
     font-size: ${({ open, isnormalfont }) =>
-      open ? (isnormalfont ? "3.0vw" : "3.6vw") : "3.0vw"};
+    open ? (isnormalfont ? "3.0vw" : "3.6vw") : "3.0vw"};
   }
 
   @media only screen and (max-width: 460px) {
     font-size: ${({ open, isnormalfont }) =>
-      open ? (isnormalfont ? "3.8vw" : "4.4vw") : "3.8vw"};
+    open ? (isnormalfont ? "3.8vw" : "4.4vw") : "3.8vw"};
   }
 
   @media only screen and (max-width: 360px) {
     font-size: ${({ open, isnormalfont }) =>
-      open ? (isnormalfont ? "4.167vw" : "5.889vw") : "4.167vw"};
+    open ? (isnormalfont ? "4.167vw" : "5.889vw") : "4.167vw"};
   }
 `;

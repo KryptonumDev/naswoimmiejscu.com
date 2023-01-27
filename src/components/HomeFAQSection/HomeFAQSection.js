@@ -24,8 +24,9 @@ const HomeFAQSection = ({ data }) => {
         {data.tytulPoPrawo ? (
           <StyledTitle>{parse(data.tytulPoPrawo)}</StyledTitle>
         ) : null}
-        {data.element.map((faq) => (
+        {data.element.map((faq, index) => (
           <FAQElement
+            index={index}
             key={faq.pytanie + faq.odpowiedz}
             question={faq.pytanie}
             answer={faq.odpowiedz}

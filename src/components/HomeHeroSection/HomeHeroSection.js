@@ -49,7 +49,7 @@ const HomeHeroSection = ({ data }) => {
               className="home-hero-section"
               variant="green"
               haswidth="355px"
-              hasheight="88px"
+              hasheight="81px"
               hasClampHeight="4.583vw"
               hasfontsize="clamp(16px, 1.042vw, 20px)"
               hasClampWidth="18.490vw"

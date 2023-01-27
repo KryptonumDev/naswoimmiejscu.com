@@ -97,8 +97,18 @@ export const StyledIconsWrapper = styled.div`
       transition: 250ms color linear;
     }
 
-    &:hover .button {
-      opacity: 0.6;
+    &:hover  {
+      .button{
+      background-color: #0BC76D60;
+      transform: scale(.65);
+      }
+      p{
+        color: #00000040;
+      }
+    }
+
+    .active{
+      color: #000000 !important;
     }
   }
 

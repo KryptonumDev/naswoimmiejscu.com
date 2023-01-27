@@ -18,9 +18,9 @@ export const StyledLink = styled(Link)`
     73px,
     ${({ hasclampheight }) => (hasclampheight ? hasclampheight : "4.583vw")},
     ${({ hasdeclaredheight }) =>
-      hasdeclaredheight ? hasdeclaredheight : "88px"}
+      hasdeclaredheight ? hasdeclaredheight : "81px"}
   );
-  transition: background-color 300ms, color 300ms, border 300ms;
+  transition: background-color 400ms, color 400ms, border 400ms;
   cursor: pointer;
   text-transform: uppercase;
   font: 700 ${({ hasfontsize }) => (hasfontsize ? hasfontsize : "20px")} Roboto;
@@ -208,7 +208,7 @@ export const StyledButton = styled.button`
     hasdeclaredwidth ? hasdeclaredwidth : "355px"};
   border-radius: 64px;
   min-height: ${({ hasdeclaredheight }) =>
-    hasdeclaredheight ? hasdeclaredheight : "88px"};
+    hasdeclaredheight ? hasdeclaredheight : "81px"};
   transition: background-color 250ms;
   cursor: pointer;
   text-transform: uppercase;

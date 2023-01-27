@@ -18,7 +18,7 @@ export const StyledBlogCard = styled(Link)`
   }
 
   .image img{
-    transition: transform .3s ease-out;
+    transition: transform .4s ease-out;
   }
 
   &:hover{

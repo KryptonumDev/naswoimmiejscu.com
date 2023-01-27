@@ -57,6 +57,7 @@ const HomeSecondSection = ({ data }) => {
                 bgColor={isWomens ? "var(--btnGrey)" : "var(--normalGreen)"}
               />
               <StyledText
+                className={isWomens ? 'text' : 'text active'}
                 hasdeclaredfontsize="clamp(26px, 1.667vw, 32px)"
                 hasdeclaredfontweight="700"
                 hasdeclaredfontcolor={
@@ -75,6 +76,7 @@ const HomeSecondSection = ({ data }) => {
                 type="button"
               />
               <StyledText
+                className={isWomens ? 'text active' : 'text'}
                 hasdeclaredfontsize="clamp(26px, 1.667vw, 32px)"
                 hasdeclaredfontweight="700"
                 hasdeclaredfontcolor={

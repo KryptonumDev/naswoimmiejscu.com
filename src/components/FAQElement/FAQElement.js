@@ -11,8 +11,8 @@ import {
   StyledQuestionContent,
 } from "./StyledFAQElement";
 
-const FAQElement = ({ question, answer, isNormalFont }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const FAQElement = ({ index, question, answer, isNormalFont }) => {
+  const [isOpen, setIsOpen] = useState(!index);
 
   const onToggle = (event) => {
     event.preventDefault();
@@ -32,6 +32,7 @@ const FAQElement = ({ question, answer, isNormalFont }) => {
           <CustomButton
             hasWidth="44px"
             hasHeight="44px"
+            tabIndex='-1'
             hasIcon
             isFAQ
             iconColor={isOpen ? "var(--normalWhite)" : "var(--arrowBlack)"}

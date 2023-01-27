@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledCustomButton = styled.button`
+
   width: ${({ hasdeclaredwidth }) =>
     hasdeclaredwidth ? hasdeclaredwidth : "131px"};
   height: ${({ hasdeclaredheight }) =>
@@ -13,12 +14,12 @@ export const StyledCustomButton = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 300ms !important;
+  transition: all 400ms !important;
   transform: scale(${({ isfaq }) => isfaq ? "1" : "0.6"});
 
   &.active{
-    transform: scale(1);
-    opacity: 1 !important;
+    transform: scale(1) !important;
+    background-color: var(--normalGreen) !important;
   }
 
   img {
