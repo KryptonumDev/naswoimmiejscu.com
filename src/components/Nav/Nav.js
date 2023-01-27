@@ -34,31 +34,31 @@ const Nav = ({ isOpen, isFooter, logoDesktop, logoMobile, openMenu }) => {
         STRONA GŁÓWNA
       </Link>
       <div className="flex-wrapper">
-        <Link to="/mlodziez" activeClassName="activeLink" onClick={openMenu}>
+        <Link to="/mlodziez/" activeClassName="activeLink" onClick={openMenu}>
           MŁODZIEŻ
         </Link>
         <span>/</span>
-        <Link to="/kobiety" activeClassName="activeLink" onClick={openMenu}>
+        <Link to="/kobiety/" activeClassName="activeLink" onClick={openMenu}>
           KOBIETY
         </Link>
       </div>
-      <Link to="/o-mnie" activeClassName="activeLink" onClick={openMenu}>
+      <Link to="/o-mnie/" activeClassName="activeLink" onClick={openMenu}>
         O MNIE
       </Link>
-      <Link partiallyActive={true} to="/blog" activeClassName="activeLink" onClick={openMenu}>
+      <Link partiallyActive={true} to="/blog/" activeClassName="activeLink" onClick={openMenu}>
         BLOG
       </Link>
-      <Link to="/calendly" activeClassName="activeLink" onClick={openMenu}>
+      <Link to="/calendly/" activeClassName="activeLink" onClick={openMenu}>
         CALENDLY
       </Link>
-      <Link to="/kontakt" activeClassName="activeLink" onClick={openMenu}>
-        KONTAKT
+      <Link to="/opinie/" activeClassName="activeLink" onClick={openMenu}>
+        OPINIE
       </Link>
       <StyledMobileWrapper>
-        <Link to="/polityka-prywatnosci" onClick={openMenu}>
+        <Link to="/polityka-prywatnosci/" onClick={openMenu}>
           Polityka prywatności
         </Link>
-        <Link to="/regulamin" onClick={openMenu}>
+        <Link to="/regulamin/" onClick={openMenu}>
           Regulamin
         </Link>
       </StyledMobileWrapper>
@@ -69,25 +69,25 @@ const Nav = ({ isOpen, isFooter, logoDesktop, logoMobile, openMenu }) => {
         STRONA GŁÓWNA
       </Link>
       <div className="flex-wrapper">
-        <Link to="/mlodziez" activeClassName="activeLink" onClick={openMenu}>
+        <Link to="/mlodziez/" activeClassName="activeLink" onClick={openMenu}>
           MŁODZIEŻ
         </Link>
         <span>/</span>
-        <Link to="/kobiety" activeClassName="activeLink" onClick={openMenu}>
+        <Link to="/kobiety/" activeClassName="activeLink" onClick={openMenu}>
           KOBIETY
         </Link>
       </div>
-      <Link to="/o-mnie" activeClassName="activeLink" onClick={openMenu}>
+      <Link to="/o-mnie/" activeClassName="activeLink" onClick={openMenu}>
         O MNIE
       </Link>
-      <Link to="/blog" activeClassName="activeLink" onClick={openMenu}>
+      <Link to="/blog/" activeClassName="activeLink" onClick={openMenu}>
         BLOG
       </Link>
-      <Link to="/calendly" activeClassName="activeLink" onClick={openMenu}>
+      <Link to="/calendly/" activeClassName="activeLink" onClick={openMenu}>
         CALENDLY
       </Link>
-      <Link to="/kontakt" activeClassName="activeLink" onClick={openMenu}>
-        KONTAKT
+      <Link to="/opinie/" activeClassName="activeLink" onClick={openMenu}>
+        OPINIE
       </Link>
     </StyledFooterNav>
   );

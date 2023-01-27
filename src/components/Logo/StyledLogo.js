@@ -15,30 +15,37 @@ export const StyledLogo = styled(Link)`
     outline-offset: 4px;
   }
 
+  
+
   @media only screen and (max-width: 1748px) {
     max-width: ${({ isheader, hasmaxwidth }) =>
-      isheader ? "400px" : hasmaxwidth};
+    isheader ? `clamp(240px, ${300 / 1024 * 100}vw, 400px)` : hasmaxwidth};
   }
 
   @media only screen and (max-width: 1608px) {
     max-width: ${({ isheader, hasmaxwidth }) =>
-      isheader ? "320px" : hasmaxwidth};
+    isheader ? `clamp(240px, ${300 / 1024 * 100}vw, 400px)` : hasmaxwidth};
   }
 
   @media only screen and (max-width: 1350px) {
     max-width: ${({ isheader, hasmaxwidth }) =>
-      isheader ? "220px" : hasmaxwidth};
+    isheader ? `clamp(240px, ${300 / 1024 * 100}vw, 400px)` : hasmaxwidth};
   }
 
   @media only screen and (max-width: 1167px) {
     max-width: ${({ isheader, hasmaxwidth }) =>
-      isheader ? "400px" : hasmaxwidth};
+    isheader ? `clamp(240px, ${300 / 1024 * 100}vw, 400px)` : hasmaxwidth};
   }
 
   @media only screen and (max-width: 600px) {
     max-width: ${({ isheader, hasmaxwidth, isfooter }) =>
-      isheader ? (isfooter ? "246px" : "169px") : hasmaxwidth};
+    isheader ? (isfooter ? "246px" : `clamp(240px, ${300 / 1024 * 100}vw, 400px)`) : hasmaxwidth};
   }
+
+@media only screen and (max-width: 380px) {
+  max-width: ${({ isheader, hasmaxwidth, isfooter }) =>
+  isheader ? (isfooter ? "246px" : `169px`) : hasmaxwidth};
+}
 `;
 
 export const StyledImage = styled(Image)``;
