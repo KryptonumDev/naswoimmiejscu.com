@@ -40,6 +40,12 @@ export const StyledRightWrapperContent = styled.div`
   align-items: center;
   align-self: flex-end;
 
+  @media (max-width: 992px) {
+    &.desctop{
+      display: none;
+    }
+  }
+
   p {
     font: 700 24px Roboto;
     color: var(--normalBlack);

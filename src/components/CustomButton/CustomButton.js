@@ -6,7 +6,6 @@ import ArrowDesktop from "../ArrowDesktop/ArrowDesktop";
 
 import { StyledCustomButton } from "./StyledCustomButton";
 
-import { useScreenService } from "../../utils/useScreenService";
 import styled from "styled-components";
 
 const CustomButton = ({

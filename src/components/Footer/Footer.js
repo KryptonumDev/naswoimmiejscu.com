@@ -24,7 +24,6 @@ import {
   StyledSmallGreenCircle,
   StyledMobileGreenCircle,
 } from "./StyledFooter";
-import { useScreenService } from "../../utils/useScreenService";
 
 const Footer = () => {
   const location = useLocation();
@@ -65,7 +64,6 @@ const Footer = () => {
     }
   `);
   const shortData = data.wpPage.global.stopka;
-  const { isLgUp } = useScreenService();
 
   return (
     <Container className="footer">
@@ -75,8 +73,7 @@ const Footer = () => {
             location.pathname === "/calendly/" ||
             location.pathname === "/polityka-prywatnosci/" ||
             location.pathname === "/kobiety/" ||
-            location.pathname === "/mlodziez/") &&
-          !isLgUp
+            location.pathname === "/mlodziez/")
         }
       >
         <StyledLeftWrapper>
@@ -109,31 +106,28 @@ const Footer = () => {
           </StyledSmallGreenCircle>
         </StyledLeftWrapper>
         <StyledRightWrapper>
-          {(location.pathname === "/kontakt/" ||
+
+          <StyledRightWrapperContent className={(location.pathname === "/kontakt/" ||
             location.pathname === "/calendly/" ||
             location.pathname === "/polityka-prywatnosci/" ||
             location.pathname === "/kobiety/" ||
-            location.pathname === "/mlodziez/") &&
-          !isLgUp ? null : (
-            location.pathname === "/kontakt/" ? null : 
-            <StyledRightWrapperContent>
-              {shortData.tekstObokPrzycisku
-                ? parse(shortData.tekstObokPrzycisku)
-                : null}
-              <Button
-                btnData={shortData.przycisk}
-                variant="green"
-                haswidth="355px"
-                hasheight="88px"
-                hasClampHeight="4.583vw"
-                hasfontsize="clamp(20px, 1.242vw, 24px)"
-                hasClampWidth="18.490vw"
-                hasBasicWidth="277px"
-                hasBasicHeight="73px"
-                className="footer"
-              />
-            </StyledRightWrapperContent>
-          )}
+            location.pathname === "/mlodziez/") ? 'desctop' : ''}>
+            {shortData.tekstObokPrzycisku
+              ? parse(shortData.tekstObokPrzycisku)
+              : null}
+            <Button
+              btnData={shortData.przycisk}
+              variant="green"
+              haswidth="355px"
+              hasheight="88px"
+              hasClampHeight="4.583vw"
+              hasfontsize="clamp(20px, 1.242vw, 24px)"
+              hasClampWidth="18.490vw"
+              hasBasicWidth="277px"
+              hasBasicHeight="73px"
+              className="footer"
+            />
+          </StyledRightWrapperContent>
           <StyledFooterLinks hideMobile>
             <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
             <Link to="/regulamin">Regulamin</Link>
@@ -145,7 +139,7 @@ const Footer = () => {
         <StyledMobileGreenCircle
           difftop={
             location.pathname === "/kobiety/" ||
-            location.pathname === "/mlodziez/"
+              location.pathname === "/mlodziez/"
               ? "true"
               : "false"
           }
