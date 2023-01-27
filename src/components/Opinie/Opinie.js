@@ -5,32 +5,56 @@ import Container from "../Container/Container"
 
 export default function Opinie({ opinie }) {
     return (
-        <Container>
-            <Content>
-                <h1>Opinie</h1>
-                <Grid>
-                    {opinie.map(el => (
-                        <Item>
-                            <InformFlex>
-                                <ImageWrapper>
-                                    <GatsbyImage className="image" image={el.authorImage.localFile.childImageSharp.gatsbyImageData} alt={el.authorImage.altText} />
-                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20" cy="20" r="20" fill="#0BC76D" />
-                                    </svg>
-                                </ImageWrapper>
-                                <div>
-                                    <p className="title">{el.authorName}</p>
-                                    <p className="text">{el.textUnderName}</p>
-                                </div>
-                            </InformFlex>
-                            <Text dangerouslySetInnerHTML={{ __html: el.review }} />
-                        </Item>
-                    ))}
-                </Grid>
-            </Content>
-        </Container>
+        <>
+            <Circle width="582" height="582" viewBox="0 0 582 582" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="291" cy="291" r="255" stroke="#0BC76D" stroke-width="72" />
+            </Circle>
+
+            <Container>
+                <Content>
+                    <h1>Opinie</h1>
+                    <Grid>
+                        {opinie.map(el => (
+                            <Item>
+                                <InformFlex>
+                                    <ImageWrapper>
+                                        <GatsbyImage className="image" image={el.authorImage.localFile.childImageSharp.gatsbyImageData} alt={el.authorImage.altText} />
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="20" cy="20" r="20" fill="#0BC76D" />
+                                        </svg>
+                                    </ImageWrapper>
+                                    <div>
+                                        <p className="title">{el.authorName}</p>
+                                        <p className="text">{el.textUnderName}</p>
+                                    </div>
+                                </InformFlex>
+                                <Text dangerouslySetInnerHTML={{ __html: el.review }} />
+                            </Item>
+                        ))}
+                    </Grid>
+                </Content>
+            </Container>
+        </>
     )
 }
+
+const Circle = styled.svg`
+    position: absolute;
+    right: calc(373px - 582px);
+    top: 190px;
+    z-index: 2;
+
+    @media (max-width: 1167px) {
+        top: 100px;
+        width: 350px;
+        height: 350px;
+    }
+
+    @media (max-width: 992px) {
+        display: none;
+    }
+
+`
 
 const Content = styled.div`
     max-width: 1380px;
@@ -129,6 +153,8 @@ const Text = styled.div`
     font-weight: 300;
     font-size: clamp(15px, ${18 / 1024 * 100}vw, 22px);
     line-height: 133%;
+    position: relative;
+    z-index: 3;
 
     @media (max-width: 768px) {
         padding-right: 0;
