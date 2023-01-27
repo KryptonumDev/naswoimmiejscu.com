@@ -115,6 +115,7 @@ const Footer = () => {
             location.pathname === "/kobiety/" ||
             location.pathname === "/mlodziez/") &&
           !isLgUp ? null : (
+            location.pathname === "/kontakt/" ? null : 
             <StyledRightWrapperContent>
               {shortData.tekstObokPrzycisku
                 ? parse(shortData.tekstObokPrzycisku)

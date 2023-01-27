@@ -18,9 +18,10 @@ const FAQSection = ({
   btnWidth,
   isNormalFont,
   hasLeftPadding,
+  isContactPage
 }) => {
   return (
-    <StyledFAQSection hasleftpadding={hasLeftPadding}>
+    <StyledFAQSection id="form" hasleftpadding={hasLeftPadding}>
       <StyledFAQWrapper>
         <StyledTitleWrapper smallmg={smallMgBottom}>
           {data.tytul ? parse(data.tytul) : null}
@@ -34,17 +35,18 @@ const FAQSection = ({
               isNormalFont={isNormalFont}
             />
           ))}
-          <Button
-            btnData={data.przycisk}
-            variant={"green"}
-            haswidth={btnWidth ? btnWidth : "355px"}
-            hasheight="88px"
-            className="btn-faq-section"
-            hasClampWidth="25.781vw"
-            hasfontsize="clamp(16px, 1.042vw, 20px)"
-            hasBasicWidth="277px"
-            hasBasicHeight="73px"
-          />
+          {!isContactPage && data.przycisk ? 
+            <Button
+              btnData={data.przycisk}
+              variant={"green"}
+              haswidth={btnWidth ? btnWidth : "355px"}
+              hasheight="88px"
+              className="btn-faq-section"
+              hasClampWidth="25.781vw"
+              hasfontsize="clamp(16px, 1.042vw, 20px)"
+              hasBasicWidth="277px"
+              hasBasicHeight="73px"
+            /> : null}
         </StyledFAQSWrapper>
       </StyledFAQWrapper>
       <ContactForm />

@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
         --womensBox: #EDEBE0;
         overflow-x: hidden;
         overflow-y: ${({ islayout }) => (islayout ? "hidden" : "visible")};
+        scroll-behavior: smooth;
     } 
 
     #gatsby-focus-wrapper{

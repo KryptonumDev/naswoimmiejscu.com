@@ -89,8 +89,9 @@ const Contact = ({
         <FAQSection
           data={kontakt.kontaktFaq}
           btnWidth="495px"
-          smallMgBottom
-          isNormalFont
+          smallMgBottom={true}
+          isNormalFont={true}
+          isContactPage={true}
         />
       </StyledFAQMargin>
     </main>
