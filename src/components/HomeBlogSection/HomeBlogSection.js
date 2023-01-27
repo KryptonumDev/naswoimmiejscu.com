@@ -51,6 +51,7 @@ const HomeBlogSection = ({
   recDif,
   isWomensYouthPage,
   youth,
+  isCasePage
 }) => {
   const {
     wpPage: { stronaGlowna },
@@ -434,7 +435,7 @@ const HomeBlogSection = ({
     <StyledHomeBlogSection iscase={isCase}>
       <StyledLeftWrapper iscase={isCase}>{leftWrapper}</StyledLeftWrapper>
       <StyledRightWrapper iscase={isCase}>
-        {isWomensYouthPage ? (
+        {isWomensYouthPage || isCasePage ? (
           <StyledWhiteCircle>
             <svg
               width="889"
