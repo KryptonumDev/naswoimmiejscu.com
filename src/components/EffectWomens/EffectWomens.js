@@ -11,6 +11,7 @@ import {
   StyledList,
   StyledCircleWrapper,
   StyledElements,
+  StyledWhiteMobileCircle,
 } from "./StyledEffectWomens";
 import {
   StyledDescWrapper,
@@ -37,14 +38,24 @@ const EffectWomens = ({
             {desc ? parse(desc) : null}
           </StyledDescWrapper>
           {isWomens ? (
-            <StyledElements>
-              {listElements.map((li) => (
-                <div>
-                  <Image imageDesktop={li.ikonka} objectFit="contain" />
-                  {li.tekstListy ? parse(li.tekstListy) : null}
-                </div>
-              ))}
-            </StyledElements>
+            <>
+              <StyledElements>
+                {listElements.map((li) => (
+                  <li>
+                    <Image imageDesktop={li.ikonka} objectFit="contain" />
+                    {li.tekstListy ? parse(li.tekstListy) : null}
+                  </li>
+                ))}
+              </StyledElements>
+              <StyledList ishide iswomens={isWomens}>
+                {listElements.map((li) => (
+                  <li>
+                    <Image imageDesktop={li.ikonka} />
+                    {li.tekstListy ? parse(li.tekstListy) : null}
+                  </li>
+                ))}
+              </StyledList>
+            </>
           ) : (
             <StyledList>
               {listElements.map((li) => (
@@ -55,9 +66,26 @@ const EffectWomens = ({
               ))}
             </StyledList>
           )}
+          <StyledWhiteMobileCircle>
+            <svg
+              width="465"
+              height="465"
+              viewBox="0 0 465 465"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="232.5"
+                cy="232.5"
+                r="197"
+                stroke="white"
+                stroke-width="71"
+              />
+            </svg>
+          </StyledWhiteMobileCircle>
         </StyledLeftWrapper>
         <StyledRightWrapper>
-          <StyledCircleWrapper>
+          <StyledCircleWrapper iswomens={isWomens}>
             <StyledCircle hasdeclaredbg="var(--normalGreen)" />
           </StyledCircleWrapper>
           <Image imageDesktop={image} imageMobil={imageMobile} />

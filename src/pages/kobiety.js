@@ -36,6 +36,7 @@ const Womens = ({
         title={drugaSekcjaKobiety.tytul}
         desc={drugaSekcjaKobiety.opis}
         btn={drugaSekcjaKobiety.przycisk}
+        isWomens={true}
       />
       <EffectWomens
         image={efektWspolpracyKobiety.zdjeciePoPrawo}
@@ -67,6 +68,7 @@ const Womens = ({
         iconImage={sekcjaZBlogiemKobiety.ikonkaDoLinku}
         tekstDoLinku={sekcjaZBlogiemKobiety.tekstDoLinku}
         isCase={true}
+        isWomensYouthPage={true}
       />
     </main>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 import parse from "html-react-parser";
 
-import BigGreenCircle from "../BigGreenCircle/BigGreenCircle";
 import Button from "../Button/Button";
 import Image from "../Image/Image";
 import Container from "../Container/Container";
@@ -17,24 +16,31 @@ import {
   StyledGreenCircleWrapper,
 } from "./StyledSecondSectionWomens";
 
-const SecondSectionWomens = ({ image, imageMobile, title, desc, btn }) => {
+const SecondSectionWomens = ({
+  image,
+  imageMobile,
+  title,
+  desc,
+  btn,
+  isWomens,
+}) => {
   return (
     <Container>
       <StyledSecondSectionWomens>
         <StyledLeftWrapper>
-          <StyledGreenCircleWrapper>
+          <StyledGreenCircleWrapper iswomens={isWomens}>
             <svg
-              width="345"
+              width="721"
               height="721"
-              viewBox="0 0 345 721"
+              viewBox="0 0 721 721"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <circle
-                cx="-15.5"
+                cx="360.5"
                 cy="360.5"
                 r="333"
-                stroke="#0BC76D"
+                stroke="currentColor"
                 stroke-width="55"
               />
             </svg>

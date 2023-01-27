@@ -174,6 +174,10 @@ export const StyledMobileGreenCircle = styled.div`
     }
   }
 
+  @media only screen and (max-width: 518px) {
+    bottom: ${({ difftop }) => (difftop ? "-15vw" : null)};
+  }
+
   @media only screen and (max-width: 346px) {
     display: none;
   }

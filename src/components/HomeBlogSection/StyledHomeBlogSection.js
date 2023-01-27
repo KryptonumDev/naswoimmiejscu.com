@@ -49,6 +49,7 @@ export const StyledLeftWrapper = styled.div`
 export const StyledRightWrapper = styled.div`
   margin-top: ${({ iscase }) => (iscase ? "0" : "3.6vw")};
   width: 50%;
+  position: relative;
 
   @media only screen and (max-width: 1024px) {
     width: 100%;
@@ -98,17 +99,17 @@ export const StyledContent = styled.button`
   width: 100%;
   opacity: ${({ isactive }) => (isactive ? "1" : "0.5")};
 
-  &.mobile{
+  &.mobile {
     display: none !important;
   }
 
   @media (max-width: 1024px) {
     opacity: 1;
-    &.desctop{
+    &.desctop {
       display: none !important;
     }
-    &.mobile{
-      display: flex !important;  
+    &.mobile {
+      display: flex !important;
     }
   }
 
@@ -229,9 +230,8 @@ export const StyledScrollWrapper = styled.div`
 
   scrollbar-color: var(--normalGreen) rgba(103, 134, 190, 0.3);
   scrollbar-width: thin;
-  @media (max-width: 1360px){
-  padding-right: ${({ notpadding }) =>
-    notpadding ? null : "40px"};
+  @media (max-width: 1360px) {
+    padding-right: ${({ notpadding }) => (notpadding ? null : "40px")};
   }
 
   ::-webkit-scrollbar {
@@ -279,4 +279,41 @@ export const StyledAddnotationSecondDiv = styled.div`
   text-align: right;
   margin-top: 10px;
   max-width: 710px;
+`;
+
+export const StyledWhiteCircle = styled.div`
+  position: absolute;
+  top: -20vw;
+  right: -20vw;
+  z-index: -1;
+  width: 46.302vw;
+  height: 46.302vw;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    top: -400px;
+    right: -400px;
+    width: 889px;
+    height: 889px;
+  }
+`;
+
+export const StyledMobileBlogText = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+    position: relative;
+
+    svg {
+      display: ${({ youth }) => (youth ? "none" : "block")};
+      left: 54px;
+      top: -10px;
+      position: absolute;
+    }
+  }
 `;

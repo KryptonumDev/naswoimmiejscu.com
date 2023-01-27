@@ -54,11 +54,15 @@ const FirstSecionWomens = ({
             <StyledCircle hasdeclaredbg="var(--normalGreen)" />
           </StyledCircleWrapper>
           <StyledMobileCircleWrapper>
-            <StyledCircle hasdeclaredwidth="30px" hasdeclaredheight="30px" />
+            <StyledCircle
+              hasdeclaredwidth="30px"
+              hasdeclaredheight="30px"
+              hasdeclaredbg={womens ? "var(--normalGreen)" : null}
+            />
           </StyledMobileCircleWrapper>
           <Image imageDesktop={image} imageMobile={imageMobile} />
         </StyledRightWrapper>
-        <StyledWhiteCircle>
+        <StyledWhiteCircle iswomens={womens}>
           <svg
             width="534"
             height="774"

@@ -61,7 +61,7 @@ const MeetsFormwomens = ({
           <StyledDescWrapper className="meets-form-womens">
             {desc ? parse(desc) : null}
           </StyledDescWrapper>
-          <StyledButtonsWrapper>
+          <StyledButtonsWrapper iswomens={isWomens}>
             <Button
               btnData={firstBtn}
               variant="green"

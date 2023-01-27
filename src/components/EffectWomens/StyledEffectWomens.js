@@ -6,7 +6,9 @@ export const StyledEffectWomens = styled.div`
   width: 100%;
   display: flex;
   margin-top: ${({ iswomens }) =>
-    iswomens ? "clamp(240px, 15.625vw, 300px)" : "10.417vw"};
+    iswomens
+      ? "clamp(160px, 15.625vw, 300px)"
+      : "clamp(160px, 10.417vw, 229px)"};
   justify-content: space-between;
   position: relative;
   z-index: 1;
@@ -20,7 +22,7 @@ export const StyledEffectWomens = styled.div`
 
 export const StyledLeftWrapper = styled.div`
   width: 57%;
-  padding-left: 100px;
+  padding-left: clamp(40px, 5.208vw, 100px);
 
   @media only screen and (max-width: 1455px) {
     padding-left: 0;
@@ -48,7 +50,8 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledList = styled.ul`
-    display: flex;
+    display: ${({ ishide, iswomens }) =>
+      ishide && iswomens ? "none" : "flex"};
     flex-direction: column;
     gap 14px;
     color: var(--lightGreen);
@@ -73,6 +76,10 @@ export const StyledList = styled.ul`
         p {
             color: var(--normalBlack);
             margin-left: 52px;
+        }
+
+        @media only screen and (min-width: 1920px) {
+          font-size: 26px;
         }
 
         @media only screen and (max-width: 1763px) {
@@ -100,11 +107,20 @@ export const StyledList = styled.ul`
     
         @media only screen and (max-width: 528px) {
             font-size: 3.409vw;
+
+            p {
+              margin-left: 40px;
+            }
         }
     
         @media only screen and (max-width: 360px) {
             font-size: 3.333vw;
         }
+    }
+
+    @media only screen and (max-width: 992px){
+      display: ${({ ishide, iswomens }) =>
+        ishide ? "flex" : iswomens ? "none" : "flex"};
     }
 `;
 
@@ -119,26 +135,27 @@ export const StyledCircleWrapper = styled.div`
     top: -23px;
 
     div {
-      background-color: var(--buttonBrownHover);
+      background-color: ${({ iswomens }) =>
+        iswomens ? "var(--paginationNormal)" : "var(--buttonBrownHover)"};
       width: 66px;
       height: 66px;
     }
   }
 `;
 
-export const StyledElements = styled.div`
+export const StyledElements = styled.ul`
   width: 100%;
-  gap: 32px;
-  margin-top: 32px;
+  gap: clamp(16px, 1.667vw, 32px);
+  margin-top: clamp(16px, 1.667vw, 32px);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 
-  > div {
+  > li {
     display: flex;
     align-items: center;
-    padding: 16px 24px;
-    gap: 16px;
+    padding: clamp(8px, 0.833vw, 16px) clamp(16px, 1.25vw, 24px);
+    gap: clamp(8px, 0.833vw, 16px);
     background-color: var(--womensBox);
     border-radius: 8px;
 
@@ -165,5 +182,52 @@ export const StyledElements = styled.div`
         font-weight: 600;
       }
     }
+  }
+
+  @media only screen and (max-width: 1208px) {
+    > li {
+      p {
+        font-size: 15px;
+      }
+
+      &:last-child {
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1128px) {
+    gap: 8px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
+`;
+
+export const StyledWhiteMobileCircle = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+    position: absolute;
+    left: -32.258vw;
+    bottom: 10vw;
+    z-index: -1;
+  }
+
+  @media only screen and (max-width: 568px) {
+    left: -60vw;
+    top: 160vw;
+  }
+
+  @media only screen and (max-width: 404px) {
+    left: -78vw;
+  }
+
+  @media only screen and (max-width: 360px) {
+    top: 110vw;
   }
 `;

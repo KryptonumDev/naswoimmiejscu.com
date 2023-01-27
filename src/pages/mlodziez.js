@@ -65,6 +65,8 @@ const Youth = ({
         iconImage={sekcjaZBlogiemMlodzie.ikonkaDoLinku}
         tekstDoLinku={sekcjaZBlogiemMlodzie.tekstDoLinku}
         isCase={true}
+        isWomensYouthPage={true}
+        youth={true}
       />
     </main>
   );

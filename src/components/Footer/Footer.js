@@ -73,7 +73,9 @@ const Footer = () => {
         smallgap={
           (location.pathname === "/kontakt/" ||
             location.pathname === "/calendly/" ||
-            location.pathname === "/polityka-prywatnosci/") &&
+            location.pathname === "/polityka-prywatnosci/" ||
+            location.pathname === "/kobiety/" ||
+            location.pathname === "/mlodziez/") &&
           !isLgUp
         }
       >
@@ -109,7 +111,9 @@ const Footer = () => {
         <StyledRightWrapper>
           {(location.pathname === "/kontakt/" ||
             location.pathname === "/calendly/" ||
-            location.pathname === "/polityka-prywatnosci/") &&
+            location.pathname === "/polityka-prywatnosci/" ||
+            location.pathname === "/kobiety/" ||
+            location.pathname === "/mlodziez/") &&
           !isLgUp ? null : (
             <StyledRightWrapperContent>
               {shortData.tekstObokPrzycisku
@@ -137,7 +141,14 @@ const Footer = () => {
         <StyledCircleWrapper>
           <WhiteCircle />
         </StyledCircleWrapper>
-        <StyledMobileGreenCircle>
+        <StyledMobileGreenCircle
+          difftop={
+            location.pathname === "/kobiety/" ||
+            location.pathname === "/mlodziez/"
+              ? "true"
+              : "false"
+          }
+        >
           <BigGreenCircle />
         </StyledMobileGreenCircle>
       </StyledFooter>

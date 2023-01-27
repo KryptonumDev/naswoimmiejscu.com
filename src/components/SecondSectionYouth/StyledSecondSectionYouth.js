@@ -32,6 +32,10 @@ export const StyledLeftWrapper = styled.div`
     font-weight: 600;
   }
 
+  @media only screen and (min-width: 1920px) {
+    font-size: 26px;
+  }
+
   @media only screen and (max-width: 1763px) {
     font-size: 1.248vw;
   }
@@ -65,6 +69,10 @@ export const StyledRightWrapper = styled.div`
 
   strong {
     font-weight: 600;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    font-size: 26px;
   }
 
   @media only screen and (max-width: 1763px) {

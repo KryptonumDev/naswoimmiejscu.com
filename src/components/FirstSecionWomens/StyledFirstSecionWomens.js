@@ -7,12 +7,15 @@ export const StyledFirstSecionWomens = styled.div`
   justify-content: space-between;
   width: 100%;
   position: relative;
-  margin-top: clamp(97px, 5.990vw, 115px);
+  margin-top: clamp(97px, 5.99vw, 115px);
+
+  @media only screen and (max-width: 1167px) {
+    margin-top: 26px;
+  }
 
   @media only screen and (max-width: 992px) {
     gap: 20px;
     flex-direction: column-reverse;
-    margin-top: 84px;
   }
 `;
 
@@ -51,12 +54,12 @@ export const StyledCircleWrapper = styled.div`
   z-index: 2;
 
   @media only screen and (max-width: 992px) {
-    bottom: ${({ iswomens }) => iswomens ? "-40px" : "-20px"};
-    right: ${({ iswomens }) => iswomens ? "-40px" : "-20px"};
+    bottom: ${({ iswomens }) => (iswomens ? "-40px" : "-20px")};
+    right: ${({ iswomens }) => (iswomens ? "-40px" : "-20px")};
 
     div {
-      width: ${({ iswomens }) => iswomens ? "100px" : "40px"};
-      height: ${({ iswomens }) => iswomens ? "100px" : "40px"};
+      width: ${({ iswomens }) => (iswomens ? "100px" : "40px")};
+      height: ${({ iswomens }) => (iswomens ? "100px" : "40px")};
     }
   }
 `;
@@ -85,6 +88,10 @@ export const StyledCirclesWrapper = styled.div`
   display: flex;
   gap: 12px;
   margin-top: 30px;
+
+  @media only screen and (max-width: 992px) {
+    margin-top: 22px;
+  }
 `;
 
 export const StyledWhiteCircle = styled.div`
@@ -92,12 +99,19 @@ export const StyledWhiteCircle = styled.div`
   width: 40.313vw;
   height: 40.313vw;
   z-index: 1;
-  bottom: -13.021vw;
+  bottom: ${({ iswomens }) => (iswomens ? "-13.021vw" : "-19vw")};
   right: -15.625vw;
 
   svg {
     width: 100%;
     height: 100%;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    width: 774px;
+    height: 774px;
+    bottom: -360px;
+    right: -300px;
   }
 
   @media only screen and (max-width: 992px) {

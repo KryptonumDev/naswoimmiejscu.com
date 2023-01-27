@@ -18,11 +18,13 @@ export const StyledIcon = styled.div`
   margin-right: 24px;
 `;
 
-export const StyledTitle = styled.div``;
+export const StyledTitle = styled.div`
+  width: calc(100% - 241px - 106px);
+`;
 
 export const StyledAvatarWrapper = styled.div`
-  width: 191px;
-  height: 191px;
+  width: clamp(120px, 9.948vw, 191px);
+  height: clamp(120px, 9.948vw, 191px);
   border-radius: 50%;
   overflow: hidden;
   margin-left: 20px;

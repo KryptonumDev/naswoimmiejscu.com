@@ -28,6 +28,12 @@ export const StyledLeftWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     width: 100%;
   }
+
+  @media only screen and (max-width: 360px) {
+    .gatsby-image-wrapper {
+      height: 249px;
+    }
+  }
 `;
 
 export const StyledRightWrapper = styled.div`
@@ -45,7 +51,8 @@ export const StyledButtonsWrapper = styled.div`
   gap: 31px;
 
   @media only screen and (max-width: 992px) {
-    display: none;
+    display: ${({ iswomens }) => (iswomens ? "flex" : "none")};
+    gap: 29px;
   }
 `;
 
@@ -66,4 +73,8 @@ export const StyledAhaWrapper = styled.div`
   right: -80px;
   width: clamp(400px, 37.969vw, 729px);
   height: clamp(120px, 13.75vw, 264px);
+
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
 `;
