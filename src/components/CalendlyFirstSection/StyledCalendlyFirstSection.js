@@ -114,3 +114,21 @@ export const StyledMobileCircle = styled.div`
     display: block;
   }
 `;
+
+export const StyledBigWhiteCircle = styled.div`
+  position: absolute;
+  width: clamp(600px, 40.313vw, 774px);
+  height: clamp(600px, 40.313vw, 774px);
+  z-index: -1;
+  right: -20.833vw;
+  top: 10.417vw;
+
+  @media only screen and (min-width: 1920px) {
+    right: -400px;
+    top: 200px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
+`;

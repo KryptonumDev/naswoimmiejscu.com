@@ -15,7 +15,7 @@ const Calendly = ({
       <CalendlyFirstSection data={calendly} />
       <FAQSection
         data={calendly.faqCalendly}
-        btnWidth="495px"
+        btnWidth="384px"
         smallMgBottom
         isNormalFont
       />

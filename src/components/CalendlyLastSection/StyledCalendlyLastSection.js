@@ -60,6 +60,13 @@ export const StyledGreenBigCircle = styled.div`
     height: 100%;
   }
 
+  @media only screen and (min-width: 1920px) {
+    width: 721px;
+    height: 721px;
+    right: -540px;
+    top: 100px;
+  }
+
   @media only screen and (max-width: 992px) {
     display: none;
   }

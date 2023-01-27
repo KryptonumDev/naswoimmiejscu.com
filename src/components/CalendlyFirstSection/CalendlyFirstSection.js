@@ -16,6 +16,7 @@ import {
   StyledList,
   StyledCircleWrapper,
   StyledMobileCircle,
+  StyledBigWhiteCircle,
 } from "./StyledCalendlyFirstSection";
 import { StyledCircle } from "../Circle/StyledCircle";
 
@@ -54,6 +55,23 @@ const CalendlyFirstSection = ({ data }) => {
           <StyledCircleWrapper>
             <StyledCircle hasdeclaredbg="var(--normalGreen)" />
           </StyledCircleWrapper>
+          <StyledBigWhiteCircle>
+            <svg
+              width="774"
+              height="774"
+              viewBox="0 0 774 774"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="387"
+                cy="387"
+                r="351.5"
+                stroke="white"
+                stroke-width="71"
+              />
+            </svg>
+          </StyledBigWhiteCircle>
         </StyledRightWrapper>
       </StyledCalendlyFirstSection>
     </Container>
