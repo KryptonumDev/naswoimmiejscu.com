@@ -4,7 +4,11 @@ export const StyledPrivacyPolicy = styled.div`
   margin-top: clamp(100px, 8.646vw, 166px);
   margin-bottom: clamp(120px, 9.792vw, 188px);
   position: relative;
-  width: 100%:
+  width: 100%;
+
+  @media only screen and (max-width: 1167px) {
+    margin-top: 38px;
+  }
 `;
 
 export const StyledTitleWrapper = styled.div`

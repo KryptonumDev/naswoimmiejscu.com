@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import parse from "html-react-parser";
 
 import Image from "../components/Image/Image";
@@ -29,7 +29,9 @@ const NotFoundPage = ({
           <StyledWhiteCircle>
             <WhiteCircle />
           </StyledWhiteCircle>
-          <Image imageDesktop={page404.logo} />
+          <Link to="/">
+            <Image imageDesktop={page404.logo} />
+          </Link>
           <StyledTitle>{page404 ? parse(page404.tytul) : null}</StyledTitle>
           <StyledDescWrapper>
             {page404.opisPierwszaLinijka

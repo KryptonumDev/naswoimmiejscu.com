@@ -18,7 +18,7 @@ export const StyledContentWrapper = styled.div`
     margin-bottom: 0;
     margin-top: 38px;
     align-items: flex-start;
-    gap: clamp(0, 1.042vw, 20px);
+    gap: 0;
   }
 `;
 
