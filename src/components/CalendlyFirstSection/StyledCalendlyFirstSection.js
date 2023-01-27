@@ -8,10 +8,13 @@ export const StyledCalendlyFirstSection = styled.div`
   align-items: center;
   margin-top: clamp(100px, 7.24vw, 135px);
 
+  @media only screen and (max-width: 1167px) {
+    margin-top: 38px;
+  }
+
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
     gap: 20px;
-    margin-top: 84px;
     align-items: flex-start;
   }
 `;
@@ -88,11 +91,15 @@ export const StyledList = styled.div`
   }
 
   @media only screen and (max-width: 528px) {
-    font-size: 3.409vw;
+    font-size: 3.009vw;
   }
 
   @media only screen and (max-width: 360px) {
-    font-size: 4.167vw;
+    font-size: 11px;
+
+    ul {
+      margin-left: 14px;
+    }
   }
 `;
 

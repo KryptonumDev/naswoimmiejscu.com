@@ -252,7 +252,8 @@ export const StyledTitleWrapper = styled.div`
     &.who-im-about-me,
     &.about-me-meet,
     &.contact-page,
-    &.calendly-last-section {
+    &.calendly-last-section,
+    &.calendly-first-section {
       font-size: 6.111vw;
     }
 

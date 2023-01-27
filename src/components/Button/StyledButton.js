@@ -132,10 +132,17 @@ export const StyledLink = styled(Link)`
   }
 
   @media only screen and (max-width: 583px) {
-    &.second-section-womens-youth {
+    &.second-section-womens-youth,
+    &.calenldy-first-section {
       width: 100%;
       min-height: 53px;
       font-size: 11px;
+    }
+
+    &.calenldy-last-section {
+      width: 100%;
+      min-height: 73px;
+      font-size: 16px;
     }
   }
 

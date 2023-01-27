@@ -38,12 +38,9 @@ export const StyledRightWrapper = styled.div`
     width: 100%;
   }
 
-  @media only screen and (max-width: 360px) {
-    max-heght: 193px;
-
+  @media only screen and (max-width: 540px) {
     .gatsby-image-wrapper {
-      width: 100%;
-      height: 100%;
+      height: 193px;
     }
   }
 `;
