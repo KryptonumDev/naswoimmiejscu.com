@@ -42,6 +42,7 @@ const CalendlyFirstSection = ({ data }) => {
             hasfontsize="clamp(16px, 1.042vw, 20px)"
             hasBasicWidth="300px"
             hasBasicHeight="53px"
+            ariaLabel="link"
           />
         </StyledLeftWrapper>
         <StyledRightWrapper>

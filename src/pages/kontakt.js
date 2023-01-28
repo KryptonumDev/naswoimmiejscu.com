@@ -58,6 +58,7 @@ const Contact = ({
                 hasBasicWidth="300px"
                 className="contact-page-btn"
                 hasBasicHeight="53px"
+                ariaLabel="link"
               />
               <Button
                 btnData={kontakt.drugiPrzycisk}
@@ -68,6 +69,7 @@ const Contact = ({
                 hasBasicWidth="300px"
                 className="contact-page-btn"
                 hasBasicHeight="53px"
+                ariaLabel="link"
               />
             </StyledButtonsWrapper>
           </StyledLeftWrapper>

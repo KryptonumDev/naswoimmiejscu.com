@@ -227,6 +227,7 @@ const HomeBlogSection = ({
           haswidth="366px"
           hasheight="88px"
           hasfontsize="20px"
+          ariaLabel="link"
         />
       ) : null}
     </StyledDesktopScroll>
@@ -280,6 +281,7 @@ const HomeBlogSection = ({
           haswidth="366px"
           hasheight="88px"
           hasfontsize="20px"
+          ariaLabel="link"
         />
       ) : null}
     </StyledBlogSliderWrapper>
@@ -311,6 +313,7 @@ const HomeBlogSection = ({
           haswidth="366px"
           hasheight="88px"
           hasfontsize="20px"
+          ariaLabel="link"
         />
       ) : null}
     </StyledDesktopScroll>
@@ -350,6 +353,7 @@ const HomeBlogSection = ({
           haswidth="366px"
           hasheight="88px"
           hasfontsize="20px"
+          ariaLabel="link"
         />
       ) : null}
     </StyledBlogSliderWrapper>
@@ -365,6 +369,7 @@ const HomeBlogSection = ({
         type="button"
         hasdeclaredpadding="64px 87px 0 0"
         isactive={isBlog}
+        aria-label="przycisk"
       >
         <StyledCircle
           hasdeclaredbg="var(--normalGreen)"

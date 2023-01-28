@@ -71,6 +71,7 @@ const MeetsFormwomens = ({
               hasheight="88px"
               hasfontsize="clamp(16px, 1.042vw, 20px)"
               className="second-section-womens-youth"
+              ariaLabel="link"
             />
             <Button
               btnData={secondBtn}
@@ -80,6 +81,7 @@ const MeetsFormwomens = ({
               hasheight="88px"
               hasfontsize="clamp(16px, 1.042vw, 20px)"
               className="second-section-womens-youth"
+              ariaLabel="link"
             />
           </StyledButtonsWrapper>
         </StyledRightWrapper>

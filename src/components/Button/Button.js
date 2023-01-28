@@ -15,10 +15,12 @@ const Button = ({
   hasClampHeight,
   hasBasicWidth,
   hasBasicHeight,
-  tabIndex = 0
+  tabIndex = 0,
+  ariaLabel
 }) => {
   return text ? (
     <StyledButton
+      aria-label={ariaLabel}
       variant={variant}
       hasdeclaredwidth={haswidth}
       hasdeclaredheight={hasheight}
@@ -30,6 +32,7 @@ const Button = ({
     </StyledButton>
   ) : (
     <StyledLink
+      aria-label={ariaLabel}
       to={btnData.url}
       target={btnData.target}
       variant={variant}

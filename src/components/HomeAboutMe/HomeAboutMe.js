@@ -53,6 +53,7 @@ const HomeAboutMe = ({ data }) => {
             hasheight="88px"
             hasfontsize="20px"
             className="home-about-me"
+            ariaLabel="link"
           />
         </StyledRightWrapper>
         <StyledGreenCircle>

@@ -110,6 +110,7 @@ const Footer = () => {
               hasBasicWidth="277px"
               hasBasicHeight="73px"
               className="footer"
+              ariaLabel="link"
             />
           </StyledRightWrapperContent>
           <StyledFooterLinks hideMobile>

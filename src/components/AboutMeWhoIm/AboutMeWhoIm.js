@@ -48,6 +48,7 @@ const AboutMeWhoIm = ({ data }) => {
             hasheight="88px"
             hasfontsize="20px"
             className="abotu-me-who-im"
+            ariaLabel="link"
           />
         </StyledRightWrapper>
       </StyledAboutMeWhoIm>

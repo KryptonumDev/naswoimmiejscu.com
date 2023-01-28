@@ -79,7 +79,7 @@ const ArticleTemplate = ({ data: { wpPost: { title, categories, artykul, content
           <div>
             <div className="title" dangerouslySetInnerHTML={{ __html: contactSection.title }} />
             <div className="text" dangerouslySetInnerHTML={{ __html: contactSection.text }} /><StyledText />
-            <Button className='link' hasfontsize={`clamp(16px, ${20 / 1920 * 100}vw, 20px)`} btnData={contactSection.link} />
+            <Button className='link' hasfontsize={`clamp(16px, ${20 / 1920 * 100}vw, 20px)`} btnData={contactSection.link} ariaLabel="link" />
           </div>
           <ImageWrapper>
             <svg className="svg" width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">

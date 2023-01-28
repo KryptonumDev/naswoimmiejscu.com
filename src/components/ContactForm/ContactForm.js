@@ -133,7 +133,7 @@ const ContactForm = () => {
                   : null}
               </label>
             </StyledCustomCheckbox>
-            <StyledSubmit type="submit" disabled={isSubmitting}>
+            <StyledSubmit type="submit" disabled={isSubmitting} aria-label="submit">
               {shortData.tekstWPrzycisku}
             </StyledSubmit>
             {isSend ? (

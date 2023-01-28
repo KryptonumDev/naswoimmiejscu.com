@@ -50,6 +50,7 @@ const UnderCooperationProcess = ({ data }) => {
             hasBasicWidth="277px"
             hasBasicHeight="73px"
             className="under-cooperation-process"
+            ariaLabel="link"
           />
           <StyledFirstIcon>
             <AnimateIcon />

@@ -54,6 +54,7 @@ const Header = () => {
         hasheight="78px"
         hasfontsize="16px"
         className="header-btn"
+        ariaLabel="link"
       />
     </StyledHeader>
   );

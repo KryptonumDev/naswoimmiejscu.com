@@ -67,6 +67,7 @@ const AboutMeMeet = ({ data }) => {
             hasheight="88px"
             hasfontsize="20px"
             className="about-me-meet-btn"
+            ariaLabel="link"
           />
         </StyledContentWrapper>
       </StyledAboutMeMeet>

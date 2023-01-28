@@ -113,6 +113,7 @@ const HomeSecondSection = ({ data }) => {
                 hasBasicWidth="277px"
                 hasBasicHeight="73px"
                 className="home-second-section"
+                ariaLabel="link"
               />
             </StyledContent>
           ) : (
@@ -131,6 +132,7 @@ const HomeSecondSection = ({ data }) => {
                 hasBasicWidth="277px"
                 hasBasicHeight="73px"
                 className="home-second-section"
+                ariaLabel="link"
               />
             </StyledContent>
           )}

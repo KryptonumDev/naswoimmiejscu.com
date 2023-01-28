@@ -38,6 +38,7 @@ const CustomButton = ({
       hastransform={hasTransform}
       isfaq={isFAQ}
       className={className}
+      aria-label="przycisk"
     >
       {children}
       {hasIcon

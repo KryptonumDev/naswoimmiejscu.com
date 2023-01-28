@@ -55,6 +55,7 @@ const HomeHeroSection = ({ data }) => {
               hasClampWidth="18.490vw"
               hasBasicWidth="277px"
               hasBasicHeight="73px"
+              ariaLabel="link"
             />
           ) : null}
         </StyledRightWrapper>

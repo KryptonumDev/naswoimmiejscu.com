@@ -62,6 +62,7 @@ const BlogCard = ({
           hasheight="78px"
           hasfontsize="16px"
           className='link'
+          ariaLabel="link"
         />
       </StyledTextWrapper>
     </StyledBlogCard>
