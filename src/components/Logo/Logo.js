@@ -17,6 +17,7 @@ const Logo = ({
             hasmaxwidth={hasMaxWidth}
             hasdeclaredmargin={hadDeclaredMargin}
             isfooter={isFooter}
+            aria-label="link"
         >
             <svg
                 width="544"
