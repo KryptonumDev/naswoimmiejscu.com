@@ -63,6 +63,15 @@ export const StyledDescriptionWrapper = styled.div`
     color: var(--normalBlack);
     position: relative;
     font-weight: ${({ recdiff }) => (recdiff ? "300" : "700")};
+    font-size: 26px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 15px;
   }
 `;
 

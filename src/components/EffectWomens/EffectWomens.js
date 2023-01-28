@@ -45,14 +45,14 @@ const EffectWomens = ({
               </li>
             ))}
           </StyledElements>
-          <StyledList ishide iswomens={isWomens}>
+          {/* <StyledList ishide iswomens={isWomens}>
             {listElements.map((li) => (
               <li>
                 <Image imageDesktop={li.ikonka} />
                 {li.tekstListy ? parse(li.tekstListy) : null}
               </li>
             ))}
-          </StyledList>
+          </StyledList> */}
           <StyledWhiteMobileCircle>
             <svg
               width="465"

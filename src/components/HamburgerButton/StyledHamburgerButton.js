@@ -17,8 +17,8 @@ export const StyledHamburgerButton = styled.button`
     top: 24px;
     cursor: pointer;
     border: 0;
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 34px;
     background-color: transparent;
     display: flex;
     justify-content: flex-end;
@@ -33,8 +33,8 @@ export const StyledHamburgerBox = styled.span`
 `;
 
 export const StyledHamburgerInner = styled.span`
-  width: 30px;
-  height: 2px;
+  width: 36px;
+  height: 3px;
   position: absolute;
   left: 0;
   top: 50%;
@@ -44,8 +44,8 @@ export const StyledHamburgerInner = styled.span`
   &::after {
     content: "";
     right: 0;
-    width: 30px;
-    height: 2px;
+    width: 36px;
+    height: 3px;
     position: absolute;
     background-color: var(--normalBlack);
     top: 8px;
@@ -57,8 +57,8 @@ export const StyledHamburgerInner = styled.span`
   &::before {
     content: "";
     right: 0;
-    width: 30px;
-    height: 2px;
+    width: 36px;
+    height: 3px;
     position: absolute;
     background-color: var(--normalBlack);
     top: -8px;

@@ -78,6 +78,10 @@ export const StyledTopText = styled.div`
   gap: 6px;
 
   @media only screen and (max-width: 992px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 480px) {
     font-size: 16px;
   }
 `;
@@ -98,6 +102,10 @@ export const StyledBottomText = styled.div`
   }
 
   @media only screen and (max-width: 992px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 480px) {
     font-size: 11px;
   }
 `;
@@ -148,6 +156,16 @@ export const StyledFooterLinks = styled.div`
     display: ${({ hideMobile }) => (hideMobile ? "none" : "flex")};
     padding-right: 0;
     margin-top: 26px;
+
+    a {
+      font-size: 22px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    a {
+      font-size: 14px;
+    }
   }
 `;
 

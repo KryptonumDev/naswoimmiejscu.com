@@ -82,7 +82,7 @@ const AboutMeProcess = ({ data }) => {
               btnData={data.przyciskKobiety}
               variant="green"
               hasheight="88px"
-              hasfontsize="20px"
+              hasfontsize="clamp(14px, 1.042vw, 20px)"
               haswidth="495px"
               hasBasicWidth="300px"
               hasClampWidth="25.781vw"
@@ -95,7 +95,7 @@ const AboutMeProcess = ({ data }) => {
               btnData={data.przyciskMlodeOsoby}
               variant="white"
               hasheight="88px"
-              hasfontsize="20px"
+              hasfontsize="clamp(14px, 1.042vw, 20px)"
               haswidth="570px"
               hasClampWidth="25.781vw"
               hasBasicWidth="300px"

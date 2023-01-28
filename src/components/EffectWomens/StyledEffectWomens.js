@@ -201,10 +201,6 @@ export const StyledElements = styled.ul`
   @media only screen and (max-width: 1128px) {
     gap: 8px;
   }
-
-  @media only screen and (max-width: 992px) {
-    display: none;
-  }
 `;
 
 export const StyledWhiteMobileCircle = styled.div`

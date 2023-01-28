@@ -12,6 +12,7 @@ export const StyledContactForm = styled.div`
     display: flex;
     flex-direction: column;
     gap: 24px;
+    width: 100%;
   }
 
   @media only screen and (max-width: 1681px) {
@@ -63,6 +64,10 @@ export const StyledCustomCheckbox = styled.div`
 
     @media only screen and (max-width: 1681px) {
       max-width: unset;
+    }
+
+    @media only screen and (max-width: 992px) {
+      max-width: 512px;
     }
 
     span {
@@ -172,6 +177,10 @@ export const StyledInputWrapper = styled.div`
 
   @media only screen and (max-width: 1681px) {
     max-width: unset;
+  }
+
+  @media only screen and (max-width: 992px) {
+    max-width: 512px;
   }
 `;
 
