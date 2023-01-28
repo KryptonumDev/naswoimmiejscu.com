@@ -2,9 +2,9 @@ import React from "react";
 
 import { StyledContainer } from "./StyledContainer";
 
-const Container = ({ children, className, hideY }) => {
+const Container = ({ as='section',children, className, hideY }) => {
   return (
-    <StyledContainer hidey={hideY} className={className}>
+    <StyledContainer as={as} hidey={hideY} className={className}>
       {children}
     </StyledContainer>
   );

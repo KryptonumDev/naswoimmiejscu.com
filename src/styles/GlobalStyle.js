@@ -28,10 +28,9 @@ const GlobalStyle = createGlobalStyle`
         --hoverGrey: #E2E2E2;
         --womensBox: #EDEBE0;
         overflow-x: hidden;
-        scroll-behavior: smooth;
     } 
 
-    .tl-wrapper{
+     /* .tl-wrapper{
       opacity: 0 !important;
       transition: opacity .2s cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
     }
@@ -47,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
     .tl-wrapper-status--exiting{
       transition: opacity .2s cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
       opacity: 0 !important;
-    }
+    }  */
 
     #gatsby-focus-wrapper{
       overflow: hidden;

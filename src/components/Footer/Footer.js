@@ -49,7 +49,7 @@ const Footer = () => {
   const shortData = data.wpPage.global.stopka;
 
   return (
-    <Container className="footer">
+    <Container as='div' className="footer">
       <StyledFooter
         smallgap={
           (location.pathname === "/kontakt/" ||
@@ -89,7 +89,7 @@ const Footer = () => {
             <SmallGreenCircle />
           </StyledSmallGreenCircle>
         </StyledLeftWrapper>
-        <StyledRightWrapper>  
+        <StyledRightWrapper>
           <StyledRightWrapperContent className={(location.pathname === "/kontakt/" ||
             location.pathname === "/calendly/" ||
             location.pathname === "/polityka-prywatnosci/" ||
