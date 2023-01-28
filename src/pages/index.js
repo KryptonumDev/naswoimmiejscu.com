@@ -27,9 +27,7 @@ const IndexPage = ({
 }) => {
 
   useEffect(() => {
-    setTimeout(() => {
-      document.getElementById('main').classList.add('active')
-    }, 1)
+    document.getElementById('main').classList.add('active')
   }, [])
 
   return (
