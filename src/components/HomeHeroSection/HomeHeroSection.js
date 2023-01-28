@@ -26,6 +26,7 @@ const HomeHeroSection = ({ data }) => {
             <StyledImage
               imageDesktop={data.zdjeciePoLewo}
               imageMobile={data.zdjeciePoLewoMobile}
+              loading="eager"
             />
           ) : null}
           <StyledBottomCircle>

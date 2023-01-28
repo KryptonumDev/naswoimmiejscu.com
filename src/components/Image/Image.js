@@ -1,7 +1,7 @@
 import React from "react";
 import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image";
 
-const Image = ({ className = '', imageDesktop, imageMobile, objectFit }) => {
+const Image = ({ className = '', imageDesktop, imageMobile, objectFit, loading = "lazy"}) => {
   const images = imageDesktop?.localFile
     ? withArtDirection(getImage(imageDesktop?.localFile), [
       {
@@ -20,6 +20,7 @@ const Image = ({ className = '', imageDesktop, imageMobile, objectFit }) => {
       alt={imageDesktop?.altText}
       title={imageDesktop?.title}
       objectFit={objectFit}
+      loading={loading}
     />
   ) : null;
 };
