@@ -152,6 +152,7 @@ export const StyledDescFirst = styled.div`
 
     @media only screen and (max-width: 992px) {
         font-size: 2.218vw;
+        margin-top: 20px;
     }
 
     @media only screen and (max-width: 808px) {
@@ -221,23 +222,46 @@ export const StyledCirclesWrapper = styled.div`
 `;
 
 export const StyledSecondSection = styled.div`
-    margin-top: clamp(80px, 6.146vw, 118px);
+    margin-top: clamp(40px, 6.146vw, 118px);
     width: 100%;
     gap: clamp(40px, 4.635vw, 89px);
     display: flex;
     justify-content: space-between;
     margin-bottom: clamp(120px, 8.906vw, 171px);
+
+    @media only screen and (max-width: 992px) {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
 `;
 
 export const StyledLeftSecondWrapper = styled.div`
     width: 35%;
     max-width: 568px;
     height: 100%;
+    
+    @media only screen and (max-width: 992px) {
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 580px) {
+        height: 219px;
+
+        .gatsby-image-wrapper {
+            height: 100%;
+        }
+    }
 `;
 
 export const StyledRightSecondWrapper = styled.div`
     width: 65%;
     position: relative;
+
+    @media only screen and (max-width: 992px){
+        width: 100%;
+    }
 `;
 
 export const StyledIconsWrapper = styled.div`
@@ -246,6 +270,10 @@ export const StyledIconsWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    @media only screen and (max-width: 992px) {
+        gap: 16px;
+    }
 `;
 
 export const StyledIconWrapper = styled.div`
@@ -263,6 +291,16 @@ export const StyledIcon = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 992px) {
+        width: 61px;
+        height: 61px;
+
+        img, svg {
+            width: 35px;
+            height: 35px;
+        }
+    }
 `;
 
 export const StyledTextWrapper = styled.div`
@@ -272,11 +310,67 @@ export const StyledTextWrapper = styled.div`
 `;
 
 export const StyledName = styled.div`
-    font: 600 26px Roboto;
+    font: 700 clamp(18px, 1.354vw, 26px) Roboto;
+
+    @media only screen and (max-width: 1763px) {
+        font-size: 1.248vw;
+    }
+
+    @media only screen and (max-width: 1499px) {
+        font-size: 1.334vw;
+    }
+
+    @media only screen and (max-width: 1349px) {
+        font-size: 1.734vw;
+    }
+
+    @media only screen and (max-width: 992px) {
+        font-size: 2.218vw;
+    }
+
+    @media only screen and (max-width: 808px) {
+        font-size: 2.9vw;
+    }
+
+    @media only screen and (max-width: 528px) {
+        font-size: 3.4vw;
+    }
+
+    @media only screen and (max-width: 360px) {
+        font-size: 4.1vw;
+    }
 `;
 
 export const StyledDesc = styled.div`
-    font: 300 26px Roboto;
+    font: 300 clamp(18px, 1.354vw, 26px) Roboto;
+
+    @media only screen and (max-width: 1763px) {
+        font-size: 1.248vw;
+    }
+
+    @media only screen and (max-width: 1499px) {
+        font-size: 1.334vw;
+    }
+
+    @media only screen and (max-width: 1349px) {
+        font-size: 1.734vw;
+    }
+
+    @media only screen and (max-width: 992px) {
+        font-size: 2.218vw;
+    }
+
+    @media only screen and (max-width: 808px) {
+        font-size: 2.9vw;
+    }
+
+    @media only screen and (max-width: 528px) {
+        font-size: 3.4vw;
+    }
+
+    @media only screen and (max-width: 360px) {
+        font-size: 4.1vw;
+    }
 `;
 
 export const StyledGlobalSecondWhiteCircle = styled.div`

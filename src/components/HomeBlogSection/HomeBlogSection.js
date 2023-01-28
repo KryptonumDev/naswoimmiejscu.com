@@ -162,7 +162,7 @@ const HomeBlogSection = ({
   };
 
   const leftSectionCase = (
-    <StyledLeftCaseWrapper>
+    <StyledLeftCaseWrapper iscase={isCasePage}>
       {anotherPerson ? (
         <MeetSomebody
           data={anotherPerson}

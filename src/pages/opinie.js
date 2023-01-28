@@ -48,7 +48,7 @@ export const query = graphql`
         }
       }
     }
-    wpPage(id: { eq: "cG9zdDo3NDE=" }) {
+    wpPage(id: { eq: "cG9zdDo3NzQ=" }) {
         seo {
           canonical
           metaDesc
