@@ -8,17 +8,13 @@ import Footer from "../Footer/Footer";
 const GlobalTemplate = ({ children, isLayout }) => {
   return (
     <>
-      <Helmet
-        htmlAttributes={{
-          lang: "pl",
-        }}
-      >
+      <Helmet htmlAttributes={{ lang: "pl" }}>
         <meta name="robots" content="noindex" />
       </Helmet>
-      <GlobalStyle islayout={isLayout} />
-      {!isLayout ? <Header /> : null}
+      <GlobalStyle />
+      {isLayout && <Header />}
       {children}
-      {!isLayout ? <Footer /> : null}
+      {isLayout && <Footer />}
     </>
   );
 };

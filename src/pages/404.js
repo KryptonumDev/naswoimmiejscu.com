@@ -32,7 +32,7 @@ const NotFoundPage = ({
 
   return (
     <main id='main'>
-      <Container hideY>
+      <Container className={'error'} hideY>
         <Styled404>
           <StyledWhiteCircle>
             <WhiteCircle />
@@ -76,6 +76,7 @@ export { Head } from "../components/Head/Head";
 export const query = graphql`
   query PageNotFound {
     wpPage(id: { eq: "cG9zdDo0Njg=" }) {
+      id
       seo {
         canonical
         metaDesc

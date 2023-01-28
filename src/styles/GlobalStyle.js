@@ -28,7 +28,6 @@ const GlobalStyle = createGlobalStyle`
         --hoverGrey: #E2E2E2;
         --womensBox: #EDEBE0;
         overflow-x: hidden;
-        overflow-y: ${({ islayout }) => (islayout ? "hidden" : "visible")};
         scroll-behavior: smooth;
     } 
 

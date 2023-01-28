@@ -4,7 +4,7 @@ const GlobalLayout =
 
 exports.wrapPageElement = ({ element, props }) => {
   return (
-    <GlobalLayout isLayout={props.location.pathname === "/404/"} {...props}>
+    <GlobalLayout isLayout={props?.data?.wpPage?.id !== 'cG9zdDo0Njg='} {...props}>
       {element}
     </GlobalLayout>
   );
