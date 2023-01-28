@@ -8,7 +8,6 @@ import {
   StyledEffectWomens,
   StyledLeftWrapper,
   StyledRightWrapper,
-  StyledList,
   StyledCircleWrapper,
   StyledElements,
   StyledWhiteMobileCircle,
@@ -38,8 +37,8 @@ const EffectWomens = ({
             {desc ? parse(desc) : null}
           </StyledDescWrapper>
           <StyledElements>
-            {listElements.map((li) => (
-              <li>
+            {listElements.map((li, index) => (
+              <li key={li.tekstListy + index}>
                 <Image imageDesktop={li.ikonka} objectFit="contain" />
                 {li.tekstListy ? parse(li.tekstListy) : null}
               </li>
@@ -66,7 +65,7 @@ const EffectWomens = ({
                 cy="232.5"
                 r="197"
                 stroke="white"
-                stroke-width="71"
+                strokeWidth="71"
               />
             </svg>
           </StyledWhiteMobileCircle>

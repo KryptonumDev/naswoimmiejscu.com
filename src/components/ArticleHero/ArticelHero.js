@@ -8,7 +8,7 @@ const Hero = ({ title, categories, headings, data: { description, tekstDoZdjecia
             <TextPart>
                 <Categories>
                     {categories.map(el => (
-                        <div className="item">{el.name}</div>
+                        <div className="item" key={el.name}>{el.name}</div>
                     ))}
                 </Categories>
                 <h1>{title}</h1>

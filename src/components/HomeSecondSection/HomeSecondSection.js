@@ -32,7 +32,7 @@ const HomeSecondSection = ({ data }) => {
   );
 
   const handleOnKeyUp = useCallback((e, womens) => {
-    if (e.keyCode == 13) {
+    if (e.keyCode === 13) {
       setIsWomens(womens);
     }
   }, [setIsWomens])

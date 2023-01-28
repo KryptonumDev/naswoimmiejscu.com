@@ -96,6 +96,13 @@ export const StyledBottomText = styled.div`
     color: var(--normalBlack);
     transition: color 350ms linear;
 
+    &:focus-visible{
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: var(--normalGreen);
+      outline-offset: -1px;
+    }
+
     &:hover {
       color: var(--normalGreen);
     }
@@ -144,6 +151,13 @@ export const StyledFooterLinks = styled.div`
 
     &:hover {
       color: var(--normalGreen);
+    }
+
+    &:focus-visible{
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: var(--normalGreen);
+      outline-offset: -1px;
     }
 
     &.activeLink {

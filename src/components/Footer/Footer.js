@@ -40,24 +40,6 @@ const Footer = () => {
               title
               url
             }
-            logoMobile {
-              altText
-              title
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(quality: 100)
-                }
-              }
-            }
-            logo {
-              altText
-              title
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(quality: 100)
-                }
-              }
-            }
           }
         }
       }
@@ -81,10 +63,9 @@ const Footer = () => {
         <StyledLeftWrapper>
           <Logo
             hadDeclaredMargin="0 0 54px 0"
-            logoDesktop={shortData.logo}
-            logoMobile={shortData.logoMobile}
             isHeader="true"
             isFooter="true"
+            hasMaxWidth="484px"
           />
           <Nav isFooter isOpen={false} />
           <StyledFooterLinks>

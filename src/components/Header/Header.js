@@ -20,24 +20,6 @@ const Header = () => {
             title
             url
           }
-          logo {
-            altText
-            title
-            localFile {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-          }
-          logoMobile {
-            altText
-            title
-            localFile {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-          }
         }
       }
     }
@@ -58,8 +40,6 @@ const Header = () => {
       <StyledLogoWrapperHeader>
         <Logo
           isHeader="true"
-          logoDesktop={shortData.logo}
-          logoMobile={shortData.logoMobile}
         />
       </StyledLogoWrapperHeader>
       <HamburgerButton openMenu={() => { setIsOpen(!isOpen) }} isOpen={isOpen} />

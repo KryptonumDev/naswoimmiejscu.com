@@ -50,9 +50,6 @@ const Nav = ({ isOpen, isFooter, openMenu }) => {
         <Link to="/polityka-prywatnosci/" onClick={openMenu}>
           Polityka prywatności
         </Link>
-        <Link to="/regulamin/" onClick={openMenu}>
-          Regulamin
-        </Link>
       </StyledMobileWrapper>
     </StyledNav>
   ) : (

@@ -38,7 +38,6 @@ import { StyledMobileIcon } from "../RecommendationCard/StyledRecommendationCard
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styled from "styled-components";
 
 const HomeBlogSection = ({
   isCase,
@@ -163,7 +162,7 @@ const HomeBlogSection = ({
   };
 
   const leftSectionCase = (
-    <StyledLeftCaseWrapper iscase={isCasePage}>
+    <StyledLeftCaseWrapper iscase={isCasePage ? "true" : "false"}>
       {anotherPerson ? (
         <MeetSomebody
           data={anotherPerson}
@@ -356,7 +355,7 @@ const HomeBlogSection = ({
     </StyledBlogSliderWrapper>
   );
 
-  const BlogText = (mobile) => (
+  const BlogText = () => (
     <>
       <StyledIconWrapper>
         <AHASvg />
@@ -453,9 +452,9 @@ const HomeBlogSection = ({
   );
 
   return (
-    <StyledHomeBlogSection iscase={isCase}>
-      <StyledLeftWrapper iscase={isCase}>{leftWrapper}</StyledLeftWrapper>
-      <StyledRightWrapper iscase={isCase}>
+    <StyledHomeBlogSection iscase={isCase ? "true" : "false"}>
+      <StyledLeftWrapper iscase={isCase ? "true" : "false"}>{leftWrapper}</StyledLeftWrapper>
+      <StyledRightWrapper iscase={isCase ? "true" : "false"}>
         {isWomensYouthPage || isCasePage ? (
           <StyledWhiteCircle>
             <svg
@@ -470,7 +469,7 @@ const HomeBlogSection = ({
                 cy="444.5"
                 r="409"
                 stroke="white"
-                stroke-width="71"
+                strokeWidth="71"
               />
             </svg>
           </StyledWhiteCircle>
@@ -482,5 +481,3 @@ const HomeBlogSection = ({
 };
 
 export default HomeBlogSection;
-
-const Mobile = styled.div``;

@@ -49,7 +49,7 @@ const Blog = ({
     <main id='main'>
       <Container>
         <Circle className="circle" width="774" height="774" viewBox="0 0 774 774" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="387" cy="387" r="351.5" stroke="#0BC76D" stroke-width="71" />
+          <circle cx="387" cy="387" r="351.5" stroke="#0BC76D" strokeWidth="71" />
         </Circle>
         <StyledHeading>
           <h1>Blog{slug ? ' – ' + name : ''}</h1>
@@ -63,7 +63,7 @@ const Blog = ({
               </StyledText>
             </Link>
             {nodes.map(({ slug, name, count }) => (
-              <Link activeClassName="active" to={'/blog/' + slug + '/'}>
+              <Link key={slug} activeClassName="active" to={'/blog/' + slug + '/'}>
                 <StyledText
                   hasdeclaredfontcolor="var(--normalBlack)"
                   hasdeclaredtexttransform="uppercase"
@@ -83,6 +83,7 @@ const Blog = ({
               btnText={'POZNAJ TĘ NOWOŚĆ'}
               slug={node.slug}
               imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
+              key={node.slug}
             />
           ))}
         </StyledSlidesWrapper>

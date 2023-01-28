@@ -8,14 +8,14 @@ export default function Opinie({ opinie }) {
     return (
         <>
             <Circle width="582" height="582" viewBox="0 0 582 582" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="291" cy="291" r="255" stroke="#0BC76D" stroke-width="72" />
+                <circle cx="291" cy="291" r="255" stroke="#0BC76D" strokeWidth="72" />
             </Circle>
             <Container>
                 <Content>
                     <h1>Opinie</h1>
                     <Grid>
                         {opinie.map(el => (
-                            <Link className="wrap" to={'/case/' + el.slug + '/'} >
+                            <Link className="wrap" to={'/case/' + el.slug + '/'} key={el.slug}>
                                 <Item>
                                     <InformFlex>
                                         <ImageWrapper>

@@ -41,7 +41,7 @@ const SecondSectionWomens = ({
                 cy="360.5"
                 r="333"
                 stroke="currentColor"
-                stroke-width="55"
+                strokeWidth="55"
               />
             </svg>
           </StyledGreenCircleWrapper>

@@ -68,7 +68,7 @@ const CalendlyFirstSection = ({ data }) => {
                 cy="387"
                 r="351.5"
                 stroke="white"
-                stroke-width="71"
+                strokeWidth="71"
               />
             </svg>
           </StyledBigWhiteCircle>
