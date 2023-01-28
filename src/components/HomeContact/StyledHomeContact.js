@@ -39,7 +39,11 @@ export const StyledLeftWrapper = styled.div`
   }
 `;
 
-export const StyledRightWrapper = styled.div``;
+export const StyledRightWrapper = styled.div`
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+  }
+`;
 
 export const StyledImageWrapper = styled.div`
   transform: translateX(-30px);

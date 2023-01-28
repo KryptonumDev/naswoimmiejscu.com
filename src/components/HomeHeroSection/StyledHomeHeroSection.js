@@ -234,7 +234,7 @@ export const StyledTitleWrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 375px) {
     &.home-hero-section,
     &.who-im-about-me,
     &.home-blog-section-text,
@@ -425,7 +425,7 @@ export const StyledDescWrapper = styled.div`
     &.contact-page,
     &.calendly-first-section,
     &.calendly-last-section {
-      font-size: 2.218vw;
+      font-size: 2.818vw;
     }
 
     &.home-hero-section {
@@ -433,7 +433,7 @@ export const StyledDescWrapper = styled.div`
     }
 
     &.first-section-womens-youth {
-      font-size: 2.218vw;
+      font-size: 2.818vw;
       margin-top: 14px;
     }
 
@@ -512,7 +512,7 @@ export const StyledDescWrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 375px) {
     &.home-hero-section,
     &.home-second-section,
     &.cooperation-process,

@@ -15,8 +15,6 @@ export const StyledLogo = styled(Link)`
     outline-offset: 4px;
   }
 
-  
-
   @media only screen and (max-width: 1748px) {
     max-width: ${({ isheader, hasmaxwidth }) =>
     isheader ? `clamp(240px, ${300 / 1024 * 100}vw, 400px)` : hasmaxwidth};
@@ -29,10 +27,10 @@ export const StyledLogo = styled(Link)`
 
   @media only screen and (max-width: 1350px) {
     max-width: ${({ isheader, hasmaxwidth }) =>
-    isheader ? `clamp(240px, ${300 / 1024 * 100}vw, 400px)` : hasmaxwidth};
+    isheader ? `clamp(340px, ${300 / 1024 * 100}vw, 400px)` : hasmaxwidth};
   }
 
-  @media only screen and (max-width: 1167px) {
+  @media only screen and (max-width: 992px) {
     max-width: ${({ isheader, hasmaxwidth }) =>
     isheader ? `clamp(240px, ${300 / 1024 * 100}vw, 400px)` : hasmaxwidth};
   }

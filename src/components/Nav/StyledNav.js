@@ -207,7 +207,7 @@ export const StyledFooterNav = styled.div`
     
     a,
     span {
-      font-size: 20px;
+      font-size: 24px;
     }
   }
 `;

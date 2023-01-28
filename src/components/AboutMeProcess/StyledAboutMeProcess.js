@@ -9,7 +9,7 @@ import {
 export const StyledAboutMeProcess = styled.div`
   width: 100%;
   margin-top: clamp(50px, 7.813vw, 94px);
-  padding-right: clamp(100px, 7.813vw, 150px);
+  padding-right: clamp(40px, 7.813vw, 150px);
 
   @media only screen and (max-width: 1719px) {
     padding-right: clamp(60px, 3.813vw, 110px);
@@ -78,13 +78,17 @@ export const StyledButtonsWrapper = styled.div`
   margin-top: 42px;
 
   @media only screen and (max-width: 1550px) {
-    flex-direction: column;
     gap: 20px;
     padding-left: 0;
   }
 
   @media only screen and (max-width: 992px) {
     margin-top: 0;
+    flex-direction: column;
+
+    button {
+      font-size: 20px;
+    }
   }
 `;
 
