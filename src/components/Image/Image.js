@@ -20,7 +20,6 @@ const Image = ({ className = '', imageDesktop, imageMobile, objectFit }) => {
       alt={imageDesktop?.altText}
       title={imageDesktop?.title}
       objectFit={objectFit}
-      leading="eager"
     />
   ) : null;
 };
