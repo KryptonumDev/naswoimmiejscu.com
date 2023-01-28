@@ -57,7 +57,7 @@ export const StyledQuestionWrapper = styled.summary`
 
   &:hover{
     svg{
-      transform: rotateZ(-15deg);
+      transform: translateY(2px);
     }
   }
 

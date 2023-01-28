@@ -42,5 +42,17 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/favicon.svg',
+        name: `Na swoim miejscu`, 
+        short_name: `naswoimmiejscu`,
+        start_url: `/`,
+        background_color: `#FFFBEF`,
+        theme_color: `#0BC76D`,
+        display: `standalone`
+      }
+    },
   ],
 };
