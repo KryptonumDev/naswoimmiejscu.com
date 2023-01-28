@@ -13,7 +13,7 @@ export const StyledNav = styled.nav`
   span {
     font: 400 14px Roboto;
     text-transform: uppercase;
-    color: var(--normalGrey);
+    color: #313133;
     text-decoration: none;
     position: relative;
     transition: color .4s ease-out, font-weight .4s ease-out;
@@ -155,7 +155,7 @@ export const StyledFooterNav = styled.div`
   span {
     font: 400 14px Roboto;
     text-transform: uppercase;
-    color: var(--normalGrey);
+    color: #313133;
     text-decoration: none;
     position: relative;
     transition: color .4s ease-out, font-weight .4s ease-out;

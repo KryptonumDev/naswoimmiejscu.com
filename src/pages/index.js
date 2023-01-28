@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { graphql } from "gatsby";
 
 import HomeHeroSection from "../components/HomeHeroSection/HomeHeroSection";
@@ -19,7 +19,6 @@ import {
   StyledWhiteSecondCircleWrapper,
   StyledWhiteCircleWrapper,
 } from "../components/Home/StyledHome";
-import { useEffect } from "react";
 
 const IndexPage = ({
   data: {
