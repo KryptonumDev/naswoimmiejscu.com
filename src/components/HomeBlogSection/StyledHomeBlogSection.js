@@ -190,7 +190,7 @@ export const StyledDesktopScroll = styled.div`
       position: absolute;
       content: "";
       bottom: 0;
-      right: 0;
+      right: 10px;
       left: 0;
       height: 300px;
       background: linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 40%);
