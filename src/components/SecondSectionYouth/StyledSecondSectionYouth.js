@@ -11,13 +11,13 @@ export const StyledSecondSectionYouth = styled.div`
   background-color: var(--grey);
 
   @media only screen and (max-width: 1167px) {
-    padding: 75px 33px;
+    padding: 75px 22px;
   }
 
   @media only screen and (max-width: 725px) {
     flex-direction: column;
     gap: 20px;
-    padding: 24px 33px;
+    padding: 24px 22px;
     margin-top: 27px;
   }
 `;

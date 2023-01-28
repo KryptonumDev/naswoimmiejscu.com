@@ -116,22 +116,20 @@ export const StyledQuestionContent = styled.div`
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: ${({ open, isnormalfont }) =>
-    open ? (isnormalfont ? "3.0vw" : "4.0vw") : "3.0vw"};
+    font-size: ${({ isnormalfont }) => (isnormalfont ? "3.0vw" : "4.0vw")};
+    transform: ${({ open }) => (open ? "scale(1.05)" : "scale(1)")};
+    transition: transform 250ms linear;
   }
 
   @media only screen and (max-width: 688px) {
-    font-size: ${({ open, isnormalfont }) =>
-    open ? (isnormalfont ? "3.0vw" : "3.6vw") : "3.0vw"};
+    font-size: ${({ isnormalfont }) => (isnormalfont ? "3.0vw" : "3.6vw")};
   }
 
   @media only screen and (max-width: 460px) {
-    font-size: ${({ open, isnormalfont }) =>
-    open ? (isnormalfont ? "3.8vw" : "4.4vw") : "3.8vw"};
+    font-size: ${({ isnormalfont }) => (isnormalfont ? "3.8vw" : "4.4vw")};
   }
 
   @media only screen and (max-width: 360px) {
-    font-size: ${({ open, isnormalfont }) =>
-    open ? (isnormalfont ? "4.167vw" : "5.889vw") : "4.167vw"};
+    font-size: ${({ isnormalfont }) => (isnormalfont ? "4.2vw" : "5.9vw")};
   }
 `;

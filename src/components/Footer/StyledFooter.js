@@ -12,7 +12,7 @@ export const StyledFooter = styled.footer`
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
     gap: ${({ smallgap }) => (smallgap ? "0" : "83px")};
-    padding-right: 33px;
+    padding-right: 22px;
   }
 `;
 
@@ -58,6 +58,7 @@ export const StyledRightWrapperContent = styled.div`
     width: 100%;
 
     p {
+      text-align: center;
       font-size: 24px;
     }
   }
@@ -73,6 +74,8 @@ export const StyledCopyright = styled.div`
 
 export const StyledTopText = styled.div`
   font: 700 20px Roboto;
+  display: flex;
+  gap: 6px;
 
   @media only screen and (max-width: 992px) {
     font-size: 16px;
@@ -193,6 +196,6 @@ export const StyledMobileGreenCircle = styled.div`
   }
 
   @media only screen and (max-width: 346px) {
-    display: none;
+    right: -260px;
   }
 `;

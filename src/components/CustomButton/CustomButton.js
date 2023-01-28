@@ -23,7 +23,6 @@ const CustomButton = ({
   hasTransform,
   className,
   children,
-  notTabIndex
 }) => {
 
   return (
@@ -46,9 +45,6 @@ const CustomButton = ({
           <ArrowWrapper className='desctop'>
             <ArrowDesktop />
           </ArrowWrapper>
-          <ArrowWrapper className='mobile'>
-            <Arrow />
-          </ArrowWrapper>
         </>
         : <Image imageDesktop={image} />
       }
@@ -63,14 +59,4 @@ const ArrowWrapper = styled.div`
   &.mobile{
     display: none;
   }
-
-  @media(max-width: 992px){
-    &.desctop{
-      display: none;
-    }
-    &.mobile{
-      display: block;
-    }
-  }
-
 `

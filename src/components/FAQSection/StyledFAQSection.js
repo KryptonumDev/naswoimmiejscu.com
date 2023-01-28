@@ -11,7 +11,7 @@ export const StyledFAQSection = styled.div`
     hasleftpadding ? "182px" : "clamp(32px, 6.667vw, 128px)"};
 
   @media only screen and (max-width: 1472px) {
-    padding: 0 0 0 clamp(33px, 3vw, 60px);
+    padding: 0 0 0 clamp(22px, 3vw, 60px);
   }
 
   @media only screen and (max-width: 992px) {
@@ -27,7 +27,7 @@ export const StyledFAQWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     margin-top: 30px;
-    padding: 0 33px;
+    padding: 0 22px;
     flex-direction: column;
   }
 `;

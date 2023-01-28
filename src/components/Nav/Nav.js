@@ -7,23 +7,15 @@ import SecondGreenCircle from "../SecondGreenCircle/SecondGreenCircle";
 import { StyledCircle } from "../Circle/StyledCircle";
 import {
   StyledNav,
-  StyledLogoWrapper,
   StyledMobileWrapper,
   StyledCircleWrapper,
   StyledGreenCircle,
   StyledFooterNav,
 } from "./StyledNav";
 
-const Nav = ({ isOpen, isFooter, logoDesktop, logoMobile, openMenu }) => {
+const Nav = ({ isOpen, isFooter, openMenu }) => {
   return !isFooter ? (
     <StyledNav isopen={isOpen}>
-      <StyledLogoWrapper>
-        <Logo
-          isHeader="true"
-          logoDesktop={logoDesktop}
-          logoMobile={logoMobile}
-        />
-      </StyledLogoWrapper>
       <StyledGreenCircle>
         <SecondGreenCircle />
       </StyledGreenCircle>

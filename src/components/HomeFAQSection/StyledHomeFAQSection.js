@@ -97,7 +97,6 @@ export const StyledMobileSubHeading = styled.div`
 
   @media only screen and (max-width: 992px) {
     display: block;
-    margin-top: 16px;
     font: 300 20px Roboto;
     margin-bottom: 32px;
 

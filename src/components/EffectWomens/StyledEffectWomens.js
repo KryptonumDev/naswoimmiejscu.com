@@ -131,7 +131,7 @@ export const StyledCircleWrapper = styled.div`
   z-index: 1;
 
   @media only screen and (max-width: 992px) {
-    left: -33px;
+    left: -22px;
     top: -23px;
 
     div {

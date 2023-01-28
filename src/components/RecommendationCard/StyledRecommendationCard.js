@@ -9,9 +9,11 @@ export const StyledRecommendationCard = styled(Link)`
   color: var(--normalBlack);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 24px;
   background-color: ${({ hasdeclaredbg }) =>
     hasdeclaredbg ? null : "var(--recomendationSecond)"};
+  flex: 1;
 
   @media only screen and (max-width: 1024px) {
     padding: 64px 0 24px 0;

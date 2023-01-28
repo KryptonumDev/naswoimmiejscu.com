@@ -9,9 +9,7 @@ import {
   StyledImageWrapper,
   StyledTitle,
   StyledDesc,
-  StyledDate,
 } from "./StyledBlogHomeCard";
-import { StyledText } from "../Text/StyledText";
 
 const BlogHomeCard = ({
   imageDesktop,

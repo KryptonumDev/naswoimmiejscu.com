@@ -62,13 +62,13 @@ export const StyledContent = styled.div`
   gap: clamp(40px, 8.698vw, 180px);
 
   @media only screen and (max-width: 1167px) {
-    padding: 0 33px;
+    padding: 0 22px;
   }
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
     margin-top: 0;
-    gap: 33px;
+    gap: 22px;
   }
 `;
 
@@ -97,7 +97,7 @@ export const StyledFirstIcon = styled.div`
   @media only screen and (max-width: 992px) {
     display: ${({ ishide }) => (ishide ? "none" : "flex")};
     position: relative;
-    margin: 33px auto 0;
+    margin: 22px auto 0;
     left: auto;
     top: auto;
     transform: translateX(0);

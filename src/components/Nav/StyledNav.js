@@ -21,7 +21,6 @@ export const StyledNav = styled.nav`
 
     &:hover{
       color: var(--normalBlack) !important;
-      font-weight: 700;
     }
 
     &:focus-visible {
@@ -56,7 +55,10 @@ export const StyledNav = styled.nav`
   }
 
   @media only screen and (max-width: 1167px) {
-    display: ${({ isopen }) => (isopen ? "flex" : "none")};
+    display: flex;
+    opacity: ${({ isopen }) => (isopen ? "1" : "0")};
+    pointer-events: ${({ isopen }) => (isopen ? "all" : "none")};
+    transition: opacity 250ms linear;
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -86,16 +88,6 @@ export const StyledNav = styled.nav`
   }
 `;
 
-export const StyledLogoWrapper = styled.div`
-  display: none;
-
-  @media only screen and (max-width: 1167px) {
-    position: absolute;
-    top: 29px;
-    left: 24px;
-    display: block;
-  }
-`;
 
 export const StyledMobileWrapper = styled.div`
   display: none;
@@ -166,7 +158,6 @@ export const StyledFooterNav = styled.div`
 
     &:hover{
       color: var(--normalBlack) !important;
-      font-weight: 700;
     }
 
     &:focus-visible {

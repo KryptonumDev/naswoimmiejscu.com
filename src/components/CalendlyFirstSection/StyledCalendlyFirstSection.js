@@ -9,7 +9,7 @@ export const StyledCalendlyFirstSection = styled.div`
   margin-top: clamp(40px, 7.24vw, 135px);
 
   @media only screen and (max-width: 1167px) {
-    margin-top: 38px;
+    margin-top: 22px;
   }
 
   @media only screen and (max-width: 992px) {

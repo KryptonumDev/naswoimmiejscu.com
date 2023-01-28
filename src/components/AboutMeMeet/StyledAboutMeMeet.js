@@ -83,6 +83,8 @@ export const StyledBottomCircle = styled.div`
 `;
 
 export const StyledDescWrapperElement = styled(StyledDescWrapper)`
+  max-width: 623px;
+  
   em {
     font-size: 16px;
     font-style: normal;

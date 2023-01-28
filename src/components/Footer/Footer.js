@@ -93,6 +93,7 @@ const Footer = () => {
               {shortData.coopyrightGornaLinia
                 ? parse(shortData.coopyrightGornaLinia)
                 : null}
+              {new Date().getFullYear()}
             </StyledTopText>
             <StyledBottomText>
               {shortData.coopyrightDolnaLinia

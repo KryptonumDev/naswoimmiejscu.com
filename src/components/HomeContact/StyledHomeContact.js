@@ -22,7 +22,7 @@ export const StyledHomeContact = styled.div`
 
   @media only screen and (max-width: 992px) {
     gap: 0;
-    margin: clamp(33px, 3.327vw, 45px) auto 0;
+    margin: clamp(22px, 3.327vw, 45px) auto 0;
   }
 `;
 
@@ -31,7 +31,7 @@ export const StyledLeftWrapper = styled.div`
   position: relative;
 
   @media only screen and (max-width: 1167px) {
-    padding-left: 33px;
+    padding-left: 22px;
   }
 
   @media only screen and (max-width: 992px) {
@@ -64,7 +64,7 @@ export const StyledDescWrapperEdit = styled(StyledDescWrapper)`
   max-width: 790px;
 
   @media only screen and (max-width: 992px) {
-    padding-right: 33px;
+    padding-right: 22px;
   }
 `;
 

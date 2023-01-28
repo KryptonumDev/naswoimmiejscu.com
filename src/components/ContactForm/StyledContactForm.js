@@ -19,7 +19,7 @@ export const StyledContactForm = styled.div`
   }
 
   @media only screen and (max-width: 1386px) {
-    padding: 60px 34px;
+    padding: 60px 22px 52px;
   }
 
   @media only screen and (max-width: 992px) {
@@ -36,6 +36,7 @@ export const StyledTitleWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     font-size: 24px;
     margin-bottom: 20px;
+    max-width: 560px;
   }
 `;
 
@@ -54,7 +55,7 @@ export const StyledCustomCheckbox = styled.div`
   label {
     font: 400 12px Roboto;
     color: ${({ iserror }) =>
-      iserror ? "var(--errorColor)" : "var(--arrowBlack)"};
+      iserror ? "var(--errorColor)" : "var(--normalBlack)"};
     cursor: pointer;
     position: relative;
     padding-left: 55px;
@@ -180,7 +181,8 @@ export const StyledSubmit = styled.button`
   font: 700 20px Roboto;
   text-transform: uppercase;
   cursor: pointer;
-  transition: color 250ms, background-color 250ms;
+  transition: color 400ms, background-color 400ms;
+  margin-top: 8px;
 
   &:hover {
     color: var(--normalWhite);

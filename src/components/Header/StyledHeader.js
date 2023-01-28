@@ -16,6 +16,7 @@ export const StyledHeader = styled.header`
   }
 
   @media only screen and (max-width: 1167px) {
+    padding-left: 22px;
     padding-top: 24px;
     height: 72px;
   }
@@ -27,5 +28,6 @@ export const StyledLogoWrapperHeader = styled.div`
     top: 29px;
     left: 24px;
     display: block;
+    z-index: 99;
   }
 `;

@@ -17,7 +17,6 @@ const BlogCard = ({
   category,
   title,
   desc,
-  date,
   btnText,
   slug,
   imageDesktop,
@@ -54,13 +53,6 @@ const BlogCard = ({
         </StyledText>
         <StyledTitleWrapper>{title}</StyledTitleWrapper>
         <StyledDescWrapper dangerouslySetInnerHTML={{__html: desc}}></StyledDescWrapper>
-        <StyledText
-          hasdeclaredfontcolor="var(--normalBlack)"
-          hasdeclaredfontweight="700"
-          hasdeclaredmargin="0 0 30px 0"
-        >
-          {date}
-        </StyledText>
         <Button
           variant={'green'}
           btnData={btnData}

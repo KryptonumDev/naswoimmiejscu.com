@@ -53,7 +53,7 @@ export const StyledContent = styled.div`
 `;
 
 export const StyledContentWrapper = styled.div`
-  font: 300 clamp(20px, 1.142px, 22px) Roboto;
+  font: 300 clamp(20px, 1.142px, 22px)/1.2em Roboto;
   margin: clamp(18px, 1.302vw, 25px) 0;
 
   strong {
@@ -61,7 +61,7 @@ export const StyledContentWrapper = styled.div`
   }
 
   @media only screen and (max-width: 1499px) {
-    font-size: clamp(16, 1.201vw, 20);
+    font-size: clamp(16px, 1.201vw, 20px);
   }
 
   @media only screen and (max-width: 992px) {
@@ -74,6 +74,7 @@ export const StyledContentWrapper = styled.div`
 
   @media only screen and (max-width: 528px) {
     font-size: 15px;
+    margin-bottom: 47px
   }
 `;
 
@@ -141,6 +142,19 @@ export const StyledIconsWrapper = styled.div`
   @media only screen and (max-width: 623px) {
     flex-direction: column;
     gap: 0;
+
+    > div {
+      &:last-child {
+        transition: transform 400ms;
+        transform: translateX(${({ iswomens }) => !iswomens ? "-18px" : "0"});
+      }
+    }
+  }
+
+  @media only screen and (max-width: 345px) {
+    p {
+      font-size: 24px;
+    }
   }
 `;
 

@@ -7,7 +7,7 @@ export const StyledPrivacyPolicy = styled.div`
   width: 100%;
 
   @media only screen and (max-width: 1167px) {
-    margin-top: 38px;
+    margin-top: 22px;
   }
 `;
 

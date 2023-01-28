@@ -31,7 +31,7 @@ export const StyledTitleWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     font-size: 4.234vw;
     text-align: left;
-    padding: 0 33px;
+    padding: 0 22px;
   }
 
   @media only screen and (max-width: 528px) {
@@ -59,7 +59,7 @@ export const StyledContent = styled.div`
     flex-direction: column;
     gap: 20px;
     margin-top: 20px;
-    padding: 0 33px;
+    padding: 0 22px;
   }
 `;
 

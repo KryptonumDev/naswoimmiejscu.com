@@ -72,7 +72,6 @@ const Blog = ({
             category={node.categories.nodes[0].name}
             title={node.title}
             desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
-            date={node.date}
             btnText={'POZNAJ TĘ NOWOŚĆ'}
             slug={node.slug}
             imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}

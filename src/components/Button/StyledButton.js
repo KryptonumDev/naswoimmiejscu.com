@@ -190,11 +190,17 @@ export const StyledLink = styled(Link)`
     }
 
     &.blog-slider-btn {
-      width: 250px;
+      width: 280px;
     }
 
     &.calenldy-last-section {
       font-size: 11px;
+    }
+  }
+
+  @media only screen and (max-width: 320px){
+    &.blog-slider-btn {
+      width: 260px;
     }
   }
 `;

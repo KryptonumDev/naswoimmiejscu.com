@@ -53,7 +53,7 @@ const HomeSecondSection = ({ data }) => {
           <StyledDescWrapper className="home-second-section">
             {data.opisPoLewo ? parse(data.opisPoLewo) : null}
           </StyledDescWrapper>
-          <StyledIconsWrapper>
+          <StyledIconsWrapper iswomens={isWomens}>
             <div onClick={() => handleChange(false)} tabIndex="0" onKeyUp={(e) => handleOnKeyUp(e, false)}>
               <CustomButton
                 onClick={() => handleChange(false)}

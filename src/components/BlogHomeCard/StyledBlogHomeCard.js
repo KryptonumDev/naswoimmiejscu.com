@@ -16,6 +16,16 @@ export const StyledBlogHomeCard = styled(Link)`
     padding-left: ${({ iscase }) => (iscase ? "0" : "30px")};
   }
 
+  img{
+    transition: transform .4s ease-out;
+  }
+
+  &:hover{
+    img{
+      transform: scale(1.05);
+    }
+  }
+
   &:focus-visible {
     outline-width: 1px;
     outline-style: solid;
@@ -55,6 +65,10 @@ export const StyledImageWrapper = styled.div`
     width: 100%;
     height: 220px;
     max-width: 419px;
+    
+    img {
+      transition: transform .4s ease-out;
+    }
   }
 
   @media only screen and (max-width: 1024px) {

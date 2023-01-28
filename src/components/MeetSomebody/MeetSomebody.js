@@ -15,7 +15,7 @@ const MeetSomebody = ({ data, icon, tekstDoLinku }) => {
   return (
     <StyledMeetSomebody to={`/case/${data[0].slug}`}>
       {icon ? (
-        <StyledIcon>
+        <StyledIcon className="icon">
           <Image imageDesktop={icon} />
         </StyledIcon>
       ) : null}

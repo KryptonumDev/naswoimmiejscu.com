@@ -67,10 +67,10 @@ const Content = styled.div`
     }
 
     @media (max-width: 480px) {
-        margin: 30px  -33px 90px -33px;
+        margin: 30px  -22px 90px -22px;
 
         h1{
-            margin: 0 33px;
+            margin: 0 22px;
         }
     }
 `

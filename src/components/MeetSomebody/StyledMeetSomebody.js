@@ -9,8 +9,21 @@ export const StyledMeetSomebody = styled(Link)`
   justify-content: space-between;
   transition: background-color 250ms;
 
+  .icon {
+    transition: transform 250ms linear;
+  }
+
   &:hover {
-    background-color: var(--hoverGrey);
+    .icon {
+      transform: translateX(20px);
+    }
+  }
+
+  &:focus-visible {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--hoverGreen);
+    outline-offset: 4px;
   }
 `;
 

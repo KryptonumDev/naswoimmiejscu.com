@@ -64,8 +64,6 @@ const Header = () => {
       </StyledLogoWrapperHeader>
       <Nav
         isOpen={isOpen}
-        logoDesktop={shortData.logo}
-        logoMobile={shortData.logoMobile}
         openMenu={() => { setIsOpen(false) }}
       />
       <Button

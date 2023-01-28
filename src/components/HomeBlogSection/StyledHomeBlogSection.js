@@ -21,13 +21,17 @@ export const StyledHomeBlogSection = styled.div`
     height: 124%;
     background-color: var(--hrColor);
     position: absolute;
-    left: 53%;
+    left: 53.3%;
     top: 0;
     z-index: 1;
+
+    @media only screen and (max-width: 1440px){
+      left: 54.5%;
+    }
   }
 
   @media only screen and (max-width: 1240px) {
-    padding-left: 33px;
+    padding-left: 22px;
   }
 
   @media only screen and (max-width: 1167px) {
@@ -153,7 +157,7 @@ export const StyledContent = styled.button`
     align-items: flex-start;
     align-self: flex-start;
     position: relative;
-    padding-right: 33px;
+    padding-right: 22px;
     padding-top: ${({ isright }) => (isright ? "0" : "24px")};
     margin-top: ${({ isright }) => (isright ? "32px" : "0")};
     margin-bottom: ${({ isright }) => (isright ? "0" : "30px")};
@@ -194,8 +198,26 @@ export const StyledBlogSliderWrapper = styled.div`
     width: 100%;
   }
 
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-list {
+    display: flex;
+  }
+
+  .slick-slide{
+    height: 100%;
+
+    > div {
+      display: flex !important;
+      height: 100%;
+      flex: 1;
+    }
+  }
+
   @media only screen and (max-width: 1024px) {
-    padding: 0 33px 0 0;
+    padding: 0 22px 0 0;
     margin: 0 -10px;
   }
 
@@ -232,7 +254,7 @@ export const StyledBlogSliderWrapper = styled.div`
   }
 
   @media only screen and (max-width: 604px) {
-    padding-right: ${({ isright }) => (isright ? "33px" : "0")};
+    padding-right: 0;
     min-width: ${({ isright }) => (isright ? "unset" : "604px")};
   }
 `;
@@ -253,17 +275,20 @@ export const StyledScrollWrapper = styled.div`
 
   scrollbar-color: var(--normalGreen) rgba(103, 134, 190, 0.3);
   scrollbar-width: thin;
+
   @media (max-width: 1360px) {
     padding-right: ${({ notpadding }) => (notpadding ? null : "40px")};
   }
 
   ::-webkit-scrollbar {
-    height: 6px;
+    width: 8px;
   }
+
   ::-webkit-scrollbar-track {
     border-radius: 6px;
     background: rgba(103, 134, 190, 0.3);
   }
+
   ::-webkit-scrollbar-thumb {
     background: var(--normalGreen);
     border-radius: 6px;

@@ -14,7 +14,7 @@ export const StyledHomeHeroSection = styled.div`
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;
-    margin-top: 38px;
+    margin-top: 22px;
   }
 
   @media only screen and (max-width: 992px) {
@@ -480,7 +480,6 @@ export const StyledDescWrapper = styled.div`
 
   @media only screen and (max-width: 528px) {
     &.home-hero-section,
-    &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
     &.home-contact,
@@ -490,6 +489,11 @@ export const StyledDescWrapper = styled.div`
     &.about-me-meet,
     &.meets-form-womens {
       margin-top: 14px;
+      font-size: 3.409vw;
+    }
+
+    &.home-second-section {
+      margin-top: 27px
       font-size: 3.409vw;
     }
 

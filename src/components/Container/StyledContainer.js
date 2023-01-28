@@ -9,18 +9,18 @@ export const StyledContainer = styled.section`
   position: relative;
 
   @media only screen and (max-width: 1472px) {
-    padding: 0 clamp(33px, 3vw, 60px);
+    padding: 0 clamp(22px, 3vw, 60px);
   }
 
   @media only screen and (max-width: 1167px) {
     &.home-about-me {
-      padding: 0 33px 0 0;
+      padding: 0 22px 0 0;
     }
   }
 
   @media only screen and (max-width: 992px) {
     &.footer {
-      padding: 0 0 0 33px;
+      padding: 0 0 0 22px;
     }
 
     &.about-me-second-section {
@@ -29,6 +29,6 @@ export const StyledContainer = styled.section`
   }
 
   @media only screen and (max-width: 992px) {
-    padding: 0 33px;
+    padding: 0 22px;
   }
 `;

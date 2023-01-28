@@ -13,7 +13,7 @@ export const StyledHomeAboutMe = styled.div`
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
-    gap: 20px;
+    gap: 35px;
     margin-top: 32px;
     align-items: flex-start;
   }
@@ -29,7 +29,7 @@ export const StyledRightWrapper = styled.div`
   }
 
   @media only screen and (max-width: 992px){
-    padding-left: 33px;
+    padding-left: 22px;
   }
 `;
 

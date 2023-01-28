@@ -11,7 +11,7 @@ export const StyledCooperationProcess = styled.div`
   position: relative;
 
   @media only screen and (max-width: 1167px) {
-    padding-right: 33px;
+    padding-right: 22px;
   }
 
   @media only screen and (max-width: 992px) {
@@ -55,7 +55,7 @@ export const StyledRightWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
-    padding: 72px 33px 0;
+    padding: 72px 22px 0;
     transform: translateX(0);
   }
 `;

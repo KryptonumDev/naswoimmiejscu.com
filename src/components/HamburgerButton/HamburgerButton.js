@@ -12,8 +12,8 @@ const HamburgerButton = ({ openMenu, isOpen }) => {
       onClick={openMenu}
       isopen={isOpen}
     >
-      <StyledHamburgerBox>
-        <StyledHamburgerInner />
+      <StyledHamburgerBox isopen={isOpen}>
+        <StyledHamburgerInner isopen={isOpen}/>
       </StyledHamburgerBox>
     </StyledHamburgerButton>
   );

@@ -6,7 +6,7 @@ export const StyledCustomButton = styled.button`
     width: ${({ hasdeclaredwidth }) =>
         hasdeclaredwidth ? hasdeclaredwidth : "clamp(111px, 6.823vw, 131px)"};
     height: ${({ hasdeclaredheight }) =>
-        hasdeclaredheight ? hasdeclaredheight : "clamp(111px, 6.823vw, 131px)"};
+        hasdeclaredheight ? hasdeclaredheight : "clamp(91px, 5.885vw, 113px)"};
     border-radius: 50% 50% 50% 0;
     background-color: ${({ bgcolor }) =>
         bgcolor ? bgcolor : "var(--buttonBrownHover)"};
@@ -15,8 +15,8 @@ export const StyledCustomButton = styled.button`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 400ms !important;
-    transform: scale(${({ isfaq }) => (isfaq ? "1" : "0.6")});
+    transition: all 450ms !important;
+    transform: scale(${({ isfaq }) => (isfaq ? "1" : "0.7")});
 
     &.active {
         transform: scale(1) !important;
@@ -42,6 +42,6 @@ export const StyledCustomButton = styled.button`
         width: ${({ hasdeclaredwidth }) =>
             hasdeclaredwidth ? hasdeclaredwidth : "131px"};
         height: ${({ hasdeclaredheight }) =>
-            hasdeclaredheight ? hasdeclaredheight : "131px"};
+            hasdeclaredheight ? hasdeclaredheight : "113px"};
     }
 `;
