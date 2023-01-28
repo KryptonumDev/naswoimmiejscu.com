@@ -187,18 +187,20 @@ const HomeBlogSection = ({
 
   const desktopScrollBlog = (
     <StyledDesktopScroll>
-      <StyledScrollWrapper>
-        {edges.map(({ node }) => (
-          <BlogHomeCard
-            key={node.slug}
-            slug={node.slug}
-            title={node.title}
-            desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
-            imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
-            isCase={isCase}
-          />
-        ))}
-      </StyledScrollWrapper>
+      <div className="fade">
+        <StyledScrollWrapper>
+          {edges.map(({ node }) => (
+            <BlogHomeCard
+              key={node.slug}
+              slug={node.slug}
+              title={node.title}
+              desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
+              imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
+              isCase={isCase}
+            />
+          ))}
+        </StyledScrollWrapper>
+      </div>
       {stronaGlowna.sekcjaZBlogiem.blogPrzycisk ? (
         <Button
           btnData={stronaGlowna.sekcjaZBlogiem.blogPrzycisk}

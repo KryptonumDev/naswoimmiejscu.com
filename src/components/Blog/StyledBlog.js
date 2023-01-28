@@ -47,6 +47,10 @@ export const StyledSlidesWrapper = styled.div`
     background: linear-gradient(0deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 40%);
     z-index: 2;
     pointer-events: none;
+
+    @media (max-width: 992px) {
+      height: 15vh;
+    }
   }
   &::after{
     content: '';
@@ -58,11 +62,16 @@ export const StyledSlidesWrapper = styled.div`
     background: linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 40%);
     z-index: 2;
     pointer-events: none;
+
+    @media (max-width: 992px) {
+      height: 15vh;
+    }
   }
 `;
 
 export const StyledCategories = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 
   .active p{
@@ -75,6 +84,6 @@ export const StyledCategories = styled.div`
 
   a{
     text-decoration: none;
-
+    min-width: fit-content;
   }
 `;

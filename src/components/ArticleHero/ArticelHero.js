@@ -77,7 +77,7 @@ const Wrapper = styled.div`
     grid-template-areas: 
     'left top'
     'left bottom';
-    grid-gap: 100px;
+    grid-gap: 0 100px;
 
 
     .svg-flex-mobile{
@@ -93,6 +93,7 @@ const Wrapper = styled.div`
         'top'
         'left'
         'bottom';
+        grid-gap: 26px;
         grid-template-columns: 1fr;
         margin: 60px auto 0 auto;
         max-width: 650px;
@@ -250,19 +251,27 @@ const ImageWrapper = styled.div`
 `
 
 const Nav = styled.nav`
+width: clamp(500px,33.85416666666667vw,650px);
     font-weight: 500;
-    font-size: clamp(22px, ${26 / 1920 * 100}vw, 26px);
-    line-height: 35px;
+    font-size: clamp(17px, ${26 / 1920 * 100}vw, 26px);
+    line-height: 150%;
     margin-top: clamp(24px, ${48 / 1920 * 100}vw, 48px);
     grid-area: bottom;
 
     @media (max-width: 1024px) {
-        font-size: 18px;
+        font-size: 17px;
+        width: 400px;
+        margin-top: 0;
+
+        ul{
+            grid-gap: 8px !important;
+        }
     }
 
     @media (max-width: 820px){
-        margin-top: 0;
         font-size: clamp(11px, ${18 / 820 * 100}vw, 18px);
+        width: unset;
+        max-width: 500px;
     }
 
 

@@ -22,13 +22,13 @@ const BlogCard = ({
   imageDesktop,
 }) => {
   const btnData = {
-    url: `/artykul/${slug}`,
+    url: `/blog/${slug}`,
     title: btnText,
     target: null,
   };
 
   return (
-    <StyledBlogCard to={`/artykul/${slug}`}>
+    <StyledBlogCard to={`/blog/${slug}`}>
       <StyledImageWrapper>
         <StyledMobileCategory>
           <StyledText

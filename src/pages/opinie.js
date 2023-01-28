@@ -3,15 +3,16 @@ import { graphql } from "gatsby";
 import Opinie from "../components/Opinie/Opinie";
 
 const OpiniePage = ({
-    data: {
-        wpPage: { opinie: { opienie } },
-    },
+  data: {
+    allWpCaseStudy: { nodes },
+    wpPage
+  },
 }) => {
-    return (
-        <main>
-            <Opinie opinie={opienie} />
-        </main>
-    );
+  return (
+    <main>
+      <Opinie opinie={nodes} />
+    </main>
+  );
 };
 
 export default OpiniePage;
@@ -20,6 +21,26 @@ export { Head } from "../components/Head/Head";
 
 export const query = graphql`
   query OpinieQuery {
+    allWpCaseStudy {
+      nodes {
+        slug
+        caseStudyArtykul {
+          miniaturkaCaseStudy {
+            podpisPodIminiem
+            opisDoMiniaturki
+            nazwaOsobyDoMiniaturki
+            avatar {
+              altText
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     wpPage(id: { eq: "cG9zdDo3NDE=" }) {
         seo {
           canonical
@@ -30,22 +51,6 @@ export const query = graphql`
           opengraphImage {
             localFile {
               publicURL
-            }
-          }
-        }
-        id
-        opinie {
-          opienie {
-            textUnderName
-            review
-            authorName
-            authorImage {
-              altText
-              localFile {
-                childImageSharp {
-                  gatsbyImageData
-                }
-              }
             }
           }
         }

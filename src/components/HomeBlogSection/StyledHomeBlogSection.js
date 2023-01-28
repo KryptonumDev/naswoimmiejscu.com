@@ -182,6 +182,22 @@ export const StyledDesktopScroll = styled.div`
   align-items: ${({ notpadding }) => (notpadding ? "flex-start" : "flex-end")};
   position: relative;
   gap: 86px;
+
+  .fade{
+    position: relative;
+
+    &::after{
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 300px;
+      background: linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 40%);
+      z-index: 2;
+      pointer-events: none;
+    }
+  }
 `;
 
 export const StyledBlogSliderWrapper = styled.div`

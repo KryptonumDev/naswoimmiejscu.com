@@ -16,7 +16,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   postData.data.allWpPost.edges.map(({ node }) => {
     createPage({
-      path: `/artykul/${node.slug}/`,
+      path: `/blog/${node.slug}/`,
       component: require.resolve(
         "./src/components/ArticleTemplate/ArticleTemplate.js"
       ),

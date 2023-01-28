@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import styled from "styled-components"
@@ -9,27 +10,28 @@ export default function Opinie({ opinie }) {
             <Circle width="582" height="582" viewBox="0 0 582 582" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="291" cy="291" r="255" stroke="#0BC76D" stroke-width="72" />
             </Circle>
-
             <Container>
                 <Content>
                     <h1>Opinie</h1>
                     <Grid>
                         {opinie.map(el => (
-                            <Item>
-                                <InformFlex>
-                                    <ImageWrapper>
-                                        <GatsbyImage className="image" image={el.authorImage.localFile.childImageSharp.gatsbyImageData} alt={el.authorImage.altText} />
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="20" cy="20" r="20" fill="#0BC76D" />
-                                        </svg>
-                                    </ImageWrapper>
-                                    <div>
-                                        <p className="title">{el.authorName}</p>
-                                        <p className="text">{el.textUnderName}</p>
-                                    </div>
-                                </InformFlex>
-                                <Text dangerouslySetInnerHTML={{ __html: el.review }} />
-                            </Item>
+                            <Link className="wrap" to={'/case/' + el.slug + '/'} >
+                                <Item>
+                                    <InformFlex>
+                                        <ImageWrapper>
+                                            <GatsbyImage className="image" image={el.caseStudyArtykul.miniaturkaCaseStudy.avatar.localFile.childImageSharp.gatsbyImageData} alt={el.caseStudyArtykul.miniaturkaCaseStudy.avatar.altText} />
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="20" cy="20" r="20" fill="#0BC76D" />
+                                            </svg>
+                                        </ImageWrapper>
+                                        <div>
+                                            <p className="title">{el.caseStudyArtykul.miniaturkaCaseStudy.nazwaOsobyDoMiniaturki}</p>
+                                            <div className="text" dangerouslySetInnerHTML={{ __html: el.caseStudyArtykul.miniaturkaCaseStudy.podpisPodIminiem }} />
+                                        </div>
+                                    </InformFlex>
+                                    <Text dangerouslySetInnerHTML={{ __html: el.caseStudyArtykul.miniaturkaCaseStudy.opisDoMiniaturki }} />
+                                </Item>
+                            </Link>
                         ))}
                     </Grid>
                 </Content>
@@ -79,19 +81,23 @@ const Grid = styled.div`
     display: grid;
     grid-gap: clamp(32px, ${32 / 1024 * 100}vw, 64px);
     margin-top: clamp(32px,  ${32 / 480 * 100}vw, 80px);
+
+    .wrap{
+    padding: 0 clamp(32px, ${32 / 1024 * 100}vw, 64px);
+        &:nth-child(2n+1){
+            padding: clamp(32px, ${32 / 1024 * 100}vw, 64px);
+            background: #EAE7E1;
+        }
+        text-decoration: unset;
+        color: unset;
+    }
 `
 
 const Item = styled.div`
-    padding: 0 clamp(32px, ${32 / 1024 * 100}vw, 64px);
     display: flex;
     gap: clamp(32px, ${32 / 1024 * 100}vw, 64px);
     justify-content: space-between;
     align-items: center;
-
-    &:nth-child(2n+1){
-        padding: clamp(32px, ${32 / 1024 * 100}vw, 64px);
-        background: #EAE7E1;
-    }
 
     @media (max-width: 768px) {
         display: grid;

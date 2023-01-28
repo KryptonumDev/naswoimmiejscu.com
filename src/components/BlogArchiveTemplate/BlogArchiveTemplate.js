@@ -146,4 +146,8 @@ const Circle = styled.svg`
   right: -500px;
   top: 30%;
   z-index: 0;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 `
