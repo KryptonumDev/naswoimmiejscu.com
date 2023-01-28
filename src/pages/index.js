@@ -31,7 +31,7 @@ const IndexPage = ({
   }, [])
 
   return (
-    <main id='main'>
+    <main id='main' className="active">
       <StyledHome>
         <HomeHeroSection data={stronaGlowna.pierwszaSekcjaHomePage} />
         <StyledCircleWrapper>
