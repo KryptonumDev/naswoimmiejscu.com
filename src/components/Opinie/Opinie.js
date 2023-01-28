@@ -121,6 +121,13 @@ const ImageWrapper = styled.div`
         right: 0;
         bottom: 0;
     }
+
+    @media only screen and (max-width: 992px) {
+        svg {
+            width: 28px;
+            height: 28px;
+        }
+    }
 `
 
 const InformFlex = styled.div`

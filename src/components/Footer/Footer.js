@@ -73,6 +73,7 @@ const Footer = () => {
             location.pathname === "/calendly/" ||
             location.pathname === "/polityka-prywatnosci/" ||
             location.pathname === "/kobiety/" ||
+            location.pathname === "/opinie/" ||
             location.pathname === "/mlodziez/" ||
             location.pathname.includes('/case/'))
         }
@@ -111,6 +112,7 @@ const Footer = () => {
             location.pathname === "/calendly/" ||
             location.pathname === "/polityka-prywatnosci/" ||
             location.pathname === "/kobiety/" ||
+            location.pathname === "/opinie/" ||
             location.pathname.includes('/case/') ||
             location.pathname === "/mlodziez/") ? 'desctop' : ''}>
             {shortData.tekstObokPrzycisku
