@@ -7,7 +7,7 @@ export const StyledCooperationProcess = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 125px;
+  padding-right: clamp(70px, 6.510vw, 125px);
   position: relative;
 
   @media only screen and (max-width: 1167px) {
