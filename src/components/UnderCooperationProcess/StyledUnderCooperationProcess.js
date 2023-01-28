@@ -14,6 +14,10 @@ export const StyledUnderCooperationProcess = styled.div`
 export const StyledLeftWrapper = styled.div`
   width: 40%;
 
+  @media only screen and (max-width: 1850px){
+    width: 50%;
+  }
+
   @media only screen and (max-width: 992px) {
     width: 100%;
   }
@@ -21,6 +25,10 @@ export const StyledLeftWrapper = styled.div`
 
 export const StyledRightWrapper = styled.div`
   width: 60%;
+  
+  @media only screen and (max-width: 1850px){
+    width: 50%;
+  }
 
   @media only screen and (max-width: 992px) {
     width: 100%;
@@ -57,7 +65,7 @@ export const StyledContent = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 50px auto 0;
-  padding: 0 125px 0 180px;
+  padding: 0 clamp(70px, 6.510vw, 125px) 0 clamp(120px, 9.375vw, 180px);
   max-width: 1920px;
   gap: clamp(40px, 8.698vw, 180px);
 

@@ -48,11 +48,11 @@ export const StyledRightWrapper = styled.div`
 export const StyledButtonsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 31px;
+  gap: 16px;
 
   @media only screen and (max-width: 992px) {
     display: ${({ iswomens }) => (iswomens ? "flex" : "none")};
-    gap: 29px;
+    gap: 16px;
   }
 `;
 

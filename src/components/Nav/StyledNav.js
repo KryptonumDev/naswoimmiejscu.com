@@ -5,6 +5,10 @@ export const StyledNav = styled.nav`
   align-items: center;
   gap: 21px;
 
+  @media only screen and (min-width: 1920px){
+    gap: 26px;
+  }
+
   a,
   span {
     font: 400 14px Roboto;
@@ -13,6 +17,11 @@ export const StyledNav = styled.nav`
     text-decoration: none;
     position: relative;
     transition: color .4s ease-out, font-weight .4s ease-out;
+
+    @media only screen and (min-width: 1920px){
+      font-size: 16px;
+      white-space: 1.2em;
+    }
 
     &.activeLink {
       color: var(--normalBlack);

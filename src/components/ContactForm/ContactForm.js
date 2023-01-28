@@ -127,7 +127,7 @@ const ContactForm = () => {
                 id="termsAndConditions"
               />
               <label htmlFor="termsAndConditions">
-                {/* ikonka */}
+                <span>&#10003;</span>
                 {shortData.wyrazamZgodeLabel
                   ? parse(shortData.wyrazamZgodeLabel)
                   : null}

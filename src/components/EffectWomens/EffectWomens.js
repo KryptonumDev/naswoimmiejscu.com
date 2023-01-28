@@ -37,35 +37,22 @@ const EffectWomens = ({
           <StyledDescWrapper className="effect-womens-title">
             {desc ? parse(desc) : null}
           </StyledDescWrapper>
-          {isWomens ? (
-            <>
-              <StyledElements>
-                {listElements.map((li) => (
-                  <li>
-                    <Image imageDesktop={li.ikonka} objectFit="contain" />
-                    {li.tekstListy ? parse(li.tekstListy) : null}
-                  </li>
-                ))}
-              </StyledElements>
-              <StyledList ishide iswomens={isWomens}>
-                {listElements.map((li) => (
-                  <li>
-                    <Image imageDesktop={li.ikonka} />
-                    {li.tekstListy ? parse(li.tekstListy) : null}
-                  </li>
-                ))}
-              </StyledList>
-            </>
-          ) : (
-            <StyledList>
-              {listElements.map((li) => (
-                <li>
-                  <Image imageDesktop={li.ikonka} />
-                  {li.tekstListy ? parse(li.tekstListy) : null}
-                </li>
-              ))}
-            </StyledList>
-          )}
+          <StyledElements>
+            {listElements.map((li) => (
+              <li>
+                <Image imageDesktop={li.ikonka} objectFit="contain" />
+                {li.tekstListy ? parse(li.tekstListy) : null}
+              </li>
+            ))}
+          </StyledElements>
+          <StyledList ishide iswomens={isWomens}>
+            {listElements.map((li) => (
+              <li>
+                <Image imageDesktop={li.ikonka} />
+                {li.tekstListy ? parse(li.tekstListy) : null}
+              </li>
+            ))}
+          </StyledList>
           <StyledWhiteMobileCircle>
             <svg
               width="465"

@@ -65,14 +65,16 @@ export const StyledCustomCheckbox = styled.div`
       max-width: unset;
     }
 
-    svg {
-      width: 16px;
-      height: 16px;
+    span {
+      font-size: 26px;
       position: absolute;
-      left: 2px;
-      top: 2px;
+      left: 12px;
+      top: 5px;
       z-index: 1;
       cursor: pointer;
+      opacity: ${({ value }) => (value ? "1" : "0")};
+      color: var(--normalWhite);
+      transition: opacity 250ms linear;
     }
 
     &:after {
@@ -85,6 +87,7 @@ export const StyledCustomCheckbox = styled.div`
       position: absolute;
       left: 0;
       top: 0;
+      transition: background-color 250ms linear;
       background-color: ${({ value }) => (value ? "#3E635D" : "transparent")};
       cursor: pointer;
       border-radius: 13px;
