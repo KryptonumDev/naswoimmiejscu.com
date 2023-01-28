@@ -16,7 +16,7 @@ export const StyledHomeFAQSection = styled.div`
   @media only screen and (max-width: 992px) {
     flex-direction: column;
     gap: 16px;
-    margin-top: 75px;
+    margin-top: 55px;
   }
 `;
 

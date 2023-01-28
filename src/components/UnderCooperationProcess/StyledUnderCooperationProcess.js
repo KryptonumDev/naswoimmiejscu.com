@@ -123,7 +123,7 @@ export const StyledSecondIcon = styled.div`
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-top: 75px;
+    margin-top: 55px;
   }
 `;
 

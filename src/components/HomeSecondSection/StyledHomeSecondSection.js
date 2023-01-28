@@ -6,7 +6,7 @@ export const StyledHomeSecondSection = styled.section`
   justify-content: space-between;
   margin-top: clamp(62px, 5.208vw, 100px);
   padding-left: 55px;
-  gap: clamp(100px, 9.375vw, 180px);
+  gap: clamp(65px, 9.375vw, 180px);
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;
@@ -54,7 +54,7 @@ export const StyledContent = styled.div`
 
 export const StyledContentWrapper = styled.div`
   font: 300 clamp(20px, 1.142px, 22px) Roboto;
-  margin: 25px 0;
+  margin: clamp(18px, 1.302vw, 25px) 0;
 
   strong {
     font-weight: 600;

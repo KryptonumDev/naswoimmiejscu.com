@@ -331,7 +331,6 @@ export const StyledDescWrapper = styled.div`
 
   @media only screen and (max-width: 1763px) {
     &.home-hero-section,
-    &.home-second-section,
     &.cooperation-process,
     &.home-about-me,
     &.home-contact,
@@ -342,6 +341,10 @@ export const StyledDescWrapper = styled.div`
     &.meets-form-womens {
       font-size: 1.248vw;
       margin-bottom: 33px;
+    }
+
+    &.home-second-section {
+      font-size: 1.248vw;
     }
 
     &.first-section-womens-youth,
