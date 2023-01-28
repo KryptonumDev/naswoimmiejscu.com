@@ -4,14 +4,22 @@ import { graphql } from "gatsby";
 import FAQSection from "../components/FAQSection/FAQSection";
 import CalendlyFirstSection from "../components/CalendlyFirstSection/CalendlyFirstSection";
 import CalendlyLastSection from "../components/CalendlyLastSection/CalendlyLastSection";
+import { useEffect } from "react";
 
 const Calendly = ({
   data: {
     wpPage: { calendly },
   },
 }) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementById('main').classList.add('active')
+    }, 1)
+  }, [])
+
   return (
-    <main>
+    <main id='main'>
       <CalendlyFirstSection data={calendly} />
       <FAQSection
         data={calendly.faqCalendly}

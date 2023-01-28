@@ -227,7 +227,7 @@ export const StyledBlogSliderWrapper = styled.div`
 
     > div {
       display: flex !important;
-      height: 100%;
+      height: fit-content;
       flex: 1;
     }
   }

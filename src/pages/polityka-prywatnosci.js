@@ -18,14 +18,22 @@ import {
   StyledMobileCircle,
 } from "../components/PrivacyPolicy/StyledPrivacyPolicy";
 import { StyledCircle } from "../components/Circle/StyledCircle";
+import { useEffect } from "react";
 
 const PrivacyPolicy = ({
   data: {
     wpPage: { politykaPrywatnosCi },
   },
 }) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementById('main').classList.add('active')
+    }, 1)
+  }, [])
+
   return (
-    <main>
+    <main id='main'>
       <Container>
         <StyledPrivacyPolicy>
           <StyledWhiteCircle>

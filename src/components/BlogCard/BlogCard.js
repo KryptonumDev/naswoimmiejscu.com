@@ -52,8 +52,10 @@ const BlogCard = ({
           {category}
         </StyledText>
         <StyledTitleWrapper>{title}</StyledTitleWrapper>
-        <StyledDescWrapper dangerouslySetInnerHTML={{__html: desc}}></StyledDescWrapper>
+        <StyledDescWrapper dangerouslySetInnerHTML={{ __html: desc }}></StyledDescWrapper>
         <Button
+          tabIndex='-1'
+          text={btnData.title}
           variant={'green'}
           btnData={btnData}
           haswidth="245px"

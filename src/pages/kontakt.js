@@ -23,14 +23,21 @@ import {
   StyledDescWrapper,
   StyledTitleWrapper,
 } from "../components/HomeHeroSection/StyledHomeHeroSection";
+import { useEffect } from "react";
 
 const Contact = ({
   data: {
     wpPage: { kontakt },
   },
 }) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementById('main').classList.add('active')
+    }, 1)
+  }, [])
   return (
-    <main>
+    <main id='main'>
       <Container>
         <StyledContentWrapper>
           <StyledLeftWrapper>

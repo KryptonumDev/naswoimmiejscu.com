@@ -11,6 +11,7 @@ import {
 } from "../Blog/StyledBlog";
 import { StyledText } from "../Text/StyledText";
 import styled from "styled-components";
+import { useEffect } from "react";
 
 const Blog = ({
   data: {
@@ -38,47 +39,55 @@ const Blog = ({
     })
   }, [edges, slug])
 
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementById('main').classList.add('active')
+    }, 1)
+  }, [])
+
   return (
-    <Container>
-      <Circle className="circle" width="774" height="774" viewBox="0 0 774 774" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="387" cy="387" r="351.5" stroke="#0BC76D" stroke-width="71" />
-      </Circle>
-      <StyledHeading>
-        <h1>Blog{slug ? ' – ' + name : ''}</h1>
-        <StyledCategories>
-          <Link activeClassName="active" to={'/blog/'}>
-            <StyledText
-              hasdeclaredfontcolor="var(--normalBlack)"
-              hasdeclaredtexttransform="uppercase"
-            >
-              blog ({edges.length})
-            </StyledText>
-          </Link>
-          {nodes.map(({ slug, name, count }) => (
-            <Link activeClassName="active" to={'/blog/' + slug + '/'}>
+    <main id='main'>
+      <Container>
+        <Circle className="circle" width="774" height="774" viewBox="0 0 774 774" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="387" cy="387" r="351.5" stroke="#0BC76D" stroke-width="71" />
+        </Circle>
+        <StyledHeading>
+          <h1>Blog{slug ? ' – ' + name : ''}</h1>
+          <StyledCategories>
+            <Link activeClassName="active" to={'/blog/'}>
               <StyledText
                 hasdeclaredfontcolor="var(--normalBlack)"
                 hasdeclaredtexttransform="uppercase"
               >
-                {name} ({count})
+                blog ({edges.length})
               </StyledText>
             </Link>
+            {nodes.map(({ slug, name, count }) => (
+              <Link activeClassName="active" to={'/blog/' + slug + '/'}>
+                <StyledText
+                  hasdeclaredfontcolor="var(--normalBlack)"
+                  hasdeclaredtexttransform="uppercase"
+                >
+                  {name} ({count})
+                </StyledText>
+              </Link>
+            ))}
+          </StyledCategories>
+        </StyledHeading>
+        <StyledSlidesWrapper>
+          {posts.map(({ node }) => (
+            <BlogCard
+              category={node.categories.nodes[0].name}
+              title={node.title}
+              desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
+              btnText={'POZNAJ TĘ NOWOŚĆ'}
+              slug={node.slug}
+              imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
+            />
           ))}
-        </StyledCategories>
-      </StyledHeading>
-      <StyledSlidesWrapper>
-        {posts.map(({ node }) => (
-          <BlogCard
-            category={node.categories.nodes[0].name}
-            title={node.title}
-            desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
-            btnText={'POZNAJ TĘ NOWOŚĆ'}
-            slug={node.slug}
-            imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
-          />
-        ))}
-      </StyledSlidesWrapper>
-    </Container>
+        </StyledSlidesWrapper>
+      </Container>
+    </main>
   );
 };
 

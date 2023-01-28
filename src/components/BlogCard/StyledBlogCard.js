@@ -11,6 +11,13 @@ export const StyledBlogCard = styled(Link)`
   text-decoration: none;
   color: var(--normalBlack);
 
+  &:focus-visible{
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--normalGreen);
+    outline-offset: -1px;
+  }
+
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     max-width: 436px;

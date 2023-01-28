@@ -85,5 +85,14 @@ export const StyledCategories = styled.div`
   a{
     text-decoration: none;
     min-width: fit-content;
+
+    
+
+  &:focus-visible{
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--normalGreen);
+    outline-offset: -1px;
+  }
   }
 `;

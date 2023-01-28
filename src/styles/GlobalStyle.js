@@ -32,6 +32,16 @@ const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
     } 
 
+    #main{
+      opacity: 0 !important;
+
+      transition: opacity .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+
+      &.active{
+        opacity: 1 !important;
+      }
+    }
+
     #gatsby-focus-wrapper{
       overflow: hidden;
       position: relative;

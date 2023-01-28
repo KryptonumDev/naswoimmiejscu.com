@@ -19,14 +19,22 @@ import {
   StyledWhiteSecondCircleWrapper,
   StyledWhiteCircleWrapper,
 } from "../components/Home/StyledHome";
+import { useEffect } from "react";
 
 const IndexPage = ({
   data: {
     wpPage: { stronaGlowna },
   },
 }) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementById('main').classList.add('active')
+    }, 1)
+  }, [])
+
   return (
-    <>
+    <main id='main'>
       <StyledHome>
         <HomeHeroSection data={stronaGlowna.pierwszaSekcjaHomePage} />
         <StyledCircleWrapper>
@@ -51,7 +59,7 @@ const IndexPage = ({
         <HomeContact data={stronaGlowna.spotkajmySie} />
       </StyledHome>
       <HomeBlogSection />
-    </>
+    </main>
   );
 };
 

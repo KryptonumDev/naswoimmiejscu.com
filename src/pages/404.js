@@ -16,14 +16,22 @@ import {
   StyledCircleWrapper,
   StyledWhiteCircle,
 } from "../components/404/Styled404";
+import { useEffect } from "react";
 
 const NotFoundPage = ({
   data: {
     wpPage: { page404 },
   },
 }) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementById('main').classList.add('active')
+    }, 1)
+  }, [])
+
   return (
-    <main>
+    <main id='main'>
       <Container hideY>
         <Styled404>
           <StyledWhiteCircle>

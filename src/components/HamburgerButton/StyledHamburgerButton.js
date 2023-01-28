@@ -3,6 +3,13 @@ import styled from "styled-components";
 export const StyledHamburgerButton = styled.button`
   display: none;
 
+  &:focus-visible{
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--normalGreen);
+    outline-offset: 4px;
+  }
+
   @media only screen and (max-width: 1167px) {
     position: absolute;
     z-index: 11;
@@ -15,7 +22,6 @@ export const StyledHamburgerButton = styled.button`
     background-color: transparent;
     display: flex;
     justify-content: flex-end;
-    transition: all 250ms linear;
   }
 `;
 

@@ -63,30 +63,39 @@ const useHeadingsData = () => {
 const ArticleTemplate = ({ data: { wpPost: { title, categories, artykul, content }, global: { globalComponets: { contactSection } } } }) => {
   const { nestedHeadings } = useHeadingsData()
 
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementById('main').classList.add('active')
+    }, 1)
+  }, [])
+
   return (
-    <Container>
-      <Hero headings={nestedHeadings} title={title} categories={categories.nodes} data={artykul.trescArtykulu} />
-      <Content id='post-content' dangerouslySetInnerHTML={{ __html: content }} />
-      <Contact>
-        <div>
-          <div className="title" dangerouslySetInnerHTML={{ __html: contactSection.title }} />
-          <div className="text" dangerouslySetInnerHTML={{ __html: contactSection.text }} /><StyledText />
-          <Button className='link' hasfontsize={`clamp(16px, ${20 / 1920 * 100}vw, 20px)`} btnData={contactSection.link} />
-        </div>
-        <ImageWrapper>
-          <svg className="svg" width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="49.5" cy="49.5" r="49.5" fill="#745239" />
-          </svg>
-          <GatsbyImage image={contactSection.image.localFile.childImageSharp.gatsbyImageData} alt={contactSection.image.altText} />
-        </ImageWrapper>
-      </Contact>
-      <Circle width="721" height="721" viewBox="0 0 721 721" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="360.5" cy="360.5" r="333" stroke="#0BC76D" stroke-width="55" />
-      </Circle>
-      <SecondCircle width="721" height="721" viewBox="0 0 721 721" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="360.5" cy="360.5" r="333" stroke="#0BC76D" stroke-width="55" />
-      </SecondCircle>
-    </Container>
+    <main id='main'>
+      <Container>
+        <Hero headings={nestedHeadings} title={title} categories={categories.nodes} data={artykul.trescArtykulu} />
+        <Content id='post-content' dangerouslySetInnerHTML={{ __html: content }} />
+        <Contact>
+          <div>
+            <div className="title" dangerouslySetInnerHTML={{ __html: contactSection.title }} />
+            <div className="text" dangerouslySetInnerHTML={{ __html: contactSection.text }} /><StyledText />
+            <Button className='link' hasfontsize={`clamp(16px, ${20 / 1920 * 100}vw, 20px)`} btnData={contactSection.link} />
+          </div>
+          <ImageWrapper>
+            <svg className="svg" width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="49.5" cy="49.5" r="49.5" fill="#745239" />
+            </svg>
+            <GatsbyImage image={contactSection.image.localFile.childImageSharp.gatsbyImageData} alt={contactSection.image.altText} />
+          </ImageWrapper>
+        </Contact>
+        <Circle width="721" height="721" viewBox="0 0 721 721" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="360.5" cy="360.5" r="333" stroke="#0BC76D" stroke-width="55" />
+        </Circle>
+        <SecondCircle width="721" height="721" viewBox="0 0 721 721" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="360.5" cy="360.5" r="333" stroke="#0BC76D" stroke-width="55" />
+        </SecondCircle>
+      </Container>
+    </main>
   )
 };
 
@@ -185,7 +194,7 @@ const Circle = styled.svg`
   @media (max-width: 1180px) {
     display: none;
   }
-` 
+`
 
 const SecondCircle = styled.svg`
   position: absolute;

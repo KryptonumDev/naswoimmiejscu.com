@@ -8,14 +8,21 @@ import AboutMeProcess from "../components/AboutMeProcess/AboutMeProcess";
 import AboutMeMeet from "../components/AboutMeMeet/AboutMeMeet";
 import FAQSection from "../components/FAQSection/FAQSection";
 import HomeBlogSection from "../components/HomeBlogSection/HomeBlogSection";
+import { useEffect } from "react";
 
 const AboutMe = ({
   data: {
     wpPage: { oMnie },
   },
 }) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementById('main').classList.add('active')
+    }, 1)
+  }, [])
   return (
-    <main>
+    <main id='main'>
       <AboutMeFirstSection data={oMnie.pierwszaSekcjaOMnie} />
       <AboutMeSecondSection data={oMnie.drugaSekcjaOMnie} />
       <AboutMeWhoIm data={oMnie.kimTerazJestem} />

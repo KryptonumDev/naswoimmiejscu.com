@@ -62,6 +62,7 @@ const Header = () => {
           logoMobile={shortData.logoMobile}
         />
       </StyledLogoWrapperHeader>
+      <HamburgerButton openMenu={() => { setIsOpen(!isOpen) }} isOpen={isOpen} />
       <Nav
         isOpen={isOpen}
         openMenu={() => { setIsOpen(false) }}
@@ -74,7 +75,6 @@ const Header = () => {
         hasfontsize="16px"
         className="header-btn"
       />
-      <HamburgerButton openMenu={() => { setIsOpen(!isOpen) }} isOpen={isOpen} />
     </StyledHeader>
   );
 };
