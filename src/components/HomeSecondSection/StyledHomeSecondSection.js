@@ -89,6 +89,14 @@ export const StyledIconsWrapper = styled.div`
     cursor: pointer;
     transition: 250ms opacity linear;
 
+    &:focus-visible {
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: ${({ variant }) =>
+        variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
+      outline-offset: 4px;
+    }
+
     button {
       transition: 250ms background-color linear;
     }
@@ -99,9 +107,10 @@ export const StyledIconsWrapper = styled.div`
 
     &:hover  {
       .button{
-      background-color: #0BC76D60;
-      transform: scale(.65);
+        background-color: #0BC76D60;
+        transform: scale(.65);
       }
+
       p{
         color: #00000040;
       }
@@ -113,13 +122,20 @@ export const StyledIconsWrapper = styled.div`
   }
 
   @media only screen and (max-width: 1349px) {
-    flex-direction: column;
-    gap: 0;
+    gap: 20px;
+
+    > div {
+      gap: 13px;
+    }
   }
 
   @media only screen and (max-width: 992px) {
     gap: 26px;
     flex-direction: row;
+
+    p {
+      font-size: 32px;
+    }
   }
 
   @media only screen and (max-width: 623px) {

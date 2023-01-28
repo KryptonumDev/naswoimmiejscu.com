@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { StyledTitleWrapper } from "../HomeHeroSection/StyledHomeHeroSection";
 
 export const StyledFirstSecionWomens = styled.div`
-  gap: clamp(60px, 5.469vw, 105px);
+  gap: clamp(30px, 5.469vw, 105px);
   display: flex;
   justify-content: space-between;
   width: 100%;
   position: relative;
-  margin-top: clamp(97px, 5.99vw, 115px);
+  margin-top: clamp(40px, 5.99vw, 115px);
 
   @media only screen and (max-width: 1167px) {
     margin-top: 26px;

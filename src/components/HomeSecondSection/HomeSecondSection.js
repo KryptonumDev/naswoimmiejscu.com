@@ -31,6 +31,12 @@ const HomeSecondSection = ({ data }) => {
     [setIsWomens]
   );
 
+  const handleOnKeyUp = useCallback((e, womens) => {
+    if (e.keyCode == 13) {
+      setIsWomens(womens);
+    }
+  }, [setIsWomens])
+
   return (
     <Container>
       <StyledHomeSecondSection>
@@ -48,17 +54,19 @@ const HomeSecondSection = ({ data }) => {
             {data.opisPoLewo ? parse(data.opisPoLewo) : null}
           </StyledDescWrapper>
           <StyledIconsWrapper>
-            <div onClick={() => handleChange(false)}>
+            <div onClick={() => handleChange(false)} tabIndex="0" onKeyUp={(e) => handleOnKeyUp(e, false)}>
               <CustomButton
                 onClick={() => handleChange(false)}
                 type="button"
-                image={data.ikonkaPoLewo}
                 className={isWomens ? 'button' : 'button active'}
                 bgColor={isWomens ? "var(--btnGrey)" : "var(--normalGreen)"}
-              />
+                tabIndex="-1"
+              >
+                ikonka
+              </CustomButton>
               <StyledText
                 className={isWomens ? 'text' : 'text active'}
-                hasdeclaredfontsize="clamp(26px, 1.667vw, 32px)"
+                hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
                 hasdeclaredfontweight="700"
                 hasdeclaredfontcolor={
                   isWomens ? "var(--btnGrey)" : "var(--normalBlack)"
@@ -67,17 +75,19 @@ const HomeSecondSection = ({ data }) => {
                 {data.tekstDoIkonkiMlodziez}
               </StyledText>
             </div>
-            <div onClick={() => handleChange(true)}>
+            <div onClick={() => handleChange(true)} tabIndex="0" onKeyUp={(e) => handleOnKeyUp(e, true)}>
               <CustomButton
                 className={isWomens ? 'active button' : 'button'}
                 bgColor={isWomens ? "var(--normalGreen)" : "var(--btnGrey)"}
-                image={data.ikonkaKobiety}
                 onClick={() => handleChange(true)}
                 type="button"
-              />
+                tabIndex="-1"
+              >
+                ikonka
+              </CustomButton>
               <StyledText
                 className={isWomens ? 'text active' : 'text'}
-                hasdeclaredfontsize="clamp(26px, 1.667vw, 32px)"
+                hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
                 hasdeclaredfontweight="700"
                 hasdeclaredfontcolor={
                   isWomens ? "var(--normalBlack)" : "var(--btnGrey)"

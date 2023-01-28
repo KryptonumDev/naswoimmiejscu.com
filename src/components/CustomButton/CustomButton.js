@@ -22,6 +22,8 @@ const CustomButton = ({
   isFAQ,
   hasTransform,
   className,
+  children,
+  notTabIndex
 }) => {
 
   return (
@@ -38,6 +40,7 @@ const CustomButton = ({
       isfaq={isFAQ}
       className={className}
     >
+      {children}
       {hasIcon
         ? <>
           <ArrowWrapper className='desctop'>

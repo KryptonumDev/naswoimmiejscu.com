@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledHomeAboutMe = styled.div`
   display: flex;
-  margin-top: clamp(100px, 13.177vw, 253px);
+  margin-top: clamp(30px, 13.177vw, 253px);
   align-items: center;
   gap: clamp(100px, 8.698vw, 169px);
   position: relative;
@@ -24,9 +24,12 @@ export const StyledRightWrapper = styled.div`
   width: 55%;
 
   @media only screen and (max-width: 1167px) {
-    padding-left: 33px;
     width: 100%;
     max-width: unset;
+  }
+
+  @media only screen and (max-width: 992px){
+    padding-left: 33px;
   }
 `;
 

@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const StyledCalendlyFirstSection = styled.div`
   display: flex;
   width: 100%;
-  gap: clamp(80px, 8.438vw, 162px);
+  gap: clamp(30px, 8.438vw, 162px);
   justify-content: space-between;
   align-items: center;
-  margin-top: clamp(100px, 7.24vw, 135px);
+  margin-top: clamp(40px, 7.24vw, 135px);
 
   @media only screen and (max-width: 1167px) {
     margin-top: 38px;

@@ -36,7 +36,7 @@ export const StyledRightWrapper = styled.div`
 
 export const StyledRightWrapperContent = styled.div`
   display: flex;
-  gap: 29px;
+  gap: clamp(20px, 1.510vw, 29px);
   align-items: center;
   align-self: flex-end;
 
@@ -47,16 +47,8 @@ export const StyledRightWrapperContent = styled.div`
   }
 
   p {
-    font: 700 24px Roboto;
+    font: 700 clamp(16px, 1.250vw, 24px) Roboto;
     color: var(--normalBlack);
-  }
-
-  @media only screen and (max-width: 1566px) {
-    gap: 10px;
-
-    p {
-      font-size: 20px;
-    }
   }
 
   @media only screen and (max-width: 992px) {
@@ -90,6 +82,17 @@ export const StyledTopText = styled.div`
 export const StyledBottomText = styled.div`
   margin-top: 11px;
   font: 300 13px Roboto;
+  
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--normalBlack);
+    transition: color 350ms linear;
+
+    &:hover {
+      color: var(--normalGreen);
+    }
+  }
 
   @media only screen and (max-width: 992px) {
     font-size: 11px;
@@ -126,6 +129,11 @@ export const StyledFooterLinks = styled.div`
     font: 600 14px Roboto;
     color: var(--normalBlack);
     text-decoration: none;
+    transition: color 350ms linear;
+
+    &:hover {
+      color: var(--normalGreen);
+    }
 
     &.activeLink {
       color: var(--normalBlack);

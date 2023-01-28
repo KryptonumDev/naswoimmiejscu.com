@@ -7,10 +7,10 @@ export const StyledHomeHeroSection = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-top: clamp(100px, 6.198vw, 119px);
+  margin-top: clamp(40px, 6.198vw, 119px);
   align-items: center;
   padding-left: 55px;
-  gap: clamp(100px, 8.698vw, 167px);
+  gap: clamp(30px, 8.698vw, 167px);
 
   @media only screen and (max-width: 1167px) {
     padding-left: 0;
@@ -291,7 +291,7 @@ export const StyledDescWrapper = styled.div`
 
   &.effect-womens-title {
     margin-bottom: 20px;
-    max-width: 752px;
+    max-width: clamp(540px, 38.656vw, 752px);
   }
 
   &.home-second-section {
@@ -299,7 +299,7 @@ export const StyledDescWrapper = styled.div`
   }
 
   &.home-hero-section {
-    max-width: 723px;
+    max-width: clamp(540px, 37.656vw, 723px);
   }
 
   &.second-section-womens-youth {

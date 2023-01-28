@@ -87,7 +87,6 @@ const Footer = () => {
           <Nav isFooter isOpen={false} />
           <StyledFooterLinks>
             <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
-            <Link to="/regulamin">Regulamin</Link>
           </StyledFooterLinks>
           <StyledCopyright>
             <StyledTopText>
@@ -105,8 +104,7 @@ const Footer = () => {
             <SmallGreenCircle />
           </StyledSmallGreenCircle>
         </StyledLeftWrapper>
-        <StyledRightWrapper>
-
+        <StyledRightWrapper>  
           <StyledRightWrapperContent className={(location.pathname === "/kontakt/" ||
             location.pathname === "/calendly/" ||
             location.pathname === "/polityka-prywatnosci/" ||
@@ -130,7 +128,6 @@ const Footer = () => {
           </StyledRightWrapperContent>
           <StyledFooterLinks hideMobile>
             <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
-            <Link to="/regulamin">Regulamin</Link>
           </StyledFooterLinks>
         </StyledRightWrapper>
         <StyledCircleWrapper>

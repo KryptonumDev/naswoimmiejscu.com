@@ -157,9 +157,15 @@ export const StyledFooterNav = styled.div`
     color: var(--normalGrey);
     text-decoration: none;
     position: relative;
+    transition: color .4s ease-out, font-weight .4s ease-out;
 
     &.activeLink {
       color: var(--normalBlack);
+      font-weight: 700;
+    }
+
+    &:hover{
+      color: var(--normalBlack) !important;
       font-weight: 700;
     }
 

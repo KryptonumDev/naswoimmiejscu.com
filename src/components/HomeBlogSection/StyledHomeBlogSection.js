@@ -12,14 +12,37 @@ export const StyledHomeBlogSection = styled.div`
   max-width: 1920px;
   margin: 0 auto;
   gap: ${({ iscase }) => (iscase ? "clamp(90px, 7.240vw, 139px)" : "0")};
+  position: relative;
+
+  &:after {
+    content: "";
+    display: ${({ iscase }) => (iscase ? "none" : "block")};
+    width: 1px;
+    height: 124%;
+    background-color: var(--hrColor);
+    position: absolute;
+    left: 53%;
+    top: 0;
+    z-index: 1;
+  }
 
   @media only screen and (max-width: 1240px) {
     padding-left: 33px;
   }
 
+  @media only screen and (max-width: 1167px) {
+    &:after {
+      left: 51%;
+    }
+  }
+
   @media only screen and (max-width: 1024px) {
     flex-direction: column;
     padding-bottom: 30px;
+
+    &:after {
+      display: none;
+    }
   }
 `;
 
@@ -28,18 +51,6 @@ export const StyledLeftWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-
-  &:after {
-    content: "";
-    display: ${({ iscase }) => (iscase ? "none" : "block")};
-    width: 1px;
-    height: 100%;
-    background-color: var(--hrColor);
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
-  }
 
   @media only screen and (max-width: 1024px) {
     width: 100%;
@@ -101,6 +112,18 @@ export const StyledContent = styled.button`
 
   &.mobile {
     display: none !important;
+  }
+
+  > div {
+    transition: transform 250ms linear;
+  }
+
+  &:hover {
+    > div {
+      &:first-child {
+        transform: ${({ isactive, isright }) => (isactive ? " translateX(0);" : isright ? "translateX(-6px)" : "translateX(6px)")};
+      }
+    }
   }
 
   @media (max-width: 1024px) {

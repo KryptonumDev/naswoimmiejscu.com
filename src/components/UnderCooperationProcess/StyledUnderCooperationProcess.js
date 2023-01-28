@@ -83,7 +83,7 @@ export const StyledLine = styled.div`
   max-width: 1671px;
   opacity: 0.24;
 
-  @media only screen and (max-width: 1167px) {
+  @media only screen and (max-width: 992px){
     display: none;
   }
 `;
@@ -93,10 +93,6 @@ export const StyledFirstIcon = styled.div`
   left: 48vw;
   transform: translateX(-50%);
   top: -22px;
-
-  @media only screen and (max-width: 1167px) {
-    display: none;
-  }
 
   @media only screen and (max-width: 992px) {
     display: ${({ ishide }) => (ishide ? "none" : "flex")};
@@ -116,10 +112,6 @@ export const StyledSecondIcon = styled.div`
   left: 90%;
   transform: translateX(-50%);
   top: -30px;
-
-  @media only screen and (max-width: 1167px) {
-    display: none;
-  }
 
   @media only screen and (max-width: 992px) {
     display: ${({ ishide }) => (ishide ? "none" : "flex")};

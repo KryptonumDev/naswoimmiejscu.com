@@ -88,7 +88,7 @@ export const StyledLink = styled(Link)`
     }
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1024px) {
     &.under-cooperation-process {
       display: none;
     }
@@ -209,7 +209,7 @@ export const StyledButton = styled.button`
   border-radius: 64px;
   min-height: ${({ hasdeclaredheight }) =>
     hasdeclaredheight ? hasdeclaredheight : "81px"};
-  transition: background-color 250ms;
+  transition: background-color 350ms;
   cursor: pointer;
   text-transform: uppercase;
   text-align: center;

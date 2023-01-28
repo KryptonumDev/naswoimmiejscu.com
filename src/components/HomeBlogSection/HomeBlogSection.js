@@ -64,7 +64,6 @@ const HomeBlogSection = ({
           node {
             slug
             title
-            date
             artykul {
               miniaturka {
                 krotkiOpisDoMiniaturki
@@ -195,7 +194,6 @@ const HomeBlogSection = ({
             slug={node.slug}
             title={node.title}
             desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
-            date={node.date}
             imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
             isCase={isCase}
           />
@@ -247,7 +245,6 @@ const HomeBlogSection = ({
             slug={node.slug}
             title={node.title}
             desc={node.artykul.miniaturka.krotkiOpisDoMiniaturki}
-            date={node.date}
             imageDesktop={node.artykul.miniaturka.zdjecieDoMiniaturki}
             isCase={isCase}
           />

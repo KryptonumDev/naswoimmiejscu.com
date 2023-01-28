@@ -5,7 +5,7 @@ export const StyledFAQMargin = styled.div`
 `;
 
 export const StyledContentWrapper = styled.div`
-  margin-top: clamp(80px, 7.917vw, 152px);
+  margin-top: clamp(40px, 7.917vw, 152px);
   gap: 4.167vw;
   display: flex;
   justify-content: space-between;

@@ -103,24 +103,6 @@ export const query = graphql`
           }
         }
         drugaSekcjaHomePage {
-          ikonkaKobiety {
-            altText
-            title
-            localFile {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-          }
-          ikonkaPoLewo {
-            altText
-            title
-            localFile {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-          }
           opisDoKobiet
           opisDoMlodziez
           opisPoLewo

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledPrivacyPolicy = styled.div`
-  margin-top: clamp(100px, 8.646vw, 166px);
+  margin-top: clamp(30px, 8.646vw, 166px);
   margin-bottom: clamp(120px, 9.792vw, 188px);
   position: relative;
   width: 100%;
