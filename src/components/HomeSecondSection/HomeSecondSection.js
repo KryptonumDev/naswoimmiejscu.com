@@ -69,7 +69,7 @@ const HomeSecondSection = ({ data }) => {
                 hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
                 hasdeclaredfontweight="700"
                 hasdeclaredfontcolor={
-                  isWomens ? "var(--btnGrey)" : "var(--normalBlack)"
+                  isWomens ? "#5B5C5E" : "var(--normalBlack)"
                 }
               >
                 {data.tekstDoIkonkiMlodziez}
@@ -90,7 +90,7 @@ const HomeSecondSection = ({ data }) => {
                 hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
                 hasdeclaredfontweight="700"
                 hasdeclaredfontcolor={
-                  isWomens ? "var(--normalBlack)" : "var(--btnGrey)"
+                  isWomens ? "var(--normalBlack)" : "#5B5C5E"
                 }
               >
                 {data.tekstKobiety}
