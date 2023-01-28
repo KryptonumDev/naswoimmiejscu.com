@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import Container from "../Container/Container";
 import BlogCard from "../BlogCard/BlogCard";
@@ -11,7 +11,7 @@ import {
 } from "../Blog/StyledBlog";
 import { StyledText } from "../Text/StyledText";
 import styled from "styled-components";
-import { useEffect } from "react";
+import { Link } from "../TransitionLink/TransitionLink";
 
 const Blog = ({
   data: {
@@ -38,15 +38,8 @@ const Blog = ({
       return isAccepted
     })
   }, [edges, slug])
-
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById('main').classList.add('active')
-    }, 1)
-  }, [])
-
   return (
-    <main id='main'>
+    <main>
       <Container>
         <Circle className="circle" width="774" height="774" viewBox="0 0 774 774" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="387" cy="387" r="351.5" stroke="#0BC76D" strokeWidth="71" />
@@ -63,14 +56,16 @@ const Blog = ({
               </StyledText>
             </Link>
             {nodes.map(({ slug, name, count }) => (
-              <Link key={slug} activeClassName="active" to={'/blog/' + slug + '/'}>
-                <StyledText
-                  hasdeclaredfontcolor="var(--normalBlack)"
-                  hasdeclaredtexttransform="uppercase"
-                >
-                  {name} ({count})
-                </StyledText>
-              </Link>
+              <React.Fragment key={slug} >
+                <Link activeClassName="active" to={'/blog/' + slug + '/'}>
+                  <StyledText
+                    hasdeclaredfontcolor="var(--normalBlack)"
+                    hasdeclaredtexttransform="uppercase"
+                  >
+                    {name} ({count})
+                  </StyledText>
+                </Link>
+              </React.Fragment>
             ))}
           </StyledCategories>
         </StyledHeading>

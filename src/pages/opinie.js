@@ -1,22 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Opinie from "../components/Opinie/Opinie";
-import { useEffect } from "react";
 
 const OpiniePage = ({
   data: {
     allWpCaseStudy: { nodes },
-    wpPage
   },
 }) => {
-
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById('main').classList.add('active')
-    }, 1)
-  }, [])
   return (
-    <main id='main'>
+    <main>
       <Opinie opinie={nodes} />
     </main>
   );

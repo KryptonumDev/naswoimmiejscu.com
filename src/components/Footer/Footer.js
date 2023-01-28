@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import parse from "html-react-parser";
 import { useLocation } from "@reach/router";
 
@@ -24,6 +24,7 @@ import {
   StyledSmallGreenCircle,
   StyledMobileGreenCircle,
 } from "./StyledFooter";
+import { Link } from "../TransitionLink/TransitionLink";
 
 const Footer = () => {
   const location = useLocation();

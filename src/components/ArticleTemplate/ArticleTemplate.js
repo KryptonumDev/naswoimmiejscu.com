@@ -62,16 +62,8 @@ const useHeadingsData = () => {
 
 const ArticleTemplate = ({ data: { wpPost: { title, categories, artykul, content }, global: { globalComponets: { contactSection } } } }) => {
   const { nestedHeadings } = useHeadingsData()
-
-
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById('main').classList.add('active')
-    }, 1)
-  }, [])
-
   return (
-    <main id='main'>
+    <main>
       <Container>
         <Hero headings={nestedHeadings} title={title} categories={categories.nodes} data={artykul.trescArtykulu} />
         <Content id='post-content' dangerouslySetInnerHTML={{ __html: content }} />

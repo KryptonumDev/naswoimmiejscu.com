@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
 
-export const StyledMeetSomebody = styled(Link)`
+export const StyledMeetSomebody = styled.div`
   width: 100%;
   display: flex;
   align-items: center;

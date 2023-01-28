@@ -10,6 +10,7 @@ import {
   StyledTitle,
   StyledDesc,
 } from "./StyledBlogHomeCard";
+import { Link } from "../TransitionLink/TransitionLink";
 
 const BlogHomeCard = ({
   imageDesktop,
@@ -20,18 +21,19 @@ const BlogHomeCard = ({
   isCase,
 }) => {
   return (
-    <StyledBlogHomeCard to={`/blog/${slug}`} iscase={isCase ? "true" : "false"}>
-      <StyledTextWrapper>
-        <StyledTitle>{title ? parse(title) : null}</StyledTitle>
-        <StyledDesc>{desc ? parse(desc) : null}</StyledDesc>
-      </StyledTextWrapper>
-      <StyledImageWrapper>
-        {imageDesktop ? (
-          <Image imageDesktop={imageDesktop} imageMobile={imageMobile} />
-        ) : null}
-      </StyledImageWrapper>
-    </StyledBlogHomeCard>
-    
+    <Link to={`/blog/${slug}`} >
+      <StyledBlogHomeCard iscase={isCase ? "true" : "false"}>
+        <StyledTextWrapper>
+          <StyledTitle>{title ? parse(title) : null}</StyledTitle>
+          <StyledDesc>{desc ? parse(desc) : null}</StyledDesc>
+        </StyledTextWrapper>
+        <StyledImageWrapper>
+          {imageDesktop ? (
+            <Image imageDesktop={imageDesktop} imageMobile={imageMobile} />
+          ) : null}
+        </StyledImageWrapper>
+      </StyledBlogHomeCard>
+    </Link>
   );
 };
 

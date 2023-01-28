@@ -23,7 +23,6 @@ import {
   StyledDescWrapper,
   StyledTitleWrapper,
 } from "../components/HomeHeroSection/StyledHomeHeroSection";
-import { useEffect } from "react";
 
 const Contact = ({
   data: {
@@ -31,13 +30,8 @@ const Contact = ({
   },
 }) => {
 
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById('main').classList.add('active')
-    }, 1)
-  }, [])
   return (
-    <main id='main'>
+    <main>
       <Container>
         <StyledContentWrapper>
           <StyledLeftWrapper>

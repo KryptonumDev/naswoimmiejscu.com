@@ -7,7 +7,6 @@ import SecondSectionWomens from "../components/SecondSectionWomens/SecondSection
 import MeetsFormwomens from "../components/MeetsFormwomens/MeetsFormwomens";
 import EffectWomens from "../components/EffectWomens/EffectWomens";
 import HomeBlogSection from "../components/HomeBlogSection/HomeBlogSection";
-import { useEffect } from "react";
 
 const Youth = ({
   data: {
@@ -24,13 +23,8 @@ const Youth = ({
   },
 }) => {
 
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById('main').classList.add('active')
-    }, 1)
-  }, [])
   return (
-    <main id='main'>
+    <main >
       <FirstSecionWomens
         title={pierwszaSekcjaMlodziez.tytul}
         desc={pierwszaSekcjaMlodziez.opis}

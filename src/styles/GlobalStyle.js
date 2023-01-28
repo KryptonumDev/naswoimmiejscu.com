@@ -31,19 +31,31 @@ const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
     } 
 
-    #main{
+    .tl-wrapper{
       opacity: 0 !important;
+      transition: opacity .2s cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+    }
 
-      transition: opacity .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+    .tl-wrapper-status--entering{
+      opacity: 1 !important;
+    }
 
-      &.active{
-        opacity: 1 !important;
-      }
+    .tl-wrapper-status--entered{
+      opacity: 1 !important;
+    }
+
+    .tl-wrapper-status--exiting{
+      transition: opacity .2s cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+      opacity: 0 !important;
     }
 
     #gatsby-focus-wrapper{
       overflow: hidden;
       position: relative;
+    }
+
+    .transitionLink{
+      text-decoration: none;
     }
 
     body {

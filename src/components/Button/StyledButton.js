@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.div`
   background-color: ${({ variant }) =>
     variant === "green" ? "var(--normalGreen)" : "transparent"};
   border: ${({ variant }) =>

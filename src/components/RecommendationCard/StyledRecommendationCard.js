@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
 
-export const StyledRecommendationCard = styled(Link)`
+export const StyledRecommendationCard = styled.div`
   width: 100%;
   padding: clamp(20px, 2.708vw, 52px) clamp(100px, 9.688vw, 186px)
     clamp(20px, 2.708vw, 52px) clamp(120px, 10.521vw, 202px);
-  text-decoration: none;
+  text-decoration: none !important;
   color: var(--normalBlack);
   display: flex;
   flex-direction: column;
@@ -14,6 +13,7 @@ export const StyledRecommendationCard = styled(Link)`
   background-color: ${({ hasdeclaredbg }) =>
     hasdeclaredbg ? null : "var(--recomendationSecond)"};
   flex: 1;
+
 
   @media only screen and (max-width: 1024px) {
     padding: 64px 0 24px 0;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
 
-export const StyledBlogHomeCard = styled(Link)`
+
+export const StyledBlogHomeCard = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 
 import HomeHeroSection from "../components/HomeHeroSection/HomeHeroSection";
@@ -25,13 +25,8 @@ const IndexPage = ({
     wpPage: { stronaGlowna },
   },
 }) => {
-
-  useEffect(() => {
-    document.getElementById('main').classList.add('active')
-  }, [])
-
   return (
-    <main id='main'>
+    <main>
       <StyledHome>
         <HomeHeroSection data={stronaGlowna.pierwszaSekcjaHomePage} />
         <StyledCircleWrapper>

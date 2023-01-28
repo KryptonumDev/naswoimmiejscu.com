@@ -30,7 +30,6 @@ import {
     StyledMobileCircle,
 } from "./StyledFirstSection";
 import { StyledCircle } from "../Circle/StyledCircle";
-import { useEffect } from "react";
 
 const CaseTemplate = ({
     data: {
@@ -45,13 +44,8 @@ const CaseTemplate = ({
         },
     },
 }) => {
-    useEffect(() => {
-        setTimeout(() => {
-          document.getElementById('main').classList.add('active')
-        }, 1)
-    }, [])
     return (
-        <main id='main'>
+        <main>
             <Container>
                 <StyledFirstSection>
                     <StyledTextWrapperFirst>

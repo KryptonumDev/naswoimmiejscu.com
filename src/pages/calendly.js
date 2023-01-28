@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import FAQSection from "../components/FAQSection/FAQSection";
 import CalendlyFirstSection from "../components/CalendlyFirstSection/CalendlyFirstSection";
 import CalendlyLastSection from "../components/CalendlyLastSection/CalendlyLastSection";
-import { useEffect } from "react";
 
 const Calendly = ({
   data: {
@@ -12,14 +11,8 @@ const Calendly = ({
   },
 }) => {
 
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById('main').classList.add('active')
-    }, 1)
-  }, [])
-
   return (
-    <main id='main'>
+    <main >
       <CalendlyFirstSection data={calendly} />
       <FAQSection
         data={calendly.faqCalendly}

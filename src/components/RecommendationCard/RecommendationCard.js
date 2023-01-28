@@ -2,6 +2,7 @@ import React from "react";
 import { StyledCircle } from "../Circle/StyledCircle";
 import parse from "html-react-parser";
 
+import { Link } from "../TransitionLink/TransitionLink";
 import Image from "../Image/Image";
 
 import {
@@ -24,31 +25,32 @@ const RecommendationCard = ({
   recDif,
 }) => {
   return (
-    <StyledRecommendationCard
-      to={`/case/${slug}`}
-      hasdeclaredbg={isDiffBg ? "true" : null}
-    >
-      <StyledAvatarWrapper recdiff={recDif}>
-        <StyledImage>
-          <Image imageDesktop={avatar} />
-          <StyledCircle
-            hasdeclaredwidth="27px"
-            hasdeclaredheight="27px"
-            hasdeclaredbg="var(--lightGreen)"
-            className="avatar-circle"
-          />
-        </StyledImage>
-        <StyledTextContent>
-          <StyledNameWrapper>{name ? parse(name) : null}</StyledNameWrapper>
-          <StyledDescImageWrapper>
-            {nameDesc ? parse(nameDesc) : null}
-          </StyledDescImageWrapper>
-        </StyledTextContent>
-      </StyledAvatarWrapper>
-      <StyledDescriptionWrapper recdiff={recDif}>
-        {desc ? parse(desc) : null}
-      </StyledDescriptionWrapper>
-    </StyledRecommendationCard>
+    <Link className="transitionLink" to={`/case/${slug}`}>
+      <StyledRecommendationCard
+        hasdeclaredbg={isDiffBg ? "true" : null}
+      >
+        <StyledAvatarWrapper recdiff={recDif}>
+          <StyledImage>
+            <Image imageDesktop={avatar} />
+            <StyledCircle
+              hasdeclaredwidth="27px"
+              hasdeclaredheight="27px"
+              hasdeclaredbg="var(--lightGreen)"
+              className="avatar-circle"
+            />
+          </StyledImage>
+          <StyledTextContent>
+            <StyledNameWrapper>{name ? parse(name) : null}</StyledNameWrapper>
+            <StyledDescImageWrapper>
+              {nameDesc ? parse(nameDesc) : null}
+            </StyledDescImageWrapper>
+          </StyledTextContent>
+        </StyledAvatarWrapper>
+        <StyledDescriptionWrapper recdiff={recDif}>
+          {desc ? parse(desc) : null}
+        </StyledDescriptionWrapper>
+      </StyledRecommendationCard>
+    </Link>
   );
 };
 

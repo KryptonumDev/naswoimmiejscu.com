@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import parse from "html-react-parser";
 
 import Image from "../components/Image/Image";
@@ -16,7 +16,7 @@ import {
   StyledCircleWrapper,
   StyledWhiteCircle,
 } from "../components/404/Styled404";
-import { useEffect } from "react";
+import { Link } from "../components/TransitionLink/TransitionLink";
 
 const NotFoundPage = ({
   data: {
@@ -24,14 +24,8 @@ const NotFoundPage = ({
   },
 }) => {
 
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById('main').classList.add('active')
-    }, 1)
-  }, [])
-
   return (
-    <main id='main'>
+    <main>
       <Container className={'error'} hideY>
         <Styled404>
           <StyledWhiteCircle>

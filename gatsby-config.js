@@ -16,6 +16,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {

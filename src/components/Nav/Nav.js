@@ -1,17 +1,14 @@
 import React from "react";
-import { Link } from "gatsby";
-
-import Logo from "../Logo/Logo";
 import SecondGreenCircle from "../SecondGreenCircle/SecondGreenCircle";
-
-import { StyledCircle } from "../Circle/StyledCircle";
+import { Link } from "../TransitionLink/TransitionLink";
 import {
   StyledNav,
   StyledMobileWrapper,
-  StyledCircleWrapper,
   StyledGreenCircle,
   StyledFooterNav,
 } from "./StyledNav";
+
+//openMenu
 
 const Nav = ({ isOpen, isFooter, openMenu }) => {
   return !isFooter ? (
@@ -19,65 +16,79 @@ const Nav = ({ isOpen, isFooter, openMenu }) => {
       <StyledGreenCircle>
         <SecondGreenCircle />
       </StyledGreenCircle>
-      <Link to="/" activeClassName="activeLink" onClick={openMenu}>
-        <StyledCircleWrapper>
-          <StyledCircle hasdeclaredwidth="30px" hasdeclaredheight="30px" />
-        </StyledCircleWrapper>
+      <Link
+        onClick={openMenu}
+        to="/"
+      >
         STRONA GŁÓWNA
       </Link>
       <div className="flex-wrapper">
-        <Link to="/mlodziez/" activeClassName="activeLink" onClick={openMenu}>
-          MŁODZIEŻ
-        </Link>
+        <Link
+          onClick={openMenu}
+          to="/mlodziez/"
+        >MŁODZIEŻ</Link>
         <span>/</span>
-        <Link to="/kobiety/" activeClassName="activeLink" onClick={openMenu}>
-          KOBIETY
-        </Link>
+        <Link
+          onClick={openMenu}
+          to="/kobiety/"
+        >KOBIETY</Link>
       </div>
-      <Link to="/o-mnie/" activeClassName="activeLink" onClick={openMenu}>
-        O MNIE
-      </Link>
-      <Link partiallyActive={true} to="/blog/" activeClassName="activeLink" onClick={openMenu}>
-        BLOG
-      </Link>
-      <Link to="/calendly/" activeClassName="activeLink" onClick={openMenu}>
-        CALENDLY
-      </Link>
-      <Link to="/opinie/" activeClassName="activeLink" onClick={openMenu}>
-        OPINIE
-      </Link>
+      <Link
+        onClick={openMenu}
+        to="/o-mnie/"
+      >O MNIE</Link>
+      <Link
+        onClick={openMenu}
+        to="/blog/"
+      >BLOG</Link>
+      <Link
+        onClick={openMenu}
+        to="/calendly/"
+      >CALENDLY</Link>
+      <Link
+        onClick={openMenu}
+        to="/opinie/"
+      >OPINIE</Link>
       <StyledMobileWrapper>
-        <Link to="/polityka-prywatnosci/" onClick={openMenu}>
-          Polityka prywatności
-        </Link>
+        <Link
+          onClick={openMenu}
+          to="/polityka-prywatnosci/"
+        >Polityka prywatności</Link>
       </StyledMobileWrapper>
     </StyledNav>
   ) : (
     <StyledFooterNav>
-      <Link to="/" activeClassName="activeLink" onClick={openMenu}>
-        STRONA GŁÓWNA
-      </Link>
+      <Link
+        onClick={openMenu}
+        to="/"
+      >STRONA GŁÓWNA</Link>
       <div className="flex-wrapper">
-        <Link to="/mlodziez/" activeClassName="activeLink" onClick={openMenu}>
-          MŁODZIEŻ
-        </Link>
+        <Link
+          onClick={openMenu}
+          to="/mlodziez/"
+        >MŁODZIEŻ</Link>
         <span>/</span>
-        <Link to="/kobiety/" activeClassName="activeLink" onClick={openMenu}>
-          KOBIETY
-        </Link>
+        <Link
+          onClick={openMenu}
+          to="/kobiety/"
+        >KOBIETY</Link>
       </div>
-      <Link to="/o-mnie/" activeClassName="activeLink" onClick={openMenu}>
-        O MNIE
-      </Link>
-      <Link to="/blog/" activeClassName="activeLink" onClick={openMenu}>
-        BLOG
-      </Link>
-      <Link to="/calendly/" activeClassName="activeLink" onClick={openMenu}>
-        CALENDLY
-      </Link>
-      <Link to="/opinie/" activeClassName="activeLink" onClick={openMenu}>
-        OPINIE
-      </Link>
+      <Link
+        onClick={openMenu}
+        to="/o-mnie/"
+      >O MNIE</Link>
+      <Link
+        onClick={openMenu}
+        to="/blog/"
+      >BLOG</Link>
+      <Link
+        onClick={openMenu}
+        to="/calendly/"
+      >CALENDLY</Link>
+      <Link
+        onClick={openMenu}
+        to="/opinie/"
+      >OPINIE</Link>
     </StyledFooterNav>
   );
 };

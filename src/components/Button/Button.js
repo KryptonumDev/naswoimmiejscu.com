@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "../TransitionLink/TransitionLink";
 
 import { StyledButton, StyledLink } from "./StyledButton";
 
@@ -31,24 +32,28 @@ const Button = ({
       {text}
     </StyledButton>
   ) : (
-    <StyledLink
-      aria-label={ariaLabel}
+    <Link
+      arialabel={ariaLabel}
       to={btnData.url}
-      target={btnData.target}
-      variant={variant}
-      disabled={disabled}
-      hasdeclaredwidth={haswidth}
-      hasdeclaredheight={hasheight}
-      hasfontsize={hasfontsize}
-      className={className}
-      hasclampwidth={hasClampWidth}
-      hasclampheight={hasClampHeight}
-      hasbasicwidth={hasBasicWidth}
-      hasbasicheight={hasBasicHeight}
-      tabIndex={tabIndex}
+      className='transitionLink'
     >
-      {btnData.title}
-    </StyledLink>
+      <StyledLink
+        target={btnData.target}
+        variant={variant}
+        disabled={disabled}
+        hasdeclaredwidth={haswidth}
+        hasdeclaredheight={hasheight}
+        hasfontsize={hasfontsize}
+        className={className}
+        hasclampwidth={hasClampWidth}
+        hasclampheight={hasClampHeight}
+        hasbasicwidth={hasBasicWidth}
+        hasbasicheight={hasBasicHeight}
+        tabIndex={tabIndex}
+      >
+        {btnData.title}
+      </StyledLink>
+    </Link>
   );
 };
 
