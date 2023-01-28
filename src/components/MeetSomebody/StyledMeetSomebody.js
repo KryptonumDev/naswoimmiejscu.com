@@ -27,7 +27,7 @@ export const StyledMeetSomebody = styled(Link)`
   }
 
   @media only screen and (max-width: 992px) {
-    max-width: 70%;
+    max-width: 50%;
     margin-bottom: 36px;
   }
 

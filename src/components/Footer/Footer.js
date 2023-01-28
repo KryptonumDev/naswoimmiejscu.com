@@ -73,7 +73,8 @@ const Footer = () => {
             location.pathname === "/calendly/" ||
             location.pathname === "/polityka-prywatnosci/" ||
             location.pathname === "/kobiety/" ||
-            location.pathname === "/mlodziez/")
+            location.pathname === "/mlodziez/" ||
+            location.pathname.includes('/case/'))
         }
       >
         <StyledLeftWrapper>
@@ -110,6 +111,7 @@ const Footer = () => {
             location.pathname === "/calendly/" ||
             location.pathname === "/polityka-prywatnosci/" ||
             location.pathname === "/kobiety/" ||
+            location.pathname.includes('/case/') ||
             location.pathname === "/mlodziez/") ? 'desctop' : ''}>
             {shortData.tekstObokPrzycisku
               ? parse(shortData.tekstObokPrzycisku)

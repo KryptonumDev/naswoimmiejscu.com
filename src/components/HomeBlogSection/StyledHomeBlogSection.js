@@ -381,3 +381,9 @@ export const StyledMobileBlogText = styled.div`
     }
   }
 `;
+
+export const StyledMobileLeftSection = styled.div`
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
+`

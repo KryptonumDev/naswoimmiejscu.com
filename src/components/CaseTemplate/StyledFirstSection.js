@@ -273,6 +273,7 @@ export const StyledIconsWrapper = styled.div`
 
     @media only screen and (max-width: 992px) {
         gap: 16px;
+        margin-top: 22px;
     }
 `;
 
