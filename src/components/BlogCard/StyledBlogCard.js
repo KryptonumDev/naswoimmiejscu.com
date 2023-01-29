@@ -91,9 +91,9 @@ export const StyledTitleWrapper = styled.div`
 `;
 
 export const StyledDescWrapper = styled.div`
-  max-width: 400px;
-  font: 400 clamp(11px, ${11 / 480 * 100}vw, 16px) Roboto;
-  margin-bottom: 10px;
+  max-width: 304px;
+  font: 300 clamp(11px, ${11 / 480 * 100}vw, 16px)/1.2em Roboto;
+  margin-bottom: 30px;
 `;
 
 export const StyledMobileCategory = styled.div`
