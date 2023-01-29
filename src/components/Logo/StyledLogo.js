@@ -50,5 +50,3 @@ export const StyledLogo = styled.div`
     isheader ? (isfooter ? "246px" : `169px`) : hasmaxwidth};
   }
 `;
-
-export const StyledImage = styled(Image)``;

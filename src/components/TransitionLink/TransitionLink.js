@@ -17,7 +17,7 @@ export const Link = ({ arialabel, className = 'transitionLink', onClick = () => 
 
     return (
         <AniLink
-        fade 
+            fade 
             arialabel={arialabel}
             className={className}
             onClick={onClick}
@@ -25,7 +25,8 @@ export const Link = ({ arialabel, className = 'transitionLink', onClick = () => 
             activeClassName={activeClassName}
             exit={exitTransition}
             entry={entryTransition}
-        >{children}
+        >
+            {children}
         </AniLink>
     )
 }
