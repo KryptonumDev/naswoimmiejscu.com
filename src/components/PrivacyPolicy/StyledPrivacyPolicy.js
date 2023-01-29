@@ -72,14 +72,13 @@ export const StyledDescWrapper = styled.div`
 
   a {
     text-transform: uppercase;
-    font-size: clamp(15px, 1.254vw, 24px);
+    font-size: 0.75em;
     text-decoration: none;
     color: var(--normalGrey);
-    transition: font-size 250ms linear, color 250ms linear;
+    transition: color 250ms linear;
     line-height: 1.2em;
 
     &:hover {
-      font-size: clamp(15px, 1.300vw, 26px);
       color: var(--normalBlack);
     }
 
@@ -93,7 +92,6 @@ export const StyledDescWrapper = styled.div`
 
   @media only screen and (max-width: 1167px) {
     margin-left: 0;
-    max-width: unset;
   }
 
   @media only screen and (max-width: 656px) {

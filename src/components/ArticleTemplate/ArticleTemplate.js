@@ -299,14 +299,13 @@ const Content = styled.div`
 
   a {
     text-transform: uppercase;
-    font-size: clamp(15px, ${26 / 1920 * 100}vw, 26px);
+    font-size: 0.75em;
     text-decoration: none;
     color: var(--normalGrey);
-    transition: font-size 250ms linear, color 250ms linear;
+    transition: color 250ms linear;
     line-height: 1.2em;
 
     &:hover {
-      font-size: clamp(16px, ${27 / 1920 * 100}vw, 27px);
       color: var(--normalBlack);
     }
 
