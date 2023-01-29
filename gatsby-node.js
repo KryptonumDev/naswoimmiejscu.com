@@ -1,5 +1,5 @@
 exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
   const postData = await graphql(`
     {
@@ -12,19 +12,19 @@ exports.createPages = async ({ actions, graphql }) => {
         }
       }
     }
-  `);
+  `)
 
   postData.data.allWpPost.edges.map(({ node }) => {
     createPage({
       path: `/blog/${node.slug}/`,
       component: require.resolve(
-        "./src/components/ArticleTemplate/ArticleTemplate.js"
+        './src/components/ArticleTemplate/ArticleTemplate.js'
       ),
       context: {
-        postId: node.id,
-      },
-    });
-  });
+        postId: node.id
+      }
+    })
+  })
 
   const caseData = await graphql(`
     {
@@ -37,54 +37,53 @@ exports.createPages = async ({ actions, graphql }) => {
         }
       }
     }
-  `);
+  `)
 
   caseData.data.allWpCaseStudy.edges.map(({ node }) => {
     createPage({
-      path: `/case/${node.slug}/`,
+      path: `/sukcesy/${node.slug}/`,
       component: require.resolve(
-        "./src/components/CaseTemplate/CaseTemplate.js"
+        './src/components/CaseTemplate/CaseTemplate.js'
       ),
       context: {
-        caseId: node.id,
-      },
-    });
-  });
-
+        caseId: node.id
+      }
+    })
+  })
 
   const blogArchiveData = await graphql(`
     {
-      allWpCategory(filter: {count: {gt: 0}}) {
+      allWpCategory(filter: { count: { gt: 0 } }) {
         nodes {
           name
           slug
           id
         }
       }
-  }
-  `);
+    }
+  `)
 
   createPage({
     path: `/blog/`,
     component: require.resolve(
-      "./src/components/BlogArchiveTemplate/BlogArchiveTemplate.js"
+      './src/components/BlogArchiveTemplate/BlogArchiveTemplate.js'
     ),
     context: {
-      id: 'cG9zdDo0ODM=',
-    },
-  });
+      id: 'cG9zdDo0ODM='
+    }
+  })
 
   blogArchiveData.data.allWpCategory.nodes.map(({ name, slug, id }) => {
     createPage({
       path: `/blog/${slug}/`,
       component: require.resolve(
-        "./src/components/BlogArchiveTemplate/BlogArchiveTemplate.js"
+        './src/components/BlogArchiveTemplate/BlogArchiveTemplate.js'
       ),
       context: {
         id: id,
         slug: slug,
         name: name
-      },
-    });
-  });
-};
+      }
+    })
+  })
+}
