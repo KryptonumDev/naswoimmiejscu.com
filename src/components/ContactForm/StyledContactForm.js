@@ -195,6 +195,7 @@ export const StyledSubmit = styled.button`
   cursor: pointer;
   transition: color 400ms, background-color 400ms;
   margin-top: 8px;
+  color: var(--normalBlack);
 
   &:hover {
     color: var(--normalWhite);
