@@ -57,6 +57,10 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: none;
     }
 
+    .tl-edges {
+      overflow-x: visible;
+    }
+
     body {
       overflow-x: hidden;
       width: 100%;
