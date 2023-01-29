@@ -162,7 +162,7 @@ const HomeBlogSection = ({
   };
 
   const leftSectionCase = (
-    <StyledLeftCaseWrapper iscase={isCasePage ? "true" : "false"}>
+    <StyledLeftCaseWrapper iscase={isCasePage ? "true" : false}>
       {anotherPerson ? (
         <MeetSomebody
           data={anotherPerson}
@@ -373,7 +373,7 @@ const HomeBlogSection = ({
       >
         <StyledCircle
           hasdeclaredbg="var(--normalGreen)"
-          className="blog-mobile-section-hide"
+          className="blog-mobile-section-hide right"
         />
         <StyledTitleElement className="home-blog-section-text">
           {stronaGlowna.sekcjaZBlogiem.blogTytul
@@ -403,7 +403,7 @@ const HomeBlogSection = ({
       isactive={!isBlog}
       className={mobile ? "mobile" : "desctop"}
     >
-      <StyledCircle className="blog-mobile-section-hide" />
+      <StyledCircle className="blog-mobile-section-hide left" />
       <StyledTitleElement className="home-blog-section-text">
         {stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul
           ? parse(stronaGlowna.sekcjaZBlogiem.rekomendacjeTytul)
@@ -457,9 +457,9 @@ const HomeBlogSection = ({
   );
 
   return (
-    <StyledHomeBlogSection iscase={isCase ? "true" : "false"}>
-      <StyledLeftWrapper iscase={isCase ? "true" : "false"}>{leftWrapper}</StyledLeftWrapper>
-      <StyledRightWrapper iscase={isCase ? "true" : "false"}>
+    <StyledHomeBlogSection iscase={isCase ? "true" : false}>
+      <StyledLeftWrapper iscase={isCase ? "true" : false}>{leftWrapper}</StyledLeftWrapper>
+      <StyledRightWrapper iscase={isCase ? "true" : false}>
         {isWomensYouthPage || isCasePage ? (
           <StyledWhiteCircle>
             <svg

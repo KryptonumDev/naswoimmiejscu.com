@@ -22,7 +22,7 @@ const BlogHomeCard = ({
 }) => {
   return (
     <Link to={`/blog/${slug}`} >
-      <StyledBlogHomeCard iscase={isCase ? "true" : "false"}>
+      <StyledBlogHomeCard iscase={isCase ? "true" : false}>
         <StyledTextWrapper>
           <StyledTitle>{title ? parse(title) : null}</StyledTitle>
           <StyledDesc>{desc ? parse(desc) : null}</StyledDesc>

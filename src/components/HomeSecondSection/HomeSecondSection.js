@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import parse from "html-react-parser";
+import { motion, AnimatePresence } from "framer-motion";
 
 import CustomButton from "../CustomButton/CustomButton";
 import Button from "../Button/Button";
@@ -97,45 +98,54 @@ const HomeSecondSection = ({ data }) => {
               </StyledText>
             </div>
           </StyledIconsWrapper>
-          {isWomens ? (
-            <StyledContent>
-              <StyledContentWrapper>
-                {data.opisDoKobiet ? parse(data.opisDoKobiet) : null}
-              </StyledContentWrapper>
-              <Button
-                btnData={data.przyciskKobiety}
-                variant="green"
-                haswidth="355px"
-                hasheight="88px"
-                hasClampHeight="4.583vw"
-                hasfontsize="clamp(16px, 1.042vw, 20px)"
-                hasClampWidth="18.490vw"
-                hasBasicWidth="277px"
-                hasBasicHeight="73px"
-                className="home-second-section"
-                ariaLabel="link"
-              />
-            </StyledContent>
-          ) : (
-            <StyledContent>
-              <StyledContentWrapper>
-                {data.opisDoMlodziez ? parse(data.opisDoMlodziez) : null}
-              </StyledContentWrapper>
-              <Button
-                btnData={data.przyciskMlodziez}
-                variant="green"
-                haswidth="355px"
-                hasheight="88px"
-                hasClampHeight="4.583vw"
-                hasfontsize="clamp(16px, 1.042vw, 20px)"
-                hasClampWidth="18.490vw"
-                hasBasicWidth="277px"
-                hasBasicHeight="73px"
-                className="home-second-section"
-                ariaLabel="link"
-              />
-            </StyledContent>
-          )}
+          <AnimatePresence key={isWomens}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              key={isWomens}
+            >
+              {isWomens ? (
+                <StyledContent>
+                  <StyledContentWrapper>
+                    {data.opisDoKobiet ? parse(data.opisDoKobiet) : null}
+                  </StyledContentWrapper>
+                  <Button
+                    btnData={data.przyciskKobiety}
+                    variant="green"
+                    haswidth="355px"
+                    hasheight="88px"
+                    hasClampHeight="4.583vw"
+                    hasfontsize="clamp(16px, 1.042vw, 20px)"
+                    hasClampWidth="18.490vw"
+                    hasBasicWidth="277px"
+                    hasBasicHeight="73px"
+                    className="home-second-section"
+                    ariaLabel="link"
+                  />
+                </StyledContent>
+              ) : (
+                <StyledContent>
+                  <StyledContentWrapper>
+                    {data.opisDoMlodziez ? parse(data.opisDoMlodziez) : null}
+                  </StyledContentWrapper>
+                  <Button
+                    btnData={data.przyciskMlodziez}
+                    variant="green"
+                    haswidth="355px"
+                    hasheight="88px"
+                    hasClampHeight="4.583vw"
+                    hasfontsize="clamp(16px, 1.042vw, 20px)"
+                    hasClampWidth="18.490vw"
+                    hasBasicWidth="277px"
+                    hasBasicHeight="73px"
+                    className="home-second-section"
+                    ariaLabel="link"
+                  />
+                </StyledContent>
+              )}
+            </motion.div>
+          </AnimatePresence>
         </StyledLeftWrapper>
         <StyledRightWrapper>
           <Image

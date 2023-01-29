@@ -211,12 +211,16 @@ const Content = styled.div`
 
   h2{
     margin-bottom: 32px;
-    font:700 clamp(22px, ${48 / 1920 * 100}vw, 48px) Roboto;
+    font: 700 clamp(22px, ${48 / 1920 * 100}vw, 48px) Roboto;
 
     @media (max-width: 820px) {
       font-size: 22px;
       margin-bottom: 16px;
     }
+  }
+
+  h3 {
+    font: 700 clamp(20px, 1.458vw, 28px) Roboto;
   }
 
   p{
@@ -230,6 +234,15 @@ const Content = styled.div`
 
     & > * + * {
       margin-top: 16px;
+    }
+  }
+
+  .wp-block-quote {
+    margin-top: 28px;
+    margin-bottom: 1rem;
+
+    > p {
+      margin-bottom: 1rem;
     }
   }
 
@@ -275,6 +288,35 @@ const Content = styled.div`
   .size-full{
     width: 100%;
   }
+
+  ul{
+    font-size: clamp(15px, ${26 / 1920 * 100}vw, 26px);
+    margin: 0 0 0 21px;
+    display: grid;
+    gap: 12px;
+    padding: 24px 0;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-size: clamp(15px, ${26 / 1920 * 100}vw, 26px);
+    text-decoration: none;
+    color: var(--normalGrey);
+    transition: font-size 250ms linear, color 250ms linear;
+
+    &:hover {
+      font-size: clamp(16px, ${27 / 1920 * 100}vw, 27px);
+      color: var(--normalBlack);
+    }
+
+    &:focus-visible {
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: var(--hoverGreen);
+      outline-offset: 4px;
+    }
+  }
+}
 `
 
 const Contact = styled.div`

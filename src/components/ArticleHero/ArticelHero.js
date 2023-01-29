@@ -251,7 +251,7 @@ const ImageWrapper = styled.div`
 `
 
 const Nav = styled.nav`
-width: clamp(500px,33.85416666666667vw,650px);
+    width: clamp(500px,33.85416666666667vw,650px);
     font-weight: 500;
     font-size: clamp(17px, ${26 / 1920 * 100}vw, 26px);
     line-height: 150%;
@@ -295,11 +295,8 @@ width: clamp(500px,33.85416666666667vw,650px);
         }
 
         ul{
-            margin-top: 16px;
-        }
-
-        ol{
-
+            font-size: 1rem;
+            margin: 8px 0 8px 16px;
         }
 
         a{

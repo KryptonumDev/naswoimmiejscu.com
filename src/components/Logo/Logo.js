@@ -14,13 +14,12 @@ const Logo = ({
     return (
         <Link
             to="/"
-            arialabel="link">
+            aria-label="link">
             <StyledLogo
                 isheader={isHeader}
                 hasmaxwidth={hasMaxWidth}
                 hasdeclaredmargin={hadDeclaredMargin}
                 isfooter={isFooter}
-
             >
                 <svg
                     width="544"
