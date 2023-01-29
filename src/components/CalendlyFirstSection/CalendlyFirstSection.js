@@ -43,6 +43,8 @@ const CalendlyFirstSection = ({ data }) => {
             hasBasicWidth="300px"
             hasBasicHeight="53px"
             ariaLabel="link"
+            noReferer={"noreferrer"}
+            noOpener={"noopener"}
           />
         </StyledLeftWrapper>
         <StyledRightWrapper>

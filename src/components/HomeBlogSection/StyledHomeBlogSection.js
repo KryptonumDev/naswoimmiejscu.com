@@ -125,19 +125,35 @@ export const StyledContent = styled.button`
   &:hover {
     > div {
       &:first-child {
-        transform: ${({ isactive, isright }) => (isactive ? " translateX(0);" : isright ? "translateX(-6px)" : "translateX(6px)")};
+        &.left {
+          transform: ${({ isactive }) => isactive ? "translateX(0)" : "translateX(-6px)"};
+        }
+
+        &.right {
+          transform: ${({ isactive }) => isactive ? "translateX(0)" : "translateX(6px)"};
+        }
       }
     }
   }
 
   @media (max-width: 1024px) {
-    opacity: 1;
+
     &.desctop {
       display: none !important;
     }
+
     &.mobile {
       display: flex !important;
     }
+
+    opacity: 1;
+    align-items: flex-start;
+    align-self: flex-start;
+    position: relative;
+    padding-right: 22px;
+    padding-top: ${({ isright }) => (isright ? "0" : "24px")};
+    margin-top: ${({ isright }) => (isright ? "32px" : "0")};
+    margin-bottom: ${({ isright }) => (isright ? "0" : "30px")};
   }
 
   &:focus-visible {
@@ -149,18 +165,8 @@ export const StyledContent = styled.button`
 
   @media only screen and (min-width: 1024px) {
     &:hover {
-      opacity: 0.8;
+      opacity: ${({ isactive }) => isactive ? "1" : "0.8"};
     }
-  }
-
-  @media only screen and (max-width: 1024px) {
-    align-items: flex-start;
-    align-self: flex-start;
-    position: relative;
-    padding-right: 22px;
-    padding-top: ${({ isright }) => (isright ? "0" : "24px")};
-    margin-top: ${({ isright }) => (isright ? "32px" : "0")};
-    margin-bottom: ${({ isright }) => (isright ? "0" : "30px")};
   }
 `;
 

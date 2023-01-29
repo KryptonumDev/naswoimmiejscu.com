@@ -14,6 +14,31 @@ export const StyledRecommendationCard = styled.div`
     hasdeclaredbg ? null : "var(--recomendationSecond)"};
   flex: 1;
 
+  > div {
+    &:first-child{
+      > div {
+        &:first-child{
+          .avatar-circle {
+            transition: transform 250ms linear;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    > div {
+      &:first-child{
+        > div {
+          &:first-child {
+            .avatar-circle {
+              transform: scale(1.15);
+            }
+          }
+        }
+      }
+    }
+  }
 
   @media only screen and (max-width: 1024px) {
     padding: 64px 0 24px 0;
@@ -36,7 +61,6 @@ export const StyledImage = styled.div`
   width: 91px;
   height: 91px;
   position: relative;
-  overflow: hidden;
 
   .gatsby-image-wrapper {
     border-radius: 50%;

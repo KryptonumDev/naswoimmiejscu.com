@@ -58,13 +58,16 @@ export const StyledList = styled.div`
     margin-left: 24px;
 
     li {
-      color: var(--normalGreen);
+      &::marker {
+        color: var(--normalGreen);
+      }
 
       p {
         color: var(--normalBlack);
       }
 
       strong {
+        color: var(--normalBlack);
         font-weight: 700;
       }
     }

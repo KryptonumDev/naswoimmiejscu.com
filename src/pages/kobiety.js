@@ -26,7 +26,6 @@ const Womens = ({
       <FirstSecionWomens
         title={pierwszaSekcjaKobiety.tytul}
         desc={pierwszaSekcjaKobiety.opis}
-        icon={pierwszaSekcjaKobiety.ikonkaObokTytulu}
         image={pierwszaSekcjaKobiety.zdjeciePoPrawo}
         imageMobile={pierwszaSekcjaKobiety.zdjeciePoPrawoMobile}
         womens={true}
@@ -131,14 +130,6 @@ export const query = graphql`
           }
         }
         pierwszaSekcjaKobiety {
-          ikonkaObokTytulu {
-            altText
-            localFile {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-          }
           opis
           tytul
           zdjeciePoPrawo {

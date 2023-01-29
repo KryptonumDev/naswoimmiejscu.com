@@ -85,13 +85,39 @@ const Grid = styled.div`
     margin-top: clamp(32px,  ${32 / 480 * 100}vw, 80px);
 
     .wrap{
-    padding: 0 clamp(32px, ${32 / 1024 * 100}vw, 64px);
+        padding: 0 clamp(32px, ${32 / 1024 * 100}vw, 64px);
         &:nth-child(2n+1){
             padding: clamp(32px, ${32 / 1024 * 100}vw, 64px);
             background: #EAE7E1;
         }
         text-decoration: unset;
         color: unset;
+
+        > div {
+            > div {
+                > div {
+                    &:first-child {
+                        svg {
+                            transition: transform 250ms linear;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &:hover {
+            > div {
+                > div {
+                    > div {
+                        &:first-child {
+                            svg {
+                                transform: scale(1.10);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 `
 

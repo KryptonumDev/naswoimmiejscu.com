@@ -28,7 +28,6 @@ const Youth = ({
       <FirstSecionWomens
         title={pierwszaSekcjaMlodziez.tytul}
         desc={pierwszaSekcjaMlodziez.opis}
-        icon={pierwszaSekcjaMlodziez.ikonkaObokTytulu}
         image={pierwszaSekcjaMlodziez.obrazPoPrawo}
         imageMobile={pierwszaSekcjaMlodziez.obrazPoPrawoMobile}
       />
@@ -226,15 +225,6 @@ export const query = graphql`
           }
         }
         pierwszaSekcjaMlodziez {
-          ikonkaObokTytulu {
-            altText
-            title
-            localFile {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-          }
           obrazPoPrawo {
             altText
             title

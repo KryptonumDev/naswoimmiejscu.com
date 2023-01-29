@@ -76,8 +76,10 @@ const AboutMeProcess = ({ data }) => {
           </StyledImageWrapper>
         </StyledContent>
         <StyledButtonsWrapper>
-          <StyledButtonWrapper hideimage>
-            <Image imageDesktop={data.ikonkaKobiet} objectFit="contain" />
+          <StyledButtonWrapper>
+            <div>
+              <Image imageDesktop={data.ikonkaKobiet} objectFit="contain" />
+            </div>
             <StyledButtonElement
               btnData={data.przyciskKobiety}
               variant="green"
@@ -90,7 +92,9 @@ const AboutMeProcess = ({ data }) => {
             />
           </StyledButtonWrapper>
           <StyledButtonWrapper bigsizeicon>
-            <Image imageDesktop={data.ikonkaMlodejOsoby} objectFit="contain" />
+            <div>
+              <Image imageDesktop={data.ikonkaMlodejOsoby} objectFit="contain" />
+            </div>
             <StyledButtonElement
               btnData={data.przyciskMlodeOsoby}
               variant="white"

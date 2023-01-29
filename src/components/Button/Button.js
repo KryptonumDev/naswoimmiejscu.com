@@ -17,7 +17,9 @@ const Button = ({
   hasBasicWidth,
   hasBasicHeight,
   tabIndex = 0,
-  ariaLabel
+  ariaLabel,
+  noReferer,
+  noOpener
 }) => {
   return text ? (
     <StyledButton
@@ -36,6 +38,8 @@ const Button = ({
       arialabel={ariaLabel}
       to={btnData.url}
       className='transitionLink'
+      rel={noReferer || noOpener ? `${noReferer} ${noOpener}` : null}
+      
     >
       <StyledLink
         target={btnData.target}

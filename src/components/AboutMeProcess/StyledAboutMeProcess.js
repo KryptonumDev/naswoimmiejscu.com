@@ -103,13 +103,20 @@ export const StyledButtonWrapper = styled.div`
   }
 
   @media only screen and (max-width: 992px) {
-    flex-direction: column;
+    width: 100%;
 
-    img,
-    .gatsby-image-wrapper {
-      display: ${({ hideimage }) => (hideimage ? "none" : "block")};
-      width: 42px;
-      height: 42px;
+    > div {
+      &:first-child {
+        width: 42px;
+        height: 42px;
+
+        img,
+        .gatsby-image-wrapper {
+          display: ${({ hideimage }) => (hideimage ? "none" : "block")};
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 `;
@@ -164,11 +171,6 @@ export const StyledButtonElement = styled(Button)`
       variant === "white" ? "var(--normalWhite)" : null};
     border-color: ${({ variant }) =>
       variant === "white" ? "var(--normalBrown)" : null};
-  }
-
-  @media only screen and (max-width: 424px) {
-    padding: 0;
-    width: 100%;
   }
 `;
 
