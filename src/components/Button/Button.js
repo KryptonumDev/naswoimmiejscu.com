@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "../TransitionLink/TransitionLink";
+import React from 'react'
+import { Link } from '../TransitionLink/TransitionLink'
 
-import { StyledButton, StyledLink } from "./StyledButton";
+import { StyledButton, StyledLink } from './StyledButton'
 
 const Button = ({
   btnData,
@@ -21,6 +21,7 @@ const Button = ({
   noReferer,
   noOpener
 }) => {
+  console.log(btnData)
   return text ? (
     <StyledButton
       aria-label={ariaLabel}
@@ -29,20 +30,17 @@ const Button = ({
       hasdeclaredheight={hasheight}
       hasfontsize={hasfontsize}
       className={className}
-      tabIndex={tabIndex}
-    >
+      tabIndex={tabIndex}>
       {text}
     </StyledButton>
   ) : (
     <Link
       arialabel={ariaLabel}
       to={btnData.url}
+      target={btnData.target}
       className='transitionLink'
-      rel={noReferer || noOpener ? `${noReferer} ${noOpener}` : null}
-      
-    >
+      rel={noReferer || noOpener ? `${noReferer} ${noOpener}` : null}>
       <StyledLink
-        target={btnData.target}
         variant={variant}
         disabled={disabled}
         hasdeclaredwidth={haswidth}
@@ -53,12 +51,11 @@ const Button = ({
         hasclampheight={hasClampHeight}
         hasbasicwidth={hasBasicWidth}
         hasbasicheight={hasBasicHeight}
-        tabIndex={tabIndex}
-      >
+        tabIndex={tabIndex}>
         {btnData.title}
       </StyledLink>
     </Link>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
