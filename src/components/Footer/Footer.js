@@ -53,7 +53,7 @@ const Footer = () => {
       <StyledFooter
         smallgap={
           location.pathname === '/kontakt/' ||
-          location.pathname === '/calendly/' ||
+          location.pathname === '/spotkajmy-sie/' ||
           location.pathname === '/polityka-prywatnosci/' ||
           location.pathname === '/kobiety/' ||
           location.pathname === '/opinie/' ||
@@ -92,7 +92,7 @@ const Footer = () => {
           <StyledRightWrapperContent
             className={
               location.pathname === '/kontakt/' ||
-              location.pathname === '/calendly/' ||
+              location.pathname === '/spotkajmy-sie/' ||
               location.pathname === '/polityka-prywatnosci/' ||
               location.pathname === '/kobiety/' ||
               location.pathname === '/opinie/' ||

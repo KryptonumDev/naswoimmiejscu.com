@@ -1,33 +1,32 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import FAQSection from "../components/FAQSection/FAQSection";
-import CalendlyFirstSection from "../components/CalendlyFirstSection/CalendlyFirstSection";
-import CalendlyLastSection from "../components/CalendlyLastSection/CalendlyLastSection";
+import FAQSection from '../components/FAQSection/FAQSection'
+import CalendlyFirstSection from '../components/CalendlyFirstSection/CalendlyFirstSection'
+import CalendlyLastSection from '../components/CalendlyLastSection/CalendlyLastSection'
 
 const Calendly = ({
   data: {
-    wpPage: { calendly },
-  },
+    wpPage: { calendly }
+  }
 }) => {
-
   return (
-    <main >
+    <main>
       <CalendlyFirstSection data={calendly} />
       <FAQSection
         data={calendly.faqCalendly}
-        btnWidth="384px"
+        btnWidth='384px'
         smallMgBottom
         isNormalFont
       />
       <CalendlyLastSection data={calendly.ostatniaSekcjaStronyCalendly} />
     </main>
-  );
-};
+  )
+}
 
-export default Calendly;
+export default Calendly
 
-export { Head } from "../components/Head/Head";
+export { Head } from '../components/Head/Head'
 
 export const query = graphql`
   query calendlyQuery {
@@ -113,4 +112,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
