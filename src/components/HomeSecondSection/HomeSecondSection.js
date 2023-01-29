@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import parse from "html-react-parser";
 import { motion, AnimatePresence } from "framer-motion";
+import { StaticImage } from "gatsby-plugin-image"
 
 import CustomButton from "../CustomButton/CustomButton";
 import Button from "../Button/Button";
@@ -62,8 +63,9 @@ const HomeSecondSection = ({ data }) => {
                 className={isWomens ? 'button' : 'button active'}
                 bgColor={isWomens ? "var(--btnGrey)" : "var(--normalGreen)"}
                 tabIndex="-1"
+                imageSize="47px"
               >
-                ikonka
+                <StaticImage src="../../images/brother.png" alt="youth" />
               </CustomButton>
               <StyledText
                 className={isWomens ? 'text' : 'text active'}
@@ -83,8 +85,9 @@ const HomeSecondSection = ({ data }) => {
                 onClick={() => handleChange(true)}
                 type="button"
                 tabIndex="-1"
+                imageHeight="57px"
               >
-                ikonka
+                <StaticImage src="../../images/women.png" alt="youth" />
               </CustomButton>
               <StyledText
                 className={isWomens ? 'text active' : 'text'}

@@ -25,12 +25,12 @@ export const StyledCustomButton = styled.button`
 
     img {
         width: ${({ imagesize }) => (imagesize ? imagesize : "initial")};
-        height: ${({ imagesize }) => (imagesize ? imagesize : "initial")};
+        height: ${({ imageheight }) => (imageheight ? imageheight : "initial")};
     }
 
     .gatsby-image-wrapper {
         width: ${({ imagesize }) => (imagesize ? imagesize : "initial")};
-        height: ${({ imagesize }) => (imagesize ? imagesize : "initial")};
+        height: ${({ imageheight }) => (imageheight ? imageheight : "initial")};
     }
 
     svg {

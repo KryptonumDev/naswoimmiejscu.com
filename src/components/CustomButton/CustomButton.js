@@ -22,6 +22,7 @@ const CustomButton = ({
   hasTransform,
   className,
   children,
+  imageHeight
 }) => {
 
   return (
@@ -37,6 +38,7 @@ const CustomButton = ({
       hastransform={hasTransform}
       isfaq={isFAQ}
       className={className}
+      imageheight={imageHeight}
       aria-label="przycisk"
     >
       {children}
