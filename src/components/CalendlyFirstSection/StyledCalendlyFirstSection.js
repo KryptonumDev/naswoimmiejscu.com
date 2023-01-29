@@ -62,6 +62,8 @@ export const StyledList = styled.div`
         color: var(--normalGreen);
       }
 
+      padding-top: 4px;
+
       p {
         color: var(--normalBlack);
       }

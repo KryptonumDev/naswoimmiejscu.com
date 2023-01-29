@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledPrivacyPolicy = styled.div`
   margin-top: clamp(30px, 8.646vw, 166px);
-  margin-bottom: clamp(120px, 9.792vw, 188px);
+  margin-bottom: clamp(50px, 9.792vw, 188px);
   position: relative;
   width: 100%;
 
@@ -22,23 +22,73 @@ export const StyledTitleWrapper = styled.div`
 export const StyledDescWrapper = styled.div`
   width: 100%;
   margin-top: clamp(70px, 5.365vw, 103px);
-  font: 300 26px/1.2em Roboto;
+  font: 300 clamp(15px, 1.354vw, 26px)/1.2em Roboto;
   margin-left: clamp(100px, 15.677vw, 301px);
   max-width: 754px;
 
-  h2 {
-    font-size: 40px;
+  h2, h3 {
+    font-size: clamp(18px, 2.083vw, 40px);
     font-wieght: bold;
     line-height: 1.2em;
+    margin: clamp(20px, 2.604vw, 50px) 0;
   }
 
   strong {
     font-wieght: 700;
   }
 
+  p + p,
+  h2 + ul,
+  h2 + ol,
+  h3 + ul,
+  h3 + ol,
+  p + ul,
+  p + ol,
+  ol + p,
+  ul + p {
+    margin-top: clamp(20px, 2.604vw, 50px);
+    line-height: 1.2em;
+  }
+
   ol,
   ul {
     margin-left: 25px;
+
+    li {
+      &::marker {
+        color: var(--normalGreen);
+      }
+
+      p {
+        color: var(--normalBlack);
+      }
+
+      strong {
+        color: var(--normalBlack);
+        font-weight: 700;
+      }
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    font-size: clamp(15px, 1.254vw, 24px);
+    text-decoration: none;
+    color: var(--normalGrey);
+    transition: font-size 250ms linear, color 250ms linear;
+    line-height: 1.2em;
+
+    &:hover {
+      font-size: clamp(15px, 1.300vw, 26px);
+      color: var(--normalBlack);
+    }
+
+    &:focus-visible {
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: var(--hoverGreen);
+      outline-offset: 4px;
+    }
   }
 
   @media only screen and (max-width: 1167px) {
