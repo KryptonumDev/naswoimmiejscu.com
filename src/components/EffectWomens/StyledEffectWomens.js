@@ -59,7 +59,7 @@ export const StyledList = styled.ul`
 
     li {
         color: var(--lightGreen);
-        font: 300 1.354vw Roboto;
+        font: 300 1.354vw/1.2em Roboto;
         position: relative;
         margin-left: 25px;
 
@@ -180,7 +180,7 @@ export const StyledElements = styled.ul`
     }
 
     p {
-      font: 300 clamp(16px, 1.042vw, 20px) Roboto;
+      font: 300 clamp(16px, 1.042vw, 20px)/1.2em Roboto;
       width: calc(100% - 40px);
 
       strong {

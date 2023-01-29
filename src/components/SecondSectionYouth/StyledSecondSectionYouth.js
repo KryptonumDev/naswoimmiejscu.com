@@ -23,7 +23,7 @@ export const StyledSecondSectionYouth = styled.div`
 `;
 
 export const StyledLeftWrapper = styled.div`
-  font: 300 1.354vw Roboto;
+  font: 300 1.354vw/1.2em Roboto;
   color: var(--normalBlack);
   position: relative;
   z-index: 1;
@@ -62,7 +62,7 @@ export const StyledLeftWrapper = styled.div`
 `;
 
 export const StyledRightWrapper = styled.div`
-  font: 300 1.354vw Roboto;
+  font: 300 1.354vw/1.2em Roboto;
   color: var(--normalBlack);
   position: relative;
   z-index: 3;

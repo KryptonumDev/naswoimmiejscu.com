@@ -36,7 +36,7 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledTextWrapper = styled.div`
-  font: 300 20px Roboto;
+  font: 300 20px/1.2em Roboto;
   color: var(--normalBlack);
   max-width: 584px;
   margin-bottom: 38px;

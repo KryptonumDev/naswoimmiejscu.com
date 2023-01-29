@@ -211,7 +211,7 @@ const Content = styled.div`
 
   h2{
     margin-bottom: 32px;
-    font: 700 clamp(22px, ${48 / 1920 * 100}vw, 48px) Roboto;
+    font: 700 clamp(22px, ${48 / 1920 * 100}vw, 48px)/1.2em Roboto;
 
     @media (max-width: 820px) {
       font-size: 22px;
@@ -303,6 +303,7 @@ const Content = styled.div`
     text-decoration: none;
     color: var(--normalGrey);
     transition: font-size 250ms linear, color 250ms linear;
+    line-height: 1.2em;
 
     &:hover {
       font-size: clamp(16px, ${27 / 1920 * 100}vw, 27px);
@@ -347,7 +348,7 @@ const Contact = styled.div`
 
   .title{
     margin-bottom: 20px;
-    font:700 clamp(22px, ${48 / 1920 * 100}vw, 48px)  Roboto;
+    font: 700 clamp(22px, ${48 / 1920 * 100}vw, 48px)/1.2em  Roboto;
 
     @media (max-width: 820px) {
       font-size: 22px;
@@ -355,7 +356,7 @@ const Contact = styled.div`
   }
 
   .text{
-    font: 300 clamp(15px, ${26 / 1920 * 100}vw, 26px) Roboto;
+    font: 300 clamp(15px, ${26 / 1920 * 100}vw, 26px)/1.2em Roboto;
     margin-bottom: 30px;
 
     @media (max-width: 1200px) {

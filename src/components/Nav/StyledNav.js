@@ -11,7 +11,7 @@ export const StyledNav = styled.nav`
 
   a,
   span {
-    font: 400 14px Roboto;
+    font: 400 14px/1.2em Roboto;
     text-transform: uppercase;
     color: var(--normalGrey);
     text-decoration: none;

@@ -12,7 +12,7 @@ export const StyledPrivacyPolicy = styled.div`
 `;
 
 export const StyledTitleWrapper = styled.div`
-  font: 700 clamp(48px, 3.333vw, 64px) / 1.2em Roboto;
+  font: 700 clamp(48px, 3.333vw, 64px)/1.2em Roboto;
 
   @media only screen and (max-width: 540px) {
     font-size: clamp(22px, 7.037vw, 38px);
@@ -29,6 +29,7 @@ export const StyledDescWrapper = styled.div`
   h2 {
     font-size: 40px;
     font-wieght: bold;
+    line-height: 1.2em;
   }
 
   strong {

@@ -18,7 +18,7 @@ export const StyledHomeBlogSection = styled.div`
     content: "";
     display: ${({ iscase }) => (iscase ? "none" : "block")};
     width: 1px;
-    height: 124%;
+    height: 121%;
     background-color: var(--hrColor);
     position: absolute;
     left: 53.3%;

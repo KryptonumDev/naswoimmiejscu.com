@@ -311,7 +311,7 @@ export const StyledTextWrapper = styled.div`
 `;
 
 export const StyledName = styled.div`
-    font: 700 clamp(18px, 1.354vw, 26px) Roboto;
+    font: 700 clamp(18px, 1.354vw, 26px)/1.2em Roboto;
 
     @media only screen and (max-width: 1763px) {
         font-size: 1.248vw;
@@ -343,7 +343,7 @@ export const StyledName = styled.div`
 `;
 
 export const StyledDesc = styled.div`
-    font: 300 clamp(18px, 1.354vw, 26px) Roboto;
+    font: 300 clamp(18px, 1.354vw, 26px)/1.2em Roboto;
 
     @media only screen and (max-width: 1763px) {
         font-size: 1.248vw;

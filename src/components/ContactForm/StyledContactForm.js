@@ -30,7 +30,7 @@ export const StyledContactForm = styled.div`
 `;
 
 export const StyledTitleWrapper = styled.div`
-  font: 700 clamp(24px, 1.875vw, 36px) Roboto;
+  font: 700 clamp(24px, 1.875vw, 36px)/1.2em Roboto;
   color: var(--arrowBlack);
   position: relative;
 

@@ -87,6 +87,7 @@ export const StyledDescWrapperElement = styled(StyledDescWrapper)`
   
   em {
     font-size: 16px;
+    line-height: 1.2em;
     font-style: normal;
   }
 `;

@@ -22,7 +22,7 @@ export const StyledHomeFAQSection = styled.div`
 
 export const StyledTextWrapper = styled.div`
   width: 45%;
-  font: 700 3.333vw Roboto;
+  font: 700 3.333vw/1.2em Roboto;
   display: flex;
   align-items: center;
   gap: 40px;

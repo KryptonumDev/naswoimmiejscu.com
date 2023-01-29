@@ -62,13 +62,12 @@ export const StyledQuestionWrapper = styled.summary`
   }
 
   @media only screen and (max-width: 992px) {
-    // align-items: ${({ open }) => (open ? "flex-start" : "center")};
     align-items: center;
   }
 `;
 
 export const StyledAnswerWrapper = styled.div`
-  font: 300 clamp(20px, 1.25vw, 24px) Roboto;
+  font: 300 clamp(20px, 1.25vw, 24px)/1.2em Roboto;
   margin-top: 24px;
 
   strong {
@@ -108,7 +107,7 @@ export const StyledIconWrapper = styled.div`
 `;
 
 export const StyledQuestionContent = styled.div`
-  font: 700 clamp(32px, 2.083vw, 40px) Roboto;
+  font: 700 clamp(32px, 2.083vw, 40px)/1.2em Roboto;
   cursor: pointer;
 
   @media only screen and (min-width: 1920px) {

@@ -78,7 +78,7 @@ export const StyledImageWrapper = styled.div`
 `;
 
 export const StyledTitle = styled.div`
-  font: 700 clamp(18px, 1.25vw, 24px) Roboto;
+  font: 700 clamp(18px, 1.25vw, 24px)/1.2em Roboto;
 
   @media only screen and (max-width: 432px) {
     font-size: 5.556vw;
@@ -96,6 +96,8 @@ export const StyledDesc = styled.div`
 
 export const StyledDate = styled.div`
   font-size: 13px;
+  line-height: 1.2em;
+  
   @media only screen and (max-width: 1024px) {
     p {
       text-align: left;
