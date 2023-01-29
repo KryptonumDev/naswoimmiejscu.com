@@ -14,11 +14,14 @@ import {
   StyledIconTitle,
   StyledSuccessMessage,
 } from "./StyledContactForm";
+import { StyledText } from "../Text/StyledText"
 
 import { initialState, contactSchema } from "./form.constants";
 
 const ContactForm = () => {
   const [isSend, setIsSend] = useState(false);
+  const [isError, setIsError] = useState(false);
+  
   const data = useStaticQuery(graphql`
     query contactQueryForm {
       wpPage(id: { eq: "cG9zdDoxOA==" }) {
@@ -52,12 +55,14 @@ const ContactForm = () => {
         `${process.env.GATSBY_WORDPRESS_URL}/wp-json/contact-form-7/v1/contact-forms/${process.env.GATSBY_WORDPRESS_FORM_ID}/feedback`,
         formData
       );
+      setIsError(false);
       setSubmitting(false);
       setIsSend(true);
       resetForm();
     } catch (err) {
       setSubmitting(false);
       setIsSend(false);
+      setIsError(true);
       console.error("handleSubmit", err);
     }
   };
@@ -134,6 +139,13 @@ const ContactForm = () => {
                   : null}
               </StyledSuccessMessage>
             ) : null}
+            {isError ?
+              <StyledSuccessMessage>
+                <StyledText hasdeclaredfontsize="18px" hasdeclaredfontcolor="var(--errorColor)">
+                  Wystąpił problem podczas wysyłania formularza
+                </StyledText>
+              </StyledSuccessMessage> 
+            : null}
           </form>
         )}
       </Formik>
