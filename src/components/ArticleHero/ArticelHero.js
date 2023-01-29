@@ -124,10 +124,13 @@ const TextPart = styled.div`
 
     .description{
         margin-top: 16px;
+        max-width: 772px;
+
         *{
-        font-size: clamp(15px, ${26 / 1920 * 100}vw, 26px);
-        line-height: 130%;
+            font-size: clamp(15px, ${26 / 1920 * 100}vw, 26px);
+            line-height: 130%;
         }
+
         & > * + *{
             margin-top: 16px;
         }
