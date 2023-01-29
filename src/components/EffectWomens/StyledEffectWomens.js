@@ -159,6 +159,16 @@ export const StyledElements = styled.ul`
     background-color: var(--womensBox);
     border-radius: 8px;
 
+    > div {
+      width: 27px;
+      height: 28px;
+
+      .gatsby-image-wrapper {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     &:last-child {
       background-color: var(--normalGreen);
       max-width: 507px;
@@ -169,14 +179,9 @@ export const StyledElements = styled.ul`
       }
     }
 
-    .gatsby-image-wrapper {
-      display: block;
-      min-width: 27px;
-      height: 27px;
-    }
-
     p {
       font: 300 clamp(16px, 1.042vw, 20px) Roboto;
+      width: calc(100% - 40px);
 
       strong {
         font-weight: 600;

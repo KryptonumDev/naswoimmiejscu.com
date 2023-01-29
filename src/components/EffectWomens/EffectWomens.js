@@ -39,7 +39,9 @@ const EffectWomens = ({
           <StyledElements>
             {listElements.map((li, index) => (
               <li key={li.tekstListy + index}>
-                <Image imageDesktop={li.ikonka} objectFit="contain" />
+                <div>
+                  <Image imageDesktop={li.ikonka} />
+                </div>
                 {li.tekstListy ? parse(li.tekstListy) : null}
               </li>
             ))}
