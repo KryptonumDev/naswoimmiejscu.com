@@ -1,9 +1,9 @@
-import React from "react";
-import { StyledCircle } from "../Circle/StyledCircle";
-import parse from "html-react-parser";
+import React from 'react'
+import { StyledCircle } from '../Circle/StyledCircle'
+import parse from 'html-react-parser'
 
-import { Link } from "../TransitionLink/TransitionLink";
-import Image from "../Image/Image";
+import { Link } from '../TransitionLink/TransitionLink'
+import Image from '../Image/Image'
 
 import {
   StyledRecommendationCard,
@@ -12,8 +12,8 @@ import {
   StyledImage,
   StyledTextContent,
   StyledNameWrapper,
-  StyledDescImageWrapper,
-} from "./StyledRecommendationCard";
+  StyledDescImageWrapper
+} from './StyledRecommendationCard'
 
 const RecommendationCard = ({
   slug,
@@ -22,21 +22,19 @@ const RecommendationCard = ({
   nameDesc,
   desc,
   isDiffBg,
-  recDif,
+  recDif
 }) => {
   return (
-    <Link className="transitionLink" to={`/case/${slug}`}>
-      <StyledRecommendationCard
-        hasdeclaredbg={isDiffBg ? "true" : null}
-      >
+    <Link className='transitionLink' to={`/sukcesy/${slug}`}>
+      <StyledRecommendationCard hasdeclaredbg={isDiffBg ? 'true' : null}>
         <StyledAvatarWrapper recdiff={recDif}>
           <StyledImage>
             <Image imageDesktop={avatar} />
             <StyledCircle
-              hasdeclaredwidth="27px"
-              hasdeclaredheight="27px"
-              hasdeclaredbg="var(--lightGreen)"
-              className="avatar-circle"
+              hasdeclaredwidth='27px'
+              hasdeclaredheight='27px'
+              hasdeclaredbg='var(--lightGreen)'
+              className='avatar-circle'
             />
           </StyledImage>
           <StyledTextContent>
@@ -51,7 +49,7 @@ const RecommendationCard = ({
         </StyledDescriptionWrapper>
       </StyledRecommendationCard>
     </Link>
-  );
-};
+  )
+}
 
-export default RecommendationCard;
+export default RecommendationCard
