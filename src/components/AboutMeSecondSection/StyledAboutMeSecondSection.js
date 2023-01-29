@@ -38,7 +38,7 @@ export const StyledTitleWrapper = styled.div`
     font-size: 6.061vw;
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 420px) {
     font-size: 5.556vw;
   }
 `;
@@ -114,7 +114,7 @@ export const StyledLeftWrapper = styled.div`
       }
     }
 
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 420px) {
       font-size: 4.167vw;
 
       em {
@@ -187,7 +187,7 @@ export const StyledRightWrapper = styled.div`
       }
     }
 
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 420px) {
       font-size: 4.167vw;
 
       em {
@@ -250,7 +250,7 @@ export const StyledCircleWrapper = styled.div`
     top: 45vw;
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 420px) {
     width: 85.146vw;
     height: 85.146vw;
     top: 42vw;
@@ -276,7 +276,7 @@ export const StyledMobileCircle = styled.div`
     }
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 420px) {
     width: 129.167vw;
     height: 129.167vw;
     left: -62.177vw;

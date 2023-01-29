@@ -113,7 +113,7 @@ export const StyledList = styled.ul`
             }
         }
     
-        @media only screen and (max-width: 360px) {
+        @media only screen and (max-width: 420px) {
             font-size: 3.333vw;
         }
     }

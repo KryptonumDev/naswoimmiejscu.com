@@ -91,7 +91,7 @@ export const StyledAnswerWrapper = styled.div`
     font-size: 3.4vw;
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 420px) {
     font-size: 4.167vw;
   }
 `;
@@ -128,7 +128,7 @@ export const StyledQuestionContent = styled.div`
     font-size: ${({ isnormalfont }) => (isnormalfont ? "3.8vw" : "4.4vw")};
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 420px) {
     font-size: ${({ isnormalfont }) => (isnormalfont ? "4.2vw" : "5.9vw")};
   }
 `;

@@ -235,7 +235,7 @@ export const StyledTitleWrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 420px) {
     &.home-hero-section,
     &.who-im-about-me,
     &.home-blog-section-text,
@@ -517,7 +517,7 @@ export const StyledDescWrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 420px) {
     &.home-hero-section,
     &.home-second-section,
     &.cooperation-process,

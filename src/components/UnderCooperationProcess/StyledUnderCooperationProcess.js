@@ -55,7 +55,7 @@ export const StyledTextWrapper = styled.div`
     font-size: 3.409vw;
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 420px) {
     font-size: 4.167vw;
   }
 `;

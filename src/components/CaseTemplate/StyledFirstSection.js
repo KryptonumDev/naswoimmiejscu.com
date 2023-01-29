@@ -80,7 +80,7 @@ export const StyledTitle = styled.div`
         font-size: 6.061vw;
     }
 
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 420px) {
         font-size: 6.111vw;
     }
 `;
@@ -163,7 +163,7 @@ export const StyledDescFirst = styled.div`
         font-size: 3.409vw;
     }
 
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 420px) {
         font-size: 4.167vw;
         margin-top: 16px;
     }
@@ -209,7 +209,7 @@ export const StyledSecondDesc = styled.div`
         font-size: 3.409vw;
     }
 
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 420px) {
         font-size: 4.167vw;
     }
 `;
@@ -337,7 +337,7 @@ export const StyledName = styled.div`
         font-size: 3.4vw;
     }
 
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 420px) {
         font-size: 4.1vw;
     }
 `;
@@ -369,7 +369,7 @@ export const StyledDesc = styled.div`
         font-size: 3.4vw;
     }
 
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 420px) {
         font-size: 4.1vw;
     }
 `;
