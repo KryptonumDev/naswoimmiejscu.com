@@ -18,7 +18,7 @@ export const Link = ({ arialabel, className = 'transitionLink', onClick = () => 
     return (
         <AniLink
             fade 
-            arialabel={arialabel ? arialabel : "link"}
+            aria-label={arialabel ? arialabel : "link"}
             className={className}
             onClick={onClick}
             to={to}
