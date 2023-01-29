@@ -14,7 +14,8 @@ const Logo = ({
     return (
         <Link
             to="/"
-            arialabel="link">
+            arialabel="link"
+        >
             <StyledLogo
                 isheader={isHeader}
                 hasmaxwidth={hasMaxWidth}
