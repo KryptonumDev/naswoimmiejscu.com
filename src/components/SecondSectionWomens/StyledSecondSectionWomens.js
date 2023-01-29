@@ -44,9 +44,13 @@ export const StyledRightWrapper = styled.div`
   width: 70%;
 
   @media only screen and (max-width: 992px) {
-    width: 100%;
+    width: 80%;
     position: relative;
     z-index: 2;
+  }
+
+  @media only screen and (max-width: 705px){
+    width: 100%;
   }
 `;
 

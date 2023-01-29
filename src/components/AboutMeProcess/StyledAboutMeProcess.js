@@ -48,7 +48,6 @@ export const StyledTextWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
-    max-width: unset;
   }
 `;
 

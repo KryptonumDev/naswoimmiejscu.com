@@ -25,7 +25,7 @@ export const StyledFAQElement = styled.details`
   }
 
   @media only screen and (max-width: 992px) {
-    max-width: unset;
+    max-width: 687px;
 
     &[open] {
       svg {

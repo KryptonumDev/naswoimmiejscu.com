@@ -11,6 +11,7 @@ export const StyledAboutMeFirstSection = styled.div`
 
   @media only screen and (max-width: 992px) {
     flex-direction: column-reverse;
+    align-items: flex-start;
     gap: 16px;
     margin-top: 22px;
   }
@@ -22,7 +23,6 @@ export const StyledLeftWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
-    max-width: unset;
   }
 `;
 

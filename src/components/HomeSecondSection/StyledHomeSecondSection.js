@@ -66,6 +66,7 @@ export const StyledContentWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     font-size: 2.218vw;
+    max-width: 655px;
   }
 
   @media only screen and (max-width: 808px) {

@@ -54,7 +54,6 @@ export const StyledRightWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
-    max-width: unset;
 
     em {
       font-size: 2.218vw;

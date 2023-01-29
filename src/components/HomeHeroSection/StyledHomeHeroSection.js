@@ -19,6 +19,7 @@ export const StyledHomeHeroSection = styled.div`
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
+    align-items: flex-start;
     gap: 14px;
   }
 `;
@@ -51,7 +52,6 @@ export const StyledRightWrapper = styled.div`
   z-index: 1;
 
   @media only screen and (max-width: 992px) {
-    max-width: unset;
     width: 100%;
   }
 `;
@@ -426,6 +426,10 @@ export const StyledDescWrapper = styled.div`
     &.calendly-first-section,
     &.calendly-last-section {
       font-size: 2.818vw;
+    }
+
+    &.home-second-section {
+      max-width: 655px;
     }
 
     &.home-hero-section {

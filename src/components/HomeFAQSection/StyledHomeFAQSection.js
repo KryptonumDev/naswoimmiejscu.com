@@ -99,6 +99,7 @@ export const StyledMobileSubHeading = styled.div`
     display: block;
     font: 300 20px Roboto;
     margin-bottom: 32px;
+    max-width: 687px;
 
     strong {
       font-weight: 500;
