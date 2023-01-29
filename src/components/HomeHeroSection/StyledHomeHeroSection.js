@@ -58,6 +58,7 @@ export const StyledRightWrapper = styled.div`
 
 export const StyledTitleWrapper = styled.div`
   font: 700 3.333vw/1.2em Roboto;
+  color: var(--normalBlack);
 
   strong {
     color: var(--nromalBrown);

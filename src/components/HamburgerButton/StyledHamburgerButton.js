@@ -39,6 +39,7 @@ export const StyledHamburgerInner = styled.span`
   left: 0;
   top: 50%;
   border-radius: 2px;
+  transition: background-color 250ms linear;
   background-color: ${({ isopen }) => isopen ? "transparent" : "var(--normalBlack)"};
 
   &::after {

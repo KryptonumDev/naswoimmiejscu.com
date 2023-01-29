@@ -239,7 +239,7 @@ export const StyledBlogSliderWrapper = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
-    padding: 0 22px 0 0;
+    padding: 0 22px 40px 0;
     margin: 0 -10px;
   }
 
