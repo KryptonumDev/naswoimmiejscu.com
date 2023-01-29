@@ -235,6 +235,15 @@ export const StyledBlogSliderWrapper = styled.div`
       display: flex !important;
       height: fit-content;
       flex: 1;
+      height: 100%;
+
+      a {
+        height: 100%;
+
+        > div {
+          height: 100%;
+        }
+      }
     }
   }
 

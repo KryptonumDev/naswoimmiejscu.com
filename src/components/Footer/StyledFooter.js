@@ -57,6 +57,12 @@ export const StyledRightWrapperContent = styled.div`
     align-items: center;
     width: 100%;
 
+    a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
     p {
       text-align: center;
       font-size: 24px;

@@ -41,7 +41,8 @@ export const StyledRecommendationCard = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
-    padding: 64px 0 24px 0;
+    padding: 24px 0 24px 0;
+    margin-top: 44px;
     background-color: transparent;
   }
 `;
