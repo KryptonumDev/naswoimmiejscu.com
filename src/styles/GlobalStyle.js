@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .tl-edges {
-      overflow-x: visible;
+      overflow-x: visible !important;
     }
 
     body {
