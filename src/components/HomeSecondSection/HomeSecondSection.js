@@ -85,7 +85,7 @@ const HomeSecondSection = ({ data }) => {
                 onClick={() => handleChange(true)}
                 type="button"
                 tabIndex="-1"
-                imageHeight="57px"
+                imageHeight="57px !important"
               >
                 <StaticImage src="../../images/women.png" alt="youth" />
               </CustomButton>
