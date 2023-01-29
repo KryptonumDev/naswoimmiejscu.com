@@ -4,8 +4,6 @@ import { Formik, Field } from "formik";
 import parse from "html-react-parser";
 import axios from "axios";
 
-import Image from "../Image/Image";
-
 import {
   StyledContactForm,
   StyledTitleWrapper,

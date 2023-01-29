@@ -1,6 +1,5 @@
 import React from "react";
 
-import Arrow from "../Arrow/Arrow";
 import Image from "../Image/Image";
 import ArrowDesktop from "../ArrowDesktop/ArrowDesktop";
 

@@ -7,9 +7,9 @@ import {
   StyledIcon,
   StyledTitle,
   StyledAvatarWrapper,
-  iconImage,
 } from "./StyledMeetSomebody";
 import { StyledText } from "../Text/StyledText";
+
 import { Link } from "../TransitionLink/TransitionLink";
 
 const MeetSomebody = ({ data, icon, tekstDoLinku }) => {
