@@ -9,7 +9,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `naswoimmiejscu`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://naswoimmiejscu.com/`,
   },
   plugins: [
     "gatsby-plugin-styled-components",
