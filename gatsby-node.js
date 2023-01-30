@@ -21,7 +21,8 @@ exports.createPages = async ({ actions, graphql }) => {
         './src/components/ArticleTemplate/ArticleTemplate.js'
       ),
       context: {
-        postId: node.id
+        postId: node.id,
+        url: `/blog/${node.slug}/`
       }
     })
   })
@@ -46,7 +47,8 @@ exports.createPages = async ({ actions, graphql }) => {
         './src/components/CaseTemplate/CaseTemplate.js'
       ),
       context: {
-        caseId: node.id
+        caseId: node.id,
+        url: `/sukcesy/${node.slug}/`
       }
     })
   })
@@ -69,7 +71,8 @@ exports.createPages = async ({ actions, graphql }) => {
       './src/components/BlogArchiveTemplate/BlogArchiveTemplate.js'
     ),
     context: {
-      id: 'cG9zdDo0ODM='
+      id: 'cG9zdDo0ODM=',
+      url: `/blog/`
     }
   })
 
@@ -82,8 +85,91 @@ exports.createPages = async ({ actions, graphql }) => {
       context: {
         id: id,
         slug: slug,
-        name: name
+        name: name,
+        url: `/blog/${slug}/`
       }
     })
+  })
+
+
+
+  createPage({
+    path: `/`,
+    component: require.resolve(
+      './src/templates/index.js'
+    ),
+    context: {
+      url: '/'
+    }
+  })
+
+  createPage({
+    path: `/kobiety/`,
+    component: require.resolve(
+      './src/templates/kobiety.js'
+    ),
+    context: {
+      url: '/kobiety/'
+    }
+  })
+
+  createPage({
+    path: `/kontakt/`,
+    component: require.resolve(
+      './src/templates/kontakt.js'
+    ),
+    context: {
+      url: '/kontakt/'
+    }
+  })
+
+  createPage({
+    path: `/mlodziez`,
+    component: require.resolve(
+      './src/templates/mlodziez.js'
+    ),
+    context: {
+      url: '/mlodziez/'
+    }
+  })
+
+  createPage({
+    path: `/o-mnie/`,
+    component: require.resolve(
+      './src/templates/o-mnie.js'
+    ),
+    context: {
+      url: '/o-mnie/'
+    }
+  })
+
+  createPage({
+    path: `/opinie/`,
+    component: require.resolve(
+      './src/templates/opinie.js'
+    ),
+    context: {
+      url: '/opinie/'
+    }
+  })
+
+  createPage({
+    path: `/polityka-prywatnosci/`,
+    component: require.resolve(
+      './src/templates/polityka-prywatnosci.js'
+    ),
+    context: {
+      url: '/polityka-prywatnosci/'
+    }
+  })
+
+  createPage({
+    path: `/spotkajmy-sie/`,
+    component: require.resolve(
+      './src/templates/spotkajmy-sie.js'
+    ),
+    context: {
+      url: '/spotkajmy-sie/'
+    }
   })
 }

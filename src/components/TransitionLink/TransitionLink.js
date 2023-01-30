@@ -14,10 +14,11 @@ const entryTransition = {
 }
 
 export const Link = ({
+  partialyActive = false,
   arialabel,
   className = 'transitionLink',
   target,
-  onClick = () => {},
+  onClick = () => { },
   to = '/',
   activeClassName = 'activeLink',
   children
@@ -30,6 +31,7 @@ export const Link = ({
       onClick={onClick}
       target={target}
       to={to}
+      partiallyActive={partialyActive}
       activeClassName={activeClassName}
       exit={exitTransition}
       entry={entryTransition}>

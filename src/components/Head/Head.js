@@ -1,11 +1,11 @@
 import React from "react";
 
-export function Head({ data }) {
+export function Head({ data, pageContext }) {
   const seo = data.wpPage?.seo ??
    data.wpCaseStudy?.seo ??
    data.wpPost?.seo;
    
-  const canonical = "https://naswoimmiejscu.com" + seo.opengraphUrl;
+  const canonical = "https://naswoimmiejscu.com" + pageContext.url;
 
   if (seo.opengraphUrl === "/404") {
     return <title>{seo.title}</title>;

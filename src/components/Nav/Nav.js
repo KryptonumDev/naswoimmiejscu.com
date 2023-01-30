@@ -31,7 +31,7 @@ const Nav = ({ isOpen, isFooter, openMenu }) => {
       <Link onClick={openMenu} to='/o-mnie/'>
         O MNIE
       </Link>
-      <Link onClick={openMenu} to='/blog/'>
+      <Link partialyActive={true} onClick={openMenu} to='/blog/'>
         BLOG
       </Link>
       <Link onClick={openMenu} to='/spotkajmy-sie/'>
