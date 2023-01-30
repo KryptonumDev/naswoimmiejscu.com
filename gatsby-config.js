@@ -18,6 +18,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-transition-link`,
     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-NCFTRRP",
+        defaultDataLayer: { platform: "gatsby" },
+        enableWebVitalsTracking: true,
+      }
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
@@ -46,7 +54,7 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/favicon.svg',
-        name: `Na swoim miejscu`, 
+        name: `Na swoim miejscu`,
         short_name: `naswoimmiejscu`,
         start_url: `/`,
         background_color: `#FFFBEF`,
