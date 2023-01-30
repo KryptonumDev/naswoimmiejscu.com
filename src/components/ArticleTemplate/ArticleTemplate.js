@@ -206,7 +206,7 @@ const Content = styled.div`
 
   @media (max-width: 820px) {
     max-width: 650px;
-    margin: 60px auto 0 auto;
+    margin: clamp(24px, 3.125vw, 60px) auto 0 auto;
   }
 
   h2{

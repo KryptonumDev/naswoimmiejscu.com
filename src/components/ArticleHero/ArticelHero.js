@@ -95,7 +95,7 @@ const Wrapper = styled.div`
         'bottom';
         grid-gap: 26px;
         grid-template-columns: 1fr;
-        margin: 60px auto 0 auto;
+        margin: 20px auto 0 auto;
         max-width: 650px;
 
         .svg-flex-mobile{
@@ -114,7 +114,7 @@ const TextPart = styled.div`
         margin-top: 16px;
         font-weight: 700;
         font-size: clamp(28px, ${64 / 1920 * 100}vw, 64px);
-        line-height: 110%;
+        line-height: 125%;
 
         @media (max-width: 640px) {
             font-size: 22px;
@@ -159,7 +159,7 @@ const Categories = styled.div`
         border-radius: 45px;
         font-weight: 300;
         font-size: clamp(7px, ${7 / 360 * 100}vw, 15px);
-        line-height: 16px;
+        line-height: 1.35em;
         text-transform: uppercase;
 
         @media (max-width: 1024px) {
@@ -245,6 +245,8 @@ const ImageWrapper = styled.div`
             text-orientation: unset;
             transform: unset;
             padding-right: 50px;
+            marign-top: 12px;
+            line-height: 1.35em;
         }
 
         @media (max-width: 640px){
