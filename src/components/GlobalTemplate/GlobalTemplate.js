@@ -9,7 +9,7 @@ const GlobalTemplate = ({ children, isLayout }) => {
   return (
     <>
       <Helmet htmlAttributes={{ lang: "pl" }}>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" data-react-helmet="true" />
       </Helmet>
       <GlobalStyle />
       {isLayout && <Header />}
