@@ -12,7 +12,7 @@ export const StyledPrivacyPolicy = styled.div`
 `;
 
 export const StyledTitleWrapper = styled.div`
-  font: 700 clamp(48px, 3.333vw, 64px)/1.2em Roboto;
+  font: 700 clamp(48px, 3.333vw, 64px)/1.33em Roboto;
 
   @media only screen and (max-width: 540px) {
     font-size: clamp(22px, 7.037vw, 38px);
@@ -22,14 +22,14 @@ export const StyledTitleWrapper = styled.div`
 export const StyledDescWrapper = styled.div`
   width: 100%;
   margin-top: clamp(70px, 5.365vw, 103px);
-  font: 300 clamp(15px, 1.354vw, 26px)/1.2em Roboto;
+  font: 300 clamp(15px, 1.354vw, 26px)/1.33em Roboto;
   margin-left: clamp(100px, 15.677vw, 301px);
   max-width: 754px;
 
   h2, h3 {
     font-size: clamp(18px, 2.083vw, 40px);
     font-wieght: bold;
-    line-height: 1.2em;
+    line-height: 1.33em;
     margin: clamp(20px, 2.604vw, 50px) 0;
   }
 
@@ -47,7 +47,7 @@ export const StyledDescWrapper = styled.div`
   ol + p,
   ul + p {
     margin-top: clamp(20px, 2.604vw, 50px);
-    line-height: 1.2em;
+    line-height: 1.33em;
   }
 
   ol,
@@ -76,7 +76,7 @@ export const StyledDescWrapper = styled.div`
     text-decoration: none;
     color: var(--normalGrey);
     transition: color 250ms linear;
-    line-height: 1.2em;
+    line-height: 1.33em;
 
     &:hover {
       color: var(--normalBlack);

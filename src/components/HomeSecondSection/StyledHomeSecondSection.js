@@ -53,7 +53,7 @@ export const StyledContent = styled.div`
 `;
 
 export const StyledContentWrapper = styled.div`
-  font: 300 clamp(20px, 1.142px, 22px)/1.2em Roboto;
+  font: 300 clamp(20px, 1.142px, 22px)/1.33em Roboto;
   margin: clamp(18px, 1.302vw, 25px) 0;
 
   strong {

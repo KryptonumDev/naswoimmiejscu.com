@@ -345,7 +345,7 @@ export const StyledCaseTitle = styled.div`
 `;
 
 export const StyledDescCase = styled.div`
-  font: 300 26px/1.2em Roboto;
+  font: 300 26px/1.33em Roboto;
   margin-bottom: 120px;
 `;
 

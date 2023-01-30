@@ -34,7 +34,7 @@ export const StyledFAQWrapper = styled.div`
 
 export const StyledTitleWrapper = styled.div`
   margin-top: 60px;
-  font: 700 64px/1.2em Roboto;
+  font: 700 64px/1.33em Roboto;
   margin-bottom: ${({ smallmg }) => (smallmg ? "60px" : "128px")};
 
   @media only screen and (max-width: 1763px) {

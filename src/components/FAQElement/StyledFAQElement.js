@@ -67,7 +67,7 @@ export const StyledQuestionWrapper = styled.summary`
 `;
 
 export const StyledAnswerWrapper = styled.div`
-  font: 300 clamp(20px, 1.25vw, 24px)/1.2em Roboto;
+  font: 300 clamp(20px, 1.25vw, 24px)/1.33em Roboto;
   margin-top: 24px;
 
   strong {
@@ -92,7 +92,7 @@ export const StyledAnswerWrapper = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: 4.167vw;
+    font-size: clamp(15px, 4.167vw, 16px);
   }
 `;
 
@@ -107,7 +107,7 @@ export const StyledIconWrapper = styled.div`
 `;
 
 export const StyledQuestionContent = styled.div`
-  font: 700 clamp(32px, 2.083vw, 40px)/1.2em Roboto;
+  font: 700 clamp(32px, 2.083vw, 40px)/1.33em Roboto;
   cursor: pointer;
 
   @media only screen and (min-width: 1920px) {

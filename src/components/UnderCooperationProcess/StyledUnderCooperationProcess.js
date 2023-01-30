@@ -36,7 +36,7 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledTextWrapper = styled.div`
-  font: 300 20px/1.2em Roboto;
+  font: 300 20px/1.33em Roboto;
   color: var(--normalBlack);
   max-width: 584px;
   margin-bottom: 38px;
@@ -56,7 +56,7 @@ export const StyledTextWrapper = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: 4.167vw;
+    font-size: clamp(15px, 4.167vw, 16px);
   }
 `;
 

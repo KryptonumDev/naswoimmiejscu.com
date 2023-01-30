@@ -47,7 +47,7 @@ export const StyledRightWrapperContent = styled.div`
   }
 
   p {
-    font: 700 clamp(16px, 1.250vw, 24px)/1.2em Roboto;
+    font: 700 clamp(16px, 1.250vw, 24px)/1.33em Roboto;
     color: var(--normalBlack);
   }
 

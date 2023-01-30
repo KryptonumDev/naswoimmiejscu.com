@@ -48,7 +48,7 @@ export const StyledRightWrapper = styled.div`
   z-index: 2;
 
   em {
-    font-size: 20px/1.2em;
+    font-size: 20px/1.33em;
     font-style: normal;
   }
 

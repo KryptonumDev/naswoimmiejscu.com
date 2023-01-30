@@ -11,7 +11,7 @@ export const StyledNav = styled.nav`
 
   a,
   span {
-    font: 400 14px/1.2em Roboto;
+    font: 400 15px/1.33em Roboto;
     text-transform: uppercase;
     color: var(--normalGrey);
     text-decoration: none;
@@ -20,7 +20,7 @@ export const StyledNav = styled.nav`
 
     @media only screen and (min-width: 1920px){
       font-size: 16px;
-      white-space: 1.2em;
+      white-space: 1.33em;
     }
 
     &.activeLink {

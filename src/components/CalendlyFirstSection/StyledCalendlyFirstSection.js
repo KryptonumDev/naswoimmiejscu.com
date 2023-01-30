@@ -46,7 +46,7 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledList = styled.div`
-  font: 300 1.354vw/1.2em Roboto;
+  font: 300 1.354vw/1.33em Roboto;
   color: var(--normalBlack);
   margin-bottom: clamp(20px, 2.917vw, 56px);
 

@@ -58,7 +58,7 @@ export const StyledTitle = styled.div`
   @media only screen and (max-width: 992px) {
     width: calc(100% - 150px - 66px);
     font-size: 20px;
-    line-height: 1.2em;
+    line-height: 1.33em;
   }
 
   @media only screen and (max-width: 347px) {

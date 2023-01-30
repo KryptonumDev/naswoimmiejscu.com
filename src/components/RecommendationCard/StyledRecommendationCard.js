@@ -75,11 +75,11 @@ export const StyledTextContent = styled.div`
 `;
 
 export const StyledNameWrapper = styled.div`
-  font: 700 18px/1.2em Roboto;
+  font: 700 18px/1.33em Roboto;
 `;
 
 export const StyledDescriptionWrapper = styled.div`
-  font: 300 15px/1.2em Roboto;
+  font: 300 15px/1.33em Roboto;
   margin-top: 4px;
 
   @media only screen and (max-width: 1024px) {
@@ -101,7 +101,7 @@ export const StyledDescriptionWrapper = styled.div`
 `;
 
 export const StyledDescImageWrapper = styled.div`
-  font: 300 14px/1.2em Roboto;
+  font: 300 14px/1.33em Roboto;
   color: var(--normalGrey);
 `;
 

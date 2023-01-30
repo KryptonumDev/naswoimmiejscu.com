@@ -158,7 +158,7 @@ const Categories = styled.div`
         border: 1px solid #000000;
         border-radius: 45px;
         font-weight: 300;
-        font-size: clamp(7px, ${7 / 360 * 100}vw, 14px);
+        font-size: clamp(7px, ${7 / 360 * 100}vw, 15px);
         line-height: 16px;
         text-transform: uppercase;
 

@@ -142,7 +142,7 @@ const ContactForm = () => {
             {isError ?
               <StyledSuccessMessage>
                 <StyledText hasdeclaredfontsize="18px" hasdeclaredfontcolor="var(--errorColor)">
-                  Wystąpił problem podczas wysyłania formularza
+                  Wystąpił problem podczas wysyłania formularza.
                 </StyledText>
               </StyledSuccessMessage> 
             : null}

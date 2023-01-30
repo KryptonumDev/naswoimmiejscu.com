@@ -14,7 +14,7 @@ export const StyledHamburgerButton = styled.button`
     position: absolute;
     z-index: 11;
     right: 22px;
-    top: 24px;
+    top: 21px;
     cursor: pointer;
     border: 0;
     width: 36px;

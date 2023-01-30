@@ -30,12 +30,12 @@ export const StyledContactForm = styled.div`
 `;
 
 export const StyledTitleWrapper = styled.div`
-  font: 700 clamp(24px, 1.875vw, 36px)/1.2em Roboto;
+  font: 700 clamp(24px, 1.875vw, 36px)/1.33em Roboto;
   color: var(--arrowBlack);
   position: relative;
 
   @media only screen and (max-width: 992px) {
-    font-size: 24px;
+    font-size: clamp(20px, 2.419vw, 24px);
     margin-bottom: 20px;
     max-width: 560px;
   }

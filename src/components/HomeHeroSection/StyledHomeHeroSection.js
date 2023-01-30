@@ -57,7 +57,7 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledTitleWrapper = styled.div`
-  font: 700 3.333vw/1.2em Roboto;
+  font: 700 3.333vw/1.33em Roboto;
   color: var(--normalBlack);
 
   strong {
@@ -245,7 +245,7 @@ export const StyledTitleWrapper = styled.div`
     &.cooperation-process,
     &.home-about-me,
     &.home-contact {
-      font-size: 8.889vw;
+      font-size: clamp(22px, 8.889vw. 32px);
     }
 
     &.home-hero-section,
@@ -255,21 +255,21 @@ export const StyledTitleWrapper = styled.div`
     &.contact-page,
     &.calendly-last-section,
     &.calendly-first-section {
-      font-size: 6.111vw;
+      font-size: clamp(22px, 6.111vw, 22px);
     }
 
     &.first-section-womens-youth,
     &.second-section-womens-youth,
     &.effect-womens-title,
     &.meets-form-womens {
-      font-size: 5.7vw;
+      font-size: clamp(22px, 5.7vw, 22px);
     }
   }
 `;
 
 export const StyledDescWrapper = styled.div`
   margin: 24px 0 73px;
-  font: 300 1.354vw/1.2em Roboto;
+  font: 300 1.354vw/1.33em Roboto;
   color: var(--normalBlack);
 
   strong {
@@ -531,14 +531,14 @@ export const StyledDescWrapper = styled.div`
     &.meets-form-womens,
     &.calendly-first-section,
     &.calendly-last-section {
-      font-size: 4.167vw;
+      font-size: clamp(15px, 4.167vw, 16px);
     }
 
     &.first-section-womens-youth,
     &.second-section-womens-youth,
     &.home-blog-section-text,
     &.contact-page {
-      font-size: 4.167vw;
+      font-size: clamp(15px, 4.167vw, 16px);
     }
   }
 `;

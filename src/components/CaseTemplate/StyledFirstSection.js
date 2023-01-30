@@ -49,7 +49,7 @@ export const StyledImageFirstSection = styled.div`
 `;
 
 export const StyledTitle = styled.div`
-    font: 700 3.333vw/1.2em Roboto;
+    font: 700 3.333vw/1.33em Roboto;
 
     strong {
         color: var(--nromalBrown);
@@ -121,7 +121,7 @@ export const StyledGlobalWhiteCircle = styled.div`
 `;
 
 export const StyledDescFirst = styled.div`
-    font: 300 1.615vw/1.2em Roboto;
+    font: 300 1.615vw/1.33em Roboto;
     color: var(--normalBlack);
     margin: 30px 0 20px;
 
@@ -170,7 +170,7 @@ export const StyledDescFirst = styled.div`
 `;
 
 export const StyledSecondDesc = styled.div`
-    font: 300 1.354vw/1.2em Roboto;
+    font: 300 1.354vw/1.33em Roboto;
     color: var(--normalBlack);
 
     strong {
@@ -311,7 +311,7 @@ export const StyledTextWrapper = styled.div`
 `;
 
 export const StyledName = styled.div`
-    font: 700 clamp(18px, 1.354vw, 26px)/1.2em Roboto;
+    font: 700 clamp(18px, 1.354vw, 26px)/1.33em Roboto;
 
     @media only screen and (max-width: 1763px) {
         font-size: 1.248vw;
@@ -343,7 +343,7 @@ export const StyledName = styled.div`
 `;
 
 export const StyledDesc = styled.div`
-    font: 300 clamp(18px, 1.354vw, 26px)/1.2em Roboto;
+    font: 300 clamp(18px, 1.354vw, 26px)/1.33em Roboto;
 
     @media only screen and (max-width: 1763px) {
         font-size: 1.248vw;

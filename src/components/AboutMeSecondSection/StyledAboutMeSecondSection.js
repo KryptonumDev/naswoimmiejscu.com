@@ -12,7 +12,7 @@ export const StyledAboutMeSecondSection = styled.div`
 
 export const StyledTitleWrapper = styled.div`
   text-align: center;
-  font: 900 56px/1.2em Roboto;
+  font: 900 56px/1.33em Roboto;
   text-transform: uppercase;
   color: var(--normalGreen);
 
@@ -39,7 +39,7 @@ export const StyledTitleWrapper = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: 5.556vw;
+    font-size: clamp(15px, 5.556vw, 22px);
   }
 `;
 
@@ -71,7 +71,7 @@ export const StyledLeftWrapper = styled.div`
   padding-left: 20px;
 
   div {
-    font: 300 1.146vw/1.2em Roboto;
+    font: 300 1.146vw/1.33em Roboto;
     max-width: 655px;
 
     &:nth-child(2) {
@@ -80,7 +80,7 @@ export const StyledLeftWrapper = styled.div`
 
     em {
       font-style: normal;
-      font-size: 0.729vw/1.2em;
+      font-size: 0.729vw/1.33em;
     }
 
     @media only screen and (max-width: 1763px) {
@@ -144,7 +144,7 @@ export const StyledRightWrapper = styled.div`
   padding-left: 20px;
 
   div {
-    font: 300 1.146vw/1.2em Roboto;
+    font: 300 1.146vw/1.33em Roboto;
     max-width: 655px;
 
     &:nth-child(2) {
@@ -153,7 +153,7 @@ export const StyledRightWrapper = styled.div`
 
     em {
       font-style: normal;
-      font-size: 0.729vw/1.2em;
+      font-size: 0.729vw/1.33em;
     }
 
     @media only screen and (max-width: 1763px) {

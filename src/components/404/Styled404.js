@@ -11,7 +11,7 @@ export const Styled404 = styled.div`
 `;
 
 export const StyledTitle = styled.div`
-  font: 700 10.417vw/1.2em Roboto;
+  font: 700 10.417vw/1.33em Roboto;
   margin-top: 80px;
 
   @media only screen and (min-width: 1920px) {
@@ -25,7 +25,7 @@ export const StyledTitle = styled.div`
 `;
 
 export const StyledDescWrapper = styled.div`
-  font: 700 2.083vw/1.2em Roboto;
+  font: 700 2.083vw/1.33em Roboto;
   margin-top: 70px;
   text-align: center;
 
@@ -40,7 +40,7 @@ export const StyledDescWrapper = styled.div`
 `;
 
 export const StyledSecondDescWrapper = styled.div`
-  font: 400 1.25vw/1.2em Roboto;
+  font: 400 1.25vw/1.33em Roboto;
   margin-top: 32px;
   margin-bottom: 80px;
   text-align: center;

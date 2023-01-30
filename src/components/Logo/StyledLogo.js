@@ -41,11 +41,11 @@ export const StyledLogo = styled.div`
   @media only screen and (max-width: 600px) {
     margin-bottom: 30px;
     max-width: ${({ isheader, hasmaxwidth, isfooter }) =>
-    isheader ? (isfooter ? "246px" : `clamp(240px, ${300 / 1024 * 100}vw, 400px)`) : hasmaxwidth};
+    isheader ? (isfooter ? "246px" : `clamp(280px, ${300 / 1024 * 100}vw, 440px)`) : hasmaxwidth};
   }
 
   @media only screen and (max-width: 380px) {
     max-width: ${({ isheader, hasmaxwidth, isfooter }) =>
-    isheader ? (isfooter ? "246px" : `169px`) : hasmaxwidth};
+    isheader ? (isfooter ? "246px" : `192px`) : hasmaxwidth};
   }
 `;
