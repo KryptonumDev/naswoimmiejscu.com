@@ -10,7 +10,7 @@ export const StyledHomeFAQSection = styled.div`
   gap: 40px;
 
   @media only screen and (max-width: 1167px) {
-    padding: 0 33px;
+    padding: 0 22px;
   }
 
   @media only screen and (max-width: 992px) {
@@ -75,6 +75,10 @@ export const StyledTextWrapper = styled.div`
 
   @media only screen and (max-width: 528px) {
     font-size: 32px;
+  }
+
+  @media only screen and (max-width: 420px) {
+    font-size: clamp(22px, 8.889vw, 32px);
   }
 `;
 

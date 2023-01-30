@@ -245,7 +245,7 @@ export const StyledTitleWrapper = styled.div`
     &.cooperation-process,
     &.home-about-me,
     &.home-contact {
-      font-size: clamp(22px, 8.889vw. 32px);
+      font-size: clamp(22px, 8.889vw, 32px);
     }
 
     &.home-hero-section,
