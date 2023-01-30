@@ -62,5 +62,13 @@ module.exports = {
         display: `standalone`
       }
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://naswoimmiejscu.com/',
+        sitemap: 'https://naswoimmiejscu.com/sitemap-index.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    }
   ],
 };
