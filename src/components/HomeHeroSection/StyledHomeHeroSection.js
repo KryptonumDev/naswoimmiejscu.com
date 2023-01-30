@@ -534,6 +534,10 @@ export const StyledDescWrapper = styled.div`
       font-size: clamp(15px, 4.167vw, 16px);
     }
 
+    &.meets-form-womens {
+      margin-bottom: 0;
+    }
+
     &.first-section-womens-youth,
     &.second-section-womens-youth,
     &.home-blog-section-text,

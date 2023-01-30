@@ -53,6 +53,7 @@ export const StyledButtonsWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     display: ${({ iswomens }) => (iswomens ? "flex" : "none")};
     gap: 16px;
+    margin-top: 20px;
   }
 `;
 

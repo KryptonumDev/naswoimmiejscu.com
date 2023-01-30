@@ -73,7 +73,7 @@ const FirstSecionWomens = ({
                         <StyledCircle
                             hasdeclaredwidth="30px"
                             hasdeclaredheight="30px"
-                            hasdeclaredbg={womens ? "var(--normalGreen)" : null}
+                            hasdeclaredbg="var(--normalGreen)"
                         />
                     </StyledMobileCircleWrapper>
                     <Image imageDesktop={image} imageMobile={imageMobile} />

@@ -26,7 +26,7 @@ export const StyledFAQWrapper = styled.div`
   width: 100%;
 
   @media only screen and (max-width: 992px) {
-    margin-top: 30px;
+    margin-top: 16px;
     padding: 0 22px;
     flex-direction: column;
   }

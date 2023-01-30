@@ -128,6 +128,10 @@ export const StyledLink = styled.div`
     &.blog-recomendation-slider-show {
       font-size: 16px;
     }
+
+    &.blog-recomendation-slider-show {
+      margin-top: 80px;
+    }
   }
 
   @media only screen and (max-width: 583px) {
@@ -142,6 +146,11 @@ export const StyledLink = styled.div`
       width: 100%;
       min-height: 73px;
       font-size: 16px;
+    }
+
+    &.btn-faq-section {
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 
@@ -183,7 +192,6 @@ export const StyledLink = styled.div`
     &.abotu-me-who-im,
     &.about-me-meet-btn,
     &.btn-faq-section,
-    &.blog-recomendation-slider-show,
     &.calenldy-last-section {
       width: 100%;
     }

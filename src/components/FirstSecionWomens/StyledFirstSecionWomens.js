@@ -10,7 +10,7 @@ export const StyledFirstSecionWomens = styled.div`
   margin-top: clamp(40px, 5.99vw, 115px);
 
   @media only screen and (max-width: 1167px) {
-    margin-top: 26px;
+    margin-top: 6px;
   }
 
   @media only screen and (max-width: 992px) {
@@ -79,6 +79,10 @@ export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
     .gatsby-image-wrapper {
       width: 30px;
       height: 30px;
+    }
+
+    svg {
+      max-height: 29px;
     }
   }
 `;

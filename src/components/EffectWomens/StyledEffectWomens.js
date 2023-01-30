@@ -158,6 +158,7 @@ export const StyledElements = styled.ul`
     gap: clamp(8px, 0.833vw, 16px);
     background-color: var(--womensBox);
     border-radius: 8px;
+    line-height: 1.33em;
 
     > div {
       width: 27px;

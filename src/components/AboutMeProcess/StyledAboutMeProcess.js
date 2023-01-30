@@ -105,6 +105,12 @@ export const StyledButtonWrapper = styled.div`
     width: 100%;
 
     > div {
+      .gatsby-image-wrapper {
+        max-height: 38px;
+      }
+    }
+
+    > div {
       &:first-child {
         width: 42px;
         height: 42px;

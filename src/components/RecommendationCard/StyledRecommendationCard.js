@@ -42,7 +42,7 @@ export const StyledRecommendationCard = styled.div`
 
   @media only screen and (max-width: 1024px) {
     padding: 24px 0 24px 0;
-    margin-top: 44px;
+    margin-top: 24px;
     background-color: transparent;
   }
 `;
@@ -89,6 +89,7 @@ export const StyledDescriptionWrapper = styled.div`
     position: relative;
     font-weight: ${({ recdiff }) => (recdiff ? "300" : "700")};
     font-size: 26px;
+    padding-bottom: 12px;
   }
 
   @media only screen and (max-width: 480px) {

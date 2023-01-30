@@ -90,7 +90,7 @@ export const StyledDesc = styled.div`
   margin-top: 10px;
 
   @media only screen and (max-width: 432px) {
-    font-size: 11px;
+    font-size: 14px;
   }
 `;
 

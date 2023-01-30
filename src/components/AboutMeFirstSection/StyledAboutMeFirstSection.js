@@ -13,7 +13,7 @@ export const StyledAboutMeFirstSection = styled.div`
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 16px;
-    margin-top: 22px;
+    margin-top: 6px;
   }
 `;
 
