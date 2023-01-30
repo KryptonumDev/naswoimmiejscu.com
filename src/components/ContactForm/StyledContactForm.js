@@ -62,6 +62,11 @@ export const StyledCustomCheckbox = styled.div`
     padding-left: 55px;
     max-width: 513px;
 
+    a {
+      color: ${({ iserror }) =>
+      iserror ? "var(--errorColor)" : "var(--normalBlack)"};
+    }
+
     @media only screen and (max-width: 1681px) {
       max-width: unset;
     }
@@ -139,7 +144,7 @@ export const StyledInputWrapper = styled.div`
     height: 66px;
     border-radius: 32px;
     font: 700 20px Roboto;
-    padding: 20px;
+    padding: clamp(17px, 1.042vw, 20px);
     color: var(--arrowBlack);
 
     &:focus-visible {
@@ -181,6 +186,14 @@ export const StyledInputWrapper = styled.div`
 
   @media only screen and (max-width: 992px) {
     max-width: 512px;
+
+    label {
+      font: 700 clamp(17px, 2.016vw, 20px) Roboto;
+    }
+
+    input {
+      font: 700 clamp(17px, 2.016vw, 20px) Roboto;
+    }
   }
 `;
 
