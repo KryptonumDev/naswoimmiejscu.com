@@ -23,6 +23,20 @@ export const Link = ({
   activeClassName = 'activeLink',
   children
 }) => {
+
+  if (to.includes('#'))
+    return (
+      <a
+        href={to}
+        aria-label={arialabel ? arialabel : 'link'}
+        className={className}
+        onClick={onClick}
+        target={target}
+      >
+        {children}
+      </a>
+    )
+
   return (
     <AniLink
       fade
