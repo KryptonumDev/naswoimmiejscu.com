@@ -5,7 +5,7 @@ export function Head({ data }) {
    data.wpCaseStudy?.seo ??
    data.wpPost?.seo;
    
-  const canonical = "https://naswoimmiejscu.com" + seo.opengraphUrl + "/";
+  const canonical = "https://naswoimmiejscu.com" + seo.opengraphUrl;
 
   if (seo.opengraphUrl === "/404") {
     return <title>{seo.title}</title>;
