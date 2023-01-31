@@ -36,6 +36,8 @@ export const StyledCustomButton = styled.button`
     svg {
         color: ${({ iconColor }) =>
             iconColor ? iconColor : "var(--normalWhite)"};
+        width: ${({ imagesize }) => (imagesize ? imagesize : "initial")};
+        height: ${({ imageheight }) => (imageheight ? imageheight : "initial")};
     }
 
     @media only screen and (max-width: 992px) {

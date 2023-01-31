@@ -143,11 +143,7 @@ const CaseTemplate = ({
                         <StyledIconsWrapper>
                             <StyledIconWrapper>
                                 <StyledIcon>
-                                    <Image
-                                        imageDesktop={
-                                            drugaSekcjaCaseStudy.zKimObraz
-                                        }
-                                    />
+                                    <img src={drugaSekcjaCaseStudy.zKimObraz.localFile.publicURL} alt="ikonka" />
                                 </StyledIcon>
                                 <StyledTextWrapper>
                                     <StyledName>Z kim?</StyledName>
@@ -162,11 +158,7 @@ const CaseTemplate = ({
                             </StyledIconWrapper>
                             <StyledIconWrapper>
                                 <StyledIcon>
-                                    <Image
-                                        imageDesktop={
-                                            drugaSekcjaCaseStudy.celObraz
-                                        }
-                                    />
+                                    <img src={drugaSekcjaCaseStudy.celObraz.localFile.publicURL} alt="ikonka" />
                                 </StyledIcon>
                                 <StyledTextWrapper>
                                     <StyledName>Cel:</StyledName>
@@ -181,11 +173,7 @@ const CaseTemplate = ({
                             </StyledIconWrapper>
                             <StyledIconWrapper>
                                 <StyledIcon>
-                                    <Image
-                                        imageDesktop={
-                                            drugaSekcjaCaseStudy.jakObraz
-                                        }
-                                    />
+                                     <img src={drugaSekcjaCaseStudy.jakObraz.localFile.publicURL} alt="ikonka" />
                                 </StyledIcon>
                                 <StyledTextWrapper>
                                     <StyledName>Jak?</StyledName>
@@ -200,11 +188,7 @@ const CaseTemplate = ({
                             </StyledIconWrapper>
                             <StyledIconWrapper>
                                 <StyledIcon>
-                                    <Image
-                                        imageDesktop={
-                                            drugaSekcjaCaseStudy.efektyObraz
-                                        }
-                                    />
+                                     <img src={drugaSekcjaCaseStudy.efektyObraz.localFile.publicURL} alt="ikonka" />
                                 </StyledIcon>
                                 <StyledTextWrapper>
                                     <StyledName>Efekty</StyledName>
@@ -321,37 +305,29 @@ export const query = graphql`
                             altText
                             title
                             localFile {
-                                childImageSharp {
-                                    gatsbyImageData
-                                }
-                            }
+                publicURL
+              }
                         }
                         efektyObraz {
                             altText
                             title
                             localFile {
-                                childImageSharp {
-                                    gatsbyImageData
-                                }
-                            }
+                publicURL
+              }
                         }
                         jakObraz {
                             altText
                             title
                             localFile {
-                                childImageSharp {
-                                    gatsbyImageData
-                                }
-                            }
+                publicURL
+              }
                         }
                         zKimObraz {
                             altText
                             title
                             localFile {
-                                childImageSharp {
-                                    gatsbyImageData
-                                }
-                            }
+                publicURL
+              }
                         }
                         zdjeciePoLewoMobile {
                             altText

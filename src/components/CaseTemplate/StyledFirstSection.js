@@ -293,14 +293,14 @@ export const StyledIcon = styled.div`
     align-items: center;
     justify-content: center;
 
+    img {
+        width: 62%;
+        height: 62%;
+    }
+
     @media only screen and (max-width: 992px) {
         width: 61px;
         height: 61px;
-
-        img, svg {
-            width: 35px;
-            height: 35px;
-        }
     }
 `;
 
