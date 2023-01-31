@@ -53,8 +53,6 @@ export const StyledQuestionWrapper = styled.summary`
     outline-offset: 4px;
   }
 
-  
-
   &:hover{
     svg{
       transform: translateY(2px);
@@ -92,7 +90,7 @@ export const StyledAnswerWrapper = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: clamp(15px, 4.167vw, 16px);
+    font-size: clamp(14px, 4.167vw, 16px);
   }
 `;
 
@@ -129,6 +127,6 @@ export const StyledQuestionContent = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: ${({ isnormalfont }) => (isnormalfont ? "4.2vw" : "5.9vw")};
+    font-size: ${({ isnormalfont }) => (isnormalfont ? "clamp(16px, 4.167vw, 18px)" : "5.9vw")};
   }
 `;

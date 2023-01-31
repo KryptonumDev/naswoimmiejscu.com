@@ -163,7 +163,7 @@ const Categories = styled.div`
         text-transform: uppercase;
 
         @media (max-width: 1024px) {
-            font-size: clamp(7px, ${7 / 360 * 100}vw, 12px);
+            font-size: clamp(9px, ${9 / 360 * 100}vw, 12px);
             padding: 8px 20px;
         }
 
@@ -250,7 +250,7 @@ const ImageWrapper = styled.div`
         }
 
         @media (max-width: 640px){
-            font-size: clamp(7px, ${12 / 640 * 100}vw, 12px);
+            font-size: clamp(9px, ${12 / 640 * 100}vw, 12px);
         }
     }
 `
@@ -274,12 +274,10 @@ const Nav = styled.nav`
     }
 
     @media (max-width: 820px){
-        font-size: clamp(11px, ${18 / 820 * 100}vw, 18px);
+        font-size: clamp(16px, ${18 / 820 * 100}vw, 18px);
         width: unset;
         max-width: 500px;
     }
-
-
 
     a{
         color: #000;
@@ -294,8 +292,16 @@ const Nav = styled.nav`
         li{
             list-style: inside decimal !important;
 
+            ul {
+                padding-top: 8px;
+            }
+
             li{
                 list-style: initial !important;
+
+                @media (max-width: 820px){
+                    font-size: clamp(14px, ${18 / 820 * 100}vw, 18px);
+                }
             }
         }
 

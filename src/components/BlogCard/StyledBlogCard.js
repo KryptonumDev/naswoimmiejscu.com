@@ -21,6 +21,7 @@ export const StyledBlogCard = styled.div`
     flex-direction: column;
     max-width: 436px;
     margin: 0 auto;
+    gap: 14px;
   }
 
   .image img{
@@ -73,6 +74,12 @@ export const StyledTextWrapper = styled.div`
 
   @media only screen and (max-width: 768px) {
     width: 100%;
+
+    > p {
+      &:first-child {
+        display: none;
+      }
+    }
   }
 
   @media (max-width: 360px) {
@@ -92,7 +99,7 @@ export const StyledTitleWrapper = styled.div`
 
 export const StyledDescWrapper = styled.div`
   max-width: 304px;
-  font: 300 clamp(11px, ${11 / 480 * 100}vw, 16px)/1.33em Roboto;
+  font: 300 clamp(14px, ${14 / 480 * 100}vw, 16px)/1.33em Roboto;
   margin-bottom: 30px;
 `;
 

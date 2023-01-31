@@ -39,7 +39,7 @@ export const StyledBlogHomeCard = styled.div`
 
   @media only screen and (max-width: 1024px) {
     flex-direction: column-reverse;
-    gap: 16px;
+    gap: 8px;
     width: auto;
     margin-right: 10px;
     padding-left: 10px;

@@ -237,12 +237,19 @@ const Content = styled.div`
     }
   }
 
+  @media only screen and (max-width: 768px) {
+    .wp-block-columns:has(.wp-block-column):nth-child(2):has(figure) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
   .wp-block-quote {
     margin-top: 28px;
     margin-bottom: 1rem;
 
     > p {
-      margin-bottom: 1rem;
+      margin-bottom: calc(1rem - 4px);
     }
   }
 
@@ -291,10 +298,10 @@ const Content = styled.div`
 
   ul{
     font-size: clamp(15px, ${26 / 1920 * 100}vw, 26px);
-    margin: 0 0 0 21px;
+    margin: 0 0 0 12px;
     display: grid;
     gap: 12px;
-    padding: 24px 0;
+    padding: 14px 0 24px;
   }
 
   a {
@@ -330,7 +337,7 @@ const Contact = styled.div`
 
   @media (max-width: 820px) {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 30px;
     max-width: 650px;
     margin: 60px auto;

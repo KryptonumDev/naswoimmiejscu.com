@@ -21,7 +21,7 @@ export const StyledTitleWrapper = styled.div`
 
 export const StyledDescWrapper = styled.div`
   width: 100%;
-  margin-top: clamp(70px, 5.365vw, 103px);
+  margin-top: clamp(30px, 5.365vw, 103px);
   font: 300 clamp(15px, 1.354vw, 26px)/1.33em Roboto;
   margin-left: clamp(100px, 15.677vw, 301px);
   max-width: 754px;

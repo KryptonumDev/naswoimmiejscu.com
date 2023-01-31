@@ -96,11 +96,10 @@ export const StyledList = styled.div`
   }
 
   @media only screen and (max-width: 528px) {
-    font-size: 3.009vw;
+    font-size: clamp(14px, 3.009vw, 18px);
   }
 
   @media only screen and (max-width: 360px) {
-    font-size: 11px;
 
     ul {
       margin-left: 14px;

@@ -387,6 +387,7 @@ export const StyledMobileBlogText = styled.div`
   @media only screen and (max-width: 992px) {
     display: block;
     position: relative;
+    margin-bottom: ${({ youth }) => (youth ? null : "-20px")};
 
     svg {
       display: ${({ youth }) => (youth ? "none" : "block")};
