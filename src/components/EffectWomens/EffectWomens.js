@@ -40,7 +40,7 @@ const EffectWomens = ({
             {listElements.map((li, index) => (
               <li key={li.tekstListy + index}>
                 <div>
-                  <Image imageDesktop={li.ikonka} />
+                  <img src={li.ikonka.localFile.publicURL} alt="ikonka" />
                 </div>
                 {li.tekstListy ? parse(li.tekstListy) : null}
               </li>

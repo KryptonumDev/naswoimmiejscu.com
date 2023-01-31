@@ -137,9 +137,7 @@ export const query = graphql`
               altText
               title
               localFile {
-                childImageSharp {
-                  gatsbyImageData(quality: 100)
-                }
+                publicURL
               }
             }
             tekstListy

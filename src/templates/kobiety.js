@@ -182,9 +182,7 @@ export const query = graphql`
             ikonka {
               altText
               localFile {
-                childImageSharp {
-                  gatsbyImageData(quality: 100)
-                }
+                publicURL
               }
             }
           }
