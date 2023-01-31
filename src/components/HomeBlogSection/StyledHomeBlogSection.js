@@ -211,10 +211,6 @@ export const StyledBlogSliderWrapper = styled.div`
   display: none;
   flex-direction: column;
 
-  @media (max-width: 1024px) {
-    display: flex;
-  }
-
   .slick-slider,
   .slick-slide {
     width: 100%;
@@ -250,6 +246,7 @@ export const StyledBlogSliderWrapper = styled.div`
   @media only screen and (max-width: 1024px) {
     padding: 0 22px 40px 0;
     margin: 0 -10px;
+    display: flex;
   }
 
   @media only screen and (max-width: 1024px) {
@@ -287,6 +284,10 @@ export const StyledBlogSliderWrapper = styled.div`
   @media only screen and (max-width: 604px) {
     padding-right: 0;
     min-width: ${({ isright }) => (isright ? "unset" : "604px")};
+  }
+
+  @media only screen and (max-width: 355px){
+    min-width: ${({ isright }) => (isright ? "unset" : "504px")};
   }
 `;
 

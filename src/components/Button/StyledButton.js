@@ -183,6 +183,10 @@ export const StyledLink = styled.div`
     &.btn-faq-section {
       min-height: 73px;
     }
+
+    &.blog-slider-btn {
+      margin-top: 40px;
+    }
   }
 
   @media only screen and (max-width: 340px) {

@@ -43,6 +43,11 @@ export const StyledBlogHomeCard = styled.div`
     width: auto;
     margin-right: 10px;
     padding-left: 10px;
+    justify-content: flex-end;
+  }
+
+  @media only screen and (max-width: 355px){
+    width: 250px;
   }
 `;
 
@@ -59,12 +64,13 @@ export const StyledTextWrapper = styled.div`
 export const StyledImageWrapper = styled.div`
   width: 55%;
   max-width: 419px;
-  min-height: 220px;
+  max-height: 220px;
 
   .gatsby-image-wrapper {
     width: 100%;
-    height: 220px;
+    height: 100%;
     max-width: 419px;
+    max-height: 220px;
     
     img {
       transition: transform .4s ease-out;
