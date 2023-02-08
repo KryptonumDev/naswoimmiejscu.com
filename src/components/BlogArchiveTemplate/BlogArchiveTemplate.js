@@ -12,6 +12,7 @@ import {
 import { StyledText } from "../Text/StyledText";
 import styled from "styled-components";
 import { Link } from "../TransitionLink/TransitionLink";
+import Wrapper from "../PageWrapper/PageWrapper";
 
 const Blog = ({
   data: {
@@ -39,7 +40,7 @@ const Blog = ({
     })
   }, [edges, slug])
   return (
-    <main>
+    <Wrapper>
       <Container>
         <Circle className="circle" width="774" height="774" viewBox="0 0 774 774" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="387" cy="387" r="351.5" stroke="#0BC76D" strokeWidth="71" />
@@ -83,7 +84,7 @@ const Blog = ({
           ))}
         </StyledSlidesWrapper>
       </Container>
-    </main>
+    </Wrapper>
   );
 };
 

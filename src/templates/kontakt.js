@@ -23,6 +23,7 @@ import {
   StyledDescWrapper,
   StyledTitleWrapper,
 } from "../components/HomeHeroSection/StyledHomeHeroSection";
+import Wrapper from "../components/PageWrapper/PageWrapper";
 
 const Contact = ({
   data: {
@@ -31,7 +32,7 @@ const Contact = ({
 }) => {
 
   return (
-    <main>
+    <Wrapper>
       <Container>
         <StyledContentWrapper>
           <StyledLeftWrapper>
@@ -97,7 +98,7 @@ const Contact = ({
           isContactPage={true}
         />
       </StyledFAQMargin>
-    </main>
+    </Wrapper>
   );
 };
 

@@ -6,6 +6,7 @@ import SecondSectionWomens from "../components/SecondSectionWomens/SecondSection
 import EffectWomens from "../components/EffectWomens/EffectWomens";
 import MeetsFormwomens from "../components/MeetsFormwomens/MeetsFormwomens";
 import HomeBlogSection from "../components/HomeBlogSection/HomeBlogSection";
+import Wrapper from "../components/PageWrapper/PageWrapper";
 
 const Womens = ({
   data: {
@@ -22,7 +23,7 @@ const Womens = ({
 }) => {
 
   return (
-    <main >
+    <Wrapper >
       <FirstSecionWomens
         title={pierwszaSekcjaKobiety.tytul}
         desc={pierwszaSekcjaKobiety.opis}
@@ -70,7 +71,7 @@ const Womens = ({
         isCase={true}
         isWomensYouthPage={true}
       />
-    </main>
+    </Wrapper>
   );
 };
 

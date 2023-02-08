@@ -8,6 +8,7 @@ import AboutMeProcess from "../components/AboutMeProcess/AboutMeProcess";
 import AboutMeMeet from "../components/AboutMeMeet/AboutMeMeet";
 import FAQSection from "../components/FAQSection/FAQSection";
 import HomeBlogSection from "../components/HomeBlogSection/HomeBlogSection";
+import Wrapper from "../components/PageWrapper/PageWrapper";
 
 const AboutMe = ({
   data: {
@@ -16,7 +17,7 @@ const AboutMe = ({
 }) => {
 
   return (
-    <main>
+    <Wrapper>
       <AboutMeFirstSection data={oMnie.pierwszaSekcjaOMnie} />
       <AboutMeSecondSection data={oMnie.drugaSekcjaOMnie} />
       <AboutMeWhoIm data={oMnie.kimTerazJestem} />
@@ -24,7 +25,7 @@ const AboutMe = ({
       <AboutMeMeet data={oMnie.spotkajmySieOMnie} />
       <FAQSection data={oMnie.faqOMnie} smallMgBottom isNormalFont />
       <HomeBlogSection recDif />
-    </main>
+    </Wrapper>
   );
 };
 

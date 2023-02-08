@@ -1,6 +1,6 @@
+import { Link as ALink } from 'gatsby'
 import React from 'react'
-// import { TransitionLink } from "gatsby-plugin-transition-link/components/TransitionLink";
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+
 
 export const Link = ({
   partialyActive = false,
@@ -27,9 +27,7 @@ export const Link = ({
     )
 
   return (
-    <AniLink
-      fade
-      duration='.5'
+    <ALink
       aria-label={arialabel ? arialabel : 'link'}
       className={className}
       onClick={onClick}
@@ -39,6 +37,6 @@ export const Link = ({
       activeClassName={activeClassName}
     >
       {children}
-    </AniLink>
+    </ALink>
   )
 }

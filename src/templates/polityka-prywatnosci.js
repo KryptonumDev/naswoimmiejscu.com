@@ -18,6 +18,7 @@ import {
   StyledMobileCircle,
 } from "../components/PrivacyPolicy/StyledPrivacyPolicy";
 import { StyledCircle } from "../components/Circle/StyledCircle";
+import Wrapper from "../components/PageWrapper/PageWrapper";
 
 const PrivacyPolicy = ({
   data: {
@@ -25,7 +26,7 @@ const PrivacyPolicy = ({
   },
 }) => {
   return (
-    <main>
+    <Wrapper>
       <Container>
         <StyledPrivacyPolicy>
           <StyledWhiteCircle>
@@ -73,7 +74,7 @@ const PrivacyPolicy = ({
           </StyledDescWrapper>
         </StyledPrivacyPolicy>
       </Container>
-    </main>
+    </Wrapper>
   );
 };
 

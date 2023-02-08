@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import FAQSection from '../components/FAQSection/FAQSection'
 import CalendlyFirstSection from '../components/CalendlyFirstSection/CalendlyFirstSection'
 import CalendlyLastSection from '../components/CalendlyLastSection/CalendlyLastSection'
+import Wrapper from '../components/PageWrapper/PageWrapper'
 
 const Calendly = ({
   data: {
@@ -11,7 +12,7 @@ const Calendly = ({
   }
 }) => {
   return (
-    <main>
+    <Wrapper>
       <CalendlyFirstSection data={calendly} />
       <FAQSection
         data={calendly.faqCalendly}
@@ -20,7 +21,7 @@ const Calendly = ({
         isNormalFont
       />
       <CalendlyLastSection data={calendly.ostatniaSekcjaStronyCalendly} />
-    </main>
+    </Wrapper>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Opinie from "../components/Opinie/Opinie";
+import Wrapper from "../components/PageWrapper/PageWrapper";
 
 const OpiniePage = ({
   data: {
@@ -8,9 +9,9 @@ const OpiniePage = ({
   },
 }) => {
   return (
-    <main>
+    <Wrapper>
       <Opinie opinie={nodes} />
-    </main>
+    </Wrapper>
   );
 };
 

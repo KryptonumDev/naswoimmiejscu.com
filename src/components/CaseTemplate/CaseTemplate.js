@@ -7,6 +7,7 @@ import parse from "html-react-parser";
 import Image from "../Image/Image";
 import HomeBlogSection from "../HomeBlogSection/HomeBlogSection";
 import Container from "../Container/Container";
+import Wrapper from "../PageWrapper/PageWrapper";
 
 import {
     StyledFirstSection,
@@ -45,7 +46,7 @@ const CaseTemplate = ({
     },
 }) => {
     return (
-        <main>
+        <Wrapper>
             <Container>
                 <StyledFirstSection>
                     <StyledTextWrapperFirst>
@@ -220,7 +221,7 @@ const CaseTemplate = ({
                 tekstDoLinku={sekcjaZBlogiem.tekstDoLinku}
                 isCasePage={true}
             />
-        </main>
+        </Wrapper>
     );
 };
 

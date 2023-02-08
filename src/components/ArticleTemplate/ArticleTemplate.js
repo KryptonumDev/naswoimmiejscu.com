@@ -6,6 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import Button from "../Button/Button";
 import { StyledText } from "../Text/StyledText";
 import Hero from "../ArticleHero/ArticelHero";
+import Wrapper from "../PageWrapper/PageWrapper";
 
 import './../../styles/wp.min.css'
 
@@ -63,7 +64,7 @@ const useHeadingsData = () => {
 const ArticleTemplate = ({ data: { wpPost: { title, categories, artykul, content }, global: { globalComponets: { contactSection } } } }) => {
   const { nestedHeadings } = useHeadingsData()
   return (
-    <main>
+    <Wrapper>
       <Container>
         <Hero headings={nestedHeadings} title={title} categories={categories.nodes} data={artykul.trescArtykulu} />
         <Content id='post-content' dangerouslySetInnerHTML={{ __html: content }} />
@@ -87,7 +88,7 @@ const ArticleTemplate = ({ data: { wpPost: { title, categories, artykul, content
           <circle cx="360.5" cy="360.5" r="333" stroke="#0BC76D" strokeWidth="55" />
         </SecondCircle>
       </Container>
-    </main>
+    </Wrapper>
   )
 };
 
@@ -323,7 +324,6 @@ const Content = styled.div`
       outline-offset: 4px;
     }
   }
-}
 `
 
 const Contact = styled.div`

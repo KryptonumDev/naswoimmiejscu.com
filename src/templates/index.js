@@ -19,6 +19,7 @@ import {
   StyledWhiteSecondCircleWrapper,
   StyledWhiteCircleWrapper,
 } from "../components/Home/StyledHome";
+import Wrapper from "../components/PageWrapper/PageWrapper";
 
 const IndexPage = ({
   data: {
@@ -26,7 +27,7 @@ const IndexPage = ({
   },
 }) => {
   return (
-    <main>
+    <Wrapper>
       <StyledHome>
         <HomeHeroSection data={stronaGlowna.pierwszaSekcjaHomePage} />
         <StyledCircleWrapper>
@@ -51,7 +52,7 @@ const IndexPage = ({
         <HomeContact data={stronaGlowna.spotkajmySie} />
       </StyledHome>
       <HomeBlogSection />
-    </main>
+    </Wrapper>
   );
 };
 
