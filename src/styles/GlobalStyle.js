@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import "./fonts.css";
-import "./normalize.css";
+import { createGlobalStyle } from 'styled-components'
+import './fonts.css'
+import './normalize.css'
 
 const GlobalStyle = createGlobalStyle`
     html{
@@ -119,6 +119,10 @@ const GlobalStyle = createGlobalStyle`
       outline: none
     }
 
+    details summary::-webkit-details-marker {
+      display:none;
+    }
+
     p {
       font-variant-numeric: oldstyle-nums;
     }
@@ -129,6 +133,6 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

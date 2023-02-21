@@ -1,14 +1,14 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledEffectWomens = styled.div`
   gap: ${({ iswomens }) =>
-    iswomens ? "clamp(20px, 1.3vw, 29px)" : "clamp(80px, 5.469vw, 105px)"};
+    iswomens ? 'clamp(20px, 1.3vw, 29px)' : 'clamp(80px, 5.469vw, 105px)'};
   width: 100%;
   display: flex;
   margin-top: ${({ iswomens }) =>
     iswomens
-      ? "clamp(160px, 15.625vw, 300px)"
-      : "clamp(160px, 10.417vw, 229px)"};
+      ? 'clamp(160px, 15.625vw, 300px)'
+      : 'clamp(160px, 10.417vw, 229px)'};
   justify-content: space-between;
   position: relative;
   z-index: 1;
@@ -18,7 +18,7 @@ export const StyledEffectWomens = styled.div`
     gap: 0;
     margin-top: 44px;
   }
-`;
+`
 
 export const StyledLeftWrapper = styled.div`
   width: 57%;
@@ -31,7 +31,7 @@ export const StyledLeftWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     width: 100%;
   }
-`;
+`
 
 export const StyledRightWrapper = styled.div`
   width: 43%;
@@ -47,11 +47,11 @@ export const StyledRightWrapper = styled.div`
       height: 248px;
     }
   }
-`;
+`
 
 export const StyledList = styled.ul`
     display: ${({ ishide, iswomens }) =>
-      ishide && iswomens ? "none" : "flex"};
+      ishide && iswomens ? 'none' : 'flex'};
     flex-direction: column;
     gap 14px;
     color: var(--lightGreen);
@@ -120,9 +120,9 @@ export const StyledList = styled.ul`
 
     @media only screen and (max-width: 992px){
       display: ${({ ishide, iswomens }) =>
-        ishide ? "flex" : iswomens ? "none" : "flex"};
+        ishide ? 'flex' : iswomens ? 'none' : 'flex'};
     }
-`;
+`
 
 export const StyledCircleWrapper = styled.div`
   position: absolute;
@@ -136,23 +136,27 @@ export const StyledCircleWrapper = styled.div`
 
     div {
       background-color: ${({ iswomens }) =>
-        iswomens ? "var(--paginationNormal)" : "var(--buttonBrownHover)"};
+        iswomens ? 'var(--paginationNormal)' : 'var(--buttonBrownHover)'};
       width: 66px;
       height: 66px;
     }
   }
-`;
+`
 
 export const StyledElements = styled.ul`
   width: 100%;
-  gap: clamp(16px, 1.667vw, 32px);
-  margin-top: clamp(16px, 1.667vw, 32px);
+  gap: clamp(10px, 1.667vw, 24px);
+  margin-top: clamp(16px, 1.667vw, 24px);
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
 
   > li {
     display: flex;
+    flex: 1 1 100%;
+    @media (min-width: 590px) {
+      flex: 1 1 47%;
+    }
     align-items: center;
     padding: clamp(8px, 0.833vw, 16px) clamp(16px, 1.25vw, 24px);
     gap: clamp(8px, 0.833vw, 16px);
@@ -181,7 +185,7 @@ export const StyledElements = styled.ul`
     }
 
     p {
-      font: 300 clamp(16px, 1.042vw, 20px)/1.33em Roboto;
+      font: 300 clamp(16px, 1.042vw, 20px) / 1.33em Roboto;
       width: calc(100% - 40px);
 
       strong {
@@ -207,7 +211,7 @@ export const StyledElements = styled.ul`
   @media only screen and (max-width: 1128px) {
     gap: 8px;
   }
-`;
+`
 
 export const StyledWhiteMobileCircle = styled.div`
   display: none;
@@ -232,4 +236,4 @@ export const StyledWhiteMobileCircle = styled.div`
   @media only screen and (max-width: 360px) {
     top: 110vw;
   }
-`;
+`
