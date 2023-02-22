@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { graphql } from "gatsby";
-import Container from "../Container/Container";
-import styled from "styled-components";
-import { GatsbyImage } from "gatsby-plugin-image";
-import Button from "../Button/Button";
-import { StyledText } from "../Text/StyledText";
-import Hero from "../ArticleHero/ArticelHero";
-import Wrapper from "../PageWrapper/PageWrapper";
+import React, { useState, useEffect } from 'react'
+import { graphql } from 'gatsby'
+import Container from '../Container/Container'
+import styled from 'styled-components'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import Button from '../Button/Button'
+import { StyledText } from '../Text/StyledText'
+import Hero from '../ArticleHero/ArticelHero'
+import Wrapper from '../PageWrapper/PageWrapper'
 
 import './../../styles/wp.min.css'
 
 const slugTransform = (string) => {
-  return string.toLowerCase()
+  return string
+    .toLowerCase()
     .trim()
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
@@ -19,10 +20,10 @@ const slugTransform = (string) => {
 }
 
 const getNestedHeadings = (headingElements) => {
-  const nestedHeadings = [];
+  const nestedHeadings = []
 
   headingElements.forEach((heading, index) => {
-    const { innerText: title } = heading;
+    const { innerText: title } = heading
     let id = slugTransform(title)
     heading.id = id
 
@@ -30,75 +31,139 @@ const getNestedHeadings = (headingElements) => {
       return null
     }
 
-    if (heading.nodeName === "H2") {
-      nestedHeadings.push({ id, title, items: [], pseudo: false });
-    } else if (heading.nodeName === "H3" && nestedHeadings.length > 0 && !nestedHeadings[nestedHeadings.length - 1].pseudo) {
+    if (heading.nodeName === 'H2') {
+      nestedHeadings.push({ id, title, items: [], pseudo: false })
+    } else if (
+      heading.nodeName === 'H3' &&
+      nestedHeadings.length > 0 &&
+      !nestedHeadings[nestedHeadings.length - 1].pseudo
+    ) {
       nestedHeadings[nestedHeadings.length - 1].items.push({
         id,
         title,
         pseudo: false
-      });
-    } else if (heading.nodeName === "H3") {
-      nestedHeadings.push({ id, title, items: [], pseudo: true });
+      })
+    } else if (heading.nodeName === 'H3') {
+      nestedHeadings.push({ id, title, items: [], pseudo: true })
     }
-  });
+  })
 
-  return nestedHeadings;
-};
+  return nestedHeadings
+}
 
 const useHeadingsData = () => {
-  const [nestedHeadings, setNestedHeadings] = useState([]);
+  const [nestedHeadings, setNestedHeadings] = useState([])
 
   useEffect(() => {
     const headingElements = Array.from(
-      document.getElementById('post-content').querySelectorAll("h2, h3")
-    );
+      document.getElementById('post-content').querySelectorAll('h2, h3')
+    )
 
-    const newNestedHeadings = getNestedHeadings(headingElements);
-    setNestedHeadings(newNestedHeadings);
-  }, []);
+    const newNestedHeadings = getNestedHeadings(headingElements)
+    setNestedHeadings(newNestedHeadings)
+  }, [])
 
-  return { nestedHeadings };
-};
+  return { nestedHeadings }
+}
 
-const ArticleTemplate = ({ data: { wpPost: { title, categories, artykul, content }, global: { globalComponets: { contactSection } } } }) => {
+const ArticleTemplate = ({
+  data: {
+    wpPost: { title, categories, artykul, content },
+    global: {
+      globalComponets: { contactSection }
+    }
+  }
+}) => {
   const { nestedHeadings } = useHeadingsData()
   return (
     <Wrapper>
       <Container>
-        <Hero headings={nestedHeadings} title={title} categories={categories.nodes} data={artykul.trescArtykulu} />
-        <Content id='post-content' dangerouslySetInnerHTML={{ __html: content }} />
+        <Hero
+          headings={nestedHeadings}
+          title={title}
+          categories={categories.nodes}
+          data={artykul.trescArtykulu}
+        />
+        <Content
+          id='post-content'
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
         <Contact>
           <div>
-            <div className="title" dangerouslySetInnerHTML={{ __html: contactSection.title }} />
-            <div className="text" dangerouslySetInnerHTML={{ __html: contactSection.text }} /><StyledText />
-            <Button className='link' hasfontsize={`clamp(16px, ${20 / 1920 * 100}vw, 20px)`} btnData={contactSection.link} ariaLabel="link" />
+            <div
+              className='title'
+              dangerouslySetInnerHTML={{ __html: contactSection.title }}
+            />
+            <div
+              className='text'
+              dangerouslySetInnerHTML={{ __html: contactSection.text }}
+            />
+            <StyledText />
+            <Button
+              className='link'
+              hasfontsize={`clamp(16px, ${(20 / 1920) * 100}vw, 20px)`}
+              btnData={contactSection.link}
+              ariaLabel='link'
+            />
           </div>
           <ImageWrapper>
-            <svg className="svg" width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="49.5" cy="49.5" r="49.5" fill="#745239" />
+            <svg
+              className='svg'
+              width='99'
+              height='99'
+              viewBox='0 0 99 99'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'>
+              <circle cx='49.5' cy='49.5' r='49.5' fill='#745239' />
             </svg>
-            <GatsbyImage image={contactSection.image.localFile.childImageSharp.gatsbyImageData} alt={contactSection.image.altText} />
+            <GatsbyImage
+              image={
+                contactSection.image.localFile.childImageSharp.gatsbyImageData
+              }
+              alt={contactSection.image.altText}
+            />
           </ImageWrapper>
         </Contact>
-        <Circle width="721" height="721" viewBox="0 0 721 721" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="360.5" cy="360.5" r="333" stroke="#0BC76D" strokeWidth="55" />
+        <Circle
+          width='721'
+          height='721'
+          viewBox='0 0 721 721'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'>
+          <circle
+            cx='360.5'
+            cy='360.5'
+            r='333'
+            stroke='#0BC76D'
+            strokeWidth='55'
+          />
         </Circle>
-        <SecondCircle width="721" height="721" viewBox="0 0 721 721" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="360.5" cy="360.5" r="333" stroke="#0BC76D" strokeWidth="55" />
+        <SecondCircle
+          width='721'
+          height='721'
+          viewBox='0 0 721 721'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'>
+          <circle
+            cx='360.5'
+            cy='360.5'
+            r='333'
+            stroke='#0BC76D'
+            strokeWidth='55'
+          />
         </SecondCircle>
       </Container>
     </Wrapper>
   )
-};
+}
 
-export default ArticleTemplate;
+export default ArticleTemplate
 
-export { Head } from "../Head/Head";
+export { Head } from '../Head/Head'
 
 export const query = graphql`
   query wpPostQuery($postId: String) {
-    global : wpPage(id: {eq: "cG9zdDo2NDU="}){
+    global: wpPage(id: { eq: "cG9zdDo2NDU=" }) {
       globalComponets {
         contactSection {
           title
@@ -169,7 +234,7 @@ export const query = graphql`
       content
     }
   }
-`;
+`
 
 const Circle = styled.svg`
   position: absolute;
@@ -203,16 +268,16 @@ const SecondCircle = styled.svg`
 `
 
 const Content = styled.div`
-  margin-top: 60px;
+  margin-top: clamp(5rem, 6vw, 8rem);
 
   @media (max-width: 820px) {
     max-width: 650px;
     margin: clamp(24px, 3.125vw, 60px) auto 0 auto;
   }
 
-  h2{
+  h2 {
     margin-bottom: 32px;
-    font: 700 clamp(22px, ${48 / 1920 * 100}vw, 48px)/1.33em Roboto;
+    font: 700 clamp(22px, ${(48 / 1920) * 100}vw, 48px) / 1.33em Roboto;
 
     @media (max-width: 820px) {
       font-size: 22px;
@@ -224,13 +289,13 @@ const Content = styled.div`
     font: 700 clamp(20px, 1.458vw, 28px) Roboto;
   }
 
-  p{
+  p {
     font-weight: 300;
-    font-size: clamp(15px, ${26 / 1920 * 100}vw, 26px);
+    font-size: clamp(15px, ${(26 / 1920) * 100}vw, 26px);
     line-height: 130%;
   }
 
-  .wp-block-column{
+  .wp-block-column {
     max-width: 772px;
 
     & > * + * {
@@ -238,7 +303,11 @@ const Content = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 820px) {
+    .wp-block-columns.mobile-reversed {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .wp-block-columns:has(.wp-block-column):nth-child(2):has(figure) {
       display: flex;
       flex-direction: column-reverse;
@@ -254,7 +323,7 @@ const Content = styled.div`
     }
   }
 
-  .wp-block-button__link{
+  .wp-block-button__link {
     margin-top: 24px;
 
     @media (max-width: 820px) {
@@ -268,16 +337,23 @@ const Content = styled.div`
     }
   }
 
-  .wp-block-button{
+  .wp-block-button {
     @media (max-width: 360px) {
       display: block !important;
     }
   }
 
-  .wp-block-columns{
+  .wp-block-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 64px;
+
+    + .wp-block-columns {
+      margin-top: clamp(5rem, 6.52vw, 9rem);
+      @media (max-width: 820px) {
+        margin-top: clamp(2rem, 3.5vw, 4rem);
+      }
+    }
 
     @media (max-width: 1024px) {
       grid-gap: 32px;
@@ -289,20 +365,28 @@ const Content = styled.div`
     }
   }
 
-  .wp-block-image{
+  .wp-block-image {
     margin: 0;
   }
 
-  .size-full{
+  .size-full {
     width: 100%;
   }
 
-  ul{
-    font-size: clamp(15px, ${26 / 1920 * 100}vw, 26px);
-    margin: 0 0 0 12px;
+  ul {
+    font-size: clamp(15px, ${(26 / 1920) * 100}vw, 26px);
+    margin: 0;
+    padding: 0 0 8px 16px;
     display: grid;
-    gap: 12px;
-    padding: 14px 0 24px;
+    grid-gap: 10px;
+    counter-reset: item;
+    list-style-position: inside;
+
+    li {
+      font-weight: 500;
+      font-size: clamp(17px, 1.3541666666666667vw, 26px);
+      line-height: 150%;
+    }
   }
 
   a {
@@ -327,8 +411,8 @@ const Content = styled.div`
 `
 
 const Contact = styled.div`
-  margin-top: clamp(120px, ${160 / 1920 * 100}vw, 160px);
-  margin-bottom: clamp(120px, ${160 / 1920 * 100}vw, 160px);
+  margin-top: clamp(120px, ${(160 / 1920) * 100}vw, 160px);
+  margin-bottom: clamp(120px, ${(160 / 1920) * 100}vw, 160px);
   display: grid;
   grid-template-columns: 768fr 796fr;
   grid-gap: 64px;
@@ -344,32 +428,31 @@ const Contact = styled.div`
   }
 
   @media (max-width: 360px) {
-    .link{
+    .link {
       width: 100%;
       font-size: 11px;
       min-height: 53px;
     }
   }
 
-
-  .title{
+  .title {
     margin-bottom: 20px;
-    font: 700 clamp(22px, ${48 / 1920 * 100}vw, 48px)/1.33em  Roboto;
+    font: 700 clamp(22px, ${(48 / 1920) * 100}vw, 48px) / 1.33em Roboto;
 
     @media (max-width: 820px) {
       font-size: 22px;
     }
   }
 
-  .text{
-    font: 300 clamp(15px, ${26 / 1920 * 100}vw, 26px)/1.33em Roboto;
+  .text {
+    font: 300 clamp(15px, ${(26 / 1920) * 100}vw, 26px) / 1.33em Roboto;
     margin-bottom: 30px;
 
     @media (max-width: 1200px) {
       font-size: 16px;
     }
 
-    p+p{
+    p + p {
       margin-top: 16px;
     }
   }
@@ -378,14 +461,14 @@ const Contact = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
 
-  .svg{
+  .svg {
     position: absolute;
     left: 0;
     top: 0;
     transform: translate(-50%, -50%);
 
-    width: clamp(50px, ${99 / 1920 * 100}vw, 99px);
-    height: clamp(50px, ${99 / 1920 * 100}vw, 99px);
+    width: clamp(50px, ${(99 / 1920) * 100}vw, 99px);
+    height: clamp(50px, ${(99 / 1920) * 100}vw, 99px);
     z-index: 2;
   }
 `

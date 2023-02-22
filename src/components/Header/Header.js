@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import React, { useState, useEffect } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import HamburgerButton from "../HamburgerButton/HamburgerButton";
-import Logo from "../Logo/Logo";
-import Button from "../Button/Button";
-import Nav from "../Nav/Nav";
+import HamburgerButton from '../HamburgerButton/HamburgerButton'
+import Logo from '../Logo/Logo'
+import Button from '../Button/Button'
+import Nav from '../Nav/Nav'
 
-import scrollLock from "../../utils/scrollLock";
+import scrollLock from '../../utils/scrollLock'
 
-import { StyledHeader, StyledLogoWrapperHeader } from "./StyledHeader";
+import { StyledHeader, StyledLogoWrapperHeader } from './StyledHeader'
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -23,9 +23,9 @@ const Header = () => {
         }
       }
     }
-  `);
-  const shortData = data.wpPage.global;
-  const [isOpen, setIsOpen] = useState(false);
+  `)
+  const shortData = data.wpPage.global
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     if (isOpen) {
@@ -38,26 +38,31 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledLogoWrapperHeader>
-        <Logo
-          isHeader="true"
-        />
+        <Logo onClick={() => setIsOpen(false)} isHeader='true' />
       </StyledLogoWrapperHeader>
-      <HamburgerButton openMenu={() => { setIsOpen(!isOpen) }} isOpen={isOpen} />
+      <HamburgerButton
+        openMenu={() => {
+          setIsOpen(!isOpen)
+        }}
+        isOpen={isOpen}
+      />
       <Nav
         isOpen={isOpen}
-        openMenu={() => { setIsOpen(false) }}
+        openMenu={() => {
+          setIsOpen(false)
+        }}
       />
       <Button
         btnData={shortData.przycisk}
-        variant="green"
-        haswidth="254px"
-        hasheight="78px"
-        hasfontsize="16px"
-        className="header-btn"
-        ariaLabel="link"
+        variant='green'
+        haswidth='254px'
+        hasheight='78px'
+        hasfontsize='16px'
+        className='header-btn'
+        ariaLabel='link'
       />
     </StyledHeader>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

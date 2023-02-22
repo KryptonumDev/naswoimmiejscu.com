@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledBlogCard = styled.div`
   width: 100%;
@@ -10,7 +10,7 @@ export const StyledBlogCard = styled.div`
   text-decoration: none;
   color: var(--normalBlack);
 
-  &:focus-visible{
+  &:focus-visible {
     outline-width: 1px;
     outline-style: solid;
     outline-color: var(--normalGreen);
@@ -24,24 +24,23 @@ export const StyledBlogCard = styled.div`
     gap: 14px;
   }
 
-  .image img{
-    transition: transform .4s ease-out;
+  .image img {
+    transition: transform 0.4s ease-out;
   }
 
-  &:hover{
-    .image{
-      img{
+  &:hover {
+    .image {
+      img {
         transform: scale(1.05);
       }
     }
 
-    
-  .link {
-    background-color: var(--hoverGreen);
-    border: 1px solid transparent;
+    .link {
+      background-color: var(--hoverGreen);
+      border: 1px solid transparent;
+    }
   }
-  }
-`;
+`
 
 export const StyledImageWrapper = styled.div`
   width: 35%;
@@ -65,7 +64,7 @@ export const StyledImageWrapper = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
   }
-`;
+`
 
 export const StyledTextWrapper = styled.div`
   width: 65%;
@@ -83,25 +82,24 @@ export const StyledTextWrapper = styled.div`
   }
 
   @media (max-width: 360px) {
-    .link{
+    .link {
       width: 100%;
       font-size: 11px;
       min-height: 53px;
     }
   }
-
-`;
+`
 
 export const StyledTitleWrapper = styled.div`
   font: 700 clamp(20px, 2.5vw, 48px) Roboto;
   margin-bottom: 20px;
-`;
+`
 
 export const StyledDescWrapper = styled.div`
   max-width: 304px;
-  font: 300 clamp(14px, ${14 / 480 * 100}vw, 16px)/1.33em Roboto;
+  font: 300 clamp(14px, ${(14 / 480) * 100}vw, 16px) / 1.33em Roboto;
   margin-bottom: 30px;
-`;
+`
 
 export const StyledMobileCategory = styled.div`
   display: none;
@@ -115,5 +113,9 @@ export const StyledMobileCategory = styled.div`
 
   @media only screen and (max-width: 768px) {
     display: block;
+    top: unset;
+    bottom: 19px;
+    left: 14px;
+    right: unset;
   }
-`;
+`

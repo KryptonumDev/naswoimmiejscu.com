@@ -205,17 +205,17 @@ const Categories = styled.div`
     border: 1px solid #000000;
     border-radius: 45px;
     font-weight: 300;
-    font-size: clamp(7px, ${(7 / 360) * 100}vw, 15px);
+    font-size: clamp(10px, ${(12 / 360) * 100}vw, 15px);
     line-height: 1.35em;
     text-transform: uppercase;
 
     @media (max-width: 1024px) {
-      font-size: clamp(9px, ${(9 / 360) * 100}vw, 12px);
+      font-size: clamp(10px, ${(10 / 360) * 100}vw, 12px);
       padding: 8px 20px;
     }
 
     @media (max-width: 640px) {
-      font-size: clamp(7px, ${(12 / 640) * 100}vw, 12px);
+      font-size: clamp(10px, ${(12 / 640) * 100}vw, 12px);
     }
 
     @media (max-width: 480px) {
@@ -315,7 +315,7 @@ const Nav = styled.nav`
     margin-top: 0;
 
     ul {
-      grid-gap: 8px !important;
+      grid-gap: 6px !important;
     }
   }
 
@@ -329,22 +329,33 @@ const Nav = styled.nav`
     color: #000;
     text-decoration: unset;
     font-variant-numeric: normal;
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+    :hover {
+      transform: translateX(4px);
+    }
   }
 
   ul {
     display: grid;
-    grid-gap: 16px;
-
+    grid-gap: 10px;
+    list-style-type: none;
+    counter-reset: item;
     li {
-      list-style: inside decimal !important;
-
+      list-style-type: none;
+      counter-increment: item;
+      :before {
+        content: counters(item, '.') '. ';
+      }
       ul {
-        padding-top: 8px;
+        padding-top: 4px;
+        grid-gap: 4px;
       }
 
       li {
-        list-style: initial !important;
-
+        :before {
+          content: counters(item, '.') '. ';
+        }
         @media (max-width: 820px) {
           font-size: clamp(14px, ${(18 / 820) * 100}vw, 18px);
         }
@@ -353,7 +364,7 @@ const Nav = styled.nav`
 
     ul {
       font-size: 1rem;
-      margin: 8px 0 8px 16px;
+      margin: 4px 0 4px 24px;
     }
 
     a {

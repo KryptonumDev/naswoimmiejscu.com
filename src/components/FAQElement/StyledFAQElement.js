@@ -1,14 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledFAQElement = styled.details`
   width: 100%;
 
-  svg{
-    transition: all .25s;
+  svg {
+    transition: all 0.25s;
   }
 
-  &:hover{
-
+  &:hover {
   }
 
   &:focus-visible {
@@ -39,7 +38,7 @@ export const StyledFAQElement = styled.details`
       display: none;
     }
   }
-`;
+`
 
 export const StyledQuestionWrapper = styled.summary`
   display: flex;
@@ -53,8 +52,8 @@ export const StyledQuestionWrapper = styled.summary`
     outline-offset: 4px;
   }
 
-  &:hover{
-    svg{
+  &:hover {
+    svg {
       transform: translateY(2px);
     }
   }
@@ -62,10 +61,10 @@ export const StyledQuestionWrapper = styled.summary`
   @media only screen and (max-width: 992px) {
     align-items: center;
   }
-`;
+`
 
 export const StyledAnswerWrapper = styled.div`
-  font: 300 clamp(20px, 1.25vw, 24px)/1.33em Roboto;
+  font: 300 clamp(20px, 1.25vw, 24px) / 1.33em Roboto;
   margin-top: 24px;
 
   strong {
@@ -92,7 +91,7 @@ export const StyledAnswerWrapper = styled.div`
   @media only screen and (max-width: 420px) {
     font-size: clamp(14px, 4.167vw, 16px);
   }
-`;
+`
 
 export const StyledIconWrapper = styled.div`
   display: flex;
@@ -102,10 +101,10 @@ export const StyledIconWrapper = styled.div`
   svg {
     width: 63%;
   }
-`;
+`
 
 export const StyledQuestionContent = styled.div`
-  font: 700 clamp(32px, 2.083vw, 40px)/1.33em Roboto;
+  font: 700 clamp(32px, 2.083vw, 40px) / 1.33em Roboto;
   cursor: pointer;
 
   @media only screen and (min-width: 1920px) {
@@ -113,20 +112,19 @@ export const StyledQuestionContent = styled.div`
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: ${({ isnormalfont }) => (isnormalfont ? "3.0vw" : "4.0vw")};
-    transform: ${({ open }) => (open ? "scale(1.05)" : "scale(1)")};
-    transition: transform 250ms linear;
+    font-size: ${({ isnormalfont }) => (isnormalfont ? '3.0vw' : '4.0vw')};
   }
 
   @media only screen and (max-width: 688px) {
-    font-size: ${({ isnormalfont }) => (isnormalfont ? "3.0vw" : "3.6vw")};
+    font-size: ${({ isnormalfont }) => (isnormalfont ? '3.0vw' : '3.6vw')};
   }
 
   @media only screen and (max-width: 460px) {
-    font-size: ${({ isnormalfont }) => (isnormalfont ? "3.8vw" : "4.4vw")};
+    font-size: ${({ isnormalfont }) => (isnormalfont ? '3.8vw' : '4.4vw')};
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: ${({ isnormalfont }) => (isnormalfont ? "clamp(16px, 4.167vw, 18px)" : "5.9vw")};
+    font-size: ${({ isnormalfont }) =>
+      isnormalfont ? 'clamp(16px, 4.167vw, 18px)' : '5.9vw'};
   }
-`;
+`

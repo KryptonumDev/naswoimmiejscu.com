@@ -5,9 +5,15 @@ import { Link } from '../TransitionLink/TransitionLink'
 
 import { StyledLogo } from './StyledLogo'
 
-const Logo = ({ hasMaxWidth, hadDeclaredMargin, isHeader, isFooter }) => {
+const Logo = ({
+  hasMaxWidth,
+  hadDeclaredMargin,
+  isHeader,
+  isFooter,
+  onClick
+}) => {
   return (
-    <Link to='/' arialabel='link'>
+    <Link onClick={onClick} to='/' arialabel='link'>
       <StyledLogo
         isheader={isHeader}
         hasmaxwidth={hasMaxWidth}
