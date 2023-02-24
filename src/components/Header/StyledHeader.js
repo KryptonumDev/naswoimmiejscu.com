@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledHeader = styled.header`
   width: 100%;
@@ -12,7 +12,8 @@ export const StyledHeader = styled.header`
   padding: clamp(40px, 4.167vw, 80px) clamp(32px, 6.667vw, 128px) 0;
 
   @media only screen and (max-width: 1472px) {
-    padding: 80px clamp(32px, 3vw, 60px) 0;
+    padding-left: clamp(32px, 3vw, 60px) 0;
+    padding-right: clamp(32px, 3vw, 60px) 0;
   }
 
   @media only screen and (max-width: 1167px) {
@@ -20,7 +21,7 @@ export const StyledHeader = styled.header`
     padding-top: 24px;
     height: 72px;
   }
-`;
+`
 
 export const StyledLogoWrapperHeader = styled.div`
   @media only screen and (max-width: 1167px) {
@@ -30,4 +31,4 @@ export const StyledLogoWrapperHeader = styled.div`
     display: block;
     z-index: 99;
   }
-`;
+`
