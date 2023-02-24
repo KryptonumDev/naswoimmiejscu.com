@@ -323,7 +323,7 @@ export const StyledDescWrapper = styled.div`
   }
 
   &.calendly-first-section {
-    margin: clamp(20px, 3.385vw, 65px) 0;
+    margin: clamp(12px, 2.385vw, 42px) 0;
   }
 
   @media only screen and (min-width: 1920px) {

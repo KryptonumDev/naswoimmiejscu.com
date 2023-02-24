@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledCalendlyFirstSection = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ export const StyledCalendlyFirstSection = styled.div`
     gap: 20px;
     align-items: flex-start;
   }
-`;
+`
 
 export const StyledLeftWrapper = styled.div`
   width: 50%;
@@ -25,7 +25,7 @@ export const StyledLeftWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     width: 100%;
   }
-`;
+`
 
 export const StyledRightWrapper = styled.div`
   width: 50%;
@@ -43,7 +43,7 @@ export const StyledRightWrapper = styled.div`
   @media only screen and (max-width: 630px) {
     width: 100%;
   }
-`;
+`
 
 export const StyledList = styled.div`
   font: 300 1.354vw/1.33em Roboto;
@@ -55,13 +55,8 @@ export const StyledList = styled.div`
   }
 
   ul {
-    margin-left: 24px;
-
     li {
-      &::marker {
-        color: var(--normalGreen);
-      }
-
+      list-style-type: none;
       padding-top: 4px;
 
       p {
@@ -100,19 +95,18 @@ export const StyledList = styled.div`
   }
 
   @media only screen and (max-width: 360px) {
-
     ul {
       margin-left: 14px;
     }
   }
-`;
+`
 
 export const StyledCircleWrapper = styled.div`
   position: absolute;
   bottom: -50px;
   z-index: 2;
   right: -50px;
-`;
+`
 
 export const StyledMobileCircle = styled.div`
   display: none;
@@ -124,7 +118,7 @@ export const StyledMobileCircle = styled.div`
   @media only screen and (max-width: 992px) {
     display: block;
   }
-`;
+`
 
 export const StyledBigWhiteCircle = styled.div`
   position: absolute;
@@ -142,4 +136,4 @@ export const StyledBigWhiteCircle = styled.div`
   @media only screen and (max-width: 992px) {
     display: none;
   }
-`;
+`
