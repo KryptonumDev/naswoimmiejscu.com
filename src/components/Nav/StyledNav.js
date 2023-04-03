@@ -1,3 +1,5 @@
+/** @format */
+
 import styled from "styled-components";
 
 export const StyledNav = styled.nav`
@@ -5,7 +7,7 @@ export const StyledNav = styled.nav`
   align-items: center;
   gap: 21px;
 
-  @media only screen and (min-width: 1920px){
+  @media only screen and (min-width: 1920px) {
     gap: 26px;
   }
 
@@ -16,9 +18,9 @@ export const StyledNav = styled.nav`
     color: var(--normalGrey);
     text-decoration: none;
     position: relative;
-    transition: color .4s ease-out, font-weight .4s ease-out;
+    transition: color 0.4s ease-out, font-weight 0.4s ease-out;
 
-    @media only screen and (min-width: 1920px){
+    @media only screen and (min-width: 1920px) {
       font-size: 16px;
       white-space: 1.33em;
     }
@@ -28,7 +30,7 @@ export const StyledNav = styled.nav`
       font-weight: 700;
     }
 
-    &:hover{
+    &:hover {
       color: var(--normalBlack) !important;
     }
 
@@ -97,7 +99,6 @@ export const StyledNav = styled.nav`
   }
 `;
 
-
 export const StyledMobileWrapper = styled.div`
   display: none;
 
@@ -148,8 +149,9 @@ export const StyledGreenCircle = styled.div`
 export const StyledFooterNav = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 21px;
-  width: 100%;
+  width: 65%;
 
   a,
   span {
@@ -158,14 +160,14 @@ export const StyledFooterNav = styled.div`
     color: var(--normalGrey);
     text-decoration: none;
     position: relative;
-    transition: color .4s ease-out, font-weight .4s ease-out;
+    transition: color 0.4s ease-out, font-weight 0.4s ease-out;
 
     &.activeLink {
       color: var(--normalBlack);
       font-weight: 700;
     }
 
-    &:hover{
+    &:hover {
       color: var(--normalBlack) !important;
     }
 
@@ -184,27 +186,25 @@ export const StyledFooterNav = styled.div`
 
   @media only screen and (max-width: 1608px) {
     gap: 13px;
-
-    a,
-    span {
-      font-size: 12px;
-    }
   }
 
   @media only screen and (max-width: 1350px) {
     gap: 9px;
+  }
 
+  @media only screen and (max-width: 1296px) {
     a,
     span {
       font-size: 10px;
     }
   }
 
-  @media only screen and (max-width: 992px){
+  @media only screen and (max-width: 992px) {
     flex-direction: column;
     gap: 14px;
     align-items: flex-start;
-    
+    width: 100%;
+
     a,
     span {
       font-size: 24px;

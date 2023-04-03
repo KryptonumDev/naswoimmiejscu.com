@@ -1,3 +1,5 @@
+/** @format */
+
 import styled from "styled-components";
 
 export const StyledHomeSecondSection = styled.section`
@@ -35,7 +37,7 @@ export const StyledRightWrapper = styled.div`
   max-height: 1080px;
   height: fit-content;
   margin: auto;
-  .image{
+  .image {
     height: fit-content;
   }
 
@@ -53,15 +55,27 @@ export const StyledContent = styled.div`
 `;
 
 export const StyledContentWrapper = styled.div`
-  font: 300 clamp(20px, 1.142px, 22px)/1.33em Roboto;
+  font: 300 1.354vw/1.33em Roboto;
   margin: clamp(18px, 1.302vw, 25px) 0;
 
   strong {
     font-weight: 600;
   }
 
+  @media only screen and (min-width: 1920px) {
+    font-size: 26px;
+  }
+
+  @media only screen and (max-width: 1763px) {
+    font-size: 1.248vw;
+  }
+
   @media only screen and (max-width: 1499px) {
-    font-size: clamp(16px, 1.201vw, 20px);
+    font-size: 1.334vw;
+  }
+
+  @media only screen and (max-width: 1349px) {
+    font-size: 1.734vw;
   }
 
   @media only screen and (max-width: 992px) {
@@ -71,7 +85,7 @@ export const StyledContentWrapper = styled.div`
 
   @media only screen and (max-width: 528px) {
     font-size: 15px;
-    margin-bottom: 47px
+    margin-bottom: 47px;
   }
 `;
 
@@ -103,18 +117,18 @@ export const StyledIconsWrapper = styled.div`
       transition: 250ms color linear;
     }
 
-    &:hover  {
-      .button{
-        background-color: #0BC76D60;
-        transform: scale(.65);
+    &:hover {
+      .button {
+        background-color: #0bc76d60;
+        transform: scale(0.65);
       }
 
-      p{
+      p {
         color: #00000040;
       }
     }
 
-    .active{
+    .active {
       color: #000000 !important;
     }
   }
@@ -141,7 +155,7 @@ export const StyledIconsWrapper = styled.div`
     > div {
       &:last-child {
         transition: transform 400ms;
-        transform: translateX(${({ iswomens }) => !iswomens ? "-18px" : "0"});
+        transform: translateX(${({ iswomens }) => (!iswomens ? "-18px" : "0")});
       }
     }
   }
@@ -182,7 +196,7 @@ export const StyledMobileImage = styled.div`
 export const StyledMobileText = styled.div`
   display: none;
 
-  @media only screen and (max-width: 992px){
+  @media only screen and (max-width: 992px) {
     display: block;
 
     p {
@@ -191,15 +205,15 @@ export const StyledMobileText = styled.div`
     }
   }
 
-  @media only screen and (max-width: 345px){
+  @media only screen and (max-width: 345px) {
     p {
       font-size: 20px;
     }
   }
-`
+`;
 
 export const StyledDesktopText = styled.div`
-  @media only screen and (max-width: 992px){
+  @media only screen and (max-width: 992px) {
     display: none;
   }
-`
+`;

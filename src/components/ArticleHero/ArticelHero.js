@@ -1,6 +1,8 @@
-import { GatsbyImage } from 'gatsby-plugin-image'
-import React from 'react'
-import styled from 'styled-components'
+/** @format */
+
+import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react";
+import styled from "styled-components";
 
 const Hero = ({
   title,
@@ -9,69 +11,73 @@ const Hero = ({
   data: {
     description,
     tekstDoZdjecia: annotation,
-    zdjecieWyrozniajaceNaPodstronieArt: image
-  }
+    zdjecieWyrozniajaceNaPodstronieArt: image,
+  },
 }) => {
   return (
     <Wrapper>
       <TextPart>
         <Categories>
           {categories.map((el) => (
-            <div className='item' key={el.name}>
+            <div className="item" key={el.name}>
               {el.name}
             </div>
           ))}
         </Categories>
         <h1>{title}</h1>
         <div
-          className='description'
+          className="description"
           dangerouslySetInnerHTML={{ __html: description }}
         />
-        <div className='svg-flex'>
+        <div className="svg-flex">
           <svg
-            width='22'
-            height='22'
-            viewBox='0 0 22 22'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'>
-            <circle cx='11' cy='11' r='11' fill='#0BC76D' />
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="11" cy="11" r="11" fill="#0BC76D" />
           </svg>
 
           <svg
-            width='22'
-            height='22'
-            viewBox='0 0 22 22'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'>
-            <circle cx='11' cy='11' r='11' fill='#0BC76D' />
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="11" cy="11" r="11" fill="#0BC76D" />
           </svg>
         </div>
       </TextPart>
       <ImageWrapper>
         <svg
-          className='svg-brown'
-          width='30'
-          height='31'
-          viewBox='0 0 30 31'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'>
-          <ellipse cx='15' cy='15.5' rx='15' ry='15.5' fill='#BBA383' />
+          className="svg-brown"
+          width="30"
+          height="31"
+          viewBox="0 0 30 31"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse cx="15" cy="15.5" rx="15" ry="15.5" fill="#BBA383" />
         </svg>
         <svg
-          className='svg'
-          width='99'
-          height='99'
-          viewBox='0 0 99 99'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'>
-          <circle cx='49.5' cy='49.5' r='49.5' fill='#0BC76D' />
+          className="svg"
+          width="99"
+          height="99"
+          viewBox="0 0 99 99"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="49.5" cy="49.5" r="49.5" fill="#0BC76D" />
         </svg>
         <GatsbyImage
           image={image.localFile.childImageSharp.gatsbyImageData}
           alt={image.altText}
         />
         <div
-          className='annotation'
+          className="annotation"
           dangerouslySetInnerHTML={{ __html: annotation }}
         />
       </ImageWrapper>
@@ -95,30 +101,32 @@ const Hero = ({
           </ul>
         </Nav>
       )}
-      <div className='svg-flex-mobile'>
+      <div className="svg-flex-mobile">
         <svg
-          width='22'
-          height='22'
-          viewBox='0 0 22 22'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'>
-          <circle cx='11' cy='11' r='11' fill='#0BC76D' />
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="11" cy="11" r="11" fill="#0BC76D" />
         </svg>
 
         <svg
-          width='22'
-          height='22'
-          viewBox='0 0 22 22'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'>
-          <circle cx='11' cy='11' r='11' fill='#0BC76D' />
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="11" cy="11" r="11" fill="#0BC76D" />
         </svg>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
 
 const Wrapper = styled.div`
   margin-top: clamp(60px, ${(160 / 1920) * 100}vw, 160px);
@@ -126,8 +134,8 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas:
-    'left top'
-    'left bottom';
+    "left top"
+    "left bottom";
   grid-gap: 0 100px;
 
   .svg-flex-mobile {
@@ -140,9 +148,9 @@ const Wrapper = styled.div`
 
   @media (max-width: 820px) {
     grid-template-areas:
-      'top'
-      'left'
-      'bottom';
+      "top"
+      "left"
+      "bottom";
     grid-gap: 26px;
     grid-template-columns: 1fr;
     margin: 20px auto 0 auto;
@@ -153,7 +161,7 @@ const Wrapper = styled.div`
       gap: 12px;
     }
   }
-`
+`;
 
 const TextPart = styled.div`
   max-width: 772px;
@@ -193,7 +201,7 @@ const TextPart = styled.div`
       display: none;
     }
   }
-`
+`;
 
 const Categories = styled.div`
   display: flex;
@@ -222,11 +230,10 @@ const Categories = styled.div`
       padding: 6px 15px;
     }
   }
-`
+`;
 
 const ImageWrapper = styled.div`
   position: relative;
-  display: flex;
   grid-area: top;
 
   width: clamp(500px, ${(650 / 1920) * 100}vw, 650px);
@@ -263,7 +270,7 @@ const ImageWrapper = styled.div`
 
   .svg {
     position: absolute;
-    right: 0;
+    right: -30px;
     top: -25px;
 
     @media (max-width: 820px) {
@@ -276,20 +283,11 @@ const ImageWrapper = styled.div`
   }
 
   .annotation {
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
     font-weight: 500;
     font-size: 12px;
     line-height: 24px;
 
-    height: fit-content;
-    transform: rotateX(180deg) rotateY(180deg);
-    margin-top: auto;
-
     @media (max-width: 820px) {
-      writing-mode: unset;
-      text-orientation: unset;
-      transform: unset;
       padding-right: 50px;
       marign-top: 12px;
       line-height: 1.35em;
@@ -299,13 +297,12 @@ const ImageWrapper = styled.div`
       font-size: clamp(9px, ${(12 / 640) * 100}vw, 12px);
     }
   }
-`
+`;
 
 const Nav = styled.nav`
   width: clamp(500px, 33.85416666666667vw, 650px);
   font-weight: 500;
   font-size: clamp(17px, ${(26 / 1920) * 100}vw, 26px);
-  line-height: 150%;
   margin-top: clamp(24px, ${(48 / 1920) * 100}vw, 48px);
   grid-area: bottom;
 
@@ -341,12 +338,16 @@ const Nav = styled.nav`
     grid-gap: 10px;
     list-style-type: none;
     counter-reset: item;
+    padding-bottom: 12px;
+
     li {
       list-style-type: none;
       counter-increment: item;
+
       :before {
-        content: counters(item, '.') '. ';
+        content: counters(item, ".") ". ";
       }
+
       ul {
         padding-top: 4px;
         grid-gap: 4px;
@@ -354,8 +355,9 @@ const Nav = styled.nav`
 
       li {
         :before {
-          content: counters(item, '.') '. ';
+          content: counters(item, ".") ". ";
         }
+
         @media (max-width: 820px) {
           font-size: clamp(14px, ${(18 / 820) * 100}vw, 18px);
         }
@@ -380,4 +382,4 @@ const Nav = styled.nav`
   ol {
     margin-left: 48px;
   }
-`
+`;
