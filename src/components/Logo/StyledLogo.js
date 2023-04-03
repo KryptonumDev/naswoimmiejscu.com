@@ -35,7 +35,7 @@ export const StyledLogo = styled.div`
 
   @media only screen and (max-width: 992px) {
     max-width: ${({ isheader, hasmaxwidth }) =>
-    isheader ? `clamp(240px, ${300 / 1024 * 100}vw, 400px)` : hasmaxwidth};
+    isheader ? "320px" : hasmaxwidth};
   }
 
   @media only screen and (max-width: 600px) {
@@ -46,6 +46,6 @@ export const StyledLogo = styled.div`
 
   @media only screen and (max-width: 380px) {
     max-width: ${({ isheader, hasmaxwidth, isfooter }) =>
-    isheader ? (isfooter ? "unset" : `192px`) : hasmaxwidth};
+    isheader ? (isfooter ? "unset" : `215px`) : hasmaxwidth};
   }
 `;

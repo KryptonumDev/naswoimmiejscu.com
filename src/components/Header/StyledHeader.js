@@ -32,3 +32,33 @@ export const StyledLogoWrapperHeader = styled.div`
     z-index: 99;
   }
 `
+
+export const StyledDesktopLogo = styled.div`
+  @media only screen and (max-width: 1245px){
+    width: 320px;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 1167px){
+    display: none;
+  }
+`
+
+export const StyledMobileLogo = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 1167px){
+    display: block;
+  }
+
+  @media only screen and (max-width: 360px){
+    width: 213px;
+
+    svg {
+      width: 100%;
+    }
+  }
+`

@@ -50,16 +50,16 @@ export const StyledNav = styled.nav`
 
     a,
     span {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 
   @media only screen and (max-width: 1350px) {
-    gap: 9px;
+    gap: 7px;
 
     a,
     span {
-      font-size: 10px;
+      font-size: 13px;
     }
   }
 

@@ -1,7 +1,6 @@
 import { Link as ALink } from 'gatsby'
 import React from 'react'
 
-
 export const Link = ({
   partialyActive = false,
   arialabel,
