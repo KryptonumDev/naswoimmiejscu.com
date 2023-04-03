@@ -498,8 +498,8 @@ export const StyledDescWrapper = styled.div`
     }
 
     &.home-second-section {
-      margin-top: 27px
-      font-size: 3.409vw;
+      margin-top: 27px;
+      font-size: 15px;
     }
 
     &.first-section-womens-youth,

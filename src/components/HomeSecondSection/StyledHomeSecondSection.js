@@ -65,12 +65,8 @@ export const StyledContentWrapper = styled.div`
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: 2.218vw;
+    font-size: 2.818vw;
     max-width: 655px;
-  }
-
-  @media only screen and (max-width: 808px) {
-    font-size: 2.9vw;
   }
 
   @media only screen and (max-width: 528px) {
@@ -141,9 +137,7 @@ export const StyledIconsWrapper = styled.div`
   }
 
   @media only screen and (max-width: 623px) {
-    flex-direction: column;
-    gap: 0;
-
+    gap: 12px;
     > div {
       &:last-child {
         transition: transform 400ms;
@@ -153,6 +147,8 @@ export const StyledIconsWrapper = styled.div`
   }
 
   @media only screen and (max-width: 345px) {
+    gap: 8px;
+
     p {
       font-size: 24px;
     }
@@ -182,3 +178,28 @@ export const StyledMobileImage = styled.div`
     height: 310px;
   }
 `;
+
+export const StyledMobileText = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 992px){
+    display: block;
+
+    p {
+      font-size: 26px;
+      margin-top: 4px;
+    }
+  }
+
+  @media only screen and (max-width: 345px){
+    p {
+      font-size: 20px;
+    }
+  }
+`
+
+export const StyledDesktopText = styled.div`
+  @media only screen and (max-width: 992px){
+    display: none;
+  }
+`
