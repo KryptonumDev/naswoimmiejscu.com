@@ -10,11 +10,12 @@ export const StyledAboutMeSecondSection = styled.div`
   }
 `;
 
-export const StyledTitleWrapper = styled.div`
+export const StyledTitleWrapperSecond = styled.div`
   text-align: center;
   font: 900 56px/1.33em Roboto;
   text-transform: uppercase;
   color: var(--normalGreen);
+  margin: clamp(40px, 6.198vw, 119px) 0 clamp(40px, 3.021vw, 58px);
 
   @media only screen and (max-width: 1763px) {
     font-size: 2.95vw;
@@ -25,13 +26,14 @@ export const StyledTitleWrapper = styled.div`
   }
 
   @media only screen and (max-width: 1349px) {
-    font-size: 2.372vw;
+    font-size: 3.372vw;
   }
 
   @media only screen and (max-width: 992px) {
     font-size: 4.234vw;
     text-align: left;
-    padding: 0 22px;
+    padding: 0;
+    margin-top: clamp(20px, 3.024vw, 30px);
   }
 
   @media only screen and (max-width: 528px) {

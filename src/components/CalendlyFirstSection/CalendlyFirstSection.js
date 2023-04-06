@@ -17,6 +17,7 @@ import {
   StyledCircleWrapper,
   StyledMobileCircle,
   StyledBigWhiteCircle,
+  StyledBottomElement,
 } from "./StyledCalendlyFirstSection";
 import { StyledCircle } from "../Circle/StyledCircle";
 
@@ -31,21 +32,6 @@ const CalendlyFirstSection = ({ data }) => {
           <StyledDescWrapper className="calendly-first-section">
             {data.opisPodTytulem ? parse(data.opisPodTytulem) : null}
           </StyledDescWrapper>
-          <StyledList>{data.lista ? parse(data.lista) : null}</StyledList>
-          <Button
-            btnData={data.przycisk}
-            variant="green"
-            haswidth="495px"
-            hasClampWidth="25.781vw"
-            className="calenldy-first-section"
-            hasheight="88px"
-            hasfontsize="clamp(16px, 1.042vw, 20px)"
-            hasBasicWidth="300px"
-            hasBasicHeight="53px"
-            ariaLabel="link"
-            noReferer={"noreferrer"}
-            noOpener={"noopener"}
-          />
         </StyledLeftWrapper>
         <StyledRightWrapper>
           <StyledMobileCircle>
@@ -77,6 +63,31 @@ const CalendlyFirstSection = ({ data }) => {
           </StyledBigWhiteCircle>
         </StyledRightWrapper>
       </StyledCalendlyFirstSection>
+      <StyledBottomElement>
+        <div>
+          <Image
+            imageDesktop={data.drugieZdjeciePoPrawo}
+            imageMobile={data.drugieZdjeciaPoPrawoMobile}
+          />
+        </div>
+        <div>
+          <StyledList>{data.lista ? parse(data.lista) : null}</StyledList>
+          <Button
+            btnData={data.przycisk}
+            variant="green"
+            haswidth="495px"
+            hasClampWidth="25.781vw"
+            className="calenldy-first-section"
+            hasheight="88px"
+            hasfontsize="clamp(16px, 1.042vw, 20px)"
+            hasBasicWidth="300px"
+            hasBasicHeight="53px"
+            ariaLabel="link"
+            noReferer={"noreferrer"}
+            noOpener={"noopener"}
+          />
+        </div>
+      </StyledBottomElement>
     </Container>
   );
 };

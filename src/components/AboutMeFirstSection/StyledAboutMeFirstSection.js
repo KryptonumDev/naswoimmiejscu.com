@@ -5,7 +5,6 @@ export const StyledAboutMeFirstSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: clamp(40px, 6.198vw, 119px);
   gap: clamp(30px, 10.156vw, 195px);
   position: relative;
 

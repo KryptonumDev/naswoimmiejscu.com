@@ -8,7 +8,6 @@ import BigGreenCircle from "../BigGreenCircle/BigGreenCircle";
 
 import {
   StyledAboutMeSecondSection,
-  StyledTitleWrapper,
   StyledContent,
   StyledLeftWrapper,
   StyledRightWrapper,
@@ -22,9 +21,6 @@ const AboutMeSecondSection = ({ data }) => {
   return (
     <Container className="about-me-second-section">
       <StyledAboutMeSecondSection>
-        <StyledTitleWrapper>
-          {data.tytul ? parse(data.tytul) : null}
-        </StyledTitleWrapper>
         <StyledContent>
           <StyledMobileCircle>
             <svg

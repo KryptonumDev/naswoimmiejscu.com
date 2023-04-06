@@ -18,7 +18,7 @@ const AboutMe = ({
 
   return (
     <Wrapper>
-      <AboutMeFirstSection data={oMnie.pierwszaSekcjaOMnie} />
+      <AboutMeFirstSection data={oMnie.pierwszaSekcjaOMnie} title={oMnie.drugaSekcjaOMnie.tytul} />
       <AboutMeSecondSection data={oMnie.drugaSekcjaOMnie} />
       <AboutMeWhoIm data={oMnie.kimTerazJestem} />
       <AboutMeProcess data={oMnie.procesWspolpracyOMnie} />

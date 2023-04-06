@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import Image from '../Image/Image'
-import { StyledCircle } from '../Circle/StyledCircle'
+import styled from "styled-components";
+import Image from "../Image/Image";
+import { StyledCircle } from "../Circle/StyledCircle";
 
 export const StyledHomeHeroSection = styled.div`
   width: 100%;
@@ -22,7 +22,7 @@ export const StyledHomeHeroSection = styled.div`
     align-items: flex-start;
     gap: 14px;
   }
-`
+`;
 
 export const StyledLeftWrapper = styled.div`
   position: relative;
@@ -43,7 +43,7 @@ export const StyledLeftWrapper = styled.div`
       height: 100%;
     }
   }
-`
+`;
 
 export const StyledRightWrapper = styled.div`
   max-width: 806px;
@@ -54,7 +54,7 @@ export const StyledRightWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     width: 100%;
   }
-`
+`;
 
 export const StyledTitleWrapper = styled.div`
   font: 700 3.333vw/1.33em Roboto;
@@ -71,6 +71,10 @@ export const StyledTitleWrapper = styled.div`
 
   &.effect-womens-title {
     margin-top: 15px;
+  }
+
+  &.about-me-first-section {
+    max-width: 300px;
   }
 
   @media only screen and (min-width: 1920px) {
@@ -265,7 +269,7 @@ export const StyledTitleWrapper = styled.div`
       font-size: clamp(22px, 5.7vw, 22px);
     }
   }
-`
+`;
 
 export const StyledDescWrapper = styled.div`
   margin: 24px 0 73px;
@@ -545,9 +549,9 @@ export const StyledDescWrapper = styled.div`
       font-size: clamp(15px, 4.167vw, 16px);
     }
   }
-`
+`;
 
-export const StyledImage = styled(Image)``
+export const StyledImage = styled(Image)``;
 
 export const StyledCircleWrapper = styled(StyledCircle)`
   position: absolute;
@@ -574,7 +578,7 @@ export const StyledCircleWrapper = styled(StyledCircle)`
       height: 64px;
     }
   }
-`
+`;
 
 export const StyledBottomCircle = styled.div`
   display: none;
@@ -585,4 +589,4 @@ export const StyledBottomCircle = styled.div`
   @media only screen and (max-width: 992px) {
     display: block;
   }
-`
+`;
