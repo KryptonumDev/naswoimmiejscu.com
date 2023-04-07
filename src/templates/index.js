@@ -51,7 +51,11 @@ const IndexPage = ({
         </StyledWhiteSecondCircleWrapper>
         <HomeContact data={stronaGlowna.spotkajmySie} />
       </StyledHome>
-      <HomeBlogSection />
+      <HomeBlogSection
+        anotherPerson={stronaGlowna.sekcjaZBlogiem.linkDoInnejOsoby}
+        iconImage={stronaGlowna.sekcjaZBlogiem.ikonkaDoLinku}
+        tekstDoLinku={stronaGlowna.sekcjaZBlogiem.tekstDoLinku}
+      />
     </Wrapper>
   );
 };
@@ -76,6 +80,37 @@ export const query = graphql`
         }
       }
       stronaGlowna {
+        sekcjaZBlogiem {
+          tekstDoLinku
+          linkDoInnejOsoby {
+            ... on WpCaseStudy {
+              id
+              slug
+              caseStudyArtykul {
+                miniaturkaCaseStudy {
+                  avatar {
+                    altText
+                    title
+                    localFile {
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          ikonkaDoLinku {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData(quality: 100)
+              }
+            }
+          }
+        }
         pierwszaSekcjaHomePage {
           opisPoPrawo
           tytulPoPrawo

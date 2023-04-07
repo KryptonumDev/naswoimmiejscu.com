@@ -15,16 +15,23 @@ const AboutMe = ({
     wpPage: { oMnie },
   },
 }) => {
-
   return (
     <Wrapper>
-      <AboutMeFirstSection data={oMnie.pierwszaSekcjaOMnie} title={oMnie.drugaSekcjaOMnie.tytul} />
+      <AboutMeFirstSection
+        data={oMnie.pierwszaSekcjaOMnie}
+        title={oMnie.drugaSekcjaOMnie.tytul}
+      />
       <AboutMeSecondSection data={oMnie.drugaSekcjaOMnie} />
       <AboutMeWhoIm data={oMnie.kimTerazJestem} />
       <AboutMeProcess data={oMnie.procesWspolpracyOMnie} />
       <AboutMeMeet data={oMnie.spotkajmySieOMnie} />
       <FAQSection data={oMnie.faqOMnie} smallMgBottom isNormalFont />
-      <HomeBlogSection recDif />
+      <HomeBlogSection
+        recDif
+        anotherPerson={oMnie.sekcjaZBlogiemOMnie?.linkDoInnejOsoby}
+        iconImage={oMnie.sekcjaZBlogiemOMnie?.ikonkaDoLinku}
+        tekstDoLinku={oMnie.sekcjaZBlogiemOMnie?.tekstDoLinku}
+      />
     </Wrapper>
   );
 };
@@ -49,6 +56,37 @@ export const query = graphql`
         }
       }
       oMnie {
+        sekcjaZBlogiemOMnie {
+          tekstDoLinku
+          linkDoInnejOsoby {
+            ... on WpCaseStudy {
+              id
+              slug
+              caseStudyArtykul {
+                miniaturkaCaseStudy {
+                  avatar {
+                    altText
+                    title
+                    localFile {
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          ikonkaDoLinku {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData(quality: 100)
+              }
+            }
+          }
+        }
         drugaSekcjaOMnie {
           opisPoLewo
           opisPoPrawo

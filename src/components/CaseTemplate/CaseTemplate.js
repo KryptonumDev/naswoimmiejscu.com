@@ -204,15 +204,10 @@ const CaseTemplate = ({
         </StyledSecondSection>
       </Container>
       <HomeBlogSection
-        addnotationSecond={sekcjaZBlogiem.adnotacjaNaDoleStronyDrugaLinia}
-        addnotationFirst={sekcjaZBlogiem.adnotacjaNaDoleStronyPierwszaLinia}
-        blogTitle={sekcjaZBlogiem.blogTytul}
-        blogOpis={sekcjaZBlogiem.blogOpis}
         anotherPerson={sekcjaZBlogiem.linkDoInnejOsoby}
         isCase={true}
         iconImage={sekcjaZBlogiem.ikonkaDoLinku}
         tekstDoLinku={sekcjaZBlogiem.tekstDoLinku}
-        isCasePage={true}
       />
     </Wrapper>
   );

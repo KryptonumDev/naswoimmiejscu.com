@@ -23,9 +23,8 @@ const Youth = ({
     },
   },
 }) => {
-
   return (
-    <Wrapper >
+    <Wrapper>
       <FirstSecionWomens
         title={pierwszaSekcjaMlodziez.tytul}
         desc={pierwszaSekcjaMlodziez.opis}
@@ -56,18 +55,10 @@ const Youth = ({
         imageMobile={formaSpotkanMlodziez.obrazPoLewoMobile}
       />
       <HomeBlogSection
-        addnotationSecond={
-          sekcjaZBlogiemMlodzie.adnotacjaNaDoleStronyDrugaLinijka
-        }
-        addnotationFirst={sekcjaZBlogiemMlodzie.adnotacjaNaDoleStronyPi}
-        blogTitle={sekcjaZBlogiemMlodzie.blogTytul}
-        blogOpis={sekcjaZBlogiemMlodzie.blogOpis}
         anotherPerson={sekcjaZBlogiemMlodzie.linkDoInnejOsoby}
         iconImage={sekcjaZBlogiemMlodzie.ikonkaDoLinku}
         tekstDoLinku={sekcjaZBlogiemMlodzie.tekstDoLinku}
         isCase={true}
-        isWomensYouthPage={true}
-        youth={true}
       />
     </Wrapper>
   );
