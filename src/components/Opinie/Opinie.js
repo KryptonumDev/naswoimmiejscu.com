@@ -193,6 +193,12 @@ const ImageWrapper = styled.div`
     border-radius: 50%;
   }
 
+  img {
+    width: clamp(91px, ${(100 / 1024) * 100}vw, 130px);
+    height: clamp(91px, ${(100 / 1024) * 100}vw, 130px);
+    border-radius: 50%;
+  }
+
   svg {
     position: absolute;
     right: 0;
