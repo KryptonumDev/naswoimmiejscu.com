@@ -7,6 +7,8 @@ export const StyledMeetSomebody = styled.div`
   text-decoration: none;
   justify-content: space-between;
   transition: background-color 250ms;
+  margin-top: clamp(80px, 9.063vw, 174px);
+  padding-right: clamp(40px, 8.75vw, 168px);
 
   .icon {
     transition: transform 250ms linear;
@@ -25,13 +27,9 @@ export const StyledMeetSomebody = styled.div`
     outline-offset: 4px;
   }
 
-  @media only screen and (max-width: 992px) {
-    max-width: 50%;
+  @media only screen and (max-width: 1024px) {
+    max-width: 70%;
     margin-bottom: 36px;
-  }
-
-  @media only screen and (max-width: 803px) {
-    max-width: 82%;
   }
 
   @media only screen and (max-width: 506px) {
@@ -44,7 +42,6 @@ export const StyledIcon = styled.div`
   margin-right: 24px;
 
   @media only screen and (max-width: 992px) {
-    
     img {
       width: 38px;
       height: 38px;

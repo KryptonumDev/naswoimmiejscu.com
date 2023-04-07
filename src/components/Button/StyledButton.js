@@ -30,6 +30,10 @@ export const StyledLink = styled.div`
   color: var(--normalBlack);
   text-align: center;
 
+  &.blog-slider-btn--show {
+    display: none;
+  }
+
   &:hover {
     background-color: ${({ variant }) =>
       variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
@@ -52,7 +56,7 @@ export const StyledLink = styled.div`
       min-height: 60px;
     }
 
-    @media only screen and (max-width: 1440px){
+    @media only screen and (max-width: 1440px) {
       width: 172px;
       min-height: 67px;
     }
@@ -63,16 +67,11 @@ export const StyledLink = styled.div`
   }
 
   &.blog-slider-btn {
-    margin-right: clamp(40px, 8.917vw, 182px);
-
-    @media only screen and (max-width: 1024px) {
-      margin-right: 0;
-      margin-top: 30px;
-    }
+    margin-top: 48px;
   }
 
   &.blog-recomendation-slider {
-    margin-left: clamp(120px, 10.521vw, 202px);
+    margin-top: 48px;
   }
 
   @media only screen and (max-width: 1499px) {
@@ -97,18 +96,6 @@ export const StyledLink = styled.div`
       display: none;
     }
 
-    &.blog-recomendation-slider {
-      display: none;
-    }
-
-    &.blog-recomendation-slider-show {
-      margin: 120px auto 0;
-    }
-
-    &.blog-slider-btn {
-      margin-top: 66px;
-    }
-
     &.btn-faq-section {
       margin-top: 32px;
     }
@@ -117,6 +104,18 @@ export const StyledLink = styled.div`
       width: 302px;
       font-size: 16px;
       height: 73px;
+    }
+
+    &.blog-slider-btn {
+      display: none;
+    }
+
+    &.blog-slider-btn--show {
+      display: flex;
+    }
+
+    &.blog-recomendation-slider {
+      display: none;
     }
   }
 
@@ -130,12 +129,8 @@ export const StyledLink = styled.div`
     &.abotu-me-who-im,
     &.about-me-meet-btn,
     &.btn-faq-section,
-    &.blog-recomendation-slider-show {
+    &.blog-recomendation-slider {
       font-size: 16px;
-    }
-
-    &.blog-recomendation-slider-show {
-      margin-top: 80px;
     }
   }
 
@@ -180,17 +175,12 @@ export const StyledLink = styled.div`
     &.home-second-section,
     &.home-about-me,
     &.blog-recomendation-slider,
-    &.blog-slider-btn &.btn-faq-section,
-    &.blog-recomendation-slider-show {
+    &.blog-slider-btn &.btn-faq-section {
       min-height: 73px;
     }
 
     &.btn-faq-section {
       min-height: 73px;
-    }
-
-    &.blog-slider-btn {
-      margin-top: 40px;
     }
   }
 
@@ -214,7 +204,7 @@ export const StyledLink = styled.div`
     }
   }
 
-  @media only screen and (max-width: 320px){
+  @media only screen and (max-width: 320px) {
     &.blog-slider-btn {
       width: 260px;
     }

@@ -1,31 +1,32 @@
-import React from 'react'
+import React from "react";
 
-import Image from '../Image/Image'
+import Image from "../Image/Image";
 
 import {
   StyledMeetSomebody,
   StyledIcon,
   StyledTitle,
-  StyledAvatarWrapper
-} from './StyledMeetSomebody'
-import { StyledText } from '../Text/StyledText'
+  StyledAvatarWrapper,
+} from "./StyledMeetSomebody";
+import { StyledText } from "../Text/StyledText";
 
-import { Link } from '../TransitionLink/TransitionLink'
+import { Link } from "../TransitionLink/TransitionLink";
 
 const MeetSomebody = ({ data, icon, tekstDoLinku }) => {
   return (
-    <Link className='transitionLink' to={`/sukcesy/${data[0].slug}`}>
+    <Link className="transitionLink" to={`/sukcesy/${data[0].slug}`}>
       <StyledMeetSomebody>
         {icon ? (
-          <StyledIcon className='icon'>
+          <StyledIcon className="icon">
             <Image imageDesktop={icon} />
           </StyledIcon>
         ) : null}
         <StyledTitle>
           <StyledText
-            hasdeclaredfontsize='clamp(20px, 3.333vw, 64px)'
-            hasdeclaredfontweight='700'
-            hasdeclaredfontcolor='var(--normalBlack)'>
+            hasdeclaredfontsize="clamp(20px, 3.333vw, 64px)"
+            hasdeclaredfontweight="700"
+            hasdeclaredfontcolor="var(--normalBlack)"
+          >
             {tekstDoLinku}
           </StyledText>
         </StyledTitle>
@@ -38,7 +39,7 @@ const MeetSomebody = ({ data, icon, tekstDoLinku }) => {
         ) : null}
       </StyledMeetSomebody>
     </Link>
-  )
-}
+  );
+};
 
-export default MeetSomebody
+export default MeetSomebody;
