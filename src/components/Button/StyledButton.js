@@ -154,6 +154,20 @@ export const StyledLink = styled.div`
     }
   }
 
+  @media only screen and (max-width: 414px) {
+    &.contact-page-btn,
+    &.calenldy-first-section,
+    &.footer,
+    &.calenldy-last-section,
+    &.home-hero-section,
+    &.home-second-section,
+    &.home-about-me,
+    &.blog-recomendation-slider,
+    &.blog-slider-btn &.btn-faq-section &.btn-faq-section {
+      width: 100%;
+    }
+  }
+
   @media only screen and (max-width: 360px) {
     &.contact-page-btn,
     &.calenldy-first-section {

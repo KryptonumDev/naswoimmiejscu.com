@@ -97,7 +97,7 @@ export const StyledIconsWrapper = styled.div`
   > div {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 8px;
     cursor: pointer;
     transition: 250ms opacity linear;
 

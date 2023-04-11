@@ -535,7 +535,7 @@ export const StyledDescWrapper = styled.div`
     &.meets-form-womens,
     &.calendly-first-section,
     &.calendly-last-section {
-      font-size: clamp(15px, 4.167vw, 16px);
+      font-size: clamp(15px, 4.167vw, 18px);
     }
 
     &.meets-form-womens {
@@ -546,7 +546,7 @@ export const StyledDescWrapper = styled.div`
     &.second-section-womens-youth,
     &.home-blog-section-text,
     &.contact-page {
-      font-size: clamp(15px, 4.167vw, 16px);
+      font-size: clamp(15px, 4.167vw, 18px);
     }
   }
 `;

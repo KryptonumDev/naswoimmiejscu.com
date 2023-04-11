@@ -30,7 +30,7 @@ export const StyledLeftWrapper = styled.div`
   }
 
   @media only screen and (max-width: 1167px) {
-    padding: 0 22px;
+    padding: 0 0 0 22px;
   }
 
   @media only screen and (max-width: 992px) {

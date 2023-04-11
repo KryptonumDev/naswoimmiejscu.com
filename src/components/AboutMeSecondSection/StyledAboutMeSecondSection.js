@@ -82,7 +82,7 @@ export const StyledLeftWrapper = styled.div`
 
     em {
       font-style: normal;
-      font-size: 0.729vw/1.33em;
+      font-size: 0.729vw;
     }
 
     @media only screen and (max-width: 1763px) {
@@ -155,7 +155,7 @@ export const StyledRightWrapper = styled.div`
 
     em {
       font-style: normal;
-      font-size: 0.729vw/1.33em;
+      font-size: 0.729vw;
     }
 
     @media only screen and (max-width: 1763px) {

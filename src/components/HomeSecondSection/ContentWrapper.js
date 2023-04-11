@@ -13,7 +13,7 @@ import {
   StyledContentWrapper,
   StyledIconsWrapper,
   StyledMobileText,
-  StyledDesktopText
+  StyledDesktopText,
 } from "./StyledHomeSecondSection";
 import { StyledText } from "../Text/StyledText";
 
@@ -67,14 +67,14 @@ const ContentWrapper = ({ data }) => {
             </StyledMobileText>
           </CustomButton>
           <StyledDesktopText>
-          <StyledText
-            className={isWomens ? "text" : "text active"}
-            hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
-            hasdeclaredfontweight="700"
-            hasdeclaredfontcolor={isWomens ? "#5B5C5E" : "var(--normalBlack)"}
-          >
-            {data.tekstDoIkonkiMlodziez}
-          </StyledText>
+            <StyledText
+              className={isWomens ? "text" : "text active"}
+              hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
+              hasdeclaredfontweight="700"
+              hasdeclaredfontcolor={isWomens ? "#5B5C5E" : "var(--normalBlack)"}
+            >
+              {data.tekstDoIkonkiMlodziez}
+            </StyledText>
           </StyledDesktopText>
         </div>
         <div
@@ -118,14 +118,14 @@ const ContentWrapper = ({ data }) => {
             </StyledMobileText>
           </CustomButton>
           <StyledDesktopText>
-          <StyledText
-            className={isWomens ? "text active" : "text"}
-            hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
-            hasdeclaredfontweight="700"
-            hasdeclaredfontcolor={isWomens ? "var(--normalBlack)" : "#5B5C5E"}
-          >
-            {data.tekstKobiety}
-          </StyledText>
+            <StyledText
+              className={isWomens ? "text active" : "text"}
+              hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
+              hasdeclaredfontweight="700"
+              hasdeclaredfontcolor={isWomens ? "var(--normalBlack)" : "#5B5C5E"}
+            >
+              {data.tekstKobiety}
+            </StyledText>
           </StyledDesktopText>
         </div>
       </StyledIconsWrapper>
