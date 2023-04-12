@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
-import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
 import Nav from "../Nav/Nav";
 
@@ -14,7 +13,6 @@ import {
   StyledHeader,
   StyledLogoWrapperHeader,
   StyledDesktopLogo,
-  StyledMobileLogo
 } from "./StyledHeader";
 
 const Header = () => {
@@ -45,9 +43,6 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledLogoWrapperHeader>
-        <StyledMobileLogo>
-         <Logo onClick={() => setIsOpen(false)} isHeader="true" />
-        </StyledMobileLogo>
         <StyledDesktopLogo>
           <svg
             width="396"
