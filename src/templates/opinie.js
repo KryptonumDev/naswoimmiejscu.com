@@ -29,6 +29,11 @@ export const query = graphql`
             podpisPodIminiem
             opisDoMiniaturki
             nazwaOsobyDoMiniaturki
+            avatarIkonka {
+              localFile {
+                publicURL
+              }
+            }
             avatar {
               altText
               localFile {
@@ -42,18 +47,18 @@ export const query = graphql`
       }
     }
     wpPage(id: { eq: "cG9zdDo3NzQ=" }) {
-        seo {
-          canonical
-          metaDesc
-          opengraphSiteName
-          title
-          opengraphUrl
-          opengraphImage {
-            localFile {
-              publicURL
-            }
+      seo {
+        canonical
+        metaDesc
+        opengraphSiteName
+        title
+        opengraphUrl
+        opengraphImage {
+          localFile {
+            publicURL
           }
         }
+      }
     }
   }
 `;

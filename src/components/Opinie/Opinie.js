@@ -1,19 +1,20 @@
-import { GatsbyImage } from 'gatsby-plugin-image'
-import React from 'react'
-import styled from 'styled-components'
-import Container from '../Container/Container'
-import { Link } from '../TransitionLink/TransitionLink'
+import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react";
+import styled from "styled-components";
+import Container from "../Container/Container";
+import { Link } from "../TransitionLink/TransitionLink";
 
 export default function Opinie({ opinie }) {
   return (
     <>
       <Circle
-        width='582'
-        height='582'
-        viewBox='0 0 582 582'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'>
-        <circle cx='291' cy='291' r='255' stroke='#0BC76D' strokeWidth='72' />
+        width="582"
+        height="582"
+        viewBox="0 0 582 582"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="291" cy="291" r="255" stroke="#0BC76D" strokeWidth="72" />
       </Circle>
       <Container>
         <Content>
@@ -21,43 +22,55 @@ export default function Opinie({ opinie }) {
           <Grid>
             {opinie.map((el) => (
               <React.Fragment key={el.slug}>
-                <Link className='wrap' to={'/sukcesy/' + el.slug + '/'}>
+                <Link className="wrap" to={"/sukcesy/" + el.slug + "/"}>
                   <Item>
                     <InformFlex>
                       <ImageWrapper>
-                        <GatsbyImage
-                          className='image'
-                          image={
-                            el.caseStudyArtykul.miniaturkaCaseStudy.avatar
-                              .localFile.childImageSharp.gatsbyImageData
-                          }
-                          alt={
-                            el.caseStudyArtykul.miniaturkaCaseStudy.avatar
-                              .altText
-                          }
-                        />
+                        {el.caseStudyArtykul.miniaturkaCaseStudy?.avatarIkonka
+                          ?.localFile?.publicURL ? (
+                          <img
+                            src={
+                              el.caseStudyArtykul.miniaturkaCaseStudy
+                                .avatarIkonka.localFile.publicURL
+                            }
+                            alt="icon"
+                          />
+                        ) : (
+                          <GatsbyImage
+                            className="image"
+                            image={
+                              el.caseStudyArtykul.miniaturkaCaseStudy.avatar
+                                .localFile.childImageSharp.gatsbyImageData
+                            }
+                            alt={
+                              el.caseStudyArtykul.miniaturkaCaseStudy.avatar
+                                .altText
+                            }
+                          />
+                        )}
                         <svg
-                          width='40'
-                          height='40'
-                          viewBox='0 0 40 40'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'>
-                          <circle cx='20' cy='20' r='20' fill='#0BC76D' />
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="20" cy="20" r="20" fill="#0BC76D" />
                         </svg>
                       </ImageWrapper>
                       <div>
-                        <p className='title'>
+                        <p className="title">
                           {
                             el.caseStudyArtykul.miniaturkaCaseStudy
                               .nazwaOsobyDoMiniaturki
                           }
                         </p>
                         <div
-                          className='text'
+                          className="text"
                           dangerouslySetInnerHTML={{
                             __html:
                               el.caseStudyArtykul.miniaturkaCaseStudy
-                                .podpisPodIminiem
+                                .podpisPodIminiem,
                           }}
                         />
                       </div>
@@ -66,7 +79,7 @@ export default function Opinie({ opinie }) {
                       dangerouslySetInnerHTML={{
                         __html:
                           el.caseStudyArtykul.miniaturkaCaseStudy
-                            .opisDoMiniaturki
+                            .opisDoMiniaturki,
                       }}
                     />
                   </Item>
@@ -77,7 +90,7 @@ export default function Opinie({ opinie }) {
         </Content>
       </Container>
     </>
-  )
+  );
 }
 
 const Circle = styled.svg`
@@ -95,7 +108,7 @@ const Circle = styled.svg`
   @media (max-width: 992px) {
     display: none;
   }
-`
+`;
 
 const Content = styled.div`
   max-width: 1380px;
@@ -114,7 +127,7 @@ const Content = styled.div`
       margin: 0 22px;
     }
   }
-`
+`;
 
 const Grid = styled.div`
   display: grid;
@@ -156,7 +169,7 @@ const Grid = styled.div`
       }
     }
   }
-`
+`;
 
 const Item = styled.div`
   display: flex;
@@ -167,7 +180,7 @@ const Item = styled.div`
   @media (max-width: 768px) {
     display: grid;
   }
-`
+`;
 
 const ImageWrapper = styled.div`
   position: relative;
@@ -175,6 +188,12 @@ const ImageWrapper = styled.div`
   height: clamp(91px, ${(100 / 1024) * 100}vw, 130px);
 
   .image {
+    width: clamp(91px, ${(100 / 1024) * 100}vw, 130px);
+    height: clamp(91px, ${(100 / 1024) * 100}vw, 130px);
+    border-radius: 50%;
+  }
+
+  img {
     width: clamp(91px, ${(100 / 1024) * 100}vw, 130px);
     height: clamp(91px, ${(100 / 1024) * 100}vw, 130px);
     border-radius: 50%;
@@ -192,7 +211,7 @@ const ImageWrapper = styled.div`
       height: 28px;
     }
   }
-`
+`;
 
 const InformFlex = styled.div`
   display: flex;
@@ -220,7 +239,7 @@ const InformFlex = styled.div`
     line-height: 110%;
     color: #606164;
   }
-`
+`;
 
 const Text = styled.div`
   max-width: 624px;
@@ -237,4 +256,4 @@ const Text = styled.div`
     padding-right: 0;
     max-width: 550px;
   }
-`
+`;

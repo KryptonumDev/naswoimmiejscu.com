@@ -1,3 +1,5 @@
+/** @format */
+
 import styled from "styled-components";
 
 export const StyledContainer = styled.section`
@@ -8,8 +10,12 @@ export const StyledContainer = styled.section`
   overflow-y: ${({ hidey }) => (hidey ? "hidden" : "visible")};
   position: relative;
 
-  &.error{
+  &.error {
     overflow: hidden;
+  }
+
+  &.footer {
+    padding: 0;
   }
 
   @media only screen and (max-width: 1472px) {
@@ -23,16 +29,14 @@ export const StyledContainer = styled.section`
   }
 
   @media only screen and (max-width: 992px) {
-    &.footer {
-      padding: 0 0 0 22px;
-    }
-
     &.about-me-second-section {
       padding: 0;
     }
-  }
 
-  @media only screen and (max-width: 992px) {
     padding: 0 22px;
+
+    &.footer {
+      padding: 0;
+    }
   }
 `;

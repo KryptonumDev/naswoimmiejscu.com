@@ -45,5 +45,16 @@ export const StyledCustomButton = styled.button`
             hasdeclaredwidth ? hasdeclaredwidth : "131px"};
         height: ${({ hasdeclaredheight }) =>
             hasdeclaredheight ? hasdeclaredheight : "113px"};
+
+        &.button{
+            flex-direction: column;
+            width: 162px;
+        }
+    }
+
+    @media only screen and (max-width: 345px){
+        &.button {
+            width: 140px;
+        }
     }
 `;

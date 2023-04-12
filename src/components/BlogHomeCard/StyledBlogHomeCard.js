@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const StyledBlogHomeCard = styled.div`
   width: 100%;
   display: flex;
@@ -9,19 +8,14 @@ export const StyledBlogHomeCard = styled.div`
   text-decoration: none;
   color: var(--normalBlack);
   cursor: pointer;
-  padding-left: ${({ iscase }) => (iscase ? "0" : "clamp(30px, 3.6vw, 70px)")};
   align-items: center;
 
-  @media (max-width: 1360px){
-    padding-left: ${({ iscase }) => (iscase ? "0" : "30px")};
+  img {
+    transition: transform 0.4s ease-out;
   }
 
-  img{
-    transition: transform .4s ease-out;
-  }
-
-  &:hover{
-    img{
+  &:hover {
+    img {
       transform: scale(1.05);
     }
   }
@@ -46,7 +40,7 @@ export const StyledBlogHomeCard = styled.div`
     justify-content: flex-end;
   }
 
-  @media only screen and (max-width: 355px){
+  @media only screen and (max-width: 355px) {
     width: 250px;
   }
 `;
@@ -71,9 +65,9 @@ export const StyledImageWrapper = styled.div`
     height: 100%;
     max-width: 419px;
     max-height: 220px;
-    
+
     img {
-      transition: transform .4s ease-out;
+      transition: transform 0.4s ease-out;
     }
   }
 
@@ -84,7 +78,7 @@ export const StyledImageWrapper = styled.div`
 `;
 
 export const StyledTitle = styled.div`
-  font: 700 clamp(18px, 1.25vw, 24px)/1.33em Roboto;
+  font: 700 clamp(18px, 1.25vw, 24px) / 1.33em Roboto;
 
   @media only screen and (max-width: 432px) {
     font-size: 5.556vw;
@@ -103,7 +97,7 @@ export const StyledDesc = styled.div`
 export const StyledDate = styled.div`
   font-size: 13px;
   line-height: 1.33em;
-  
+
   @media only screen and (max-width: 1024px) {
     p {
       text-align: left;

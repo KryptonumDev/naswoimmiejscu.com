@@ -1,33 +1,33 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from "react";
+import { graphql } from "gatsby";
 
-import FAQSection from '../components/FAQSection/FAQSection'
-import CalendlyFirstSection from '../components/CalendlyFirstSection/CalendlyFirstSection'
-import CalendlyLastSection from '../components/CalendlyLastSection/CalendlyLastSection'
-import Wrapper from '../components/PageWrapper/PageWrapper'
+import FAQSection from "../components/FAQSection/FAQSection";
+import CalendlyFirstSection from "../components/CalendlyFirstSection/CalendlyFirstSection";
+import CalendlyLastSection from "../components/CalendlyLastSection/CalendlyLastSection";
+import Wrapper from "../components/PageWrapper/PageWrapper";
 
 const Calendly = ({
   data: {
-    wpPage: { calendly }
-  }
+    wpPage: { calendly },
+  },
 }) => {
   return (
     <Wrapper>
       <CalendlyFirstSection data={calendly} />
       <FAQSection
         data={calendly.faqCalendly}
-        btnWidth='384px'
+        btnWidth="384px"
         smallMgBottom
         isNormalFont
       />
       <CalendlyLastSection data={calendly.ostatniaSekcjaStronyCalendly} />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Calendly
+export default Calendly;
 
-export { Head } from '../components/Head/Head'
+export { Head } from "../components/Head/Head";
 
 export const query = graphql`
   query calendlyQuery {
@@ -45,6 +45,24 @@ export const query = graphql`
         }
       }
       calendly {
+        drugieZdjeciePoPrawo {
+          altText
+          title
+          localFile {
+            childImageSharp {
+              gatsbyImageData(quality: 100)
+            }
+          }
+        }
+        drugieZdjeciaPoPrawoMobile {
+          altText
+          title
+          localFile {
+            childImageSharp {
+              gatsbyImageData(quality: 100)
+            }
+          }
+        }
         lista
         opisPodTytulem
         tytulStrony
@@ -113,4 +131,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -1,53 +1,128 @@
+/** @format */
+
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding-bottom: 42px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-top: 56px;
 
   @media only screen and (max-width: 992px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: ${({ smallgap }) => (smallgap ? "0" : "83px")};
     padding-right: 22px;
   }
 `;
 
 export const StyledLeftWrapper = styled.div`
-  width: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 54px 0 clamp(32px, 6.667vw, 128px);
+
+  p {
+    font: 700 clamp(16px, 1.25vw, 24px) / 1.33em Roboto;
+    color: var(--normalBlack);
+  }
+
+  @media only screen and (max-width: 1167px) {
+    padding: 0 0 0 22px;
+  }
 
   @media only screen and (max-width: 992px) {
-    width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      &:first-child {
+        display: none;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 24px;
+    }
   }
 `;
 
-export const StyledRightWrapper = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
+export const StyledCopyright = styled.div`
+  width: 25%;
+  min-width: 330px;
 
   @media only screen and (max-width: 992px) {
+    min-width: unset;
     width: 100%;
+    padding-bottom: 56px;
+  }
+`;
+
+export const StyledTopText = styled.div`
+  font: 700 20px Roboto;
+  display: flex;
+  gap: 6px;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    font-size: 16px;
+  }
+`;
+
+export const StyledBottomText = styled.div`
+  margin-top: 11px;
+  font: 300 13px Roboto;
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--normalBlack);
+    transition: color 350ms linear;
+
+    &:focus-visible {
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: var(--normalGreen);
+      outline-offset: -1px;
+    }
+
+    &:hover {
+      color: var(--normalGreen);
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    font-size: 11px;
   }
 `;
 
 export const StyledRightWrapperContent = styled.div`
   display: flex;
-  gap: clamp(20px, 1.510vw, 29px);
   align-items: center;
-  align-self: flex-end;
+  gap: 29px;
 
   @media (max-width: 992px) {
-    &.desctop{
+    &.desctop {
       display: none;
     }
   }
 
   p {
-    font: 700 clamp(16px, 1.250vw, 24px)/1.33em Roboto;
+    font: 700 clamp(16px, 1.25vw, 24px) / 1.33em Roboto;
     color: var(--normalBlack);
   }
 
@@ -70,62 +145,9 @@ export const StyledRightWrapperContent = styled.div`
   }
 `;
 
-export const StyledCopyright = styled.div`
-  margin-top: 62px;
-
-  @media only screen and (max-width: 992px) {
-    margin-top: 26px;
-  }
-`;
-
-export const StyledTopText = styled.div`
-  font: 700 20px Roboto;
-  display: flex;
-  gap: 6px;
-
-  @media only screen and (max-width: 992px) {
-    font-size: 22px;
-  }
-
-  @media only screen and (max-width: 480px) {
-    font-size: 16px;
-  }
-`;
-
-export const StyledBottomText = styled.div`
-  margin-top: 11px;
-  font: 300 13px Roboto;
-  
-  a {
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--normalBlack);
-    transition: color 350ms linear;
-
-    &:focus-visible{
-      outline-width: 1px;
-      outline-style: solid;
-      outline-color: var(--normalGreen);
-      outline-offset: -1px;
-    }
-
-    &:hover {
-      color: var(--normalGreen);
-    }
-  }
-
-  @media only screen and (max-width: 992px) {
-    font-size: 18px;
-  }
-
-  @media only screen and (max-width: 480px) {
-    font-size: 11px;
-  }
-`;
-
 export const StyledCircleWrapper = styled.div`
   position: absolute;
-  bottom: 10%;
+  bottom: 50%;
   left: 50%;
   width: 982px;
   height: 982px;
@@ -145,12 +167,12 @@ export const StyledCircleWrapper = styled.div`
 export const StyledFooterLinks = styled.div`
   display: ${({ hideMobile }) => (hideMobile ? "flex" : "none")};
   gap: 28px;
-  margin-top: 36px;
-  align-self: flex-end;
-  padding-right: 70px;
+  padding-right: 20px;
+  width: 10%;
+  min-width: 170px;
 
   a {
-    font: 600 14px Roboto;
+    font: 300 14px Roboto;
     color: var(--normalBlack);
     text-decoration: none;
     transition: color 350ms linear;
@@ -159,7 +181,7 @@ export const StyledFooterLinks = styled.div`
       color: var(--normalGreen);
     }
 
-    &:focus-visible{
+    &:focus-visible {
       outline-width: 1px;
       outline-style: solid;
       outline-color: var(--normalGreen);
@@ -172,10 +194,20 @@ export const StyledFooterLinks = styled.div`
     }
   }
 
+  @media only screen and (max-width: 1296px) {
+    min-width: 120px;
+    a {
+      font-size: 10px;
+    }
+  }
+
   @media only screen and (max-width: 992px) {
     display: ${({ hideMobile }) => (hideMobile ? "none" : "flex")};
     padding-right: 0;
     margin-top: 26px;
+    margin-bottom: 26px;
+    width: 100%;
+    min-width: unset;
 
     a {
       font-size: 22px;
@@ -235,5 +267,46 @@ export const StyledMobileGreenCircle = styled.div`
 
   @media only screen and (max-width: 346px) {
     right: -260px;
+  }
+`;
+
+export const StyledBottomWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f6f2e1;
+  padding: 16px clamp(32px, 6.667vw, 128px);
+  margin-top: 48px;
+
+  @media only screen and (max-width: 1167px) {
+    padding: 16px 22px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    flex-direction: column-reverse;
+    background-color: transparent;
+  }
+`;
+
+export const StyledMobileLogo = styled.div`
+  width: 100%;
+  display: none;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+
+  @media only screen and (max-width: 992px) {
+    display: flex;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding-bottom: 0;
+  }
+
+  @media only screen and (max-width: 360px) {
+    a {
+      max-width: 246px;
+      width: 100%;
+    }
   }
 `;

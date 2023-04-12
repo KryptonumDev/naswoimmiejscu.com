@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const StyledRecommendationCard = styled.div`
   width: 100%;
-  padding: clamp(20px, 2.708vw, 52px) clamp(100px, 9.688vw, 186px)
-    clamp(20px, 2.708vw, 52px) clamp(120px, 10.521vw, 202px);
+  padding: 28px clamp(30px, 3.958vw, 76px);
   text-decoration: none !important;
   color: var(--normalBlack);
   display: flex;
@@ -15,9 +14,9 @@ export const StyledRecommendationCard = styled.div`
   flex: 1;
 
   > div {
-    &:first-child{
+    &:first-child {
       > div {
-        &:first-child{
+        &:first-child {
           .avatar-circle {
             transition: transform 250ms linear;
           }
@@ -28,7 +27,7 @@ export const StyledRecommendationCard = styled.div`
 
   &:hover {
     > div {
-      &:first-child{
+      &:first-child {
         > div {
           &:first-child {
             .avatar-circle {

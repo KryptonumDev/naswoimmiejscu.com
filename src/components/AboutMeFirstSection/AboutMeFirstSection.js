@@ -19,9 +19,14 @@ import {
 } from "../HomeHeroSection/StyledHomeHeroSection";
 import { StyledCircle } from "../Circle/StyledCircle";
 
-const AboutMeFirstSection = ({ data }) => {
+import { StyledTitleWrapperSecond } from "../AboutMeSecondSection/StyledAboutMeSecondSection";
+
+const AboutMeFirstSection = ({ data, title }) => {
   return (
     <Container>
+      <StyledTitleWrapperSecond>
+        {title ? parse(title) : null}
+      </StyledTitleWrapperSecond>
       <StyledAboutMeFirstSection>
         <StyledCircleWrapper>
           <BiggerWhiteCircle />
