@@ -207,6 +207,7 @@ const CaseTemplate = ({
         anotherPerson={sekcjaZBlogiem.linkDoInnejOsoby}
         isCase={true}
         iconImage={sekcjaZBlogiem.ikonkaDoLinku}
+        
         tekstDoLinku={sekcjaZBlogiem.tekstDoLinku}
       />
     </Wrapper>
@@ -246,6 +247,9 @@ export const query = graphql`
               }
             }
           }
+          avatarIkonka {
+            sourceUrl
+          }
         }
         sekcjaZBlogiem {
           adnotacjaNaDoleStronyDrugaLinia
@@ -268,6 +272,9 @@ export const query = graphql`
               slug
               caseStudyArtykul {
                 miniaturkaCaseStudy {
+                  avatarIkonka {
+                    sourceUrl
+                  }
                   avatar {
                     altText
                     title

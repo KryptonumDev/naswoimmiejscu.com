@@ -1,7 +1,8 @@
 /** @format */
 
-import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
+import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 const Hero = ({
@@ -19,9 +20,9 @@ const Hero = ({
       <TextPart>
         <Categories>
           {categories.map((el) => (
-            <div className="item" key={el.name}>
+            <Link to={`/blog/${el.slug}`} className="item" key={el.name}>
               {el.name}
-            </div>
+            </Link>
           ))}
         </Categories>
         <h1>{title}</h1>
@@ -216,7 +217,8 @@ const Categories = styled.div`
     font-size: clamp(10px, ${(12 / 360) * 100}vw, 15px);
     line-height: 1.35em;
     text-transform: uppercase;
-
+    text-decoration: none;
+    color: var(--normalBlack);
     @media (max-width: 1024px) {
       font-size: clamp(10px, ${(10 / 360) * 100}vw, 12px);
       padding: 8px 20px;

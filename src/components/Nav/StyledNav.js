@@ -151,7 +151,6 @@ export const StyledFooterNav = styled.div`
   align-items: center;
   justify-content: center;
   gap: 21px;
-  width: 65%;
 
   a,
   span {

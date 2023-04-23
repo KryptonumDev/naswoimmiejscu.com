@@ -97,6 +97,9 @@ export const query = graphql`
                       }
                     }
                   }
+                  avatarIkonka {
+                    sourceUrl
+                  }
                 }
               }
             }

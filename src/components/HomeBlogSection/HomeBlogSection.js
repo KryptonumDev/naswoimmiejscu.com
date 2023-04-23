@@ -100,6 +100,9 @@ const HomeBlogSection = ({
                     }
                   }
                 }
+                avatarIkonka {
+                  sourceUrl
+                }
               }
             }
           }
@@ -185,6 +188,7 @@ const HomeBlogSection = ({
             key={node.slug}
             slug={node.slug}
             avatar={node.caseStudyArtykul.miniaturkaCaseStudy.avatar}
+            avatarIcon={node.caseStudyArtykul.miniaturkaCaseStudy.avatarIkonka}
             name={
               node.caseStudyArtykul.miniaturkaCaseStudy.nazwaOsobyDoMiniaturki
             }
@@ -207,6 +211,7 @@ const HomeBlogSection = ({
             key={node.slug}
             slug={node.slug}
             avatar={node.caseStudyArtykul.miniaturkaCaseStudy.avatar}
+            avatarIcon={node.caseStudyArtykul.miniaturkaCaseStudy.avatarIkonka}
             name={
               node.caseStudyArtykul.miniaturkaCaseStudy.nazwaOsobyDoMiniaturki
             }

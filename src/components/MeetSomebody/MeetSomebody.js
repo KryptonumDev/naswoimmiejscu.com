@@ -13,6 +13,7 @@ import { StyledText } from "../Text/StyledText";
 import { Link } from "../TransitionLink/TransitionLink";
 
 const MeetSomebody = ({ data, icon, tekstDoLinku }) => {
+  const person = data[0].caseStudyArtykul.miniaturkaCaseStudy;
   return (
     <Link className="transitionLink" to={`/sukcesy/${data[0].slug}`}>
       <StyledMeetSomebody>
@@ -30,11 +31,15 @@ const MeetSomebody = ({ data, icon, tekstDoLinku }) => {
             {tekstDoLinku}
           </StyledText>
         </StyledTitle>
-        {data[0].caseStudyArtykul.miniaturkaCaseStudy.avatar ? (
+        {person.avatar || person.avatarIkonka ? (
           <StyledAvatarWrapper>
-            <Image
-              imageDesktop={data[0].caseStudyArtykul.miniaturkaCaseStudy.avatar}
-            />
+            {person.avatar ? (
+              <Image
+                imageDesktop={person.avatar}
+              />
+            ) : (
+              <img src={person.avatarIkonka.sourceUrl} alt="" />
+            )}
           </StyledAvatarWrapper>
         ) : null}
       </StyledMeetSomebody>

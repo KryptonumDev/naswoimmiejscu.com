@@ -48,15 +48,12 @@ const Nav = ({ isOpen, isFooter, openMenu }) => {
       <Link onClick={openMenu} to='/'>
         STRONA GŁÓWNA
       </Link>
-      <div className='flex-wrapper'>
-        <Link onClick={openMenu} to='/mlodziez/'>
-          MŁODZIEŻ
-        </Link>
-        <span>/</span>
-        <Link onClick={openMenu} to='/kobiety/'>
-          KOBIETY
-        </Link>
-      </div>
+      <Link onClick={openMenu} to='/mlodziez/'>
+        MŁODZIEŻ
+      </Link>
+      <Link onClick={openMenu} to='/kobiety/'>
+        KOBIETY
+      </Link>
       <Link onClick={openMenu} to='/o-mnie/'>
         O MNIE
       </Link>

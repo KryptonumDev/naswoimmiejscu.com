@@ -168,19 +168,16 @@ export const StyledFooterLinks = styled.div`
   display: ${({ hideMobile }) => (hideMobile ? "flex" : "none")};
   gap: 28px;
   padding-right: 20px;
-  width: 10%;
-  min-width: 170px;
-
+  text-transform: uppercase;
   a {
     font: 300 14px Roboto;
     color: var(--normalBlack);
     text-decoration: none;
     transition: color 350ms linear;
-
+    color: var(--normalGrey);
     &:hover {
-      color: var(--normalGreen);
+      color: var(--normalBlack);
     }
-
     &:focus-visible {
       outline-width: 1px;
       outline-style: solid;
@@ -195,7 +192,6 @@ export const StyledFooterLinks = styled.div`
   }
 
   @media only screen and (max-width: 1296px) {
-    min-width: 120px;
     a {
       font-size: 10px;
     }

@@ -28,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
         --hoverGrey: #E2E2E2;
         --womensBox: #EDEBE0;
         overflow-x: hidden;
+        scroll-behavior: smooth;
     } 
 
      /* .tl-wrapper{
@@ -121,6 +122,9 @@ const GlobalStyle = createGlobalStyle`
 
     details summary::-webkit-details-marker {
       display:none;
+    }
+    img{
+      width: 100%;
     }
 
     p {

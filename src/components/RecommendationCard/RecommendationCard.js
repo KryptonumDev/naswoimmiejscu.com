@@ -1,4 +1,5 @@
 import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 import { StyledCircle } from '../Circle/StyledCircle'
 import parse from 'html-react-parser'
 
@@ -18,6 +19,7 @@ import {
 const RecommendationCard = ({
   slug,
   avatar,
+  avatarIcon,
   name,
   nameDesc,
   desc,
@@ -29,7 +31,11 @@ const RecommendationCard = ({
       <StyledRecommendationCard hasdeclaredbg={isDiffBg ? 'true' : null}>
         <StyledAvatarWrapper recdiff={recDif}>
           <StyledImage>
-            <Image imageDesktop={avatar} />
+            {avatar ? (
+              <Image imageDesktop={avatar} />
+            ): (
+              <img src={avatarIcon.sourceUrl} alt="" />
+            )}
             <StyledCircle
               hasdeclaredwidth='27px'
               hasdeclaredheight='27px'
