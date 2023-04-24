@@ -51,10 +51,10 @@ const ContactForm = () => {
     }
 
     try {
-      // await axios.post(
-      //   `${process.env.GATSBY_WORDPRESS_URL}/wp-json/contact-form-7/v1/contact-forms/${process.env.GATSBY_WORDPRESS_FORM_ID}/feedback`,
-      //   formData
-      // );
+      await axios.post(
+        `${process.env.GATSBY_WORDPRESS_URL}/wp-json/contact-form-7/v1/contact-forms/${process.env.GATSBY_WORDPRESS_FORM_ID}/feedback`,
+        formData
+      );
       await axios.post(
         `/api/newsletter`,
         formData
