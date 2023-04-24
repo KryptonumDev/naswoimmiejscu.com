@@ -1,3 +1,6 @@
+const axios = require('axios');
+
+
 export default function handler(req, res){
   res.setHeader('Access-Control-Allow-Origin', 'https://naswoimmiejscu.com/');
   if(req.method === `POST`){
@@ -10,13 +13,11 @@ export default function handler(req, res){
     if(isError){
       res.status(422).send(req.body)
     } else {
-      fetch(`https://api.mailerlite.com/api/v2/groups/${process.env.MAILERLITE_GROUPID}/subscribers/`, {
-        method: 'POST',
+      axios.post(`https://api.mailerlite.com/api/v2/groups/${process.env.MAILERLITE_GROUPID}/subscribers/`, data, {
         headers: {
           'Content-Type': 'application/json',
           'X-MailerLite-ApiKey': process.env.MAILERLITE_API
-        },
-        body: JSON.stringify(data)
+        }
       })
       .then(() => {
         res.status(200).json({ success: true })
