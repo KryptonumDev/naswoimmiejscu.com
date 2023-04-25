@@ -8,7 +8,7 @@ export const wrapPageElement = ({ element, props }) => {
       props={props}
       isLayout={props?.data?.wpPage?.id !== 'cG9zdDo0Njg='}
       {...props}>
-      <AnimatePresence mode="wait">{element}</AnimatePresence>
+      <AnimatePresence initial={false} mode="wait">{element}</AnimatePresence>
     </GlobalLayout>
   )
 }
