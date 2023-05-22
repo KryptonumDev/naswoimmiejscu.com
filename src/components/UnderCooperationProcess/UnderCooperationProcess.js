@@ -27,9 +27,6 @@ const UnderCooperationProcess = ({ data }) => {
         <StyledFirstIcon ishide>
           <AnimateIcon />
         </StyledFirstIcon>
-        <StyledSecondIcon ishide>
-          <BiggerAnimate />
-        </StyledSecondIcon>
       </StyledAnimationWrapper>
       <StyledContent>
         <StyledCircleWrapper>
