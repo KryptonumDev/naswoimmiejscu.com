@@ -111,8 +111,8 @@ export const StyledMobileWrapper = styled.div`
 
     a {
       text-transform: normal;
-      font: 600 14px Roboto;
-      color: var(--normalBlack);
+      font: 400 14px Roboto;
+      color:var(--normalGrey);
 
       &:focus-visible {
         outline-width: 1px;
