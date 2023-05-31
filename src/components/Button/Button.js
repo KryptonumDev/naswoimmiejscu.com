@@ -34,7 +34,7 @@ const Button = ({
     </StyledButton>
   ) : (
     <Link
-      arialabel={ariaLabel}
+      aria-label={ariaLabel}
       to={btnData.url}
       target={btnData.target}
       className='transitionLink'

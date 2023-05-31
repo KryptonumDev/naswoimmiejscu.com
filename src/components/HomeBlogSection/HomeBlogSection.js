@@ -40,7 +40,7 @@ const HomeBlogSection = ({
     allWpCaseStudy: { edges: caseStudy },
   } = useStaticQuery(graphql`
     query homeBlog {
-      allWpPost {
+      allWpPost(sort: {date: DESC}) {
         edges {
           node {
             slug
@@ -82,7 +82,7 @@ const HomeBlogSection = ({
           }
         }
       }
-      allWpCaseStudy {
+      allWpCaseStudy(sort: {date: DESC}) {
         edges {
           node {
             slug

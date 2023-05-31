@@ -95,9 +95,6 @@ const Footer = () => {
                 : ""
             }
           >
-            {shortData.tekstObokPrzycisku
-              ? parse(shortData.tekstObokPrzycisku)
-              : null}
             <Button
               btnData={shortData.przycisk}
               variant="green"
@@ -119,7 +116,7 @@ const Footer = () => {
               {shortData.coopyrightGornaLinia
                 ? parse(shortData.coopyrightGornaLinia)
                 : null}
-              {new Date().getFullYear()}
+              {` ${new Date().getFullYear()}`}
             </StyledTopText>
             <StyledBottomText>
               {shortData.coopyrightDolnaLinia

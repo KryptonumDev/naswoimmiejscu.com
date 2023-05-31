@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
         --hrColor: #EBE2D3;
         --grey: #E3E1DA;
         --lightGreen: #9FF86F;
-        --paginationNormal: #BBA383;
+        --paginationNormal: #BBA38385;
         --hoverGrey: #E2E2E2;
         --womensBox: #EDEBE0;
         overflow-x: hidden;

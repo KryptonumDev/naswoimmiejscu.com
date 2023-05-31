@@ -22,7 +22,7 @@ export const StyledLeftWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 54px 0 clamp(32px, 6.667vw, 128px);
+  padding: 16px clamp(32px,6.667vw,128px);
 
   p {
     font: 700 clamp(16px, 1.25vw, 24px) / 1.33em Roboto;
@@ -67,8 +67,9 @@ export const StyledCopyright = styled.div`
 
 export const StyledTopText = styled.div`
   font: 700 20px Roboto;
-  display: flex;
-  gap: 6px;
+  p {
+    display: inline-block
+  }
 
   @media only screen and (max-width: 992px) {
     font-size: 22px;
@@ -167,10 +168,9 @@ export const StyledCircleWrapper = styled.div`
 export const StyledFooterLinks = styled.div`
   display: ${({ hideMobile }) => (hideMobile ? "flex" : "none")};
   gap: 28px;
-  padding-right: 20px;
   text-transform: uppercase;
   a {
-    font: 300 14px Roboto;
+    font: 400 14px Roboto;
     color: var(--normalBlack);
     text-decoration: none;
     transition: color 350ms linear;
@@ -212,7 +212,7 @@ export const StyledFooterLinks = styled.div`
 
   @media only screen and (max-width: 480px) {
     a {
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 `;
@@ -272,7 +272,7 @@ export const StyledBottomWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: #f6f2e1;
-  padding: 16px clamp(32px, 6.667vw, 128px);
+  padding: 32px clamp(32px, 6.667vw, 128px);
   margin-top: 48px;
 
   @media only screen and (max-width: 1167px) {

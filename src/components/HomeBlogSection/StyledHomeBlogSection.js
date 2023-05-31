@@ -144,9 +144,15 @@ export const StyledBlogSliderWrapper = styled.div`
   display: none;
   flex-direction: column;
 
+  .slick-slider {
+    width: calc(100% + 44px);
+  }
   .slick-slider,
   .slick-slide {
     width: 100%;
+  }
+  .slick-slide {
+    padding: 0 22px;
   }
 
   .slick-track {
@@ -179,7 +185,7 @@ export const StyledBlogSliderWrapper = styled.div`
   @media only screen and (max-width: 1024px) {
     display: flex;
     margin-top: 20px;
-    margin: 0px -10px;
+    margin: 0px -22px;
   }
 
   @media only screen and (max-width: 1024px) {

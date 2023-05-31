@@ -83,12 +83,15 @@ export const StyledDescriptionWrapper = styled.div`
 
   @media only screen and (max-width: 1024px) {
     text-align: ${({ recdiff }) => (recdiff ? "left" : "center")};
-    font-style: ${({ recdiff }) => (recdiff ? "normal" : "italic")};
     color: var(--normalBlack);
     position: relative;
-    font-weight: ${({ recdiff }) => (recdiff ? "300" : "700")};
     font-size: 26px;
     padding-bottom: 12px;
+    .sign {
+      font-weight: 600;
+      margin-top: 13px;
+      font-style: italic;
+    }
   }
 
   @media only screen and (max-width: 480px) {

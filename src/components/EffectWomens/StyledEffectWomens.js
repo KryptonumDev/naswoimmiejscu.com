@@ -21,7 +21,7 @@ export const StyledEffectWomens = styled.div`
 `
 
 export const StyledLeftWrapper = styled.div`
-  width: 57%;
+  width: 50%;
   padding-left: clamp(40px, 5.208vw, 100px);
 
   @media only screen and (max-width: 1455px) {
@@ -175,13 +175,7 @@ export const StyledElements = styled.ul`
     }
 
     &:last-child {
-      background-color: var(--normalGreen);
-      max-width: 507px;
-      align-items: flex-start;
-
-      p {
-        font-size: clamp(20px, 1.242vw, 26px);
-      }
+      padding: clamp(16px, 0.833vw, 16px) clamp(16px, 1.25vw, 24px);
     }
 
     p {

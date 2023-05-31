@@ -5,24 +5,39 @@ import logoAnimation from './logoAnimation.json';
 const BiggerAnimate = () => {
   const locationPath = typeof window !== "undefined" ? window.location.pathname : '';
   const logoRef = useRef(null);
+
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if(document.querySelector('.logoAnimation').getBoundingClientRect().top <= window.innerHeight) {
-        console.log('bhek');
+    const logo = document.querySelector('.logoAnimation');
+    const handleLottieAnim = () => {
+      if (logo.getBoundingClientRect().top <= window.innerHeight) {
         logoRef.current.play();
+        window.removeEventListener('scroll', handleLottieAnim);
       }
-    })
-  }, [locationPath])
+    };
+    handleLottieAnim();
+    window.addEventListener('scroll', handleLottieAnim);
+    return () => {
+      window.removeEventListener('scroll', handleLottieAnim);
+    };
+  }, [locationPath]);
+
+  const handleAnimationComplete = () => {
+    const randomDelay = Math.random() * (10000 - 5000) + 5000;
+    setTimeout(() => {
+      logoRef.current.goToAndPlay(0);
+    }, randomDelay);
+  };
 
   return (
     <Lottie
       className="logoAnimation"
       animationData={logoAnimation}
-      loop={false}
-      autoplay={false}
       lottieRef={logoRef}
+      autoplay={false}
+      loop={false}
+      onComplete={handleAnimationComplete}
     />
-  )
+  );
 };
 
 export default BiggerAnimate;

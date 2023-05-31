@@ -122,7 +122,7 @@ export const StyledFirstIcon = styled.div`
 
 export const StyledSecondIcon = styled.div`
   position: absolute;
-  left: 90%;
+  left: 91%;
   transform: translateX(-50%);
   top: -30px;
 
