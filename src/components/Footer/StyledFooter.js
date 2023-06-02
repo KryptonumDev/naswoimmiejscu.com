@@ -175,9 +175,15 @@ export const StyledFooterLinks = styled.div`
     display: flex;
     a {
       padding: 11px 12px;
+      &:hover {
+        svg {
+          fill: var(--normalGreen);
+        }
+      }
     }
     svg {
       vertical-align: top;
+      transition: fill .2s;
     }
     gap: 13px;
   }
