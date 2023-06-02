@@ -8,7 +8,7 @@ import Button from "./Button/Button";
 const MoreArticles = ({ prevPage, nextPage }) => {
   return (
     <Wrapper>
-      {prevPage && (
+      {prevPage ? (
         <Link to={`/blog/${prevPage.slug}`} className="prevPage">
           <p className="arrow">
             <ArrowLeft />
@@ -23,11 +23,11 @@ const MoreArticles = ({ prevPage, nextPage }) => {
             <div className="copy">
               <h3>{prevPage.title}</h3>
               <div dangerouslySetInnerHTML={{ __html: prevPage.excerpt }} className='p'></div>
-              <span className="btn">Przczytaj</span>
+              <span className="btn">Przeczytaj</span>
             </div>
           </article>
         </Link>
-      )}
+      ) : <div></div>}
       {nextPage && (
         <Link to={`/blog/${nextPage.slug}`} className="nextPage">
           <p className="arrow">
@@ -43,7 +43,7 @@ const MoreArticles = ({ prevPage, nextPage }) => {
             <div className="copy">
               <h3>{nextPage.title}</h3>
               <div dangerouslySetInnerHTML={{ __html: nextPage.excerpt }} className='p'></div>
-              <span className="btn">Przczytaj</span>
+              <span className="btn">Przeczytaj</span>
             </div>
           </article>
         </Link>
@@ -76,7 +76,7 @@ const Wrapper = styled.section`
         .p {
           font-size: clamp(${14/16}rem, ${15/7.68}vw, ${18/16}rem);
           display: -webkit-box;
-          -webkit-line-clamp: 5;
+          -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
           overflow: hidden;
           margin-bottom: 32px;
@@ -88,16 +88,15 @@ const Wrapper = styled.section`
           text-transform: uppercase;
           font-weight: 600;
           width: 100%;
-          border: 1px solid #000;
+          border: 1px solid var(--normalGreen);
           border-radius: 45px;
-          transition: color .3s, background-color .3s;
+          transition: background-color .3s;
         }
       }
     }
     &:hover {
       .btn {
-        background-color: #000;
-        color: #fff;
+        background-color: var(--normalGreen);
       }
     }
   }
