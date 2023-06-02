@@ -73,7 +73,7 @@ const ContactForm = () => {
   };
 
   return (
-    <StyledContactForm>
+    <StyledContactForm id="form">
       <Formik
         initialValues={initialState}
         validationSchema={contactSchema}

@@ -122,7 +122,7 @@ export const StyledLink = styled.div`
   @media only screen and (max-width: 660px) {
     &.about-me-proccess-btn {
       width: 100%;
-      font-size: 11px;
+      font-size: 13px;
       min-height: 53px;
     }
 
@@ -139,7 +139,7 @@ export const StyledLink = styled.div`
     &.calenldy-first-section {
       width: 100%;
       min-height: 53px;
-      font-size: 11px;
+      font-size: 13px;
     }
 
     &.calenldy-last-section {
@@ -172,7 +172,7 @@ export const StyledLink = styled.div`
     &.contact-page-btn,
     &.calenldy-first-section {
       width: 100%;
-      font-size: 11px;
+      font-size: 13px;
       min-height: 53px;
     }
 
@@ -210,17 +210,11 @@ export const StyledLink = styled.div`
     }
 
     &.blog-slider-btn {
-      width: 280px;
+      width: 100%
     }
 
     &.calenldy-last-section {
-      font-size: 11px;
-    }
-  }
-
-  @media only screen and (max-width: 320px) {
-    &.blog-slider-btn {
-      width: 260px;
+      font-size: 13px;
     }
   }
 `;

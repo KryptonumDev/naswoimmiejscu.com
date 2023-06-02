@@ -40,6 +40,11 @@ export const StyledBlogCard = styled.div`
       border: 1px solid transparent;
     }
   }
+  @media (max-width: 449px){
+    button {
+      width: 100%;
+    }
+  }
 `
 
 export const StyledImageWrapper = styled.div`
@@ -84,7 +89,7 @@ export const StyledTextWrapper = styled.div`
   @media (max-width: 360px) {
     .link {
       width: 100%;
-      font-size: 11px;
+      font-size: 13px;
       min-height: 53px;
     }
   }
@@ -99,6 +104,9 @@ export const StyledDescWrapper = styled.div`
   max-width: 304px;
   font: 300 clamp(14px, ${(14 / 480) * 100}vw, 16px) / 1.33em Roboto;
   margin-bottom: 30px;
+  @media (max-width: 449px){
+    max-width: 100%;
+  }
 `
 
 export const StyledMobileCategory = styled.div`
