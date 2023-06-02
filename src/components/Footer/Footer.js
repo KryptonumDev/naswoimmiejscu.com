@@ -13,6 +13,8 @@ import Button from "../Button/Button";
 import BigGreenCircle from "../BigGreenCircle/BigGreenCircle";
 import SmallGreenCircle from "../SmallGreenCircle/SmallGreenCircle";
 
+import { Facebook, Instagram, Linkedin } from "../../atoms/Icons";
+
 import {
   StyledFooter,
   StyledLeftWrapper,
@@ -126,10 +128,32 @@ const Footer = () => {
           </StyledCopyright>
           <StyledFooterLinks>
             <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
+            <div className="social">
+              <a href="https://www.facebook.com/agnieszkajablonskajobcoach" target="_blank" rel="noreferrer">
+                <Facebook />
+              </a>
+              <a href="https://www.instagram.com/na_swoim_miejscu._job_coaching/" target="_blank" rel="noreferrer">
+                <Instagram />
+              </a>
+              <a href="https://www.linkedin.com/in/agnieszkajablonska-jobcoach/" target="_blank" rel="noreferrer">
+                <Linkedin />
+              </a>
+            </div>
           </StyledFooterLinks>
           <Nav isFooter isOpen={false} />
           <StyledFooterLinks hideMobile>
             <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
+            <div className="social">
+              <a href="https://www.facebook.com/agnieszkajablonskajobcoach" target="_blank" rel="noreferrer">
+                <Facebook />
+              </a>
+              <a href="https://www.instagram.com/na_swoim_miejscu._job_coaching/" target="_blank" rel="noreferrer">
+                <Instagram />
+              </a>
+              <a href="https://www.linkedin.com/in/agnieszkajablonska-jobcoach/" target="_blank" rel="noreferrer">
+                <Linkedin />
+              </a>
+            </div>
           </StyledFooterLinks>
           <StyledMobileLogo>
             <Logo isHeader="true" isFooter="true" hasMaxWidth="484px" />

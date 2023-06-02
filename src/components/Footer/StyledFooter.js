@@ -166,9 +166,21 @@ export const StyledCircleWrapper = styled.div`
 `;
 
 export const StyledFooterLinks = styled.div`
-  display: ${({ hideMobile }) => (hideMobile ? "flex" : "none")};
+  display: ${({ hideMobile }) => (hideMobile ? "block" : "none")};
   gap: 28px;
   text-transform: uppercase;
+  .social {
+    margin-top: 8px;
+    margin-right: -12px;
+    display: flex;
+    a {
+      padding: 11px 12px;
+    }
+    svg {
+      vertical-align: top;
+    }
+    gap: 13px;
+  }
   a {
     font: 400 14px Roboto;
     color: var(--normalBlack);
@@ -198,7 +210,11 @@ export const StyledFooterLinks = styled.div`
   }
 
   @media only screen and (max-width: 992px) {
-    display: ${({ hideMobile }) => (hideMobile ? "none" : "flex")};
+    display: ${({ hideMobile }) => (hideMobile ? "none" : "block")};
+    .social {
+      margin-right: 0;
+      margin-left: -12px;
+    }
     padding-right: 0;
     margin-top: 26px;
     margin-bottom: 26px;
