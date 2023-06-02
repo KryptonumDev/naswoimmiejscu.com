@@ -119,7 +119,7 @@ export const StyledContent = styled.div`
     align-items: flex-start;
     align-self: flex-start;
     position: relative;
-    padding-right: 22px;
+    padding-right: 0;
     padding-top: ${({ isright }) => (isright ? "0" : "24px")};
     margin-top: ${({ isright }) => (isright ? "32px" : "0")};
     margin-bottom: ${({ isright }) => (isright ? "0" : "30px")};
@@ -144,8 +144,11 @@ export const StyledBlogSliderWrapper = styled.div`
   display: none;
   flex-direction: column;
 
-  .slick-slider,
+  .slick-slider {
+    width: calc(100% + 44px);
+  }
   .slick-slide {
+    padding: 0 22px;
     width: 100%;
   }
 
@@ -179,7 +182,7 @@ export const StyledBlogSliderWrapper = styled.div`
   @media only screen and (max-width: 1024px) {
     display: flex;
     margin-top: 20px;
-    margin: 0px -10px;
+    margin: 0px -22px;
   }
 
   @media only screen and (max-width: 1024px) {

@@ -10,11 +10,11 @@ export const StyledHamburgerButton = styled.button`
     outline-offset: 4px;
   }
 
-  @media only screen and (max-width: 1167px) {
+  @media only screen and (max-width: 1199px) {
     position: absolute;
     z-index: 11;
     right: 22px;
-    top: 21px;
+    top: 28px;
     cursor: pointer;
     border: 0;
     width: 36px;

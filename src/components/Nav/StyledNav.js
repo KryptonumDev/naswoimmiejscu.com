@@ -65,7 +65,7 @@ export const StyledNav = styled.nav`
     }
   }
 
-  @media only screen and (max-width: 1167px) {
+  @media only screen and (max-width: 1199px) {
     display: flex;
     opacity: ${({ isopen }) => (isopen ? "1" : "0")};
     pointer-events: ${({ isopen }) => (isopen ? "all" : "none")};
@@ -102,7 +102,7 @@ export const StyledNav = styled.nav`
 export const StyledMobileWrapper = styled.div`
   display: none;
 
-  @media only screen and (max-width: 1167px) {
+  @media only screen and (max-width: 1199px) {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -111,8 +111,8 @@ export const StyledMobileWrapper = styled.div`
 
     a {
       text-transform: normal;
-      font: 600 14px Roboto;
-      color: var(--normalBlack);
+      font: 400 14px Roboto;
+      color:var(--normalGrey);
 
       &:focus-visible {
         outline-width: 1px;
@@ -127,7 +127,7 @@ export const StyledMobileWrapper = styled.div`
 export const StyledCircleWrapper = styled.div`
   display: none;
 
-  @media only screen and (max-width: 1167px) {
+  @media only screen and (max-width: 1199px) {
     position: absolute;
     top: -3px;
     left: -100px;
@@ -138,7 +138,7 @@ export const StyledCircleWrapper = styled.div`
 export const StyledGreenCircle = styled.div`
   display: none;
 
-  @media only screen and (max-width: 1167px) {
+  @media only screen and (max-width: 1199px) {
     position: absolute;
     top: 150px;
     right: -240px;

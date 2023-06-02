@@ -36,7 +36,7 @@ export const StyledBlogHomeCard = styled.div`
     gap: 8px;
     width: auto;
     margin-right: 10px;
-    padding-left: 10px;
+    padding-left: 0;
     justify-content: flex-end;
   }
 

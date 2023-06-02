@@ -66,6 +66,12 @@ export const StyledQuestionWrapper = styled.summary`
 export const StyledAnswerWrapper = styled.div`
   font: 300 clamp(20px, 1.25vw, 24px) / 1.33em Roboto;
   margin-top: 24px;
+  span {
+    font-weight: 300 !important;
+  }
+  p:not(:last-child){
+    margin-bottom: 16px;
+  }
 
   strong {
     font-weight: 500;

@@ -58,21 +58,23 @@ export const StyledList = styled.div`
     li {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 13px;
       list-style-type: none;
       padding-top: 16px;
 
       em {
         font-variant-numeric: normal;
-        width: 48px;
-        height: 48px;
+        width: 38px;
+        height: 38px;
         border-radius: 50%;
-        border: 1px solid #000;
+        border: 1px solid var(--normalGreen);
         display: flex;
         align-items: center;
         justify-content: center;
         padding-top: 0;
         font-style: normal;
+        font-size: 1rem;
+        font-weight: 600;
       }
 
       p {

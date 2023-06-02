@@ -61,7 +61,7 @@ export const StyledLink = styled.div`
       min-height: 67px;
     }
 
-    @media only screen and (max-width: 1167px) {
+    @media only screen and (max-width: 1199px) {
       display: none;
     }
   }

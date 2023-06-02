@@ -5,7 +5,6 @@ export const StyledUnderCooperationProcess = styled.div`
   width: 100%;
   max-width: 1920px;
   position: relative;
-
   @media only screen and (max-width: 992px) {
     margin-top: 0;
   }
@@ -24,6 +23,12 @@ export const StyledLeftWrapper = styled.div`
 `;
 
 export const StyledRightWrapper = styled.div`
+  svg {
+    width: 128px !important;
+    height: 128px !important;
+    transform: scale(2) translateY(-10px) !important;
+    transform-origin: bottom;
+  }
   width: 60%;
 
   @media only screen and (max-width: 1850px) {
@@ -117,7 +122,7 @@ export const StyledFirstIcon = styled.div`
 
 export const StyledSecondIcon = styled.div`
   position: absolute;
-  left: 90%;
+  left: 91%;
   transform: translateX(-50%);
   top: -30px;
 

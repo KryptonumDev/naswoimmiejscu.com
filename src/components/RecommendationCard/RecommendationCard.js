@@ -52,6 +52,7 @@ const RecommendationCard = ({
         </StyledAvatarWrapper>
         <StyledDescriptionWrapper recdiff={recDif}>
           {desc ? parse(desc) : null}
+          <p className='sign'>{name}</p>
         </StyledDescriptionWrapper>
       </StyledRecommendationCard>
     </Link>

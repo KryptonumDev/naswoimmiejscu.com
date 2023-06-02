@@ -21,7 +21,11 @@ const BlogHomeCard = ({
   isCase,
 }) => {
   return (
-    <Link to={`/blog/${slug}`} >
+    <Link
+      to={`/blog/${slug}`}
+      onMouseDown={e => this.handleOnMouseDown(e)}
+      onClick={e => this.handleOnClick(e)}
+    >
       <StyledBlogHomeCard iscase={isCase ? "true" : false}>
         <StyledTextWrapper>
           <StyledTitle>{title ? parse(title) : null}</StyledTitle>

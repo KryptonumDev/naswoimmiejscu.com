@@ -461,7 +461,10 @@ const Contact = styled.div`
   .text {
     font: 300 clamp(15px, ${(26 / 1920) * 100}vw, 26px) / 1.33em Roboto;
     margin-bottom: 30px;
-
+    img {
+      width: 28px;
+      vertical-align: middle;
+    }
     @media (max-width: 1200px) {
       font-size: 16px;
     }
