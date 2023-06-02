@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledBlogHomeCard = styled.div`
   width: 100%;
@@ -43,7 +43,7 @@ export const StyledBlogHomeCard = styled.div`
   @media only screen and (max-width: 355px) {
     width: 250px;
   }
-`;
+`
 
 export const StyledTextWrapper = styled.div`
   width: 45%;
@@ -53,7 +53,7 @@ export const StyledTextWrapper = styled.div`
     width: 100%;
     text-align: left;
   }
-`;
+`
 
 export const StyledImageWrapper = styled.div`
   width: 55%;
@@ -75,7 +75,7 @@ export const StyledImageWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
-`;
+`
 
 export const StyledTitle = styled.div`
   font: 700 clamp(18px, 1.25vw, 24px) / 1.33em Roboto;
@@ -83,16 +83,17 @@ export const StyledTitle = styled.div`
   @media only screen and (max-width: 432px) {
     font-size: 5.556vw;
   }
-`;
+`
 
 export const StyledDesc = styled.div`
   font: 300 13px Roboto;
   margin-top: 10px;
 
   @media only screen and (max-width: 432px) {
-    font-size: 14px;
+    font-size: clamp(15px, 4.167vw, 18px);
+    line-height: 1.33em;
   }
-`;
+`
 
 export const StyledDate = styled.div`
   font-size: 13px;
@@ -109,4 +110,4 @@ export const StyledDate = styled.div`
       font-size: 13px;
     }
   }
-`;
+`

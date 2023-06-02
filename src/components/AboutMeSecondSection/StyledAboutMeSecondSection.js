@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledAboutMeSecondSection = styled.div`
   width: 100%;
@@ -8,7 +8,7 @@ export const StyledAboutMeSecondSection = styled.div`
   @media only screen and (max-width: 992px) {
     margin-top: 0;
   }
-`;
+`
 
 export const StyledTitleWrapperSecond = styled.div`
   text-align: center;
@@ -43,7 +43,7 @@ export const StyledTitleWrapperSecond = styled.div`
   @media only screen and (max-width: 420px) {
     font-size: clamp(15px, 5.556vw, 22px);
   }
-`;
+`
 
 export const StyledContent = styled.div`
   width: 100%;
@@ -63,7 +63,7 @@ export const StyledContent = styled.div`
     margin-top: 20px;
     padding: 0 22px;
   }
-`;
+`
 
 export const StyledLeftWrapper = styled.div`
   width: 50%;
@@ -117,10 +117,10 @@ export const StyledLeftWrapper = styled.div`
     }
 
     @media only screen and (max-width: 420px) {
-      font-size: 4.167vw;
+      font-size: clamp(15px, 4.167vw, 18px);
 
       em {
-        font-size: 4.167vw;
+        font-size: clamp(15px, 4.167vw, 18px);
       }
     }
   }
@@ -135,7 +135,7 @@ export const StyledLeftWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     width: 100%;
   }
-`;
+`
 
 export const StyledRightWrapper = styled.div`
   width: 50%;
@@ -190,10 +190,10 @@ export const StyledRightWrapper = styled.div`
     }
 
     @media only screen and (max-width: 420px) {
-      font-size: 4.167vw;
+      font-size: clamp(15px, 4.167vw, 18px);
 
       em {
-        font-size: 4.167vw;
+        font-size: clamp(15px, 4.167vw, 18px);
       }
     }
   }
@@ -208,7 +208,7 @@ export const StyledRightWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     width: 100%;
   }
-`;
+`
 
 export const StyledImageWrapper = styled.div`
   margin-top: clamp(30px, 2.865vw, 55px);
@@ -225,7 +225,7 @@ export const StyledImageWrapper = styled.div`
       height: 100%;
     }
   }
-`;
+`
 
 export const StyledCircleWrapper = styled.div`
   width: 51.146vw;
@@ -258,7 +258,7 @@ export const StyledCircleWrapper = styled.div`
     top: 42vw;
     right: -55.042vw;
   }
-`;
+`
 
 export const StyledMobileCircle = styled.div`
   display: none;
@@ -284,4 +284,4 @@ export const StyledMobileCircle = styled.div`
     left: -62.177vw;
     top: -30px;
   }
-`;
+`

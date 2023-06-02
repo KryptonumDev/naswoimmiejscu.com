@@ -69,7 +69,7 @@ export const StyledAnswerWrapper = styled.div`
   span {
     font-weight: 300 !important;
   }
-  p:not(:last-child){
+  p:not(:last-child) {
     margin-bottom: 16px;
   }
 
@@ -95,7 +95,7 @@ export const StyledAnswerWrapper = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: clamp(14px, 4.167vw, 16px);
+    font-size: clamp(15px, 4.167vw, 18px);
   }
 `
 

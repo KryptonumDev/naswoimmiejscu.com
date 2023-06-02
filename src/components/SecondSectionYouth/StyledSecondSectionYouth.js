@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledSecondSectionYouth = styled.div`
   gap: clamp(100px, 3.75vw, 200px);
@@ -20,7 +20,7 @@ export const StyledSecondSectionYouth = styled.div`
     padding: 24px 22px;
     margin-top: 27px;
   }
-`;
+`
 
 export const StyledLeftWrapper = styled.div`
   font: 300 1.354vw/1.33em Roboto;
@@ -57,9 +57,9 @@ export const StyledLeftWrapper = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: 4.167vw;
+    font-size: clamp(15px, 4.167vw, 18px);
   }
-`;
+`
 
 export const StyledRightWrapper = styled.div`
   font: 300 1.354vw/1.33em Roboto;
@@ -96,6 +96,6 @@ export const StyledRightWrapper = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: 4.167vw;
+    font-size: clamp(15px, 4.167vw, 18px);
   }
-`;
+`

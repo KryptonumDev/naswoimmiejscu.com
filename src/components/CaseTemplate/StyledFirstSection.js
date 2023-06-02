@@ -1,6 +1,6 @@
 /** @format */
 
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledFirstSection = styled.div`
   width: 100%;
@@ -14,7 +14,7 @@ export const StyledFirstSection = styled.div`
     gap: 0;
     margin-top: 22px;
   }
-`;
+`
 
 export const StyledTextWrapperFirst = styled.div`
   width: 50%;
@@ -25,7 +25,7 @@ export const StyledTextWrapperFirst = styled.div`
     width: 100%;
     margin-top: 20px;
   }
-`;
+`
 
 export const StyledImageFirstSection = styled.div`
   width: 50%;
@@ -47,7 +47,7 @@ export const StyledImageFirstSection = styled.div`
   @media only screen and (max-width: 603px) {
     width: 100%;
   }
-`;
+`
 
 export const StyledTitle = styled.div`
   font: 700 3.333vw/1.33em Roboto;
@@ -84,7 +84,7 @@ export const StyledTitle = styled.div`
   @media only screen and (max-width: 420px) {
     font-size: 6.111vw;
   }
-`;
+`
 
 export const StyledCircleWrapper = styled.div`
   position: absolute;
@@ -101,7 +101,7 @@ export const StyledCircleWrapper = styled.div`
       height: 40px;
     }
   }
-`;
+`
 
 export const StyledGlobalWhiteCircle = styled.div`
   position: absolute;
@@ -119,7 +119,7 @@ export const StyledGlobalWhiteCircle = styled.div`
   @media only screen and (max-width: 992px) {
     display: none;
   }
-`;
+`
 
 export const StyledDescFirst = styled.div`
   font: 300 1.615vw/1.33em Roboto;
@@ -170,10 +170,10 @@ export const StyledDescFirst = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: 4.167vw;
+    font-size: clamp(15px, 4.167vw, 18px);
     margin-top: 16px;
   }
-`;
+`
 
 export const StyledSecondDesc = styled.div`
   font: 300 1.354vw/1.23em Roboto;
@@ -217,16 +217,16 @@ export const StyledSecondDesc = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    font-size: 4.167vw;
+    font-size: clamp(15px, 4.167vw, 18px);
   }
-`;
+`
 
 export const StyledCirclesWrapper = styled.div`
   width: 100%;
   display: flex;
   gap: 12px;
   margin-top: 20px;
-`;
+`
 
 export const StyledSecondSection = styled.div`
   margin-top: clamp(40px, 6.146vw, 118px);
@@ -241,7 +241,7 @@ export const StyledSecondSection = styled.div`
     margin-top: 20px;
     margin-bottom: 40px;
   }
-`;
+`
 
 export const StyledLeftSecondWrapper = styled.div`
   width: 100%;
@@ -274,7 +274,7 @@ export const StyledLeftSecondWrapper = styled.div`
       height: 100%;
     }
   }
-`;
+`
 
 export const StyledRightSecondWrapper = styled.div`
   width: 100%;
@@ -283,7 +283,7 @@ export const StyledRightSecondWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     width: 100%;
   }
-`;
+`
 
 export const StyledIconsWrapper = styled.div`
   width: 100%;
@@ -296,7 +296,7 @@ export const StyledIconsWrapper = styled.div`
     gap: 16px;
     margin-top: 22px;
   }
-`;
+`
 
 export const StyledIconWrapper = styled.div`
   width: calc(50% - 16px);
@@ -307,7 +307,7 @@ export const StyledIconWrapper = styled.div`
   @media only screen and (max-width: 871px) {
     width: 100%;
   }
-`;
+`
 
 export const StyledIcon = styled.div`
   width: 80px;
@@ -327,13 +327,13 @@ export const StyledIcon = styled.div`
     width: 61px;
     height: 61px;
   }
-`;
+`
 
 export const StyledTextWrapper = styled.div`
   width: calc(100% - 102px);
   margin-top: 8px;
   max-width: 786px;
-`;
+`
 
 export const StyledName = styled.div`
   font: 700 clamp(18px, 1.354vw, 26px) / 1.33em Roboto;
@@ -365,7 +365,7 @@ export const StyledName = styled.div`
   @media only screen and (max-width: 420px) {
     font-size: 4.1vw;
   }
-`;
+`
 
 export const StyledDesc = styled.div`
   font: 300 clamp(18px, 1.354vw, 26px) / 1.33em Roboto;
@@ -397,13 +397,13 @@ export const StyledDesc = styled.div`
   @media only screen and (max-width: 420px) {
     font-size: 4.1vw;
   }
-`;
+`
 
 export const StyledGlobalSecondWhiteCircle = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
-`;
+`
 
 export const StyledMobileCircle = styled.div`
   display: none;
@@ -415,4 +415,4 @@ export const StyledMobileCircle = styled.div`
     left: -15px;
     z-index: -1;
   }
-`;
+`

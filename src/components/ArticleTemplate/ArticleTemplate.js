@@ -1,84 +1,84 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
-import { graphql } from "gatsby";
-import Container from "../Container/Container";
-import styled from "styled-components";
-import { GatsbyImage } from "gatsby-plugin-image";
-import Button from "../Button/Button";
-import { StyledText } from "../Text/StyledText";
-import Hero from "../ArticleHero/ArticelHero";
-import Wrapper from "../PageWrapper/PageWrapper";
+import React, { useState, useEffect } from 'react'
+import { graphql } from 'gatsby'
+import Container from '../Container/Container'
+import styled from 'styled-components'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import Button from '../Button/Button'
+import { StyledText } from '../Text/StyledText'
+import Hero from '../ArticleHero/ArticelHero'
+import Wrapper from '../PageWrapper/PageWrapper'
 
-import "./../../styles/wp.min.css";
-import MoreArticles from "../MoreArticles";
+import './../../styles/wp.min.css'
+import MoreArticles from '../MoreArticles'
 
 const slugTransform = (string) => {
   return string
     .toLowerCase()
     .trim()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/[\s_-]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-};
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
 
 const getNestedHeadings = (headingElements) => {
-  const nestedHeadings = [];
+  const nestedHeadings = []
 
   headingElements.forEach((heading, index) => {
-    const { innerText: title } = heading;
-    let id = slugTransform(title);
-    heading.id = id;
+    const { innerText: title } = heading
+    let id = slugTransform(title)
+    heading.id = id
 
-    if (title === "Problem" || title === "Solution" || title === "Result") {
-      return null;
+    if (title === 'Problem' || title === 'Solution' || title === 'Result') {
+      return null
     }
 
-    if (heading.nodeName === "H2") {
-      nestedHeadings.push({ id, title, items: [], pseudo: false });
+    if (heading.nodeName === 'H2') {
+      nestedHeadings.push({ id, title, items: [], pseudo: false })
     } else if (
-      heading.nodeName === "H3" &&
+      heading.nodeName === 'H3' &&
       nestedHeadings.length > 0 &&
       !nestedHeadings[nestedHeadings.length - 1].pseudo
     ) {
       nestedHeadings[nestedHeadings.length - 1].items.push({
         id,
         title,
-        pseudo: false,
-      });
-    } else if (heading.nodeName === "H3") {
-      nestedHeadings.push({ id, title, items: [], pseudo: true });
+        pseudo: false
+      })
+    } else if (heading.nodeName === 'H3') {
+      nestedHeadings.push({ id, title, items: [], pseudo: true })
     }
-  });
+  })
 
-  return nestedHeadings;
-};
+  return nestedHeadings
+}
 
 const useHeadingsData = () => {
-  const [nestedHeadings, setNestedHeadings] = useState([]);
+  const [nestedHeadings, setNestedHeadings] = useState([])
 
   useEffect(() => {
     const headingElements = Array.from(
-      document.getElementById("post-content").querySelectorAll("h2, h3")
-    );
+      document.getElementById('post-content').querySelectorAll('h2, h3')
+    )
 
-    const newNestedHeadings = getNestedHeadings(headingElements);
-    setNestedHeadings(newNestedHeadings);
-  }, []);
+    const newNestedHeadings = getNestedHeadings(headingElements)
+    setNestedHeadings(newNestedHeadings)
+  }, [])
 
-  return { nestedHeadings };
-};
+  return { nestedHeadings }
+}
 
 const ArticleTemplate = ({
   pageContext: { prevPage, nextPage },
   data: {
     wpPost: { title, categories, artykul, content },
     global: {
-      globalComponets: { contactSection },
-    },
-  },
+      globalComponets: { contactSection }
+    }
+  }
 }) => {
-  const { nestedHeadings } = useHeadingsData();
+  const { nestedHeadings } = useHeadingsData()
   return (
     <Wrapper>
       <Container>
@@ -89,38 +89,37 @@ const ArticleTemplate = ({
           data={artykul.trescArtykulu}
         />
         <Content
-          id="post-content"
+          id='post-content'
           dangerouslySetInnerHTML={{ __html: content }}
         />
         <MoreArticles prevPage={prevPage} nextPage={nextPage} />
         <Contact>
           <div>
             <div
-              className="title"
+              className='title'
               dangerouslySetInnerHTML={{ __html: contactSection.title }}
             />
             <div
-              className="text"
+              className='text'
               dangerouslySetInnerHTML={{ __html: contactSection.text }}
             />
             <StyledText />
             <Button
-              className="link"
+              className='link'
               hasfontsize={`clamp(16px, ${(20 / 1920) * 100}vw, 20px)`}
               btnData={contactSection.link}
-              ariaLabel="link"
+              ariaLabel='link'
             />
           </div>
           <ImageWrapper>
             <svg
-              className="svg"
-              width="99"
-              height="99"
-              viewBox="0 0 99 99"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="49.5" cy="49.5" r="49.5" fill="#745239" />
+              className='svg'
+              width='99'
+              height='99'
+              viewBox='0 0 99 99'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'>
+              <circle cx='49.5' cy='49.5' r='49.5' fill='#745239' />
             </svg>
             <GatsbyImage
               image={
@@ -131,43 +130,41 @@ const ArticleTemplate = ({
           </ImageWrapper>
         </Contact>
         <Circle
-          width="721"
-          height="721"
-          viewBox="0 0 721 721"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+          width='721'
+          height='721'
+          viewBox='0 0 721 721'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'>
           <circle
-            cx="360.5"
-            cy="360.5"
-            r="333"
-            stroke="#0BC76D"
-            strokeWidth="55"
+            cx='360.5'
+            cy='360.5'
+            r='333'
+            stroke='#0BC76D'
+            strokeWidth='55'
           />
         </Circle>
         <SecondCircle
-          width="721"
-          height="721"
-          viewBox="0 0 721 721"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+          width='721'
+          height='721'
+          viewBox='0 0 721 721'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'>
           <circle
-            cx="360.5"
-            cy="360.5"
-            r="333"
-            stroke="#0BC76D"
-            strokeWidth="55"
+            cx='360.5'
+            cy='360.5'
+            r='333'
+            stroke='#0BC76D'
+            strokeWidth='55'
           />
         </SecondCircle>
       </Container>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default ArticleTemplate;
+export default ArticleTemplate
 
-export { Head } from "../Head/Head";
+export { Head } from '../Head/Head'
 
 export const query = graphql`
   query wpPostQuery($postId: String) {
@@ -242,7 +239,7 @@ export const query = graphql`
       content
     }
   }
-`;
+`
 
 const Circle = styled.svg`
   position: absolute;
@@ -260,7 +257,7 @@ const Circle = styled.svg`
   @media (max-width: 1180px) {
     display: none;
   }
-`;
+`
 
 const SecondCircle = styled.svg`
   position: absolute;
@@ -273,7 +270,7 @@ const SecondCircle = styled.svg`
   @media (max-width: 1180px) {
     display: none;
   }
-`;
+`
 
 const Content = styled.div`
   margin-top: clamp(5rem, 6vw, 8rem);
@@ -402,6 +399,9 @@ const Content = styled.div`
     li {
       font-weight: 500;
       font-size: clamp(17px, 1.3541666666666667vw, 26px);
+      @media (max-width: 424px) {
+        font-size: 15px;
+      }
       line-height: 150%;
     }
   }
@@ -425,7 +425,7 @@ const Content = styled.div`
       outline-offset: 4px;
     }
   }
-`;
+`
 
 const Contact = styled.div`
   margin-top: clamp(120px, ${(160 / 1920) * 100}vw, 160px);
@@ -476,7 +476,7 @@ const Contact = styled.div`
       margin-top: 16px;
     }
   }
-`;
+`
 
 const ImageWrapper = styled.div`
   position: relative;
@@ -491,4 +491,4 @@ const ImageWrapper = styled.div`
     height: clamp(50px, ${(99 / 1920) * 100}vw, 99px);
     z-index: 2;
   }
-`;
+`

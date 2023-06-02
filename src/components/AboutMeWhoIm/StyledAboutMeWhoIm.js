@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import {
   StyledDescWrapper,
-  StyledTitleWrapper,
-} from "../HomeHeroSection/StyledHomeHeroSection";
+  StyledTitleWrapper
+} from '../HomeHeroSection/StyledHomeHeroSection'
 
 export const StyledAboutMeWhoIm = styled.div`
   margin-top: clamp(120px, 9.219vw, 177px);
@@ -19,7 +19,7 @@ export const StyledAboutMeWhoIm = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
-`;
+`
 
 export const StyledLeftWrapper = styled.div`
   width: 50%;
@@ -39,7 +39,7 @@ export const StyledLeftWrapper = styled.div`
     padding-right: 70px;
     max-width: 90%;
   }
-`;
+`
 
 export const StyledRightWrapper = styled.div`
   max-width: 745px;
@@ -74,13 +74,13 @@ export const StyledRightWrapper = styled.div`
 
   @media only screen and (max-width: 360px) {
     em {
-      font-size: 4.167vw;
+      font-size: clamp(15px, 4.167vw, 18px);
     }
   }
-`;
+`
 
 export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
-  display: ${({ ishide }) => (ishide ? "none" : "grid")};
+  display: ${({ ishide }) => (ishide ? 'none' : 'grid')};
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 20px;
@@ -90,16 +90,16 @@ export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
   }
 
   @media only screen and (max-width: 992px) {
-    display: ${({ ishide }) => (ishide ? "grid" : "none")};
+    display: ${({ ishide }) => (ishide ? 'grid' : 'none')};
     grid-template-columns: 1fr;
     margin: 26px 0;
     svg {
       display: none;
     }
   }
-`;
+`
 
-export const StyledDescWrapperElement = styled(StyledDescWrapper)``;
+export const StyledDescWrapperElement = styled(StyledDescWrapper)``
 
 export const StyledCircleWrapper = styled.div`
   position: absolute;
@@ -129,4 +129,4 @@ export const StyledCircleWrapper = styled.div`
   @media only screen and (max-width: 768px) {
     right: 5%;
   }
-`;
+`
