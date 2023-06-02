@@ -69,6 +69,7 @@ const useHeadingsData = () => {
 };
 
 const ArticleTemplate = ({
+  pageContext: { prevPage, nextPage },
   data: {
     wpPost: { title, categories, artykul, content },
     global: {

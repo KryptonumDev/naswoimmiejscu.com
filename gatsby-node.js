@@ -14,7 +14,24 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
 
-  postData.data.allWpPost.edges.map(({ node }) => {
+  // postData.data.allWpPost.edges.map(({ node }) => {
+  //   createPage({
+  //     path: `/blog/${node.slug}/`,
+  //     component: require.resolve(
+  //       './src/components/ArticleTemplate/ArticleTemplate.js'
+  //     ),
+  //     context: {
+  //       postId: node.id,
+  //       url: `/blog/${node.slug}/`
+  //     }
+  //   })
+  // })
+
+  for (let i = 0; i < postData.data.allWpPost.edges.length; i++) {
+    let node = postData.data.allWpPost.edges[i].node
+    let prevPage = i === 0 ? null : postData.data.allWpPost.edges[i - 1].node
+    let nextPage = i === postData.data.allWpPost.edges.length - 1 ? null : postData.data.allWpPost.edges[i + 1].node
+
     createPage({
       path: `/blog/${node.slug}/`,
       component: require.resolve(
@@ -22,10 +39,12 @@ exports.createPages = async ({ actions, graphql }) => {
       ),
       context: {
         postId: node.id,
-        url: `/blog/${node.slug}/`
+        url: `/blog/${node.slug}/`,
+        prevPage: `/blog/${prevPage.slug}/`,
+        nextPage: `/blog/${nextPage.slug}/`
       }
     })
-  })
+  }
 
   const caseData = await graphql(`
     {
