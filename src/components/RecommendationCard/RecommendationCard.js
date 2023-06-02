@@ -1,5 +1,4 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
 import { StyledCircle } from '../Circle/StyledCircle'
 import parse from 'html-react-parser'
 

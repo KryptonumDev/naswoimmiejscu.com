@@ -11,6 +11,7 @@ import Hero from "../ArticleHero/ArticelHero";
 import Wrapper from "../PageWrapper/PageWrapper";
 
 import "./../../styles/wp.min.css";
+import MoreArticles from "../MoreArticles";
 
 const slugTransform = (string) => {
   return string
@@ -91,6 +92,7 @@ const ArticleTemplate = ({
           id="post-content"
           dangerouslySetInnerHTML={{ __html: content }}
         />
+        <MoreArticles prevPage={prevPage} nextPage={nextPage} />
         <Contact>
           <div>
             <div

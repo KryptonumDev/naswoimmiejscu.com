@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import parse from "html-react-parser";
 import { useStaticQuery, graphql } from "gatsby";
 import Slider from "react-slick";

@@ -8,6 +8,20 @@ exports.createPages = async ({ actions, graphql }) => {
           node {
             id
             slug
+            title
+            excerpt
+            artykul {
+              miniaturka {
+                zdjecieDoMiniaturki {
+                  altText
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -40,8 +54,8 @@ exports.createPages = async ({ actions, graphql }) => {
       context: {
         postId: node.id,
         url: `/blog/${node.slug}/`,
-        prevPage: `/blog/${prevPage.slug}/`,
-        nextPage: `/blog/${nextPage.slug}/`
+        prevPage,
+        nextPage
       }
     })
   }
