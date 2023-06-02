@@ -77,13 +77,16 @@ export const StyledButtonsWrapper = styled.div`
   margin-top: 42px;
 
   @media only screen and (max-width: 1550px) {
-    gap: 20px;
+    gap: 34px;
     padding-left: 0;
   }
 
   @media only screen and (max-width: 992px) {
     margin-top: 0;
     flex-direction: column;
+    a {
+      width: 100%;
+    }
 
     button {
       font-size: 20px;
@@ -122,6 +125,13 @@ export const StyledButtonWrapper = styled.div`
           height: 100%;
         }
       }
+    }
+  }
+  @media only screen and (max-width: 509px) {
+    flex-direction: column;
+    gap: 13px;
+    a div {
+      padding: 21px 13px;
     }
   }
 `;

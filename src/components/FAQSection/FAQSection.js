@@ -21,7 +21,7 @@ const FAQSection = ({
   isContactPage
 }) => {
   return (
-    <StyledFAQSection id="form" hasleftpadding={hasLeftPadding}>
+    <StyledFAQSection hasleftpadding={hasLeftPadding}>
       <StyledFAQWrapper>
         <StyledTitleWrapper smallmg={smallMgBottom}>
           {data.tytul ? parse(data.tytul) : null}

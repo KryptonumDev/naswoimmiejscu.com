@@ -444,7 +444,7 @@ const Contact = styled.div`
   @media (max-width: 360px) {
     .link {
       width: 100%;
-      font-size: 11px;
+      font-size: 13px;
       min-height: 53px;
     }
   }

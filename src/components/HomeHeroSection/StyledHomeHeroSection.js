@@ -259,7 +259,7 @@ export const StyledTitleWrapper = styled.div`
     &.contact-page,
     &.calendly-last-section,
     &.calendly-first-section {
-      font-size: clamp(22px, 6.111vw, 22px);
+      font-size: clamp(30px, 6.111vw, 22px);
     }
 
     &.first-section-womens-youth,
@@ -267,6 +267,17 @@ export const StyledTitleWrapper = styled.div`
     &.effect-womens-title,
     &.meets-form-womens {
       font-size: clamp(22px, 5.7vw, 22px);
+    }
+  }
+  @media (max-width: 369px){
+    &.home-hero-section,
+    &.about-me-first-section,
+    &.who-im-about-me,
+    &.about-me-meet,
+    &.contact-page,
+    &.calendly-last-section,
+    &.calendly-first-section {
+      font-size: clamp(26px, 6.111vw, 22px);
     }
   }
 `;

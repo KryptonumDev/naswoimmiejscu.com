@@ -28,13 +28,13 @@ export const StyledMeetSomebody = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
-    max-width: 70%;
+    max-width: 100%;
     margin-bottom: 36px;
+    padding-right: clamp(40px, 8.75vw, 120px);
   }
 
   @media only screen and (max-width: 506px) {
-    max-width: 100%;
-    padding-right: 77px;
+    padding-right: 0;
   }
 `;
 
@@ -76,7 +76,7 @@ export const StyledAvatarWrapper = styled.div`
   }
 
   @media only screen and (max-width: 540px) {
-    width: 58px;
-    height: 58px;
+    width: 89px;
+    height: 89px;
   }
 `;

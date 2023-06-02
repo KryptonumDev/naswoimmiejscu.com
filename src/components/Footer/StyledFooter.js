@@ -107,7 +107,7 @@ export const StyledBottomText = styled.div`
   }
 
   @media only screen and (max-width: 480px) {
-    font-size: 11px;
+    font-size: 13px;
   }
 `;
 

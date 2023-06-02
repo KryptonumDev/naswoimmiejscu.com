@@ -80,7 +80,8 @@ export const StyledRightWrapper = styled.div`
 `;
 
 export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
-  display: ${({ ishide }) => (ishide ? "none" : "flex")};
+  display: ${({ ishide }) => (ishide ? "none" : "grid")};
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 20px;
 
@@ -89,9 +90,9 @@ export const StyledTitleWrapperElement = styled(StyledTitleWrapper)`
   }
 
   @media only screen and (max-width: 992px) {
-    display: ${({ ishide }) => (ishide ? "flex" : "none")};
+    display: ${({ ishide }) => (ishide ? "grid" : "none")};
+    grid-template-columns: 1fr;
     margin: 26px 0;
-
     svg {
       display: none;
     }
