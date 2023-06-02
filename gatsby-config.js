@@ -39,6 +39,9 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: `${process.env.GATSBY_WORDPRESS_URL}/graphql`,
+        html: {
+          useGatsbyImage: false,
+        },
       },
     },
     {
