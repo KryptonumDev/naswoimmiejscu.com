@@ -1,12 +1,12 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import FirstSecionWomens from "../components/FirstSecionWomens/FirstSecionWomens";
-import SecondSectionWomens from "../components/SecondSectionWomens/SecondSectionWomens";
-import EffectWomens from "../components/EffectWomens/EffectWomens";
-import MeetsFormwomens from "../components/MeetsFormwomens/MeetsFormwomens";
-import HomeBlogSection from "../components/HomeBlogSection/HomeBlogSection";
-import Wrapper from "../components/PageWrapper/PageWrapper";
+import FirstSecionWomens from '../components/FirstSecionWomens/FirstSecionWomens'
+import SecondSectionWomens from '../components/SecondSectionWomens/SecondSectionWomens'
+import EffectWomens from '../components/EffectWomens/EffectWomens'
+import MeetsFormwomens from '../components/MeetsFormwomens/MeetsFormwomens'
+import HomeBlogSection from '../components/HomeBlogSection/HomeBlogSection'
+import Wrapper from '../components/PageWrapper/PageWrapper'
 
 const Womens = ({
   data: {
@@ -16,10 +16,10 @@ const Womens = ({
         drugaSekcjaKobiety,
         efektWspolpracyKobiety,
         formaSpotkanKobiety,
-        sekcjaZBlogiemKobiety,
-      },
-    },
-  },
+        sekcjaZBlogiemKobiety
+      }
+    }
+  }
 }) => {
   return (
     <Wrapper>
@@ -62,12 +62,12 @@ const Womens = ({
         isCase={true}
       />
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Womens;
+export default Womens
 
-export { Head } from "../components/Head/Head";
+export { Head } from '../components/Head/Head'
 
 export const query = graphql`
   query womensQuery {
@@ -86,8 +86,6 @@ export const query = graphql`
       }
       kobiety {
         sekcjaZBlogiemKobiety {
-          adnotacjaNaDoleStronyDrugaLinijka
-          adnotacjaNaDoleStronyPierwszaLinia
           blogOpis
           blogTytul
           tekstDoLinku
@@ -230,4 +228,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

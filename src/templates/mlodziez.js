@@ -1,13 +1,13 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import FirstSecionWomens from "../components/FirstSecionWomens/FirstSecionWomens";
-import SecondSectionYouth from "../components/SecondSectionYouth/SecondSectionYouth";
-import SecondSectionWomens from "../components/SecondSectionWomens/SecondSectionWomens";
-import MeetsFormwomens from "../components/MeetsFormwomens/MeetsFormwomens";
-import EffectWomens from "../components/EffectWomens/EffectWomens";
-import HomeBlogSection from "../components/HomeBlogSection/HomeBlogSection";
-import Wrapper from "../components/PageWrapper/PageWrapper";
+import FirstSecionWomens from '../components/FirstSecionWomens/FirstSecionWomens'
+import SecondSectionYouth from '../components/SecondSectionYouth/SecondSectionYouth'
+import SecondSectionWomens from '../components/SecondSectionWomens/SecondSectionWomens'
+import MeetsFormwomens from '../components/MeetsFormwomens/MeetsFormwomens'
+import EffectWomens from '../components/EffectWomens/EffectWomens'
+import HomeBlogSection from '../components/HomeBlogSection/HomeBlogSection'
+import Wrapper from '../components/PageWrapper/PageWrapper'
 
 const Youth = ({
   data: {
@@ -18,10 +18,10 @@ const Youth = ({
         jakMogeCiPomocMlodziez,
         efektWspolpracyMlodziez,
         formaSpotkanMlodziez,
-        sekcjaZBlogiemMlodzie,
-      },
-    },
-  },
+        sekcjaZBlogiemMlodzie
+      }
+    }
+  }
 }) => {
   return (
     <Wrapper>
@@ -61,12 +61,12 @@ const Youth = ({
         isCase={true}
       />
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Youth;
+export default Youth
 
-export { Head } from "../components/Head/Head";
+export { Head } from '../components/Head/Head'
 
 export const query = graphql`
   query youthQuery {
@@ -85,8 +85,6 @@ export const query = graphql`
       }
       mlodziez {
         sekcjaZBlogiemMlodzie {
-          adnotacjaNaDoleStronyDrugaLinijka
-          adnotacjaNaDoleStronyPi
           blogOpis
           blogTytul
           tekstDoLinku
@@ -242,4 +240,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

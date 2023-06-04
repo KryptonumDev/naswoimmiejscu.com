@@ -1,13 +1,13 @@
 /** @format */
 
-import React from "react";
-import { graphql } from "gatsby";
-import parse from "html-react-parser";
+import React from 'react'
+import { graphql } from 'gatsby'
+import parse from 'html-react-parser'
 
-import Image from "../Image/Image";
-import HomeBlogSection from "../HomeBlogSection/HomeBlogSection";
-import Container from "../Container/Container";
-import Wrapper from "../PageWrapper/PageWrapper";
+import Image from '../Image/Image'
+import HomeBlogSection from '../HomeBlogSection/HomeBlogSection'
+import Container from '../Container/Container'
+import Wrapper from '../PageWrapper/PageWrapper'
 
 import {
   StyledFirstSection,
@@ -28,26 +28,26 @@ import {
   StyledDesc,
   StyledCircleWrapper,
   StyledGlobalWhiteCircle,
-  StyledMobileCircle,
-} from "./StyledFirstSection";
-import { StyledCircle } from "../Circle/StyledCircle";
+  StyledMobileCircle
+} from './StyledFirstSection'
+import { StyledCircle } from '../Circle/StyledCircle'
 
 const CaseTemplate = ({
   data: {
     wpCaseStudy: {
       caseStudyArtykul: {
         trescStronyCaseStudy: { pierwszaSekcjaCaseStudy, drugaSekcjaCaseStudy },
-        sekcjaZBlogiem,
-      },
-    },
-  },
+        sekcjaZBlogiem
+      }
+    }
+  }
 }) => {
   return (
     <Wrapper>
       <Container>
         <StyledFirstSection>
           <StyledTextWrapperFirst>
-            <StyledTitle className="case-template">
+            <StyledTitle className='case-template'>
               {pierwszaSekcjaCaseStudy.tytul
                 ? parse(pierwszaSekcjaCaseStudy.tytul)
                 : null}
@@ -64,31 +64,30 @@ const CaseTemplate = ({
 
               <StyledCirclesWrapper>
                 <StyledCircle
-                  hasdeclaredbg="var(--normalGreen)"
-                  hasdeclaredwidth="22px"
-                  hasdeclaredheight="22px"
+                  hasdeclaredbg='var(--normalGreen)'
+                  hasdeclaredwidth='22px'
+                  hasdeclaredheight='22px'
                 />
                 <StyledCircle
-                  hasdeclaredbg="var(--normalGreen)"
-                  hasdeclaredwidth="22px"
-                  hasdeclaredheight="22px"
+                  hasdeclaredbg='var(--normalGreen)'
+                  hasdeclaredwidth='22px'
+                  hasdeclaredheight='22px'
                 />
               </StyledCirclesWrapper>
             </StyledSecondDesc>
             <StyledGlobalWhiteCircle>
               <svg
-                width="774"
-                height="774"
-                viewBox="0 0 774 774"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                width='774'
+                height='774'
+                viewBox='0 0 774 774'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'>
                 <circle
-                  cx="387"
-                  cy="387"
-                  r="351.5"
-                  stroke="white"
-                  strokeWidth="71"
+                  cx='387'
+                  cy='387'
+                  r='351.5'
+                  stroke='white'
+                  strokeWidth='71'
                 />
               </svg>
             </StyledGlobalWhiteCircle>
@@ -96,16 +95,16 @@ const CaseTemplate = ({
           <StyledImageFirstSection>
             <StyledCircleWrapper>
               <StyledCircle
-                hasdeclaredbg="var(--normalGreen)"
-                hasdeclaredwidth="97px"
-                hasdeclaredheight="97px"
+                hasdeclaredbg='var(--normalGreen)'
+                hasdeclaredwidth='97px'
+                hasdeclaredheight='97px'
               />
             </StyledCircleWrapper>
             <StyledMobileCircle>
               <StyledCircle
-                hasdeclaredbg="var(--paginationNormal)"
-                hasdeclaredwidth="30px"
-                hasdeclaredheight="30px"
+                hasdeclaredbg='var(--paginationNormal)'
+                hasdeclaredwidth='30px'
+                hasdeclaredheight='30px'
               />
             </StyledMobileCircle>
             <Image
@@ -126,7 +125,7 @@ const CaseTemplate = ({
                   ? parse(drugaSekcjaCaseStudy.tytul)
                   : null}
               </StyledTitle>
-              <StyledSecondDesc className="second">
+              <StyledSecondDesc className='second'>
                 {drugaSekcjaCaseStudy.opis
                   ? parse(drugaSekcjaCaseStudy.opis)
                   : null}
@@ -139,7 +138,7 @@ const CaseTemplate = ({
                 <StyledIcon>
                   <img
                     src={drugaSekcjaCaseStudy.zKimObraz.localFile.publicURL}
-                    alt="ikonka"
+                    alt='ikonka'
                   />
                 </StyledIcon>
                 <StyledTextWrapper>
@@ -155,7 +154,7 @@ const CaseTemplate = ({
                 <StyledIcon>
                   <img
                     src={drugaSekcjaCaseStudy.celObraz.localFile.publicURL}
-                    alt="ikonka"
+                    alt='ikonka'
                   />
                 </StyledIcon>
                 <StyledTextWrapper>
@@ -171,7 +170,7 @@ const CaseTemplate = ({
                 <StyledIcon>
                   <img
                     src={drugaSekcjaCaseStudy.jakObraz.localFile.publicURL}
-                    alt="ikonka"
+                    alt='ikonka'
                   />
                 </StyledIcon>
                 <StyledTextWrapper>
@@ -187,7 +186,7 @@ const CaseTemplate = ({
                 <StyledIcon>
                   <img
                     src={drugaSekcjaCaseStudy.efektyObraz.localFile.publicURL}
-                    alt="ikonka"
+                    alt='ikonka'
                   />
                 </StyledIcon>
                 <StyledTextWrapper>
@@ -207,16 +206,15 @@ const CaseTemplate = ({
         anotherPerson={sekcjaZBlogiem.linkDoInnejOsoby}
         isCase={true}
         iconImage={sekcjaZBlogiem.ikonkaDoLinku}
-        
         tekstDoLinku={sekcjaZBlogiem.tekstDoLinku}
       />
     </Wrapper>
-  );
-};
+  )
+}
 
-export default CaseTemplate;
+export default CaseTemplate
 
-export { Head } from "../Head/Head";
+export { Head } from '../Head/Head'
 
 export const query = graphql`
   query caseStudyQuery($caseId: String) {
@@ -252,8 +250,6 @@ export const query = graphql`
           }
         }
         sekcjaZBlogiem {
-          adnotacjaNaDoleStronyDrugaLinia
-          adnotacjaNaDoleStronyPierwszaLinia
           blogOpis
           blogTytul
           ikonkaDoLinku {
@@ -371,4 +367,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
