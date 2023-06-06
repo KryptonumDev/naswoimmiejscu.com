@@ -30,7 +30,7 @@ module.exports = {
         defaults: {
           formats: [`auto`, `webp`],
           placeholder: 'dominantColor',
-          quality: 100,
+          quality: 80,
           backgroundColor: `transparent`,
         }
       }
