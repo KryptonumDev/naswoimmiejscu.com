@@ -13,13 +13,11 @@ import Wrapper from '../PageWrapper/PageWrapper'
 import './../../styles/wp.min.css'
 import MoreArticles from '../MoreArticles'
 
-const slugTransform = (string) => {
-  return string
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, '')
-    .replace(/[\s_-]+/g, '-')
-    .replace(/^-+|-+$/g, '')
+export const slugify = (string) => {
+  const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;',
+    b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------',
+    p = new RegExp(a.split('').join('|'), 'g');
+  return string.toString().toLowerCase().replace(/\s+/g, '-').replace(p, c => b.charAt(a.indexOf(c))).replace(/&/g, '-i-').replace(/[^\w-]+/g, '').replace(/--+/g, '-').replace(/^-+/, '').replace(/-+$/, '');
 }
 
 const getNestedHeadings = (headingElements) => {
@@ -27,7 +25,7 @@ const getNestedHeadings = (headingElements) => {
 
   headingElements.forEach((heading, index) => {
     const { innerText: title } = heading
-    let id = slugTransform(title)
+    let id = slugify(title)
     heading.id = id
 
     if (title === 'Problem' || title === 'Solution' || title === 'Result') {

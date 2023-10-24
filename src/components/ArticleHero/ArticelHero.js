@@ -4,6 +4,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
+import { smoothScroll } from '../../utils/smoothScroll'
 
 const Hero = ({
   title,
@@ -83,12 +84,18 @@ const Hero = ({
           <ul>
             {headings?.map((heading) => (
               <li key={heading.id}>
-                <a href={`#${heading.id}`}>{heading.title}</a>
+                <a
+                  href={`#${heading.id}`}
+                  onClick={(e) => smoothScroll(e)}
+                >{heading.title}</a>
                 {heading.items.length > 0 && (
                   <ul>
                     {heading.items.map((child) => (
                       <li key={child.id}>
-                        <a href={`#${child.id}`}>{child.title}</a>
+                        <a
+                          href={`#${child.id}`}
+                          onClick={(e) => smoothScroll(e)}
+                        >{child.title}</a>
                       </li>
                     ))}
                   </ul>
@@ -340,7 +347,7 @@ const Nav = styled.nav`
       list-style-type: none;
       counter-increment: item;
 
-      :before {
+      &:before {
         content: counters(item, '.') '. ';
       }
 
@@ -350,9 +357,6 @@ const Nav = styled.nav`
       }
 
       li {
-        :before {
-          content: counters(item, '.') '. ';
-        }
 
         @media (max-width: 820px) {
           font-size: clamp(14px, ${(18 / 820) * 100}vw, 18px);
