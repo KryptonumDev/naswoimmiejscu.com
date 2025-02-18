@@ -1,0 +1,33 @@
+query SINGLE_CONTENT_QUERY($id: ID!) {
+  menu(id: $id) {
+    count
+    databaseId
+    id
+    locations
+
+    menuItems(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    name
+    slug
+    __typename
+  }
+}

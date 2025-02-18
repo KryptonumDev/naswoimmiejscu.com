@@ -1,0 +1,173 @@
+query PREVIEW_QUERY($id: ID!) {
+  user(id: $id, idType: ID, asPreview: true) {
+    avatar {
+      default
+      extraAttr
+      forceDefault
+      foundAvatar
+      height
+      rating
+      scheme
+      size
+      url
+      width
+    }
+
+    capKey
+    capabilities
+
+    comments(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    databaseId
+    description
+    email
+    extraCapabilities
+    firstName
+    id
+    isContentNode
+    isTermNode
+    lastName
+    locale
+    name
+    nicename
+    nickname
+
+    pages(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    posts(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    registeredDate
+
+    roles(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    seo {
+      breadcrumbTitle
+      canonical
+      fullHead
+      language
+      metaDesc
+      metaRobotsNofollow
+      metaRobotsNoindex
+      opengraphDescription
+
+      opengraphImage {
+        __typename
+        id
+      }
+
+      opengraphTitle
+      region
+
+      schema {
+        articleType
+        pageType
+        raw
+      }
+
+      social {
+        facebook
+        instagram
+        linkedIn
+        mySpace
+        pinterest
+        soundCloud
+        twitter
+        wikipedia
+        youTube
+      }
+
+      title
+      twitterDescription
+
+      twitterImage {
+        __typename
+        id
+      }
+
+      twitterTitle
+    }
+
+    shouldShowAdminToolbar
+    slug
+    uri
+    url
+    username
+    __typename
+  }
+}

@@ -142,7 +142,7 @@ export const query = graphql`
           }
         }
         drugaSekcjaHomePage {
-          opisDoKobiet
+          opisDoDorosli
           opisDoMlodziez
           opisPoLewo
           przyciskMlodziez {
@@ -150,13 +150,13 @@ export const query = graphql`
             title
             url
           }
-          przyciskKobiety {
+          przyciskDorosli {
             target
             url
             title
           }
           tekstDoIkonkiMlodziez
-          tekstKobiety
+          tekstDorosli
           tytulPoLewo
           zdjeciePoPrawoMobile {
             altText

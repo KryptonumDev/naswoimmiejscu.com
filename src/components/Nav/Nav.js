@@ -22,8 +22,11 @@ const Nav = ({ isOpen, isFooter, openMenu }) => {
       <Link onClick={openMenu} to='/mlodziez/'>
         MŁODZIEŻ
       </Link>
-      <Link onClick={openMenu} to='/kobiety/'>
-        KOBIETY
+      <Link onClick={openMenu} to='/dorosli/'>
+        DOROŚLI
+      </Link>
+      <Link onClick={openMenu} to='/gallup/'>
+        GALLUP
       </Link>
       <Link onClick={openMenu} to='/o-mnie/'>
         O MNIE
@@ -51,8 +54,11 @@ const Nav = ({ isOpen, isFooter, openMenu }) => {
       <Link onClick={openMenu} to='/mlodziez/'>
         MŁODZIEŻ
       </Link>
-      <Link onClick={openMenu} to='/kobiety/'>
-        KOBIETY
+      <Link onClick={openMenu} to='/dorosli/'>
+        DOROŚLI
+      </Link>
+      <Link onClick={openMenu} to='/gallup/'>
+        GALLUP
       </Link>
       <Link onClick={openMenu} to='/o-mnie/'>
         O MNIE

@@ -2,21 +2,23 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import FirstSecionWomens from '../components/FirstSecionWomens/FirstSecionWomens'
+import SecondSectionYouth from '../components/SecondSectionYouth/SecondSectionYouth'
 import SecondSectionWomens from '../components/SecondSectionWomens/SecondSectionWomens'
-import EffectWomens from '../components/EffectWomens/EffectWomens'
 import MeetsFormwomens from '../components/MeetsFormwomens/MeetsFormwomens'
+import EffectWomens from '../components/EffectWomens/EffectWomens'
 import HomeBlogSection from '../components/HomeBlogSection/HomeBlogSection'
 import Wrapper from '../components/PageWrapper/PageWrapper'
 
-const Womens = ({
+const Gallup = ({
   data: {
     wpPage: {
-      kobiety: {
-        pierwszaSekcjaKobiety,
-        drugaSekcjaKobiety,
-        efektWspolpracyKobiety,
-        formaSpotkanKobiety,
-        sekcjaZBlogiemKobiety
+      gallup_page: {
+        pierwszaSekcjaGallup,
+        drugaSekcjaGallup,
+        jakMogeCiPomocGallup,
+        efektWspolpracyGallup,
+        formaSpotkanGallup,
+        sekcjaZBlogiemGallup
       }
     }
   }
@@ -24,54 +26,51 @@ const Womens = ({
   return (
     <Wrapper>
       <FirstSecionWomens
-        title={pierwszaSekcjaKobiety.tytul}
-        desc={pierwszaSekcjaKobiety.opis}
-        image={pierwszaSekcjaKobiety.zdjeciePoPrawo}
-        imageMobile={pierwszaSekcjaKobiety.zdjeciePoPrawoMobile}
-        womens={true}
+        title={pierwszaSekcjaGallup.tytul}
+        desc={pierwszaSekcjaGallup.opis}
+        image={pierwszaSekcjaGallup.obrazPoPrawo}
+        imageMobile={pierwszaSekcjaGallup.obrazPoPrawoMobile}
       />
+      <SecondSectionYouth data={drugaSekcjaGallup} />
       <SecondSectionWomens
-        image={drugaSekcjaKobiety.zdjeciePoLewo}
-        imageMobile={drugaSekcjaKobiety.zdjeciePoLewoMobile}
-        title={drugaSekcjaKobiety.tytul}
-        desc={drugaSekcjaKobiety.opis}
-        btn={drugaSekcjaKobiety.przycisk}
-        isWomens={true}
+        image={jakMogeCiPomocGallup.zdjeciePoLewo}
+        imageMobile={jakMogeCiPomocGallup.zdjeciePoLewoMobile}
+        title={jakMogeCiPomocGallup.tytul}
+        desc={jakMogeCiPomocGallup.opis}
+        btn={jakMogeCiPomocGallup.przycisk}
       />
       <EffectWomens
-        image={efektWspolpracyKobiety.zdjeciePoPrawo}
-        imageMobile={efektWspolpracyKobiety.zdjeciePoPrawoMobile}
-        title={efektWspolpracyKobiety.tytul}
-        listElements={efektWspolpracyKobiety.elementListy}
-        desc={efektWspolpracyKobiety.opis}
-        isWomens={true}
+        image={efektWspolpracyGallup.zdjeciePoPrawo}
+        imageMobile={efektWspolpracyGallup.zdjeciePoPrawoMobile}
+        title={efektWspolpracyGallup.tytul}
+        listElements={efektWspolpracyGallup.elementyListy}
+        desc={efektWspolpracyGallup.opis}
       />
       <MeetsFormwomens
-        firstBtn={formaSpotkanKobiety.pierwszyPrzycisk}
-        secondBtn={formaSpotkanKobiety.drugiPrzycisk}
-        title={formaSpotkanKobiety.tytul}
-        desc={formaSpotkanKobiety.opis}
-        image={formaSpotkanKobiety.obrazPoLewo}
-        isWomens={true}
-        imageMobile={formaSpotkanKobiety.obrazPoLewoMobile}
+        firstBtn={formaSpotkanGallup.pierwszyPrzycisk}
+        secondBtn={formaSpotkanGallup.drugiPrzycisk}
+        title={formaSpotkanGallup.tytul}
+        desc={formaSpotkanGallup.opis}
+        image={formaSpotkanGallup.obrazPoLewo}
+        imageMobile={formaSpotkanGallup.obrazPoLewoMobile}
       />
       <HomeBlogSection
-        anotherPerson={sekcjaZBlogiemKobiety.linkDoInnejOsoby}
-        iconImage={sekcjaZBlogiemKobiety.ikonkaDoLinku}
-        tekstDoLinku={sekcjaZBlogiemKobiety.tekstDoLinku}
+        anotherPerson={sekcjaZBlogiemGallup.linkDoInnejOsoby}
+        iconImage={sekcjaZBlogiemGallup.ikonkaDoLinku}
+        tekstDoLinku={sekcjaZBlogiemGallup.tekstDoLinku}
         isCase={true}
       />
     </Wrapper>
   )
 }
 
-export default Womens
+export default Gallup
 
 export { Head } from '../components/Head/Head'
 
 export const query = graphql`
-  query womensQuery {
-    wpPage(id: { eq: "cG9zdDozMjk=" }) {
+  query gallupQuery {
+    wpPage(id: { eq: "cG9zdDoxMzU1" }) {
       seo {
         canonical
         metaDesc
@@ -84,8 +83,8 @@ export const query = graphql`
           }
         }
       }
-      kobiety {
-        sekcjaZBlogiemKobiety {
+      gallup_page {
+        sekcjaZBlogiemGallup {
           blogOpis
           blogTytul
           tekstDoLinku
@@ -121,65 +120,26 @@ export const query = graphql`
             }
           }
         }
-        pierwszaSekcjaKobiety {
-          opis
-          tytul
-          zdjeciePoPrawo {
-            altText
-            localFile {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-          }
-          zdjeciePoPrawoMobile {
-            altText
-            localFile {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-          }
+        drugaSekcjaGallup {
+          tekstPoLewo
+          tekstPoPrawo
         }
-        drugaSekcjaKobiety {
-          opis
-          przycisk {
-            target
-            title
-            url
-          }
-          tytul
-          zdjeciePoLewo {
-            altText
-            localFile {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-          }
-          zdjeciePoLewoMobile {
-            altText
-            localFile {
-              childImageSharp {
-                gatsbyImageData(quality: 100)
-              }
-            }
-          }
-        }
-        efektWspolpracyKobiety {
-          tytul
-          opis
-          elementListy {
-            tekstListy
+        efektWspolpracyGallup {
+          elementyListy {
             ikonka {
               altText
+              title
               localFile {
                 publicURL
               }
             }
+            tekstListy
           }
+          opis
+          tytul
           zdjeciePoPrawo {
             altText
+            title
             localFile {
               childImageSharp {
                 gatsbyImageData(quality: 100)
@@ -188,6 +148,7 @@ export const query = graphql`
           }
           zdjeciePoPrawoMobile {
             altText
+            title
             localFile {
               childImageSharp {
                 gatsbyImageData(quality: 100)
@@ -195,7 +156,7 @@ export const query = graphql`
             }
           }
         }
-        formaSpotkanKobiety {
+        formaSpotkanGallup {
           drugiPrzycisk {
             target
             title
@@ -203,6 +164,7 @@ export const query = graphql`
           }
           obrazPoLewo {
             altText
+            title
             localFile {
               childImageSharp {
                 gatsbyImageData(quality: 100)
@@ -211,6 +173,7 @@ export const query = graphql`
           }
           obrazPoLewoMobile {
             altText
+            title
             localFile {
               childImageSharp {
                 gatsbyImageData(quality: 100)
@@ -224,6 +187,55 @@ export const query = graphql`
             title
             url
           }
+        }
+        jakMogeCiPomocGallup {
+          opis
+          przycisk {
+            title
+            target
+            url
+          }
+          tytul
+          zdjeciePoLewo {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData(quality: 100)
+              }
+            }
+          }
+          zdjeciePoLewoMobile {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData(quality: 100)
+              }
+            }
+          }
+        }
+        pierwszaSekcjaGallup {
+          obrazPoPrawo {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData(quality: 100)
+              }
+            }
+          }
+          obrazPoPrawoMobile {
+            altText
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData(quality: 100)
+              }
+            }
+          }
+          opis
+          tytul
         }
       }
     }

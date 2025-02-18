@@ -17,7 +17,7 @@ export const StyledLink = styled.div`
     73px,
     ${({ hasclampheight }) => (hasclampheight ? hasclampheight : "4.583vw")},
     ${({ hasdeclaredheight }) =>
-      hasdeclaredheight ? hasdeclaredheight : "81px"}
+    hasdeclaredheight ? hasdeclaredheight : "81px"}
   );
   transition: background-color 400ms, color 400ms, border 400ms;
   cursor: pointer;
@@ -36,9 +36,9 @@ export const StyledLink = styled.div`
 
   &:hover {
     background-color: ${({ variant }) =>
-      variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
+    variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
     color: ${({ variant }) =>
-      variant === "green" ? null : "var(--normalWhite)"};
+    variant === "green" ? null : "var(--normalWhite)"};
     border: 1px solid transparent;
   }
 
@@ -46,7 +46,7 @@ export const StyledLink = styled.div`
     outline-width: 1px;
     outline-style: solid;
     outline-color: ${({ variant }) =>
-      variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
+    variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
     outline-offset: 4px;
   }
 
@@ -61,7 +61,7 @@ export const StyledLink = styled.div`
       min-height: 67px;
     }
 
-    @media only screen and (max-width: 1199px) {
+    @media only screen and (max-width: 1249px) {
       display: none;
     }
   }
@@ -237,28 +237,28 @@ export const StyledButton = styled.button`
 
   &:hover {
     background-color: ${({ variant }) =>
-      variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
+    variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
   }
 
   &:focus-visible {
     outline-width: 1px;
     outline-style: solid;
     outline-color: ${({ variant }) =>
-      variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
+    variant === "green" ? "var(--hoverGreen)" : "var(--buttonBrownHover)"};
     outline-offset: 4px;
   }
 
   &:disabled {
     background-color: ${({ variant }) =>
-      variant === "green"
-        ? "var(--disabledGreen)"
-        : "var(--buttonWhiteNormal)"};
+    variant === "green"
+      ? "var(--disabledGreen)"
+      : "var(--buttonWhiteNormal)"};
     color: ${({ variant }) =>
-      variant === "green" ? "var(--normalWhite)" : "var(--disabledGreen)"};
+    variant === "green" ? "var(--normalWhite)" : "var(--disabledGreen)"};
     border: ${({ variant }) =>
-      variant === "green"
-        ? "1px solid var(--normalWhite)"
-        : "1px solid var(--disabledGreen)"};
+    variant === "green"
+      ? "1px solid var(--normalWhite)"
+      : "1px solid var(--disabledGreen)"};
   }
 
   @media only screen and (max-width: 1499px) {

@@ -37,7 +37,7 @@ const EffectWomens = ({
             {desc ? parse(desc) : null}
           </StyledDescWrapper>
           <StyledElements>
-            {listElements.map((li, index) => (
+            {listElements?.map((li, index) => (
               <li key={li.tekstListy + index}>
                 <div>
                   <img src={li.ikonka.localFile.publicURL} alt="ikonka" />

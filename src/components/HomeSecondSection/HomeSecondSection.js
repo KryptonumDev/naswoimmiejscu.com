@@ -1,20 +1,10 @@
 import React from "react";
 import parse from "html-react-parser";
-
 import Container from "../Container/Container";
 import Image from "../Image/Image";
 import ContentWrapper from "./ContentWrapper";
-
-import {
-  StyledDescWrapper,
-  StyledTitleWrapper,
-} from "../HomeHeroSection/StyledHomeHeroSection";
-import {
-  StyledHomeSecondSection,
-  StyledLeftWrapper,
-  StyledRightWrapper,
-  StyledMobileImage,
-} from "./StyledHomeSecondSection";
+import { StyledDescWrapper, StyledTitleWrapper } from "../HomeHeroSection/StyledHomeHeroSection";
+import { StyledHomeSecondSection, StyledLeftWrapper, StyledRightWrapper, StyledMobileImage } from "./StyledHomeSecondSection";
 
 const HomeSecondSection = ({ data }) => {
   return (

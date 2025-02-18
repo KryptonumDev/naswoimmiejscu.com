@@ -1,0 +1,254 @@
+query PREVIEW_QUERY($id: ID!) {
+  post(id: $id, idType: ID, asPreview: true) {
+    artykul {
+      fieldGroupName
+
+      miniaturka {
+        fieldGroupName
+        krotkiOpisDoMiniaturki
+
+        zdjecieDoMiniaturki {
+          __typename
+          id
+        }
+      }
+
+      trescArtykulu {
+        description
+        fieldGroupName
+        tekstDoZdjecia
+
+        zdjecieWyrozniajaceNaPodstronieArt {
+          __typename
+          id
+        }
+      }
+    }
+
+    author {
+      node {
+        __typename
+        id
+      }
+    }
+
+    authorDatabaseId
+    authorId
+
+    categories(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    commentCount
+    commentStatus
+
+    comments(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    content
+
+    contentType {
+      node {
+        __typename
+        id
+      }
+    }
+
+    contentTypeName
+    databaseId
+    date
+    dateGmt
+    desiredSlug
+    enclosure
+    excerpt
+
+    featuredImage {
+      node {
+        __typename
+        id
+      }
+    }
+
+    featuredImageDatabaseId
+    featuredImageId
+    guid
+    id
+    isContentNode
+    isRevision
+    isSticky
+    isTermNode
+
+    lastEditedBy {
+      node {
+        __typename
+        id
+      }
+    }
+
+    link
+    modified
+    modifiedGmt
+    pingStatus
+    pinged
+
+    postFormats(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    seo {
+      breadcrumbs {
+        text
+        url
+      }
+
+      canonical
+      cornerstone
+      focuskw
+      fullHead
+      metaDesc
+      metaKeywords
+      metaRobotsNofollow
+      metaRobotsNoindex
+      opengraphAuthor
+      opengraphDescription
+
+      opengraphImage {
+        __typename
+        id
+      }
+
+      opengraphModifiedTime
+      opengraphPublishedTime
+      opengraphPublisher
+      opengraphSiteName
+      opengraphTitle
+      opengraphType
+      opengraphUrl
+      readingTime
+
+      schema {
+        articleType
+        pageType
+        raw
+      }
+
+      title
+      twitterDescription
+
+      twitterImage {
+        __typename
+        id
+      }
+
+      twitterTitle
+    }
+
+    slug
+    status
+
+    tags(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    template {
+      templateName
+
+      __typename
+    }
+
+    terms(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    title
+    toPing
+    uri
+    __typename
+  }
+}

@@ -1,0 +1,1433 @@
+query SINGLE_CONTENT_QUERY($id: ID!) {
+  page(id: $id) {
+    ancestors(first: 100) {
+      nodes {
+        contentType {
+          node {
+            __typename
+            id
+          }
+        }
+
+        contentTypeName
+        databaseId
+        date
+        dateGmt
+        desiredSlug
+        enclosure
+        guid
+        id
+        isContentNode
+        isTermNode
+
+        lastEditedBy {
+          node {
+            __typename
+            id
+          }
+        }
+
+        link
+        modified
+        modifiedGmt
+
+        seo {
+          breadcrumbs {
+            text
+            url
+          }
+
+          canonical
+          cornerstone
+          focuskw
+          fullHead
+          metaDesc
+          metaKeywords
+          metaRobotsNofollow
+          metaRobotsNoindex
+          opengraphAuthor
+          opengraphDescription
+
+          opengraphImage {
+            __typename
+            id
+          }
+
+          opengraphModifiedTime
+          opengraphPublishedTime
+          opengraphPublisher
+          opengraphSiteName
+          opengraphTitle
+          opengraphType
+          opengraphUrl
+          readingTime
+
+          schema {
+            articleType
+            pageType
+            raw
+          }
+
+          title
+          twitterDescription
+
+          twitterImage {
+            __typename
+            id
+          }
+
+          twitterTitle
+        }
+
+        slug
+        status
+
+        template {
+          templateName
+
+          __typename
+        }
+
+        uri
+
+        __typename
+
+        ... on MediaItem {
+          id
+        }
+
+        ... on Page {
+          id
+        }
+
+        ... on CaseStudy {
+          id
+        }
+
+        ... on Post {
+          id
+        }
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    author {
+      node {
+        __typename
+        id
+      }
+    }
+
+    authorDatabaseId
+    authorId
+
+    calendly {
+      drugieZdjeciaPoPrawoMobile {
+        __typename
+        id
+      }
+
+      drugieZdjeciePoPrawo {
+        __typename
+        id
+      }
+
+      faqCalendly {
+        element {
+          fieldGroupName
+          odpowiedz
+          pytanie
+        }
+
+        fieldGroupName
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+      }
+
+      fieldGroupName
+      lista
+      opisPodTytulem
+
+      ostatniaSekcjaStronyCalendly {
+        fieldGroupName
+        opis
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tytulStrony
+
+        zdjeciePoPrawo {
+          __typename
+          id
+        }
+
+        zdjeciePoPrawoMobile {
+          __typename
+          id
+        }
+      }
+
+      przycisk {
+        target
+        title
+        url
+      }
+
+      tytulStrony
+
+      zdjeciePoPrawo {
+        __typename
+        id
+      }
+
+      zdjeciePoPrawoMobile {
+        __typename
+        id
+      }
+    }
+
+    wpChildren: children(first: 100) {
+      nodes {
+        contentType {
+          node {
+            __typename
+            id
+          }
+        }
+
+        contentTypeName
+        databaseId
+        date
+        dateGmt
+        desiredSlug
+        enclosure
+        guid
+        id
+        isContentNode
+        isTermNode
+
+        lastEditedBy {
+          node {
+            __typename
+            id
+          }
+        }
+
+        link
+        modified
+        modifiedGmt
+
+        seo {
+          breadcrumbs {
+            text
+            url
+          }
+
+          canonical
+          cornerstone
+          focuskw
+          fullHead
+          metaDesc
+          metaKeywords
+          metaRobotsNofollow
+          metaRobotsNoindex
+          opengraphAuthor
+          opengraphDescription
+
+          opengraphImage {
+            __typename
+            id
+          }
+
+          opengraphModifiedTime
+          opengraphPublishedTime
+          opengraphPublisher
+          opengraphSiteName
+          opengraphTitle
+          opengraphType
+          opengraphUrl
+          readingTime
+
+          schema {
+            articleType
+            pageType
+            raw
+          }
+
+          title
+          twitterDescription
+
+          twitterImage {
+            __typename
+            id
+          }
+
+          twitterTitle
+        }
+
+        slug
+        status
+
+        template {
+          templateName
+
+          __typename
+        }
+
+        uri
+
+        __typename
+
+        ... on MediaItem {
+          id
+        }
+
+        ... on Page {
+          id
+        }
+
+        ... on CaseStudy {
+          id
+        }
+
+        ... on Post {
+          id
+        }
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    commentCount
+    commentStatus
+
+    comments(first: 100) {
+      nodes {
+        __typename
+        id
+      }
+
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+
+        seo {
+          schema {
+            raw
+          }
+        }
+
+        startCursor
+      }
+    }
+
+    contentType {
+      node {
+        __typename
+        id
+      }
+    }
+
+    contentTypeName
+    databaseId
+    date
+    dateGmt
+    desiredSlug
+
+    dorosli {
+      drugaSekcja {
+        fieldGroupName
+        opis
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+
+        zdjeciePoLewo {
+          __typename
+          id
+        }
+
+        zdjeciePoLewoMobile {
+          __typename
+          id
+        }
+      }
+
+      efektWspolpracy {
+        elementListy {
+          fieldGroupName
+
+          ikonka {
+            __typename
+            id
+          }
+
+          tekstListy
+        }
+
+        fieldGroupName
+        opis
+        tytul
+
+        zdjeciePoPrawo {
+          __typename
+          id
+        }
+
+        zdjeciePoPrawoMobile {
+          __typename
+          id
+        }
+      }
+
+      fieldGroupName
+
+      formaSpotkan {
+        drugiPrzycisk {
+          target
+          title
+          url
+        }
+
+        fieldGroupName
+
+        obrazPoLewo {
+          __typename
+          id
+        }
+
+        obrazPoLewoMobile {
+          __typename
+          id
+        }
+
+        opis
+
+        pierwszyPrzycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+      }
+
+      pierwszaSekcja {
+        fieldGroupName
+        opis
+        tytul
+
+        zdjeciePoPrawo {
+          __typename
+          id
+        }
+
+        zdjeciePoPrawoMobile {
+          __typename
+          id
+        }
+      }
+
+      sekcjaZBlogiem {
+        adnotacjaNaDoleStronyDrugaLinijka
+        adnotacjaNaDoleStronyPierwszaLinia
+        blogOpis
+        blogTytul
+        fieldGroupName
+
+        ikonkaDoLinku {
+          __typename
+          id
+        }
+
+        linkDoInnejOsoby {
+          __typename
+
+          ... on CaseStudy {
+            id
+          }
+        }
+
+        tekstDoLinku
+      }
+    }
+
+    enclosure
+
+    featuredImage {
+      node {
+        __typename
+        id
+      }
+    }
+
+    featuredImageDatabaseId
+    featuredImageId
+
+    gallup_page {
+      drugaSekcjaGallup {
+        fieldGroupName
+        tekstPoLewo
+        tekstPoPrawo
+      }
+
+      efektWspolpracyGallup {
+        elementyListy {
+          fieldGroupName
+
+          ikonka {
+            __typename
+            id
+          }
+
+          tekstListy
+        }
+
+        fieldGroupName
+        opis
+        tytul
+
+        zdjeciePoPrawo {
+          __typename
+          id
+        }
+
+        zdjeciePoPrawoMobile {
+          __typename
+          id
+        }
+      }
+
+      fieldGroupName
+
+      formaSpotkanGallup {
+        drugiPrzycisk {
+          target
+          title
+          url
+        }
+
+        fieldGroupName
+
+        obrazPoLewo {
+          __typename
+          id
+        }
+
+        obrazPoLewoMobile {
+          __typename
+          id
+        }
+
+        opis
+
+        pierwszyPrzycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+      }
+
+      jakMogeCiPomocGallup {
+        fieldGroupName
+        opis
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+
+        zdjeciePoLewo {
+          __typename
+          id
+        }
+
+        zdjeciePoLewoMobile {
+          __typename
+          id
+        }
+      }
+
+      pierwszaSekcjaGallup {
+        fieldGroupName
+
+        obrazPoPrawo {
+          __typename
+          id
+        }
+
+        obrazPoPrawoMobile {
+          __typename
+          id
+        }
+
+        opis
+        tytul
+      }
+
+      sekcjaZBlogiemGallup {
+        adnotacjaNaDoleStronyDrugaLinijka
+        adnotacjaNaDoleStronyPi
+        blogOpis
+        blogTytul
+        fieldGroupName
+
+        ikonkaDoLinku {
+          __typename
+          id
+        }
+
+        linkDoInnejOsoby {
+          __typename
+
+          ... on CaseStudy {
+            id
+          }
+        }
+
+        tekstDoLinku
+      }
+    }
+
+    global {
+      fieldGroupName
+
+      formularzKontaktowy {
+        emailLabel
+        fieldGroupName
+        imieLabel
+        tekstWPrzycisku
+        trescWiadomoscPoPoprawnymWyslaniu
+        trescWiadomosciLabel
+        tytul
+        wyrazamZgodeLabel
+      }
+
+      przycisk {
+        target
+        title
+        url
+      }
+
+      stopka {
+        coopyrightDolnaLinia
+        coopyrightGornaLinia
+        fieldGroupName
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tekstObokPrzycisku
+      }
+    }
+
+    globalComponets {
+      contactSection {
+        fieldGroupName
+
+        image {
+          __typename
+          id
+        }
+
+        link {
+          target
+          title
+          url
+        }
+
+        text
+        title
+      }
+
+      fieldGroupName
+    }
+
+    guid
+    id
+    isContentNode
+    isFrontPage
+    isPostsPage
+    isPrivacyPage
+    isRevision
+    isTermNode
+
+    kontakt {
+      drugiPrzycisk {
+        target
+        title
+        url
+      }
+
+      fieldGroupName
+
+      kontaktFaq {
+        element {
+          fieldGroupName
+          odpowiedz
+          pytanie
+        }
+
+        fieldGroupName
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+      }
+
+      opis
+
+      pierwszyPrzycisk {
+        target
+        title
+        url
+      }
+
+      tytulKontakt
+
+      zdjeciePoPrawo {
+        __typename
+        id
+      }
+
+      zdjeciePoPrawoMobile {
+        __typename
+        id
+      }
+    }
+
+    lastEditedBy {
+      node {
+        __typename
+        id
+      }
+    }
+
+    link
+    menuOrder
+
+    mlodziez {
+      drugaSekcjaMlodziez {
+        fieldGroupName
+        tekstPoLewo
+        tekstPoPrawo
+      }
+
+      efektWspolpracyMlodziez {
+        elementyListy {
+          fieldGroupName
+
+          ikonka {
+            __typename
+            id
+          }
+
+          tekstListy
+        }
+
+        fieldGroupName
+        opis
+        tytul
+
+        zdjeciePoPrawo {
+          __typename
+          id
+        }
+
+        zdjeciePoPrawoMobile {
+          __typename
+          id
+        }
+      }
+
+      fieldGroupName
+
+      formaSpotkanMlodziez {
+        drugiPrzycisk {
+          target
+          title
+          url
+        }
+
+        fieldGroupName
+
+        obrazPoLewo {
+          __typename
+          id
+        }
+
+        obrazPoLewoMobile {
+          __typename
+          id
+        }
+
+        opis
+
+        pierwszyPrzycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+      }
+
+      jakMogeCiPomocMlodziez {
+        fieldGroupName
+        opis
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+
+        zdjeciePoLewo {
+          __typename
+          id
+        }
+
+        zdjeciePoLewoMobile {
+          __typename
+          id
+        }
+      }
+
+      pierwszaSekcjaMlodziez {
+        fieldGroupName
+
+        obrazPoPrawo {
+          __typename
+          id
+        }
+
+        obrazPoPrawoMobile {
+          __typename
+          id
+        }
+
+        opis
+        tytul
+      }
+
+      sekcjaZBlogiemMlodzie {
+        adnotacjaNaDoleStronyDrugaLinijka
+        adnotacjaNaDoleStronyPi
+        blogOpis
+        blogTytul
+        fieldGroupName
+
+        ikonkaDoLinku {
+          __typename
+          id
+        }
+
+        linkDoInnejOsoby {
+          __typename
+
+          ... on CaseStudy {
+            id
+          }
+        }
+
+        tekstDoLinku
+      }
+    }
+
+    modified
+    modifiedGmt
+
+    oMnie {
+      drugaSekcjaOMnie {
+        fieldGroupName
+        opisPoLewo
+        opisPoPrawo
+        tytul
+
+        zdjecieNaDole {
+          __typename
+          id
+        }
+
+        zdjecieNaDoleMobile {
+          __typename
+          id
+        }
+      }
+
+      faqOMnie {
+        element {
+          fieldGroupName
+          odpowiedz
+          pytanie
+        }
+
+        fieldGroupName
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+      }
+
+      fieldGroupName
+
+      kimTerazJestem {
+        fieldGroupName
+        opis
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+
+        zdjeciePoLewo {
+          __typename
+          id
+        }
+
+        zdjeciePoLewoMobile {
+          __typename
+          id
+        }
+      }
+
+      pierwszaSekcjaOMnie {
+        fieldGroupName
+        opisPoLewo
+        tytulPoLewo
+
+        zdjeciePoPrawo {
+          __typename
+          id
+        }
+
+        zdjeciePoPrawoMobile {
+          __typename
+          id
+        }
+      }
+
+      procesWspolpracyOMnie {
+        fieldGroupName
+
+        ikonkaKobiet {
+          __typename
+          id
+        }
+
+        ikonkaMlodejOsoby {
+          __typename
+          id
+        }
+
+        opis
+        procesWspolpracyTytul
+
+        przyciskKobiety {
+          target
+          title
+          url
+        }
+
+        przyciskMlodeOsoby {
+          target
+          title
+          url
+        }
+
+        zdjeciePoPrawo {
+          __typename
+          id
+        }
+
+        zdjeciePoPrawoMobile {
+          __typename
+          id
+        }
+      }
+
+      sekcjaZBlogiemOMnie {
+        fieldGroupName
+
+        ikonkaDoLinku {
+          __typename
+          id
+        }
+
+        linkDoInnejOsoby {
+          __typename
+
+          ... on CaseStudy {
+            id
+          }
+        }
+
+        tekstDoLinku
+      }
+
+      spotkajmySieOMnie {
+        fieldGroupName
+        opis
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tytul
+
+        zdjeciePoLewo {
+          __typename
+          id
+        }
+
+        zdjeciePoLewoMobile {
+          __typename
+          id
+        }
+      }
+    }
+
+    page404 {
+      fieldGroupName
+
+      logo {
+        __typename
+        id
+      }
+
+      opisDrugaLinijka
+      opisPierwszaLinijka
+
+      przycisk {
+        target
+        title
+        url
+      }
+
+      tytul
+    }
+
+    wpParent: parent {
+      node {
+        contentType {
+          node {
+            __typename
+            id
+          }
+        }
+
+        contentTypeName
+        databaseId
+        date
+        dateGmt
+        desiredSlug
+        enclosure
+        guid
+        id
+        isContentNode
+        isTermNode
+
+        lastEditedBy {
+          node {
+            __typename
+            id
+          }
+        }
+
+        link
+        modified
+        modifiedGmt
+
+        seo {
+          breadcrumbs {
+            text
+            url
+          }
+
+          canonical
+          cornerstone
+          focuskw
+          fullHead
+          metaDesc
+          metaKeywords
+          metaRobotsNofollow
+          metaRobotsNoindex
+          opengraphAuthor
+          opengraphDescription
+
+          opengraphImage {
+            __typename
+            id
+          }
+
+          opengraphModifiedTime
+          opengraphPublishedTime
+          opengraphPublisher
+          opengraphSiteName
+          opengraphTitle
+          opengraphType
+          opengraphUrl
+          readingTime
+
+          schema {
+            articleType
+            pageType
+            raw
+          }
+
+          title
+          twitterDescription
+
+          twitterImage {
+            __typename
+            id
+          }
+
+          twitterTitle
+        }
+
+        slug
+        status
+
+        template {
+          templateName
+
+          __typename
+        }
+
+        uri
+
+        __typename
+
+        ... on MediaItem {
+          id
+        }
+
+        ... on Page {
+          id
+        }
+
+        ... on CaseStudy {
+          id
+        }
+
+        ... on Post {
+          id
+        }
+      }
+    }
+
+    parentDatabaseId
+    parentId
+
+    politykaPrywatnosCi {
+      fieldGroupName
+      kontent
+      tytul
+    }
+
+    seo {
+      breadcrumbs {
+        text
+        url
+      }
+
+      canonical
+      cornerstone
+      focuskw
+      fullHead
+      metaDesc
+      metaKeywords
+      metaRobotsNofollow
+      metaRobotsNoindex
+      opengraphAuthor
+      opengraphDescription
+
+      opengraphImage {
+        __typename
+        id
+      }
+
+      opengraphModifiedTime
+      opengraphPublishedTime
+      opengraphPublisher
+      opengraphSiteName
+      opengraphTitle
+      opengraphType
+      opengraphUrl
+      readingTime
+
+      schema {
+        articleType
+        pageType
+        raw
+      }
+
+      title
+      twitterDescription
+
+      twitterImage {
+        __typename
+        id
+      }
+
+      twitterTitle
+    }
+
+    slug
+    status
+
+    stronaGlowna {
+      drugaSekcjaHomePage {
+        fieldGroupName
+        opisDoKobiet
+        opisDoMlodziez
+        opisPoLewo
+
+        przyciskKobiety {
+          target
+          title
+          url
+        }
+
+        przyciskMlodziez {
+          target
+          title
+          url
+        }
+
+        tekstDoIkonkiMlodziez
+        tekstDorosli
+        tytulPoLewo
+
+        zdjeciePoPrawo {
+          __typename
+          id
+        }
+
+        zdjeciePoPrawoMobile {
+          __typename
+          id
+        }
+      }
+
+      fieldGroupName
+
+      oMnie {
+        fieldGroupName
+        opisPoPrawo
+
+        przycisk {
+          target
+          title
+          url
+        }
+
+        tytulPoPrawo
+
+        zdjeciePoLewo {
+          __typename
+          id
+        }
+
+        zdjeciePoLewoMobile {
+          __typename
+          id
+        }
+      }
+
+      pierwszaSekcjaHomePage {
+        fieldGroupName
+        opisPoPrawo
+
+        przyciskPoPrawo {
+          target
+          title
+          url
+        }
+
+        tytulPoPrawo
+
+        zdjeciePoLewo {
+          __typename
+          id
+        }
+
+        zdjeciePoLewoMobile {
+          __typename
+          id
+        }
+      }
+
+      procesWspolpracyHomePage {
+        fieldGroupName
+        opisPoPrawo
+        tytulPoPrawo
+
+        zdjeciePoLewo {
+          __typename
+          id
+        }
+
+        zdjeciePoLewoMobile {
+          __typename
+          id
+        }
+      }
+
+      sekcjaPodProcesemWspolpracy {
+        fieldGroupName
+
+        przyciskPoLewo {
+          target
+          title
+          url
+        }
+
+        tekstPoLewo
+        tekstPoPrawo
+      }
+
+      sekcjaZBlogiem {
+        blogOpis
+
+        blogPrzycisk {
+          target
+          title
+          url
+        }
+
+        blogTytul
+        fieldGroupName
+
+        ikonkaDoLinku {
+          __typename
+          id
+        }
+
+        linkDoInnejOsoby {
+          __typename
+
+          ... on CaseStudy {
+            id
+          }
+        }
+
+        rekomendacjeOpis
+
+        rekomendacjePrzycisk {
+          target
+          title
+          url
+        }
+
+        rekomendacjeTytul
+        tekstDoLinku
+      }
+
+      spotkajmySie {
+        fieldGroupName
+
+        obraz {
+          __typename
+          id
+        }
+
+        obrazMobile {
+          __typename
+          id
+        }
+
+        opis
+        tytul
+      }
+
+      stronaGlownaFaq {
+        element {
+          fieldGroupName
+          odpowiedz
+          pytanie
+        }
+
+        fieldGroupName
+        tekstMobilePodTytulem
+        tytulPoLewej
+        tytulPoPrawo
+      }
+    }
+
+    template {
+      templateName
+
+      __typename
+    }
+
+    title
+    uri
+    __typename
+  }
+}

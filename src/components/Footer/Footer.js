@@ -60,7 +60,8 @@ const Footer = () => {
           location.pathname === "/kontakt/" ||
           location.pathname === "/spotkajmy-sie/" ||
           location.pathname === "/polityka-prywatnosci/" ||
-          location.pathname === "/kobiety/" ||
+          location.pathname === "/dorosli/" ||
+          location.pathname === "/gallup/" ||
           location.pathname === "/opinie/" ||
           location.pathname === "/mlodziez/" ||
           location.pathname.includes("/sukcesy/")
@@ -76,8 +77,8 @@ const Footer = () => {
           </StyledCircleWrapper>
           <StyledMobileGreenCircle
             difftop={
-              location.pathname === "/kobiety/" ||
-              location.pathname === "/mlodziez/"
+              location.pathname === "/dorosli/" ||
+                location.pathname === "/mlodziez/"
                 ? "true"
                 : "false"
             }
@@ -87,12 +88,13 @@ const Footer = () => {
           <StyledRightWrapperContent
             className={
               location.pathname === "/kontakt/" ||
-              location.pathname === "/spotkajmy-sie/" ||
-              location.pathname === "/polityka-prywatnosci/" ||
-              location.pathname === "/kobiety/" ||
-              location.pathname === "/opinie/" ||
-              location.pathname.includes("/sukcesy/") ||
-              location.pathname === "/mlodziez/"
+                location.pathname === "/spotkajmy-sie/" ||
+                location.pathname === "/polityka-prywatnosci/" ||
+                location.pathname === "/dorosli/" ||
+                location.pathname === "/gallup/" ||
+                location.pathname === "/opinie/" ||
+                location.pathname.includes("/sukcesy/") ||
+                location.pathname === "/mlodziez/"
                 ? "desctop"
                 : ""
             }

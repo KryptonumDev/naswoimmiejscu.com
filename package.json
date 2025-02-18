@@ -29,7 +29,7 @@
     "gatsby-plugin-sitemap": "^6.10.0",
     "gatsby-plugin-styled-components": "^6.10.0",
     "gatsby-source-filesystem": "^5.10.0",
-    "gatsby-source-wordpress": "^7.10.1",
+    "gatsby-source-wordpress": "^7.14.0",
     "gatsby-transformer-sharp": "^5.10.0",
     "html-react-parser": "^4.0.0",
     "lottie-react": "^2.4.0",

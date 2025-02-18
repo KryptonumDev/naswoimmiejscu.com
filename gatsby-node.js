@@ -137,12 +137,12 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   createPage({
-    path: `/kobiety/`,
+    path: `/dorosli/`,
     component: require.resolve(
-      './src/templates/kobiety.js'
+      './src/templates/dorosli.js'
     ),
     context: {
-      url: '/kobiety/'
+      url: '/dorosli/'
     }
   })
 
@@ -163,6 +163,16 @@ exports.createPages = async ({ actions, graphql }) => {
     ),
     context: {
       url: '/mlodziez/'
+    }
+  })
+
+  createPage({
+    path: `/gallup/`,
+    component: require.resolve(
+      './src/templates/gallup.js'
+    ),
+    context: {
+      url: '/gallup/'
     }
   })
 

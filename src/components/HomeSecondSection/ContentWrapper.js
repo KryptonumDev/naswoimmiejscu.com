@@ -18,27 +18,27 @@ import {
 import { StyledText } from "../Text/StyledText";
 
 const ContentWrapper = ({ data }) => {
-  const [isWomens, setIsWomens] = useState(false);
+  const [isAdult, setIsAdult] = useState(false);
 
   const handleChange = useCallback(
-    (womens) => {
-      setIsWomens(womens);
+    (adult) => {
+      setIsAdult(adult);
     },
-    [setIsWomens]
+    [setIsAdult]
   );
 
   const handleOnKeyUp = useCallback(
-    (e, womens) => {
+    (e, adult) => {
       if (e.keyCode === 13) {
-        setIsWomens(womens);
+        setIsAdult(adult);
       }
     },
-    [setIsWomens]
+    [setIsAdult]
   );
 
   return (
     <div>
-      <StyledIconsWrapper iswomens={isWomens}>
+      <StyledIconsWrapper isadult={isAdult}>
         <div
           onClick={() => handleChange(false)}
           tabIndex="0"
@@ -47,19 +47,19 @@ const ContentWrapper = ({ data }) => {
           <CustomButton
             onClick={() => handleChange(false)}
             type="button"
-            className={isWomens ? "button" : "button active"}
-            bgColor={isWomens ? "var(--btnGrey)" : "var(--normalGreen)"}
+            className={isAdult ? "button" : "button active"}
+            bgColor={isAdult ? "var(--btnGrey)" : "var(--normalGreen)"}
             tabIndex="-1"
             imageSize="47px"
           >
             <StaticImage src="../../images/brother.png" alt="youth" />
             <StyledMobileText>
               <StyledText
-                className={isWomens ? "text" : "text active"}
+                className={isAdult ? "text" : "text active"}
                 hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
                 hasdeclaredfontweight="700"
                 hasdeclaredfontcolor={
-                  isWomens ? "#5B5C5E" : "var(--normalBlack)"
+                  isAdult ? "#5B5C5E" : "var(--normalBlack)"
                 }
               >
                 {data.tekstDoIkonkiMlodziez}
@@ -68,10 +68,10 @@ const ContentWrapper = ({ data }) => {
           </CustomButton>
           <StyledDesktopText>
             <StyledText
-              className={isWomens ? "text" : "text active"}
+              className={isAdult ? "text" : "text active"}
               hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
               hasdeclaredfontweight="700"
-              hasdeclaredfontcolor={isWomens ? "#5B5C5E" : "var(--normalBlack)"}
+              hasdeclaredfontcolor={isAdult ? "#5B5C5E" : "var(--normalBlack)"}
             >
               {data.tekstDoIkonkiMlodziez}
             </StyledText>
@@ -83,8 +83,8 @@ const ContentWrapper = ({ data }) => {
           onKeyUp={(e) => handleOnKeyUp(e, true)}
         >
           <CustomButton
-            className={isWomens ? "active button" : "button"}
-            bgColor={isWomens ? "var(--normalGreen)" : "var(--btnGrey)"}
+            className={isAdult ? "active button" : "button"}
+            bgColor={isAdult ? "var(--normalGreen)" : "var(--btnGrey)"}
             onClick={() => handleChange(true)}
             type="button"
             tabIndex="-1"
@@ -106,43 +106,43 @@ const ContentWrapper = ({ data }) => {
             </svg>
             <StyledMobileText>
               <StyledText
-                className={isWomens ? "text active" : "text"}
+                className={isAdult ? "text active" : "text"}
                 hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
                 hasdeclaredfontweight="700"
                 hasdeclaredfontcolor={
-                  isWomens ? "var(--normalBlack)" : "#5B5C5E"
+                  isAdult ? "var(--normalBlack)" : "#5B5C5E"
                 }
               >
-                {data.tekstKobiety}
+                {data.tekstDorosli}
               </StyledText>
             </StyledMobileText>
           </CustomButton>
           <StyledDesktopText>
             <StyledText
-              className={isWomens ? "text active" : "text"}
+              className={isAdult ? "text active" : "text"}
               hasdeclaredfontsize="clamp(16px, 1.667vw, 32px)"
               hasdeclaredfontweight="700"
-              hasdeclaredfontcolor={isWomens ? "var(--normalBlack)" : "#5B5C5E"}
+              hasdeclaredfontcolor={isAdult ? "var(--normalBlack)" : "#5B5C5E"}
             >
-              {data.tekstKobiety}
+              {data.tekstDorosli}
             </StyledText>
           </StyledDesktopText>
         </div>
       </StyledIconsWrapper>
-      <AnimatePresence key={isWomens}>
+      <AnimatePresence key={isAdult}>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          key={isWomens}
+          key={isAdult}
         >
-          {isWomens ? (
+          {isAdult ? (
             <StyledContent>
               <StyledContentWrapper>
-                {data.opisDoKobiet ? parse(data.opisDoKobiet) : null}
+                {data.opisDoDorosli ? parse(data.opisDoDorosli) : null}
               </StyledContentWrapper>
               <Button
-                btnData={data.przyciskKobiety}
+                btnData={data.przyciskDorosli}
                 variant="green"
                 haswidth="355px"
                 hasheight="88px"
