@@ -1,5 +1,5 @@
 exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   const postData = await graphql(`
     {
@@ -214,5 +214,10 @@ exports.createPages = async ({ actions, graphql }) => {
     context: {
       url: '/spotkajmy-sie/'
     }
+  })
+
+  createRedirect({
+    fromPath: `/kobiety/`,
+    toPath: `/dorosli/`,
   })
 }
