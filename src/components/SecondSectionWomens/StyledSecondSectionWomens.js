@@ -29,13 +29,10 @@ export const StyledLeftWrapper = styled.div`
 
   @media only screen and (max-width: 576px) {
     .gatsby-image-wrapper {
-      height: 248px;
-    }
-  }
-
-  @media only screen and (max-width: 360px) {
-    .gatsby-image-wrapper {
-      height: 248px;
+      max-height: 377px;
+      img {
+        object-position: 50% 15%;
+      }
     }
   }
 `;
@@ -83,7 +80,7 @@ export const StyledGreenCircleWrapper = styled.div`
 
     svg {
       color: ${({ iswomens }) =>
-        iswomens ? "var(--normalGreen)" : "var(--normalWhite)"};
+    iswomens ? "var(--normalGreen)" : "var(--normalWhite)"};
     }
   }
 
