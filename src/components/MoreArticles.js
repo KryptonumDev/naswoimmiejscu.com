@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { ArrowLeft, ArrowRight } from "../atoms/Icons";
-import Button from "./Button/Button";
 
 const MoreArticles = ({ prevPage, nextPage }) => {
   return (
