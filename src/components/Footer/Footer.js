@@ -129,7 +129,8 @@ const Footer = () => {
             </StyledBottomText>
           </StyledCopyright>
           <StyledFooterLinks>
-            <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
+            <Link to="/polityka-prywatnosci" className="legal">Polityka Prywatności</Link>
+            <a href="/Standardy-Ochrony-Maloletnich_Na-Swoim-Miejscu.pdf" target="_blank" className="legal">Standardy Ochrony Małoletnich</a>
             <div className="social">
               <a href="https://www.facebook.com/agnieszkajablonskajobcoach" target="_blank" rel="noreferrer">
                 <Facebook />
@@ -144,7 +145,8 @@ const Footer = () => {
           </StyledFooterLinks>
           <Nav isFooter isOpen={false} />
           <StyledFooterLinks hideMobile>
-            <Link to="/polityka-prywatnosci">Polityka Prywatności</Link>
+            <Link to="/polityka-prywatnosci" className="legal">Polityka Prywatności</Link>
+            <a href="/Standardy-Ochrony-Maloletnich_Na-Swoim-Miejscu.pdf" target="_blank" className="legal">Standardy Ochrony Małoletnich</a>
             <div className="social">
               <a href="https://www.facebook.com/agnieszkajablonskajobcoach" target="_blank" rel="noreferrer">
                 <Facebook />

@@ -169,6 +169,12 @@ export const StyledFooterLinks = styled.div`
   display: ${({ hideMobile }) => (hideMobile ? "block" : "none")};
   gap: 28px;
   text-transform: uppercase;
+  .legal {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
   .social {
     margin-top: 8px;
     margin-right: -12px;
