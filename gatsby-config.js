@@ -42,6 +42,18 @@ module.exports = {
         html: {
           useGatsbyImage: false,
         },
+        schema: {
+          timeout: 120000, // Increase timeout to 120 seconds
+          perPage: 10, // Further reduce nodes per request to lower server load
+        },
+        type: {
+          Category: {
+            limit: 100, // Limit total categories fetched
+          },
+          PostFormat: {
+            limit: 50, // Limit total post formats fetched
+          },
+        },
       },
     },
     {
@@ -69,7 +81,7 @@ module.exports = {
       options: {
         host: 'https://naswoimmiejscu.com/',
         sitemap: 'https://naswoimmiejscu.com/sitemap-index.xml',
-        policy: [{userAgent: '*', allow: '/'}]
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     }
   ],
