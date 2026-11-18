@@ -135,7 +135,9 @@ const ContactForm = () => {
               />
               <label htmlFor="termsAndConditions">
                 <span>&#10003;</span>
-                Akceptuję <a href="/polityka-prywatnosci/">politykę prywatności</a>.
+                <p>
+                  Akceptuję <a href="/polityka-prywatnosci/">politykę prywatności</a>.
+                </p>
               </label>
             </StyledCustomCheckbox>
             <StyledCustomCheckbox value={values.newsletter}>

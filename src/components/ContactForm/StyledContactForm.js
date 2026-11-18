@@ -61,6 +61,9 @@ export const StyledCustomCheckbox = styled.div`
     position: relative;
     padding-left: 55px;
     max-width: 513px;
+    min-height: 43px;
+    display: flex;
+    align-items: center;
 
     a {
       color: ${({ iserror }) =>
