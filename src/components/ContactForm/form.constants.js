@@ -5,6 +5,7 @@ export const initialState = {
   email: "",
   message: "",
   termsAndConditions: false,
+  newsletter: false,
 };
 
 export const contactSchema = Yup.object().shape({

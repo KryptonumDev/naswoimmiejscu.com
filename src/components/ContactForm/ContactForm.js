@@ -44,21 +44,27 @@ const ContactForm = () => {
 
   const handleSubmit = async (data, { setSubmitting, resetForm }) => {
     setSubmitting(true);
+    const { newsletter, ...contactData } = data;
     const formData = new FormData();
 
-    for (let field of Object.keys(data)) {
-      formData.append(field, data[field]);
+    for (let field of Object.keys(contactData)) {
+      formData.append(field, contactData[field]);
     }
 
     try {
-      await axios.post(
+      const response = await axios.post(
         `${process.env.GATSBY_WORDPRESS_URL}/wp-json/contact-form-7/v1/contact-forms/${process.env.GATSBY_WORDPRESS_FORM_ID}/feedback`,
         formData
       );
-      await axios.post(
-        `/api/newsletter`,
-        formData
-      );
+      if (response.data?.status !== "mail_sent") {
+        throw new Error(`Contact Form 7: ${response.data?.status}`);
+      }
+      if (newsletter) {
+        await axios.post(
+          `/api/newsletter`,
+          formData
+        );
+      }
       setIsError(false);
       setSubmitting(false);
       setIsSend(true);
@@ -128,6 +134,17 @@ const ContactForm = () => {
                 id="termsAndConditions"
               />
               <label htmlFor="termsAndConditions">
+                <span>&#10003;</span>
+                Akceptuję <a href="/polityka-prywatnosci/">politykę prywatności</a>.
+              </label>
+            </StyledCustomCheckbox>
+            <StyledCustomCheckbox value={values.newsletter}>
+              <Field
+                type="checkbox"
+                name="newsletter"
+                id="newsletter"
+              />
+              <label htmlFor="newsletter">
                 <span>&#10003;</span>
                 {shortData.wyrazamZgodeLabel
                   ? parse(shortData.wyrazamZgodeLabel)
